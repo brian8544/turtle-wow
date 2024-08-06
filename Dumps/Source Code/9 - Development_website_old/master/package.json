@@ -1,0 +1,26 @@
+{
+  "name": "turt_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "chart.js": "^3.8.0",
+    "del": "^7.1.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
+    "gulp-angular": "^0.1.2",
+    "gulp-angular-templatecache": "^3.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}

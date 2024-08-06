@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs certbot renew monthly
+
+[Timer]
+OnCalendar=*-*-1 05:00:00
+Unit=certbot_renew.service
+
+[Install]
+WantedBy=multi-user.target

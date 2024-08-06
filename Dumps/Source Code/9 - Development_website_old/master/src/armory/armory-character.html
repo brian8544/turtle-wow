@@ -1,0 +1,398 @@
+<div class="section mb-5 armory" id="pages">
+   <div class="container-fluid pb-5">
+      <div class="container-lg pt-5 pb-5">
+
+         <div class="row">
+
+            <div class="col-lg-12 mb-3 p-3"
+                 ng-class="{'bg-alliance' : [1, 3, 4, 7].indexOf(c.basic.race) != -1,
+            'bg-horde' : [1, 3, 4, 7].indexOf(c.basic.race) == -1}">
+
+               <table>
+                  <tr>
+                     <td>
+                        <img src="images/icons/class_{{c.basic.class_text.toLowerCase()}}.jpg"
+                             class="mr-3">
+                     </td>
+                     <td>
+                        <span class="orange-text">{{c.basic.name}}</span><br>
+                        <small class="text-white">
+                           <a ng-href="#/armory/guild/{{c.basic.guild}}"
+                              class="text-white">&lt;{{c.basic.guild}}&gt;</a>
+                           <Br>
+                           {{c.basic.race_text}} {{c.basic.class_text}}</small>
+                     </td>
+                  </tr>
+               </table>
+
+            </div>
+
+            <div class="col-lg-3" ng-if="c.gear.length > 0">
+
+               <table>
+
+                  <tr>
+
+                     <td>
+
+                        <div class="placeholder head">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(0).item_template}}"
+                              target="_blank" data-transmog="{{getItem(0).transmogName}}"
+                              data-wowhead="item={{getItem(0).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(0).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(0)">
+
+                           </a>
+
+                        </div>
+
+                     </td>
+                     <td rowspan="8" colspan="5">
+
+                        <img class="p-4" style="width: 200px;" src="images/Alliance_Crest.png"
+                             ng-if="[1, 3, 4, 7].indexOf(c.basic.race) != -1">
+                        <img class="p-4" style="width: 200px;" src="images/Horde_Crest.png"
+                             ng-if="[1, 3, 4, 7].indexOf(c.basic.race) == -1">
+
+
+                     </td>
+                     <td>
+                        <div class="placeholder hands">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(9).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(9).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(9).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(9)">
+
+                           </a>
+
+                        </div>
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <div class="placeholder neck">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(1).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(1).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(1).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(1)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder waist">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(5).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(5).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(5).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(5)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <div class="placeholder shoulder">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(2).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(2).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(2).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(2)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder pants">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(6).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(6).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(6).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(6)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <div class="placeholder back">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(14).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(14).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(14).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(14)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder feet">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(7).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(7).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(7).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(7)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <div class="placeholder chest">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(4).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(4).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(4).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(4)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder ring">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(10).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(10).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(10).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(10)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <div class="placeholder shirt">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(3).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(3).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(3).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(3)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder ring">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(11).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(11).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(11).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(11)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <div class="placeholder tabard">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(18).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(18).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(18).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(18)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder trinket">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(12).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(12).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(12).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(12)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <div class="placeholder wrist">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(8).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(8).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(8).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(8)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder trinket">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(13).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(13).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(13).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(13)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td></td>
+                     <td>&nbsp;</td>
+                     <td>
+                        <div class="placeholder mainhand">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(15).item_template}}"
+                              target="_blank" data-transmog={{getItem(15).transmogName}}
+                              data-wowhead="item={{getItem(15).item_template}}&amp;transmog=asd&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(15).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(15)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder offhand">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(16).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(16).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(16).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(16)">
+
+                           </a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <div class="placeholder ranged">
+
+                           <a ng-href="https://database.turtle-wow.org/?item={{getItem(17).item_template}}"
+                              target="_blank"
+                              data-wowhead="item={{getItem(17).item_template}}&amp;domain=classic;">
+
+                              <img ng-src="https://wow.zamimg.com/images/wow/icons/medium/{{getItem(17).icon.toLowerCase()}}.jpg"
+                                   ng-if="getItem(17)">
+
+                           </a>
+
+                        </div>
+                     </td>
+
+                     <td>&nbsp;</td>
+                     <td></td>
+
+                  </tr>
+
+               </table>
+
+            </div>
+
+            <div class="col-lg-12 p-5">
+               <h3 class="orange-text">Talents {{c.spec}}</h3>
+            </div>
+
+
+            <div class="col-lg-2 talents" ng-repeat="(k, row) in c.talents">
+
+               <div class="tree" style="background-image: url('images/talent_tabs/{{k / ($index + 1)}}.jpg')">
+
+                  <div ng-repeat="r in row track by $index">
+
+                     <div class="talent" ng-repeat="spell in r track by $index">
+
+                        <div class="talent-icon" ng-if="spell.id != 0"
+                             ng-class="{'desat' : spell.rank == 0}"
+                             style="background-image: url('https://wow.zamimg.com/images/wow/icons/medium/{{spell.icon}}.jpg')">
+
+                           <span class="talent-rank" ng-if="spell.rank > 0"
+                           ng-class="{
+                           'text-yellow' : spell.rank == spell.maxRanks,
+                           'text-green' : spell.rank != spell.maxRanks
+                           }"> {{spell.rank}}</span>
+
+                        </div>
+
+                        <div class="talent-tooltip" ng-if="spell.rank != -1">
+                           <span class="text-white">{{spell.name}}</span><br>
+                           <span class="text-white">{{spell.rank}}/{{spell.maxRanks}}</span><Br>
+                           {{spell.description}}
+                        </div>
+
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+</div>
+
+
+

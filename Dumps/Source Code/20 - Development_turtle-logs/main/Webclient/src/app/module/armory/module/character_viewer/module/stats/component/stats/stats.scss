@@ -1,0 +1,29 @@
+@import "src/styles/global";
+@import "src/styles/table";
+
+:host {
+    display: block;
+
+    .tableRow {
+        div {
+            padding: 0!important;
+            &:first-child {
+                flex-basis: 50%;
+                padding-left: 8px !important;
+            }
+            &:nth-child(2) {
+                flex-basis: 50%;
+                text-align: right;
+                padding-right: 8px !important;
+            }
+        }
+    }
+
+    .tableHead {
+        div {
+            flex-basis: 100% !important;
+            padding: 8px 8px 8px 8px !important;
+            text-align: left !important;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+.title_bar {
+    $titleBarSize: 50px - $spacing;
+    display: flex;
+    flex-direction: row;
+    min-height: $titleBarSize;
+    width: calc(100% - #{$spacing});
+    background: $tdc_darker;
+    padding: 0.5 * $spacing 0.5 * $spacing;
+    border: 1px solid $tdc_accent;
+    border-bottom: none;
+
+    #rpll_share_button {
+        display: block;
+        width: 34px;
+        height: 34px;
+        align-self: flex-end;
+        flex-shrink: 0;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    SelectInput, MultiSelect {
+        width: 100%;
+        max-width: 300px;
+        height: $titleBarSize;
+        align-self: flex-start;
+        margin-right: 0.5 * $spacing;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 1450px) {
+        flex-wrap: wrap;
+
+        SelectInput, MultiSelect {
+            max-width: calc(50% - 0.25 * #{$spacing});
+            margin-bottom: 0.5 * $spacing;
+
+            &:nth-child(2), &:nth-child(4), &:nth-child(6) {
+                margin-right: 0;
+            }
+
+            &:nth-child(6), &:nth-child(7) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: 520px) {
+        flex-direction: column;
+
+        SelectInput, MultiSelect {
+            margin-right: 0;
+            margin-bottom: 0.5 * $spacing !important;
+            max-width: 100%;
+
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}

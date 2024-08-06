@@ -1,0 +1,28 @@
+@import "src/styles/global";
+@import "src/styles/buttons";
+
+:host {
+    display: block;
+    align-self: flex-start;
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+
+    h1 {
+        font-size: 64px;
+    }
+
+    button {
+        width: 420px;
+    }
+
+    @media (max-width: 500px) {
+
+        h1 {
+            font-size: 42px !important;
+        }
+
+        button {
+            width: 275px !important;
+        }
+    }
+}

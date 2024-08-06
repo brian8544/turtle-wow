@@ -1,0 +1,62 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.table_container {
+    width: calc(100% - 2px);
+    border: 1px solid $tdc_accent;
+
+    .td {
+        $tdHeight: 25px;
+        min-height: $tdHeight;
+        min-width: 100px;
+        border-right: 1px solid $tdc_accent;
+        line-height: $tdHeight;
+        flex: 1;
+        font-size: 16px;
+        text-align: center;
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 11px;
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        $size: 25px;
+        background: $tdc_darker;
+        width: 100%;
+        height: $size;
+        border-bottom: 1px solid $tdc_accent;
+        flex: 1;
+    }
+
+    .body {
+        width: 100%;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            border-bottom: 1px solid $tdc_accent;
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+<div class="icon" *ngIf="!talent.is_filler"
+     [showTooltip]="{type: 16, expansion_id: expansion_id, spell_ids: talent.spell_id, index: talent.points_spend}"
+     (click)="on_click($event)"
+     [class.grayed_out]="is_grayed_out"
+     [class.green_border]="has_green_border()"
+     [class.golden_border]="has_golden_border()"
+     style="background-image: url(/assets/wow_icon/{{talent.icon}}.jpg)">
+    <div class="spend_points">{{talent.points_spend}}</div>
+</div>
+<div class="filler" *ngIf="talent.is_filler">
+    <div *ngIf="is_horizontal_arrow_filler"
+         [class.horizontal_arrow_filler]="is_horizontal_arrow_filler"
+         [class.golden_arrow]="is_horizontal_arrow_golden"></div>
+    <div *ngIf="is_vertical_arrow_filler"
+         [class.vertical_arrow_filler]="is_vertical_arrow_filler"
+         [class.golden_arrow]="is_vertical_arrow_golden"></div>
+    <div *ngIf="is_diagonal_arrow_filler" class="diagonal_arrow_filler"
+         [class.golden_arrow]="is_diagonal_arrow_golden">
+        <div></div>
+        <div></div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+@import "../../../../../../../styles/global";
+@import "../../../../../../../styles/shadows";
+@import "../../../../../../../styles/buttons";
+
+:host {
+    display: block;
+    padding: $spacing * 2.5;
+}
+
+header {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+    color: $font_title;
+    padding-bottom: $spacing * 2.5;
+}
+
+section {
+    width: 100%;
+    color: $font_less_important !important;
+    padding-bottom: $spacing;
+}
+
+footer {
+    text-align: center;
+
+    button {
+        width: calc(50% - #{$spacing} * 0.5);
+        margin-bottom: $spacing * 0.5;
+        margin-right: $spacing;
+
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            width: 100%;
+            margin: none;
+        }
+    }
+
+    @media (max-width: 540px) {
+        button {
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: $spacing * 0.5;
+            }
+        }
+    }
+}

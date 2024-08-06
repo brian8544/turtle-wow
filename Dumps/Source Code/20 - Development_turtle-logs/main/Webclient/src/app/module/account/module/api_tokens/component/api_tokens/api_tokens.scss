@@ -1,0 +1,106 @@
+@import "../../../../../../../styles/global";
+@import "../../../../../../../styles/table";
+
+:host {
+    display: block;
+    position: relative;
+
+    .generatedTokenContainer {
+        margin-top: $spacing;
+
+        div {
+            min-height: 10px;
+            overflow: hidden;
+            position: relative;
+
+            GeneralInput {
+                width: calc(100% - 130px - #{$spacing} * 0.5);
+                float: left;
+                margin-right: $spacing * 0.5;
+            }
+
+            ConfirmButton {
+                float: left;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                &::ng-deep button {
+                    min-width: 130px;
+                    min-height: 32px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+
+    .purposeForm {
+        display: flex;
+        flex-direction: row;
+
+        GeneralInput {
+            flex: 1;
+
+            &:first-child {
+                margin-right: $spacing * 0.5;
+            }
+        }
+
+        ConfirmButton {
+            margin-top: auto;
+            margin-left: $spacing * 0.5;
+
+            ::ng-deep button {
+                min-width: 130px;
+                min-height: 32px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 445px) {
+            flex-direction: column;
+
+            GeneralInput {
+                margin: 0 0 $spacing;
+            }
+
+            ConfirmButton {
+                margin: $spacing 0 0;
+            }
+        }
+    }
+
+    .tableContainer {
+        margin-top: $spacing;
+
+        @media (max-width: 445px) {
+            overflow-x: scroll;
+        }
+
+        .tableRow {
+            min-width: 400px;
+
+            div {
+
+                &:nth-child(1), &:nth-child(2) {
+                    width: calc(50% - 60px);
+                    text-align: center;
+                }
+
+                &:first-child {
+                    text-align: left;
+                }
+
+                &:nth-child(3) {
+                    width: 120px;
+                }
+
+                ConfirmButton::ng-deep button {
+                    min-height: 32px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="title_bar">Raid composition</div>
+    <div class="role_container">
+        <div class="role_title_bar">
+            <div class="role_icon" id="role_tank"></div>
+            <div class="role_label">Tanks</div>
+            <CaretButton (toggled)="show_tanks=!show_tanks"></CaretButton>
+        </div>
+        <div class="class_container" *ngIf="show_tanks">
+            <div *ngFor="let hero_classes of tanks" class="class_row"
+                 [attr.data-hero-class-id]="hero_classes[0].hero_class_id">
+                <span *ngFor="let participant of hero_classes"
+                      [showTooltip]="{type: 1, character_id: participant.character_id, timestamp: current_ts }"><a
+                    [routerLink]="'/armory/character/' + (server_name | async) + '/' + participant.name">{{participant.name}}</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="role_container">
+        <div class="role_title_bar">
+            <div class="role_icon" id="role_healer"></div>
+            <div class="role_label">Healer</div>
+            <CaretButton (toggled)="show_healers=!show_healers"></CaretButton>
+        </div>
+        <div class="class_container" *ngIf="show_healers">
+            <div *ngFor="let hero_classes of healer" class="class_row"
+                 [attr.data-hero-class-id]="hero_classes[0].hero_class_id">
+                <span *ngFor="let participant of hero_classes"
+                      [showTooltip]="{type: 1, character_id: participant.character_id, timestamp: current_ts }"><a
+                    [routerLink]="'/armory/character/' + (server_name | async) + '/' + participant.name">{{participant.name}}</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="role_container">
+        <div class="role_title_bar" [class.border_none]="!show_dps">
+            <div class="role_icon" id="role_dps"></div>
+            <div class="role_label">Dps</div>
+            <CaretButton (toggled)="show_dps=!show_dps"></CaretButton>
+        </div>
+        <div class="class_container" *ngIf="show_dps">
+            <div *ngFor="let hero_classes of dps" class="class_row"
+                 [attr.data-hero-class-id]="hero_classes[0].hero_class_id">
+                <span *ngFor="let participant of hero_classes"
+                      [showTooltip]="{type: 1, character_id: participant.character_id, timestamp: current_ts }"><a
+                    [routerLink]="'/armory/character/' + (server_name | async) + '/' + participant.name">{{participant.name}}</a></span>
+            </div>
+        </div>
+    </div>
+</div>

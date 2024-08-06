@@ -1,0 +1,86 @@
+@import "src/styles/global";
+
+:host {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media (max-width: 775px) {
+        display: block;
+    }
+
+    CharacterItems, .rightBar, .tables {
+        float:left;
+    }
+
+    .tables {
+        width: 100%;
+    }
+
+    AttendedRaids {;
+        margin-bottom: 0.5 * $spacing;
+    }
+
+    @media (min-width: 658px) {
+        CharacterItems {
+            width: calc(100% - 225px - #{$spacing} / 2);
+            margin-right: $spacing / 2;
+        }
+    }
+
+    @media (min-width: 775px) {
+        CharacterItems {
+            width: 500px;
+            margin-right: $spacing / 2;
+        }
+
+        .tables {
+            width: 908px;
+            margin-left: 0.5 * $spacing;
+        }
+    }
+
+    @media (max-width: 1840px) {
+        .tables {
+            margin-left: 0;
+        }
+    }
+
+    .rightBar {
+        Profession, Talents, Stats {
+            margin-bottom: $spacing / 2;
+        }
+
+        @media (max-width: 549px) {
+            width: 100%;
+        }
+        @media (min-width: 550px) {
+            width: 100%;
+            Profession, Talents {
+                width: calc(50% - #{$spacing} * 0.25);
+                float: left;
+
+                &:first-child {
+                    margin-right: $spacing / 2;
+                }
+            }
+
+            Stats {
+                width: 100%;
+                float: left;
+            }
+        }
+        @media (min-width: 658px) {
+            width: 225px;
+            Profession, Talents, Stats {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        @media (min-width: 775px) {
+            width: calc(100% - 500px - #{$spacing} / 2);
+        }
+        @media (min-width: 940px) {
+            width: 400px;
+        }
+    }
+}

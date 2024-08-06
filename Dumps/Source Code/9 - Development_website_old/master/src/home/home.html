@@ -1,0 +1,538 @@
+<div class="section" id="home1" style="background-image: url(images/bg1.png)">
+    <div class="container-fluid pt-5">
+        <div class="container pt-5">
+            <div class="alert alert-warning mtn w-75 d-none">Maintainance<img src="images/exclamation.png"
+                                                                              class="pull-right"></div>
+            <a href="https://www.youtube.com/@turtlewow" target="_blank" class="icons"><img
+                    src="images/icon youtube.png"></a><a href="https://discord.com/invite/mBGxmHy" target="_blank"
+                                                         class="icons"><img src="images/icon discord.png"></a><a
+                href="https://www.instagram.com/turtlewowteam/" target="_blank" class="icons"><img
+                src="images/icon instagram.png"></a><a href="https://twitter.com/turtlewowteam" target="_blank"
+                                                       class="icons"><img src="images/icon twitter.png"></a><a
+                href="https://github.com/slowtorta/turtlewow-bug-tracker/issues" target="_blank" class="icons"><img
+                src="images/icon GitHub.png"></a><a href="https://soundcloud.com/turtlewow" target="_blank"
+                                                    class="icons soundcloud"><img
+                src="images/icon soundcloud.png"></a><a ng-href="#/watch" target="_blank" class="icons"><img
+                src="images/icon turtletv.png" style="width: 30px; margin-left: 3px;"></a></a><a
+                href="https://open.spotify.com/artist/3QLoyBdT2ZlirCtRPhdOcp" target="_blank" class="icons"><img
+                src="images/icon spotify.png" style="width: 30px; margin-left: 3px;"></a></a><a
+                href="https://music.apple.com/us/artist/turtle-wow/1649088037" target="_blank" class="icons apple"><img
+                src="images/icon apple.png" style="width: 32px; margin-left: 3px;"></a></a><h2 class="mt-4">MYSTERIES OF
+            AZEROTH</h2>
+            <div class="row">
+                <div class="col-lg-8"><p class="pt-3">A story expansion inspired by the Warcraft universe of Blizzard
+                    Entertainment and developed by the Turtle WoW Team. This expansion aims to take a different path
+                    from the Burning Crusade, emphasizing the familiar Azeroth of Vanilla WoW over the cosmic battle
+                    with the Burning Legion. While being heavily based on the lore from Warcraft 3 and Vanilla WoW,
+                    Mysteries of Azeroth seeks to enhance the game by adding content that matches the already
+                    well-established lore of Warcraft Universe.<BR><BR>Get ready for a brand-new adventure that will
+                    take you on a journey around Azeroth in a new story tailored to provide never-before-experienced
+                    adventures.</p>
+                    <div class="row"><a id="button-sign-up" class="col" ng-click="openRegisterModal()"
+                                        ng-if="!isLoggedIn()"><h4>SIGN UP</h4></a><a id="button-am" class="col"
+                                                                                     ng-href="#/ucp/overview"
+                                                                                     ng-if="isLoggedIn()"><h4>Account
+                        Management</h4></a><a id="button-download-client" class="col"
+                                              href="https://forum.turtle-wow.org/viewtopic.php?t=7709"><h4>DOWNLOAD
+                        CLIENT</h4></a></div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" id="home2" style="background-image: url(images/bg2.png)">
+    <div class="container-fluid">
+        <div class="container pt-5">
+            <div class="row" id="box1">
+                <div class="col-lg-12 twbox hand" ng-click="goToPage('new-races')">
+                    <div class="graphic"></div>
+                    <div class="row">
+                        <div class="col-lg-6"></div>
+                        <div class="col-lg-6 pt-5 pb-5 pr-5"><h3>NEW PLAYABLE RACES</h3>
+                            <h2 class="orange-text">GOBLINS & HIGH ELVES</h2><img src="images/footerline.png"
+                                                                                  class="mt-3 mb-4 w-100">
+                            <p style="width: 80%;">In addition to new dungeons, raids, and zones, the expansion also
+                                features two new races. A group of greedy Goblins splits off from the Venture Company to
+                                join their fellow outcasts in the Horde, and High Elf refugees from the fall of
+                                Quel'Thalas lend their magical talents to the Alliance.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5" id="box2">
+                <div class="col-lg-5 mt-0 pt-5 pb-0"><h3 class="orange-text mt-5">Existing content</h3>
+                    <h1 class="orange-text font-weight-bold">stays relevant!</h1>We don't want to devalue the existing
+                    content of Vanilla WoW. Instead, new content from this expansion will run in parallel to existing
+                    vanilla wow content, starting at level 10 and running up to level 60 (which remains the max level)
+                </div>
+                <div class="col-lg-12"></div>
+                <div class="col-lg-6 smallBox" id="sb1">
+                    <div class="inner p-5 hand" ng-click="goToPage('new-races')">
+                        <div class="image"></div>
+                        <h4>High Elves<br>of the Alliance</h4><h4 class="orange-text font-weight-bold"> Silvermoon
+                        Remnants </h4>
+                        <p class="mt-5">Long ago, the exiled high elves founded the magical kingdom of Quel'Thalas. Here
+                            they created a mystical fount called the Sunwell. For generations, the elves cultivated a
+                            prosperous and powerful country until the shadow of death fell upon them. Scourge attacked
+                            Quel'Thalas and destroyed the Sunwell, at the same time reducing the population of the High
+                            Elves to an all-time low. Scattered and regretful, the refugees of this once proud race now
+                            seek a new place to call home and a way to fill the void inside them, left by the
+                            destruction of the Sunwell.</p></div>
+                </div>
+                <div class="col-lg-6 smallBox" id="sb2">
+                    <div class="inner p-5 hand" ng-click="goToPage('new-races')">
+                        <div class="image"></div>
+                        <h4>Goblins<Br>of the Horde</h4><h4 class="orange-text font-weight-bold"> Durotar Labor
+                        Union </h4>
+                        <p class="mt-5">Shrewd, greedy, and ruthless, goblins have a long-standing reputation for being
+                            neutral in the rest of the world, despite the Steamwheedle Cartel allying with the Old Horde
+                            during the Second War. Heroes of goblin society are not bastions of honor or integrity.
+                            Instead, goblins tend to admire the ruthless acquisition of profit, by any means necessary.
+                            Goblins are gifted engineers and accomplished seafarers but are best known for their
+                            unabashed avarice.<br><br></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section d-none" id="changelog_home" style="background-image: url(images/changelogglow.png)">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4"><img src="images/cog.png">
+                    <p class="cDate">December 12 | 2021</p>
+                    <p class="cDescription">Name of change and some other description. Name of change and some7other
+                        description</p></div>
+                <div class="col-lg-4"><img src="images/cog.png">
+                    <p class="cDate">December 12 | 2021</p>
+                    <p class="cDescription">Name of change and some other description. Name of change and some7other
+                        description</p></div>
+                <div class="col-lg-4"><img src="images/cog.png">
+                    <p class="cDate">December 12 | 2021</p>
+                    <p class="cDescription">Name of change and some other description. Name of change and some7other
+                        description</p></div>
+            </div>
+            <a href="#"><img src="images/changelog.png" style="margin-bottom: -50px;"></a></div>
+    </div>
+</div>
+<div class="section mt-5" id="home4">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 hand" ng-click="goToPage('sound-design')">
+                    <div class="lore4 p-3" style="background-image: url(images/home41.png)"><h2
+                            class="orange-text mt-5 pt-3  font-weight-bold">music</h2><h4
+                            class="orange-text middle  font-weight-bold">and</h4>
+                        <h3 class="orange-text  font-weight-bold">sounds</h3>
+                        <p>Sound design has always been a big part of Warcraft Universe. It helped bring players closer
+                            to the stories this world had to offer and enhanced the experience its players had. For that
+                            reason, we aim to keep up with this tradition and provide our players with excellent sound
+                            design to match the new content we provide.</p></div>
+                </div>
+                <div class="col-lg-4 hand" ng-click="goToPage('new-factions-and-quests')">
+                    <div class="lore4 p-3" style="background-image: url(images/home42.png)"><h2
+                            class="orange-text mt-5 pt-3  font-weight-bold">lore</h2><h4
+                            class="orange-text middle font-weight-bold">and</h4>
+                        <h3 class="orange-text font-weight-bold">factions</h3>
+                        <p>Whether you are a seasoned adventurer or a new one, Mysteries of Azeroth brings with it a ton
+                            of new content for everyone to enjoy. Journey across Azeroth and encounter numerous new
+                            factions, locations and characters.</p></div>
+                </div>
+                <div class="col-lg-4 hand" ng-click="goToPage('new-locations-and-maps')">
+                    <div class="lore4 p-3" style="background-image: url(images/home43.png)"><h2
+                            class="orange-text mt-5 pt-3 font-weight-bold">zones</h2><h4
+                            class="orange-text middle font-weight-bold">and</h4>
+                        <h3 class="orange-text font-weight-bold">maps</h3>
+                        <p>Azeroth is a mysterious, beautiful, and dangerous place. While some of its inhabitants prefer
+                            to stay in the warmth and safety of their cities, others seek glory, knowledge, and riches
+                            still hidden around the world. The new expansion Mysteries of Azeroth brings a ton of new
+                            areas and locations to explore for the eager adventurers.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mt-5" id="home5">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row ml-0 mr-0">
+                <div class="col-lg-6 p-5 hand" ng-click="goToPage('class-race-combinations')"><h2 style="color: white;">
+                    new class & race</h2>
+                    <h2 class="orange-text font-weight-bold">combinations</h2><img src="images/footerline.png"
+                                                                                   class="mt-3 mb-4 w-100" id="home-footerline">
+                    <p>While beautiful, no one can deny that Azeroth is a dangerous place. To rise above the challenges
+                        they face, the heroes of Azeroth found new ways to succeed.</p>
+                    <ul>
+                        <li>Trained by their other kin the Orcs learned how to wield the arts of the arcane.</li>
+                        <li>Uncovering the lost texts the Dwarvish mages reconnected with their titanic roots.</li>
+                        <li>Armed with the experiences from their past lives, the Forsaken once again seek to improve
+                            their hunting and survival skills.
+                        </li>
+                        <li>By using their ingenuity, the Gnomes found new ways to surpass other races. With their new
+                            devices, the Gnomish hunters managed to bend even the mightiest of beasts to their will.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mt-5" id="home6" style="background-image:url(images/boat.png)">
+    <div class="container">
+        <div class="row"><div class="col-lg-6"></div><div class="col-lg-6" id="new-transport"><h1 class="orange-text">New</h1>
+                <h1 class="orange-text">Transport</h1>
+                <p class="mt-3 w-75">By creating new transport routes and flight paths, the Horde and Alliance can now
+                    access even the farthest corners of the world. Including those undeservedly forgotten.</p><BR><BR><a
+                        ng-click="goToPage('additional-transport-routes')"><img src="images/transportsbutton.png"> </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" id="home7" style="margin-top: -100px;">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row" id="box3">
+                <div class="col-lg-6 smallBox hand" id="sb3" ng-click="goToPage('survival-and-gardening')">
+                    <div class="inner p-5">
+                        <div class="image"></div>
+                        <h4>new profession</h4><h4 class="orange-text">survival</h4>
+                        <p class="mt-5"><BR>Ah, the great outdoors! Make yourself at home with a camping tent, warm up
+                            with a cozy campfire and enjoy fishing on a sturdy fishing boat, with bonuses on top.
+                            Collect new seeds from around the world and tend to your own crops and reap the rewards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 smallBox hand" id="sb4" ng-click="goToPage('seasonal-events')">
+                    <div class="inner p-5">
+                        <div class="image"></div>
+                        <h4>Exciting seasonal</h4><h4 class="orange-text">events</h4>
+                        <p class="mt-5"><BR>Whether you like spending summer days on the beach parties in Tanaris or
+                            enjoying cold yet cozy holidays in Winter Veil Vale, there is always something to do for
+                            everyone!</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mt-5" id="home8">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 hand" ng-click="goToPage('items-and-recipes')">
+                    <div class="lore4 p-3 pt-5" style="background-image: url(images/items.png)"><h2
+                            class="orange-text mt-5 font-weight-bold">items</h2><h4
+                            class="orange-text middle font-weight-bold">and</h4>
+                        <h3 class="orange-text font-weight-bold">recipes</h3>
+                        <p>Uncover new treasures and lost recipes scattered around the world, defeat powerful foes or
+                            earn the favor of different quartermasters to earn their boons.</p></div>
+                </div>
+                <div class="col-lg-4 hand" ng-click="goToPage('raids-and-dungeons')">
+                    <div class="lore4 p-3 pt-5" style="background-image: url(images/raids.png)"><h2
+                            class="orange-text mt-5 font-weight-bold">raids</h2><h4
+                            class="orange-text middle font-weight-bold">and</h4>
+                        <h3 class="orange-text font-weight-bold">dungeons</h3>
+                        <p>From the depths of Karazhan Crypt to the corrupted wilds of Crescent Grove, new foes arise to
+                            threaten the world. Only by the combined might of the brave adventures do residents of
+                            Azeroth stand a chance.</p></div>
+                </div>
+                <div class="col-lg-4 hand" ng-click="goToPage('player-versus-player-content')">
+                    <div class="lore4 p-3 pt-5" style="background-image: url(images/arena.png)"><h2
+                            class="orange-text mt-5 font-weight-bold">arena</h2><h4
+                            class="orange-text middle font-weight-bold">and</h4>
+                        <h3 class="orange-text font-weight-bold">battlegrounds</h3>
+                        <p>From the sands of the Blood Ring to the timeless conflicts of Sunnyglade Valley, there are
+                            many opportunities to earn fame and glory for your faction.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mt-3 mb-5" id="home9">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10" id="main-video">
+
+                        <turtle-video-embed id="'62844b89'"></turtle-video-embed>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" id="home10" style="margin-top: 0">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row ml-0 mr-0">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6 p-5 hand" ng-click="goToPage('guild-banks')"><h2 class="orange-text">Guild
+                    Vaults</h2><img src="images/footerline.png" class="mt-4 mb-4 w-100">
+                    <p class="w-75">Are you tired of stashing away your guild's goodies on your alts? By paying a hefty
+                        sum of gold, you can unlock the Guild Vault to store all your valuables. And if that is not
+                        enough, you can always pay extra gold from either the guild vault or your own pockets for
+                        additional tabs. Personalize your vault by adding icons to the tabs, limiting the number of
+                        items you take daily and which guilds ranks can access them.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mt-5 mb-5" id="home11">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 hand" ng-click="goToPage('character-customizations')"><h2 class="orange-text">New
+                    CHARACTER</h2>
+                    <h2 class="orange-text">CUSTOMIZATIONS</h2>
+                    <p class="mt-4 w-75">With new hair colors, skin paints and colors its never been easier to make your
+                        character truly yours.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mt-5 mb-5" id="home12">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="cow"></div>
+                    <div class="p-5 ml-7"><h4>New Player</h4>
+                        <h3 class="orange-text font-weight-bold">Spells & Talents</h3><img src="images/footerline.png"
+                                                                                           class="mt-3 mb-4 w-100">
+                        <p class="w-75">Old dogs can learn new tricks after all! Discover fresh playstyles and spells to
+                            defeat your foes and experience a number of improved and polished specializations.</p></div>
+                </div>
+                <div class="col-lg-6 cow2 hand" ng-click="goToPage('client-interface-improvements')">
+                    <div class="p-5"><h4>Client interface</h4>
+                        <h3 class="orange-text font-weight-bold">Improvements</h3>
+                        <ul>
+                            <li>Extended Quest Log</li>
+                            <li>XP gain toggle on player's portrait</li>
+                            <li>Looking for Players (without teleport) in-built addon</li>
+                            <li>Battleground Finder on the minimap</li>
+                        </ul>
+                        <BR><BR></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mt-5" id="home13">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 hand" ng-click="goToPage('pets-and-mounts')"><h2 class="orange-text">New pets &
+                    mounts</h2>
+                    <p class="mt-4">From cute critters to valiant steeds and whirring shredders there is a new companian
+                        for everyone, now safely stored in your personal pets and mounts tabs found in your
+                        spellbook.</p><br><a ng-click="goToPage('pets-and-mounts')"><img
+                            src="images/buttonpets.png"></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" id="home14">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 hand" ng-click="goToPage('achievement-titles')">
+                    <div class="titles"></div>
+                    <div class="p-5"><h4>New feature</h4>
+                        <h3 class="orange-text  font-weight-bold">Player Titles</h3><img src="images/footerline.png"
+                                                                                         class="mt-3 mb-4 w-75">
+                        <p style="width: 70%;">Show off your outstanding accomplishments with a title granted to you by
+                            wielding legendary items or accomplishing extreme feats:</p>
+                        <ul>
+                            <li>Immortal</li>
+                            <li>Sulfuron Champion</li>
+                            <li>Stormwielder</li>
+                            <li>Guardian of Tirisfal</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 cow2 hand" ng-click="goToPage('transmogrification')">
+                    <div class="transmog"></div>
+                    <div class="p-5"><h4>New feature</h4>
+                        <h3 class="orange-text  font-weight-bold">transmogrification</h3><img
+                                src="images/footerline.png" class="mt-3 mb-4 w-75">
+                        <p class="w-50">Complete repeatable quests and defeat powerful foes to earn Fashion Tokens and
+                            change your gear looks to your desire! Some restrictions apply.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section pb-5" id="teamQuotes">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="p-5" style="background-image: url(images/icon_star.png)"><h3 class="orange-text">
+                        Torta</h3>
+                        <p class="tDate">Server Development</p>
+                        <hr>
+                        <p>Turtle WoW proves that a single Vanilla WoW realm can last throughout the years without
+                            losing the player's interest. We are glad to see that the decision to switch to a horizontal
+                            gameplay loop ensured that the players could enjoy both the old well-known content and the
+                            new one simultaneously and helped to connect the generations of players by allowing them to
+                            play together. Our team strives to keep the nostalgia that so many of us have for this game
+                            but, at the same time, breath in a new life that will match the feeling of the excitement we
+                            all had when we first played it and make it mysterious once again.</p></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5" style="background-image: url(images/icon_brush.png)"><h3 class="orange-text">
+                        Shang</h3>
+                        <p class="tDate">Game Design</p>
+                        <hr>
+                        <p>Joined the team with a background of noggit experience, and wanted to keep vanilla wow
+                            ideals, fundamentals and game design as a pillar. My main goal has always been to
+                            reintroduce exploration, and the unknown into old World of Warcraft once again. I sincerely
+                            hope players will enjoy new zones, dungeons, areas, quests, and mysteries added into the
+                            game.</p></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5" style="background-image: url(images/icon_speaker.png)"><h3 class="orange-text">
+                        Charles L</h3>
+                        <p class="tDate">Music & Sound Design</p>
+                        <hr>
+                        <p>The community that Turtle WoW fosters is one of teamwork, passion, and care that is almost
+                            unprecedented in other games past and present. I'm thankful to be working with such
+                            incredible people and extremely humbled by their willingness to let me express myself in my
+                            voicework. For Azeroth!</p></div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="p-5" style="background-image: url(images/icon_star.png)"><h3 class="orange-text">
+                        Gheor</h3>
+                        <p class="tDate">Story & Quests</p>
+                        <hr>
+                        <p>World building and lore has always been my focus. The world must feel alive, the timeline
+                            mustn't feel stagnate! We've lived in this world for several years and one of my dreams was
+                            to go back to the roots of it and experience it all over again but in a different way and I
+                            am sure so do all of you. Come for the nostalgia, stay for the untold story! This is where
+                            we stand, this is who we are, welcome home.</p></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5" style="background-image: url(images/icon_star.png)"><h3 class="orange-text">
+                        Rile</h3>
+                        <p class="tDate">Story & Quests</p>
+                        <hr>
+                        <p>Warcraft universe became part of my life when I first encountered Tides of Darkness. Once I
+                            found out more about Turtle WoW and what this team is trying to achieve, I immediately got
+                            an urge to offer my writing experience to assist them in creating new content that fans of
+                            this franchise will love.</p></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5" style="background-image: url(images/icon_speaker.png)"><h3 class="orange-text">
+                        George Kouroupakis</h3>
+                        <p class="tDate">Music & Sound Design</p>
+                        <hr>
+                        <p>I am glad I have the chance to be part of this community and also part of this passionate
+                            team. Always had a more appreciation for Vanilla WoW than the other expansions and still
+                            believe music in the old-school era was at its best. Hope with my work I succeed travel you
+                            back to the Vanilla music era as a continuity of its own form. See you in Azeroth!</p></div>
+                </div>
+            </div>
+    </div>
+</div>
+<!--
+<div class="section mb-5" id="team">
+    <div class="container-fluid">
+        <div class="container"><img src="images/logoteam.png">
+            <h2 class="orange-text mb-2">Team & Credits</h2>
+            <p class="m-auto w-50">Turtle WoW consists of a passionate and talented contributors working around the
+                clock to provide the best possible content for our community.</p><BR><BR>
+            <div class="row mt-5">
+                <div class="col-lg-3">
+                    <div class="icon crown"></div>
+                    <h3 class="orange-text">Narrative Team</h3>
+                    <p>Shang • Voji</p>
+                    <p>Gheor • Moriena • Rile</p></div>
+                <div class="col-lg-3">
+                    <div class="icon wrench"></div>
+                    <h3 class="orange-text">Server Development</h3>
+                    <p>Jamey • Torta</p>
+                    <p>Brotalnia • Pompa</p>
+                    <p>Dormilon • Letic</p>
+                    <p>Giperion</p></div>
+                <div class="col-lg-3">
+                    <div class="icon cog"></div>
+                    <h3 class="orange-text">Client Development</h3>
+                    <p>Haaxor • Nick </p>
+                    <p>Coldstar • Thimz</p>
+                    <p>Dragunovi • Moon</p></div>
+                <div class="col-lg-3">
+                    <div class="icon globe"></div>
+                    <h3 class="orange-text">3D Modelling</h3>
+                    <p>Werdun • Soft</p>
+                    <p>Mattew • Kamoodle</p>
+                    <p>Tonky • cpt_alex</p>
+                    <p>Godfarther • Regrowth</p>
+                    <p>Ghost</p></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-3">
+                    <div class="icon eye"></div>
+                    <h3 class="orange-text">Quality Assurance</h3>
+                    <p>Muigin • Dated</p>
+                    <p>Goblin Boy</p></div>
+                <div class="col-lg-3">
+                    <div class="icon speaker"></div>
+                    <h3 class="orange-text">Music & Sound Design</h3>
+                    <p>George Kouroupakis • József Kiss</p>
+                    <p>Gabriel Contreras • Ivan Nikolić</p>
+                    <p>Parhaus • Sauli Pulkkinen</p></div>
+                <div class="col-lg-3">
+                    <div class="icon globe"></div>
+                    <h3 class="orange-text">Trailers & Graphic Design</h3>
+                    <p>Willberg • Irim • Xecc</p>
+                    <p>Evgeniy Moiseev • Rennz</p>
+                    <p>Damian • TzuguMMoMo</p>
+                    <p>Haaxor • Creaden</p></div>
+                <div class="col-lg-3">
+                    <div class="icon eye"></div>
+                    <h3 class="orange-text">Community Support</h3>
+                    <p>Cherry Pie • Vanth • Akalix</p>
+                    <p>Sneaky • Shiromare • Lily</p>
+                    <p>Glitter • Agreeable • Happyhorror</p>
+                    <p>SleepTime • Gorgon • poogzmoon</p>
+                    <p>Othram • Juwu • Liovin</p>
+                    <p>Stagolee • Saelas • Pepesmite</p></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-3">
+                    <div class="icon star"></div>
+                    <h3 class="orange-text">Hardware & SysOps</h3>
+                    <p>Bowser • Naravia</p></div>
+                <div class="col-lg-3">
+                    <div class="icon speaker"></div>
+                    <h3 class="orange-text">Voice Acting</h3>
+                    <p>Charles Lobaugh</p>
+                    <p>Bougga Gnema • Silver</p>
+                    <p>Moonlit Majesty • DapperTetu</p></div>
+                <div class="col-lg-3">
+                    <div class="icon globe"></div>
+                    <h3 class="orange-text">Item Design</h3>
+                    <p>Dragunovi</p>
+                    <p>Ques</p>
+                    <p>Crite</p></div>
+                <div class="col-lg-3">
+                    <div class="icon eye"></div>
+                    <h3 class="orange-text">Roleplay Support</h3>
+                    <p>Gheor</p>
+                    <p>Sin'rek</p></div>&lt;!&ndash;         </div>&ndash;&gt;&lt;!&ndash;         <div class="row mt-5">&ndash;&gt;<BR><BR><BR>
+                <div class="col-lg-12 mt-5 mb-5 text-center"><h4 class="orange-text mt-4">Special thanks</h4><img
+                        src="images/footerline.png" class="mt-3 mb-2 w-50">
+                    <p class="mb-5 mt-3">Mosey • Zeo • Tinyfin • Kazgrim • Namreeb • Neto • Five • Hallaven • Cocely •
+                        Mr.Rosh • Sun • Henhouse • Axon • Fiur • Mirajho • Yurrie • Sly • Necropola • VMaNGOS Team • A2
+                        • Bengus • Shagu • Jecs • Cranica • Tor-Tun • Dodgykebaab • Bruce • Intra • Traggyo • Wall •
+                        Glouton • Sleambean • Widogast • Tamamo-no-bae • Xerron<br>And every player who has helped
+                        making Turtle WoW feel like a welcoming and homely place for everyone.</p></div>
+                <BR><BR><BR></div>
+        </div>
+    </div>
+</div>-->

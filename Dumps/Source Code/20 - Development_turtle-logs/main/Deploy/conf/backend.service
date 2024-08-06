@@ -1,0 +1,13 @@
+[Unit]
+Description=RPLL backend application
+
+[Service]
+WorkingDirectory=/home/rpll/
+ExecStart=/home/rpll/backend
+User=rpll
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

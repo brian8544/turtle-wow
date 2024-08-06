@@ -1,0 +1,7 @@
+<div [class.error]="context.severity == 2"
+     [class.info]="context.severity == 3"
+     [class.success]="context.severity == 0"
+     [class.warning]="context.severity == 1">
+    <button (click)="close()" class="closeButton"></button>
+    <div class="messageContainer">{{ context.message | translate:context.message_arguments }}</div>
+</div>

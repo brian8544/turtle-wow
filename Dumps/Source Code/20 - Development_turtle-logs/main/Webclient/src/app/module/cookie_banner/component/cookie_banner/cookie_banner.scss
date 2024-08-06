@@ -1,0 +1,26 @@
+@import "../../../../../styles/global";
+@import "../../../../../styles/shadows";
+
+:host {
+    background: rgba(33, 41, 52, 0.85);
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    overflow-y: scroll;
+}
+
+#cookieContainer {
+    @extend .floatShadow;
+
+    background: #fff;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+    margin: auto;
+}

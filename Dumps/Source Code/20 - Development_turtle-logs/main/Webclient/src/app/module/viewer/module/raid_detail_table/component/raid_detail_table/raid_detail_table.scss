@@ -1,0 +1,31 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: calc(100% - 2px);
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid $tdc_accent;
+
+    .title_bar {
+        $size: 50px - $spacing;
+        width: calc(100% - #{$spacing});
+        height: $size;
+        padding: 0.5 * $spacing 0.5 * $spacing;
+        background: $tdc_darker;
+        border-bottom: 1px solid $tdc_accent;
+
+        SelectInput {
+            float: left;
+            width: min(300px, calc(50% - 0.25 * #{$spacing}));
+
+            &:first-child {
+                margin-right: 0.5 * $spacing;
+            }
+        }
+    }
+}

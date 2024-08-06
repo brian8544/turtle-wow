@@ -1,0 +1,46 @@
+version: '3.6'
+services:
+  mariadb:
+    build: ./Database
+    networks:
+    - rpll
+    volumes:
+    - ./Database/patches:/docker-entrypoint-initdb.d
+    - rpll_mariadb:/var/lib/mysql
+    environment:
+    - MYSQL_USER=mysql
+    - MYSQL_PASSWORD=vagrant
+    - MYSQL_ROOT_PASSWORD=vagrant
+    - TZ=Europe/Berlin
+  backend:
+    depends_on:
+    - mariadb
+    build: ./Backend
+    networks:
+    - rpll
+    volumes:
+    - rpll_backend_storage:/Storage
+    environment:
+    - MYSQL_URL=mysql://root:vagrant@mariadb/main
+    - ROCKET_DATABASES={main={url="mysql://root:vagrant@mariadb/main"}}
+    - SMTP_DNS=127.0.0.1:25
+    - HOST=http://localhost
+    - MODEL_GENERATOR=http://localhost:5555
+    - INSTANCE_STORAGE_PATH=/Storage
+  webclient:
+    build: ./Webclient
+    networks:
+    - rpll
+  reverse-proxy:
+    build: ./ReverseProxy
+    networks:
+    - rpll
+    ports:
+    - '6337:80'
+
+volumes:
+  rpll_mariadb:
+  rpll_backend_storage:
+
+networks:
+  rpll:

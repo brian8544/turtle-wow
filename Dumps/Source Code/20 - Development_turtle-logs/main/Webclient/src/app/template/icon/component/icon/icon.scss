@@ -1,0 +1,14 @@
+@import "src/styles/global";
+
+:host {
+    display: inline-block;
+
+    img {
+        display: block;
+        border-radius: 3px 3px 3px 3px;
+
+        &.border {
+            border: 1px solid $tdc_accent;
+        }
+    }
+}

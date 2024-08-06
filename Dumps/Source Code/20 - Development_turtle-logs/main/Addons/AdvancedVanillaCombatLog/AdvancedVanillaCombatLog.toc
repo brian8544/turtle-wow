@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: AdvancedVanillaCombatLog |cFFFF8080-Shino-|r
+## Notes: Puts additional information into the WoWCombatLog, like armory data and pet ownership.
+## Author: Shino
+## SavedVariablesPerCharacter: RPLL_PlayerInformation
+## DefaultState: enabled
+
+RPLLCollector.xml
+core.lua

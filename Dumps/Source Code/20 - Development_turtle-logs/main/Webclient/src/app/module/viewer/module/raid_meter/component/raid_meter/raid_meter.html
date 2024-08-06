@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="title_bar">
+        <SelectInput [value]="current_selection" (valueChange)="selection_changed($event)"
+                     [options]="options" [themed]="true"></SelectInput>
+        <div class="total_and_dps">
+            <ng-container *ngIf="![19, 20].includes(current_selection)">
+                {{format_number(total.toFixed(1))}}
+            </ng-container>
+            <ng-container *ngIf="show_per_second">
+                ({{format_number(total_ps.toFixed(1))}}/s)
+            </ng-container>
+        </div>
+    </div>
+    <MeterGraph *ngIf="!in_ability_mode || ![11, 12, 13, 14, 15, 16, 17, 18].includes(current_selection)"
+                [bars]="bars"
+                [per_second_duration]="current_attempt_duration"
+                [bar_subjects]="bar_subjects"
+                [bar_tooltips]="bar_tooltips"
+                [show_per_second]="show_per_second"
+                [show_percent]="![19, 20, 29, 30].includes(current_selection)"
+                (bar_clicked)="bar_clicked($event)">
+    </MeterGraph>
+    <DeathsOverview *ngIf="[11, 12].includes(current_selection) && in_ability_mode" [death_overview_rows]="bars"
+                    [abilities]="abilities" [units]="units" [bar_tooltips]="bar_tooltips">
+    </DeathsOverview>
+    <UnAuraOverview *ngIf="[13, 14, 15, 16, 17, 18].includes(current_selection) && in_ability_mode"
+                    [un_aura_overview_rows]="bars" [abilities]="abilities" [units]="units">
+    </UnAuraOverview>
+</div>

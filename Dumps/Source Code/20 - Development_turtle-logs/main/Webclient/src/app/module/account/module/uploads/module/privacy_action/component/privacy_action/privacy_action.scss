@@ -1,0 +1,21 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+    height: 42px;
+    padding-top: 8px;
+}
+
+SelectInput {
+    float: left;
+    width: calc(50% - #{$spacing} / 4);
+
+    &:last-child {
+        margin-left: $spacing / 2;
+    }
+
+    &.full_span {
+        width: 100%;
+        margin-left: 0;
+    }
+}

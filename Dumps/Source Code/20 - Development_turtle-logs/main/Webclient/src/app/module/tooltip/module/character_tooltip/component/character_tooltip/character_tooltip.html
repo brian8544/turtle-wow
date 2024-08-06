@@ -1,0 +1,7 @@
+<div class="tt_row">
+    <span class="hero_class_{{ payload.hero_class_id }}">{{ payload.name + ' ' + payload.level }}</span>
+    <span *ngIf="payload.guild" [class.faction_0]="!payload.faction" [class.tt_faction_1]="payload.faction">{{ ', ' }} {{ '<' + payload.guild.name + '>' }}</span>
+    <span *ngIf="payload.guild">{{ ' - ' + payload.guild.rank }}</span>
+</div>
+<div class="tt_row expansion_{{ payload.expansion_id }}"> {{ payload.server }} </div>
+<div class="tt_row tt_item" *ngFor="let item of payload.items"><span class="item_quality_{{ item.quality }}">[{{ item.name }}]</span></div>

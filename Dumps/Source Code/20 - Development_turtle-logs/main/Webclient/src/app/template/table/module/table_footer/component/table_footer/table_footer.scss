@@ -1,0 +1,24 @@
+@import "./../../../../../../../styles/global";
+
+$rowHeight: 40px;
+
+:host {
+    display: flex;
+    flex-direction: row;
+    height: $rowHeight;
+
+    padding: 0 $spacing / 2;
+    width: calc(100% - #{$spacing});
+
+    background: $tdc_darker;
+    border-radius: 0 0 3px 3px;
+
+    div, FooterPager {
+        height: inherit;
+        line-height: $rowHeight;
+    }
+
+    FooterPager {
+        margin-left: auto;
+    }
+}

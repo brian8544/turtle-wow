@@ -1,0 +1,25 @@
+<div class="container" *ngIf="loot.length > 0">
+    <div class="title_bar">
+        <div class="title">Loot</div>
+        <div class="insignificant_box">
+            <label for="insig_checkbox">Show insignificant items</label>
+            <GeneralInput [htmlId]="'insig_checkbox'" type="checkbox" [(value)]="show_insignificant"></GeneralInput>
+        </div>
+    </div>
+    <ng-container *ngFor="let group of loot; index as i">
+        <div class="boss_container">
+            <div class="boss_title_bar" [class.no_border]="i+1==toggle_decisions.length">
+                <div class="boss_label">{{group.name | async}}</div>
+                <CaretButton (toggled)="toggle_decisions[i]=!toggle_decisions[i]"></CaretButton>
+            </div>
+            <div class="loot_container" *ngIf="toggle_decisions[i]">
+                <ng-container *ngFor="let loot of group.loot_items">
+                    <LootItem *ngIf="show_insignificant || (loot.item | async)?.base.quality > 4" [quality]="(loot.item | async)?.base.quality"
+                              [icon_path]="(loot.item | async)?.base.icon"
+                              [character_id]="loot.receiver_id" [item_id]="(loot.item | async)?.base.id" [amount]="loot.amount"
+                              [character_name]="loot.receiver" [expansion_id]="expansion_id | async"></LootItem>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+</div>

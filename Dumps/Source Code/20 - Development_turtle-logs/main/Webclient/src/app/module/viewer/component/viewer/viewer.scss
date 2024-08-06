@@ -1,0 +1,53 @@
+@import "src/styles/units";
+
+:host {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-self: stretch;
+    width: calc(100% - 6 * #{$spacing});
+    padding: $spacing 3 * $spacing;
+    align-content: flex-start;
+
+    @media (max-width: 658px) {
+        width: 100%;
+        padding: $spacing 0;
+    }
+}
+
+RaidTitleBar, RaidMeter, RaidComposition, RaidLoot, RaidDetailTable, RaidEventLog {
+    z-index: 3;
+}
+
+RaidGraph {
+    z-index: 4;
+}
+
+RaidConfigurationMenu {
+    z-index: 5;
+}
+
+RaidTitleBar, RaidGraph, RaidMeter, RaidComposition, RaidDetailTable, RaidConfigurationMenu {
+    margin-bottom: $spacing;
+}
+
+@media (min-width: 1280px) {
+    RaidMeter, RaidComposition, RaidLoot {
+        width: calc(50% - 0.5 * #{$spacing});
+        float: left;
+    }
+
+    #left_meter, RaidLoot {
+        margin-right: $spacing;
+    }
+}
+
+.hide_loot {
+    width: 0 !important;
+    margin: 0 !important;
+}
+
+.full_width {
+    width: 100% !important;
+}

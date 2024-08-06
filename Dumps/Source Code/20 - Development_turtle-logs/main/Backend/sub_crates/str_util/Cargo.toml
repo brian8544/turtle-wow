@@ -1,0 +1,12 @@
+[package]
+name = "str_util"
+version = "0.1.0"
+authors = ["Tom Dymel <tom@dymel.dev>"]
+
+[dependencies]
+sha3 = "0.10.1"
+rand = "0.8.5"
+rand_distr = "0.4.3"
+
+[dev-dependencies]
+proptest = "0.9.6"

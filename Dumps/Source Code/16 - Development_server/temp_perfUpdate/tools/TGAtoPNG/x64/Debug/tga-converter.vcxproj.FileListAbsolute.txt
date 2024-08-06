@@ -1,0 +1,2 @@
+C:\Users\Torta\Documents\Turtle WoW\Server\tga-converter\x64\Debug\tga-converter.exe
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\x64\Debug\tga-converter.exe

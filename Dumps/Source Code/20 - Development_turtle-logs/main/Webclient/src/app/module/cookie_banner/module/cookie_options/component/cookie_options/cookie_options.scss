@@ -1,0 +1,84 @@
+@import "../../../../../../../styles/global";
+@import "../../../../../../../styles/buttons";
+
+:host {
+    display: block;
+    padding: $spacing 0 $spacing $spacing;
+
+    header {
+        margin-right: $spacing * 1.6;
+        border-bottom: 1px solid $lesser_black;
+
+        .co-title {
+            font-weight: bold;
+            font-size: 24px;
+            padding-bottom: $spacing;
+            line-height: 24px;
+            color: #000;
+        }
+
+        .co-description {
+            padding-bottom: $spacing * 0.5;
+            color: $font_less_important;
+        }
+    }
+
+    section {
+        max-height: 500px;
+        overflow-y: scroll;
+    }
+
+    footer {
+        margin-right: $spacing * 1.6;
+        border-top: 1px solid $lesser_black;
+        padding-top: $spacing * 0.5;
+        text-align: center;
+
+        button {
+            width: calc(33.3% - #{$spacing} * 0.4);
+            margin-right: $spacing * 0.5;
+        }
+
+        button:last-child {
+            margin-right: 0;
+        }
+
+        @media (max-width: 500px) {
+            button {
+                width: 100%;
+                margin: 0 0 $spacing * 0.5 0;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.cookieRowContainer {
+    border: 1px solid $lesser_black;
+    margin: $spacing * 0.5 0 $spacing * 0.5 0;
+    padding: $spacing * 0.5;
+    width: calc(100% - #{$spacing} * 2);
+    overflow: hidden;
+
+    .cr-title {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: $spacing * 0.5;
+
+        div:nth-child(1) {
+            color: $medium_black;
+            font-weight: bold;
+            font-size: 16px;
+            flex: 1;
+        }
+
+        div:nth-child(2) {
+            justify-self: flex-end;
+            color: $highlight;
+            cursor: pointer;
+        }
+    }
+}

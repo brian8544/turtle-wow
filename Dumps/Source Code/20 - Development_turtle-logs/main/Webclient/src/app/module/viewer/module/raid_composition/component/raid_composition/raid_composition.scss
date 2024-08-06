@@ -1,0 +1,123 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: calc(100% - 2px);
+    border: 1px solid $tdc_accent;
+    border-radius: 3px 3px 3px 3px;
+
+    .title_bar {
+        $size: 50px - $spacing;
+        width: calc(100% - #{$spacing});
+        height: $size;
+        background: $tdc_darker;
+        border-bottom: 1px solid $tdc_accent;
+        font-size: 20px;
+        line-height: $size;
+        padding: 0.5 * $spacing 0.5 * $spacing;
+    }
+
+    .role_container {
+        width: 100%;
+
+        .border_none {
+            border: none !important;
+        }
+
+        .role_title_bar {
+            $RTBsize: 25px - 0.25 * $spacing;
+            background-color: $tdc_darker;
+            width: calc(100% - 0.5 * #{$spacing});
+            height: $RTBsize;
+            border-bottom: 1px solid $tdc_accent;
+            padding: 0.25 * $spacing 0.25 * $spacing;
+
+            CaretButton {
+                float: left;
+                height: $RTBsize;
+                width: $RTBsize;
+            }
+
+            .role_label {
+                float:left;
+                height: $RTBsize;
+                width: calc(100% - 2 * #{$RTBsize} - 2px - 0.5 * #{$spacing});
+                font-size: 16px;
+                line-height: $RTBsize - 2px;
+                padding-left: 0.5 * $spacing;
+            }
+
+            .role_icon {
+                float:left;
+                height: $RTBsize;
+                width: $RTBsize + 2px;
+                background-size: 4.25 * $RTBsize 4.25 * $RTBsize;
+                background-repeat: no-repeat;
+                background-image: url("/assets/viewer/roles.png");
+            }
+
+            #role_tank {
+                background-position-x: 2px;
+                background-position-y: -1.2 * $RTBsize;
+            }
+
+            #role_healer {
+                background-position-x: -1.1 * $RTBsize;
+                background-position-y: -1px;
+            }
+
+            #role_dps {
+                background-position-x: -1.1 * $RTBsize;
+                background-position-y: -1.18 * $RTBsize;
+            }
+        }
+
+        .class_container {
+            width: 100%;
+
+            .class_row {
+                $CRsize: 25px;
+                width: calc(100% - #{$CRsize} - 0.25 * #{$spacing});
+                min-height: $CRsize;
+                background-repeat: no-repeat;
+                background-size: $CRsize $CRsize;
+                padding: 0 0 0 $CRsize + 0.25 * $spacing;
+                line-height: $CRsize;
+                border-bottom: 1px solid $tdc_accent;
+
+                &:last-child {
+                    border: none;
+                }
+
+                &[data-hero-class-id="1"] { background-image: url("/assets/wow_hero_classes/c1.png"); }
+                &[data-hero-class-id="2"] { background-image: url("/assets/wow_hero_classes/c2.png"); }
+                &[data-hero-class-id="3"] { background-image: url("/assets/wow_hero_classes/c3.png"); }
+                &[data-hero-class-id="4"] { background-image: url("/assets/wow_hero_classes/c4.png"); }
+                &[data-hero-class-id="5"] { background-image: url("/assets/wow_hero_classes/c5.png"); }
+                &[data-hero-class-id="6"] { background-image: url("/assets/wow_hero_classes/c6.png"); }
+                &[data-hero-class-id="7"] { background-image: url("/assets/wow_hero_classes/c7.png"); }
+                &[data-hero-class-id="8"] { background-image: url("/assets/wow_hero_classes/c8.png"); }
+                &[data-hero-class-id="9"] { background-image: url("/assets/wow_hero_classes/c9.png"); }
+                &[data-hero-class-id="10"] { background-image: url("/assets/wow_hero_classes/c10.png"); }
+                &[data-hero-class-id="11"] { background-image: url("/assets/wow_hero_classes/c11.png"); }
+                &[data-hero-class-id="12"] { background-image: url("/assets/wow_hero_classes/c12.png"); }
+
+                span:after {
+                    content: ", ";
+                }
+
+                span:last-child:after {
+                    content: "";
+                }
+
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../../../../../../styles/global";
+
+:host {
+    display: block;
+
+    ConfirmButton::ng-deep button {
+        background: darken($error, 40%);
+
+        &:hover {
+            background: darken($error, 50%);
+        }
+    }
+}

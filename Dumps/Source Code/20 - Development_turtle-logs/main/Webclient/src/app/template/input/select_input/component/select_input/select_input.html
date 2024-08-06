@@ -1,0 +1,3 @@
+<select #selectInput [value]="value" (change)="value=$event.currentTarget.value" [class.themed]="themed">
+    <option *ngFor="let option of options" [value]="option.value" [selected]="value === option.value">{{ (!!option.label_key.pipe ? (option.label_key | async) : (option.label_key | translate)) }}</option>
+</select>

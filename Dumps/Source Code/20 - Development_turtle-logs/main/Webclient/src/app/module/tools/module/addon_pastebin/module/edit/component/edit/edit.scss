@@ -1,0 +1,30 @@
+@import "src/styles/global";
+@import "src/styles/buttons";
+
+:host {
+    display: block;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.input_row {
+    height: 80px;
+
+    label {
+        display: block;
+        font-size: 20px;
+        width: 100%;
+        line-height: 20px;
+        height: 24px;
+    }
+
+    .save_btn {
+        height: 30px;
+        min-height: 30px;
+        line-height: 30px;
+    }
+}

@@ -1,0 +1,33 @@
+@import "src/styles/units";
+
+:host {
+    h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+RecentRaids, GuildRoster, SpeedKills, SpeedRuns {
+    width: calc(50% - #{$spacing} / 4);
+    float: left;
+}
+
+RecentRaids, SpeedKills {
+    margin-right: 0.5 * $spacing;
+}
+
+SpeedKills, SpeedRuns {
+    margin-top: 0.5 * $spacing;
+}
+
+@media (max-width: 1000px) {
+    RecentRaids, GuildRoster, SpeedKills, SpeedRuns {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    RecentRaids, GuildRoster, SpeedKills {
+        margin-bottom: $spacing * 0.5;
+    }
+}

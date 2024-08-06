@@ -1,0 +1,36 @@
+<header>
+    <div class="co-title">{{ "CookieBanner.options.title" | translate }}</div>
+    <div class="co-description">{{ "CookieBanner.options.description" | translate }}</div>
+</header>
+<section class="cookieTables">
+    <div *ngIf="cookies_third_party.length" class="cookieRowContainer">
+        <div class="cr-title">
+            <div>{{ "CookieBanner.options.vendor.thirdparty" | translate }}</div>
+            <div
+                (click)="accept_all(cookies_third_party)">{{ "CookieBanner.options.vendor.acceptAll" | translate }}</div>
+        </div>
+        <CookieOptionRow *ngFor="let cookie of cookies_third_party" [cookie]="cookie"></CookieOptionRow>
+    </div>
+
+    <div *ngIf="cookies_other.length" class="cookieRowContainer">
+        <div class="cr-title">
+            <div>{{ "CookieBanner.options.vendor.other" | translate }}</div>
+            <div (click)="accept_all(cookies_other)">{{ "CookieBanner.options.vendor.acceptAll" | translate }}</div>
+        </div>
+        <CookieOptionRow *ngFor="let cookie of cookies_other" [cookie]="cookie"></CookieOptionRow>
+    </div>
+
+    <div *ngIf="cookies_necessary.length" class="cookieRowContainer">
+        <div class="cr-title">
+            <div>{{ "CookieBanner.options.vendor.necessary" | translate }}</div>
+        </div>
+        <CookieOptionRow *ngFor="let cookie of cookies_necessary" [cookie]="cookie"></CookieOptionRow>
+    </div>
+</section>
+<footer>
+    <button (click)="emit_show_front()"
+            class="btnNonHighlight">{{ "CookieBanner.options.button.back" | translate }}</button>
+    <button (click)="reject_all()"
+            class="btnNonHighlight">{{ "CookieBanner.options.button.rejectAll" | translate }}</button>
+    <button (click)="emit_save()" class="btnHighlight">{{ "CookieBanner.options.button.save" | translate }}</button>
+</footer>

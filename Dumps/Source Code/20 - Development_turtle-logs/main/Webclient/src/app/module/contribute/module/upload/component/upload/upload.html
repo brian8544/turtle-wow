@@ -1,0 +1,36 @@
+<form (ngSubmit)="upload()" formValid ngNativeValidate [class.hide_upload]="disableSubmit">
+    <div class="row">
+        <div class="col">
+            <label for="server_id">Server</label>
+            <SelectInput id="server_id" [options]="server" [value]="selected_server_id" (valueChange)="selectedServerIdChanges($event)" [themed]="true"></SelectInput>
+        </div>
+    </div>
+    <!--
+    <div class="row">
+        <div class="col">
+            <label for="start_date">Start time</label>
+            <GeneralInput id="start_date" [required]="true" placeholderKey="dd.mm.yy HH:mm AM/PM" [(value)]="selected_start_date"></GeneralInput>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="end_date">End time</label>
+            <GeneralInput id="end_date" [required]="true" placeholderKey="dd.mm.yy HH:mm AM/PM" [(value)]="selected_end_date"></GeneralInput>
+        </div>
+    </div>
+    -->
+    <div class="row">
+        <div class="col">
+            <label for="log">WoWCombatLog.txt zipped</label>
+            <input id="log" #upload_file type="file" accept=".zip" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn btnHighlight" [disabled]="disableSubmit">Upload</button>
+        </div>
+    </div>
+</form>
+<div class="progress_counter" *ngIf="disableSubmit">
+    {{ current_progress }}%
+</div>

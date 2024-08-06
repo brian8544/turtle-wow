@@ -1,0 +1,60 @@
+version: '3.8'
+services:
+  lpcmmariadb:
+    build:
+      context: ./
+      dockerfile: ./Environment/lp_cm_mariadb/Dockerfile
+    restart: on-failure
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.2
+    environment:
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=notSecret
+      - MYSQL_ROOT_PASSWORD=notSecret
+      - TZ=Europe/Berlin
+    volumes:
+      - rpll_mariadb_volume:/var/lib/mysql
+    ports:
+      - "3333:3306"
+  lpcmnginx:
+    depends_on:
+      - lpcmbackend
+    build:
+      context: ./
+      dockerfile: ./Environment/lp_cm_nginx/Dockerfile
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.3
+    ports:
+      - '8880:80'
+  lpcmbackend:
+    depends_on:
+      - lpcmmariadb
+    build:
+      context: ./
+      dockerfile: ./Environment/lp_cm_backend/Dockerfile
+    restart: on-failure
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.4
+    environment:
+      - CHARACTERS_URL=mysql://root:vagrant@172.17.0.1/characters
+      - LP_CONSENT_URL=mysql://root:notSecret@lpcmmariadb/lp_consent
+      - ROCKET_DATABASES={characters={url="mysql://root:vagrant@172.17.0.1/characters"}, lp_consent={url="mysql://root:notSecret@lpcmmariadb/lp_consent"}}
+      - LP_API_TOKEN=df8ee2cf43a8062e238381970f87d07cecddcaf9e38d74a284c66c23a0a06acd0a993119e70a59fbed3c04f0d52f918f6175014d485941769fd6652bb1740339
+      - URL_AUTHORIZATION_ENDPOINT=http://localhost:8001/token_validator
+      - CHARACTER_FETCH_INTERVAL_IN_SEC=60
+      - EXPANSION_ID=2
+      - UID_SALT=SomeSalt
+      - OPT_IN_MODE=false
+
+networks:
+  lp_cm_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.34.0.1/16
+
+volumes:
+  rpll_mariadb_volume:

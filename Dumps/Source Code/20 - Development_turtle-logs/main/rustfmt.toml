@@ -1,0 +1,10 @@
+comment_width = 250
+max_width = 250
+fn_args_layout = "Compressed"
+format_code_in_doc_comments = true
+format_strings = true
+match_block_trailing_comma = true
+newline_style = "Unix"
+reorder_impl_items = true
+where_single_line = true
+wrap_comments = true

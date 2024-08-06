@@ -1,0 +1,8 @@
+<table>
+    <tbody>
+    <tr *ngFor="let entry of pending_observable | async">
+        <td>[{{dateService.toRPLLTimePreciseLong(entry.timestamp)}}]</td>
+        <td>{{entry.event_message | async}}</td>
+    </tr>
+    </tbody>
+</table>

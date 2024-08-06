@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="top_left">{{instance_name | async}} - {{ duration | async }}</div>
+    <div class="top_right">
+        <a class="faction_1" href="/armory/guild/{{ server_name | async }}/{{instance_meta.guild.guild_name}}"
+           *ngIf="instance_meta?.guild" [showTooltip]="{ type: 3, guild_id: instance_meta.guild.guild_id }">{{instance_meta.guild.guild_name}}</a>
+        <span class="faction_1" *ngIf="!instance_meta?.guild">{{ 'Pug Raid' | translate }}</span>
+    </div>
+    <div class="bottom_left">{{ instance_start | async }}</div>
+    <div class="bottom_right expansion_{{expansion | async}}">{{(server_name | async) + " (" + (this.server_patch | async) + ")"}}</div>
+</div>

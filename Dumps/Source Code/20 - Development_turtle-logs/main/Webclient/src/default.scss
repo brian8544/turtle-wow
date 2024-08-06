@@ -1,0 +1,27 @@
+@import "./styles/global.scss";
+@import "./styles/text.scss";
+@import "./styles/loading";
+@import "./styles/flex_basis";
+
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    margin: 0;
+    background: $theme_dominant_color;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover, &:active, &.active {
+        color: $highlight;
+    }
+}

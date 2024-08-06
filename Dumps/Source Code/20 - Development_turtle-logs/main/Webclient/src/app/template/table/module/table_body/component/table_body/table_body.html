@@ -1,0 +1,15 @@
+<ng-container *ngIf="isResponsiveMode">
+    <ResponsiveBodyRow [colTypes]="colTypes" [typeRange]="internalTypeRange"
+                       [responsiveHeadColumns]="responsiveHeadColumns"
+                       [columns]="row.columns" [style.background-color]="row.color"
+                       [et_row_items]="et_row_items"
+                       *ngFor="let row of rows; index as i">
+    </ResponsiveBodyRow>
+</ng-container>
+
+<ng-container *ngIf="!isResponsiveMode">
+    <BodyRow [colTypes]="colTypes" [typeRange]="internalTypeRange" [columns]="row.columns"
+             [style.background-color]="row.color" [et_row_items]="et_row_items"
+             *ngFor="let row of rows">
+    </BodyRow>
+</ng-container>

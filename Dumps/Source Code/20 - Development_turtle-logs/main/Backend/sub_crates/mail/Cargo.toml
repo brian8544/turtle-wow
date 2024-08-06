@@ -1,0 +1,9 @@
+[package]
+name = "mail"
+version = "0.1.0"
+authors = ["Tom Dymel <tom@dymel.dev>"]
+
+[dependencies]
+lettre = "0.9.6"
+lettre_email = "0.9.4"
+dotenv = "0.15.0"

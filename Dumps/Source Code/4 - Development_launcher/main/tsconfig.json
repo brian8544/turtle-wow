@@ -1,0 +1,16 @@
+{
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.node.json" },
+		{ "path": "./tsconfig.web.json" }
+	],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~common/*": ["./src/common/*"],
+			"~main/*": ["./src/main/*"],
+			"~renderer/*": ["./src/renderer/*"],
+			"~build/*": ["./build/*"]
+		}
+	}
+}

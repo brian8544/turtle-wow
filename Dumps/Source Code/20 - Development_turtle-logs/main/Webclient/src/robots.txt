@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /i18n/
+Sitemap: https://legacyplayers.com/sitemap.xml

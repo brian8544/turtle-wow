@@ -1,0 +1,2 @@
+<div class="details" style="background-image: url('/assets/wow_icon/{{(spell | async).base.icon}}.jpg')">{{details.label}} ({{details.id}})</div>
+<div class="interval_bar" *ngFor="let interval of intervals" style="width: {{get_interval_width(interval)}}%; left: {{get_left_position(interval)}}%"></div>

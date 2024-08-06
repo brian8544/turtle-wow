@@ -1,0 +1,26 @@
+@import "src/styles/colors";
+@import "src/styles/units";
+
+input, select {
+    background: #ffffff;
+    display: block;
+    color: #000;
+    border: none;
+    padding: $spacing * 0.5;
+    border-radius: 4px 4px 4px 4px;
+    width: calc(100% - #{$spacing});
+}
+
+select option {
+    color: #000 !important;
+}
+
+select.themed {
+    background: $tdc_darker;
+    color: $font_default;
+    border: 1px solid $tdc_accent;
+
+    option {
+        background: #ffffff;
+    }
+}

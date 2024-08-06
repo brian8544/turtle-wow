@@ -1,0 +1,45 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+    min-height: 50px;
+    width: 100%;
+    overflow: hidden;
+
+    * {
+        display: block;
+        float: left;
+        height: 50px;
+    }
+
+    span {
+        line-height: 50px;
+        font-size: 20px;
+        margin-left: $spacing / 2;
+    }
+
+    .progress {
+        height: 25px;
+        width: 100%;
+        margin-top: $spacing / 2;
+        background-color: #9c9c9c;
+        border-radius: 3px 3px 3px 3px;
+        position: relative;
+    }
+    .progress:before {
+        content: attr(data-label);
+        font-size: 16px;
+        position: absolute;
+        text-align: center;
+        top: 3px;
+        left: 0;
+        right: 0;
+    }
+    .progress .value {
+        background-color: $highlight;
+        border-radius: 3px 3px 3px 3px;
+        display: inline-block;
+        height: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,1210 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Turtle WoW API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/characters/population": {
+            "get": {
+                "tags": [
+                    "Character"
+                ],
+                "summary": "Get population statistics",
+                "operationId": "getPopulationStatistics",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "week_name": {
+                                                "type": "string"
+                                            },
+                                            "year": {
+                                                "type": "integer"
+                                            },
+                                            "week": {
+                                                "type": "integer"
+                                            },
+                                            "m_a": {
+                                                "type": "integer"
+                                            },
+                                            "m_h": {
+                                                "type": "integer"
+                                            },
+                                            "date_nice": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        },
+        "/api/characters/online": {
+            "get": {
+                "tags": [
+                    "Character"
+                ],
+                "summary": "Get online characters",
+                "description": "Returns a list of online characters excluding GM accounts",
+                "operationId": "getOnlineCharacters",
+                "parameters": [
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "Number of results per page",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 15
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "current_page": {
+                                            "description": "Current page number",
+                                            "type": "integer"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "guid": {
+                                                        "description": "Character's GUID",
+                                                        "type": "integer"
+                                                    },
+                                                    "name": {
+                                                        "description": "Character's name",
+                                                        "type": "string"
+                                                    },
+                                                    "race": {
+                                                        "description": "Character's race",
+                                                        "type": "integer"
+                                                    },
+                                                    "class": {
+                                                        "description": "Character's class",
+                                                        "type": "integer"
+                                                    },
+                                                    "gender": {
+                                                        "description": "Character's gender",
+                                                        "type": "integer"
+                                                    },
+                                                    "level": {
+                                                        "description": "Character's level",
+                                                        "type": "integer"
+                                                    },
+                                                    "map": {
+                                                        "description": "Character's map",
+                                                        "type": "integer"
+                                                    },
+                                                    "zone": {
+                                                        "description": "Character's zone",
+                                                        "type": "integer"
+                                                    },
+                                                    "guildId": {
+                                                        "description": "Character's guild ID",
+                                                        "type": "integer"
+                                                    },
+                                                    "guildName": {
+                                                        "description": "Character's guild name",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "first_page_url": {
+                                            "description": "URL of the first page",
+                                            "type": "string"
+                                        },
+                                        "from": {
+                                            "description": "Index of the first item in the current page",
+                                            "type": "integer"
+                                        },
+                                        "last_page": {
+                                            "description": "Last page number",
+                                            "type": "integer"
+                                        },
+                                        "last_page_url": {
+                                            "description": "URL of the last page",
+                                            "type": "string"
+                                        },
+                                        "links": {
+                                            "description": "Pagination links",
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "url": {
+                                                        "description": "URL of the page",
+                                                        "type": "string"
+                                                    },
+                                                    "label": {
+                                                        "description": "Label of the link",
+                                                        "type": "string"
+                                                    },
+                                                    "active": {
+                                                        "description": "Is the link active",
+                                                        "type": "boolean"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "next_page_url": {
+                                            "description": "URL of the next page",
+                                            "type": "string"
+                                        },
+                                        "path": {
+                                            "description": "URL path of the current page",
+                                            "type": "string"
+                                        },
+                                        "per_page": {
+                                            "description": "Number of results per page",
+                                            "type": "integer"
+                                        },
+                                        "prev_page_url": {
+                                            "description": "URL of the previous page",
+                                            "type": "string"
+                                        },
+                                        "to": {
+                                            "description": "Index of the last item in the current page",
+                                            "type": "integer"
+                                        },
+                                        "total": {
+                                            "description": "Total number of results",
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        },
+        "/api/characters/stats": {
+            "get": {
+                "tags": [
+                    "Character"
+                ],
+                "summary": "Get character statistics",
+                "description": "Returns statistics for characters",
+                "operationId": "getStats",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "current_page": {
+                                            "description": "Current page number",
+                                            "type": "integer"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "race": {
+                                                        "description": "Character's race",
+                                                        "type": "integer"
+                                                    },
+                                                    "class": {
+                                                        "description": "Character's class",
+                                                        "type": "integer"
+                                                    },
+                                                    "level": {
+                                                        "description": "Character's level",
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "first_page_url": {
+                                            "description": "URL of the first page",
+                                            "type": "string"
+                                        },
+                                        "from": {
+                                            "description": "Index of the first item in the current page",
+                                            "type": "integer"
+                                        },
+                                        "last_page": {
+                                            "description": "Last page number",
+                                            "type": "integer"
+                                        },
+                                        "last_page_url": {
+                                            "description": "URL of the last page",
+                                            "type": "string"
+                                        },
+                                        "links": {
+                                            "description": "Pagination links",
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "url": {
+                                                        "description": "URL of the page",
+                                                        "type": "string"
+                                                    },
+                                                    "label": {
+                                                        "description": "Label of the link",
+                                                        "type": "string"
+                                                    },
+                                                    "active": {
+                                                        "description": "Is the link active",
+                                                        "type": "boolean"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "next_page_url": {
+                                            "description": "URL of the next page",
+                                            "type": "string"
+                                        },
+                                        "path": {
+                                            "description": "URL path of the current page",
+                                            "type": "string"
+                                        },
+                                        "per_page": {
+                                            "description": "Number of results per page",
+                                            "type": "integer"
+                                        },
+                                        "prev_page_url": {
+                                            "description": "URL of the previous page",
+                                            "type": "string"
+                                        },
+                                        "to": {
+                                            "description": "Index of the last item in the current page",
+                                            "type": "integer"
+                                        },
+                                        "total": {
+                                            "description": "Total number of results",
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        },
+        "/api/characters/hardcore/stats": {
+            "get": {
+                "tags": [
+                    "Character"
+                ],
+                "summary": "Get character hardcore stats",
+                "description": "Retrieve character hardcore stats with filtering and pagination.",
+                "operationId": "getCharacterHardcoreStats",
+                "parameters": [
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "Number of results per page",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 15
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "mortality_status",
+                        "in": "query",
+                        "description": "Filter by character's hardcore status (1, 2, or 3)",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer",
+                                "enum": [
+                                    1,
+                                    2,
+                                    3
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "current_page": {
+                                            "description": "Current page number",
+                                            "type": "integer"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "Character's name",
+                                                        "type": "string"
+                                                    },
+                                                    "race": {
+                                                        "description": "Character's race",
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "Human",
+                                                            "Orc",
+                                                            "Dwarf",
+                                                            "Nightelf",
+                                                            "Undead",
+                                                            "Tauren",
+                                                            "Gnome",
+                                                            "Troll",
+                                                            "Goblin",
+                                                            "Highelf"
+                                                        ]
+                                                    },
+                                                    "class": {
+                                                        "description": "Character's class",
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "Warrior",
+                                                            "Paladin",
+                                                            "Hunter",
+                                                            "Rogue",
+                                                            "Priest",
+                                                            "Shaman",
+                                                            "Mage",
+                                                            "Warlock",
+                                                            "Druid"
+                                                        ]
+                                                    },
+                                                    "gender": {
+                                                        "description": "Character's gender",
+                                                        "type": "string"
+                                                    },
+                                                    "mortality_status": {
+                                                        "description": "Character's hardcore status",
+                                                        "type": "integer"
+                                                    },
+                                                    "level": {
+                                                        "description": "Character's level",
+                                                        "type": "integer"
+                                                    },
+                                                    "percent": {
+                                                        "description": "Character's level percent",
+                                                        "type": "number"
+                                                    },
+                                                    "logout_time": {
+                                                        "description": "Character's logout last time",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "first_page_url": {
+                                            "description": "URL of the first page",
+                                            "type": "string"
+                                        },
+                                        "from": {
+                                            "description": "Index of the first item in the current page",
+                                            "type": "integer"
+                                        },
+                                        "last_page": {
+                                            "description": "Last page number",
+                                            "type": "integer"
+                                        },
+                                        "last_page_url": {
+                                            "description": "URL of the last page",
+                                            "type": "string"
+                                        },
+                                        "links": {
+                                            "description": "Pagination links",
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "url": {
+                                                        "description": "URL of the page",
+                                                        "type": "string"
+                                                    },
+                                                    "label": {
+                                                        "description": "Label of the link",
+                                                        "type": "string"
+                                                    },
+                                                    "active": {
+                                                        "description": "Is the link active",
+                                                        "type": "boolean"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "next_page_url": {
+                                            "description": "URL of the next page",
+                                            "type": "string"
+                                        },
+                                        "path": {
+                                            "description": "URL path of the current page",
+                                            "type": "string"
+                                        },
+                                        "per_page": {
+                                            "description": "Number of results per page",
+                                            "type": "integer"
+                                        },
+                                        "prev_page_url": {
+                                            "description": "URL of the previous page",
+                                            "type": "string"
+                                        },
+                                        "to": {
+                                            "description": "Index of the last item in the current page",
+                                            "type": "integer"
+                                        },
+                                        "total": {
+                                            "description": "Total number of results",
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Account": {
+                "title": "Account",
+                "description": "Account model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "username": {
+                        "type": "string"
+                    },
+                    "sha_pass_hash": {
+                        "type": "string"
+                    },
+                    "rank": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sessionkey": {
+                        "type": "string"
+                    },
+                    "v": {
+                        "type": "string"
+                    },
+                    "s": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "joindate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "tfa_verif": {
+                        "type": "string"
+                    },
+                    "last_ip": {
+                        "type": "string"
+                    },
+                    "last_local_ip": {
+                        "type": "string"
+                    },
+                    "failed_logins": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "locked": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "last_login": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "online": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "expansion": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "mutetime": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "mutereason": {
+                        "type": "string"
+                    },
+                    "muteby": {
+                        "type": "string"
+                    },
+                    "locale": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "os": {
+                        "type": "string"
+                    },
+                    "platform": {
+                        "type": "string"
+                    },
+                    "current_realm": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "banned": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "flags": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "security": {
+                        "type": "string"
+                    },
+                    "pass_verif": {
+                        "type": "string"
+                    },
+                    "email_verif": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "forum_username": {
+                        "type": "string"
+                    },
+                    "token_key": {
+                        "type": "string"
+                    },
+                    "email_keyword": {
+                        "type": "string"
+                    },
+                    "email_status": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "email_sub": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "comments": {
+                        "type": "string"
+                    },
+                    "geolock_pin": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "type": "object"
+            },
+            "AccountAccess": {
+                "title": "AccountAccess",
+                "description": "AccountAccess model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "gmlevel": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "RealmID": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "StatisticsOnline": {
+                "title": "StatisticsOnline",
+                "description": "StatisticsOnline model",
+                "properties": {
+                    "guid": {
+                        "type": "integer"
+                    },
+                    "online": {
+                        "type": "integer"
+                    },
+                    "online_alli": {
+                        "type": "integer"
+                    },
+                    "online_horde": {
+                        "type": "integer"
+                    },
+                    "connections": {
+                        "type": "integer"
+                    },
+                    "realm": {
+                        "type": "integer"
+                    },
+                    "date": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "Character": {
+                "title": "Character",
+                "description": "Character model",
+                "properties": {
+                    "guid": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "account": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "race": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "class": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "gender": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "level": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "xp": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "money": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "playerBytes": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "playerBytes2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "playerFlags": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "position_x": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "position_y": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "position_z": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "map": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "orientation": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "taximask": {
+                        "type": "string"
+                    },
+                    "online": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "cinematic": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "totaltime": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "leveltime": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "logout_time": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "is_logout_resting": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "rest_bonus": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "resettalents_multiplier": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "resettalents_time": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "trans_x": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "trans_y": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "trans_z": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "trans_o": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "transguid": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "extra_flags": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "stable_slots": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "at_login": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "zone": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "death_expire_time": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "taxi_path": {
+                        "type": "string"
+                    },
+                    "honorRankPoints": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "honorHighestRank": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "honorStanding": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "honorLastWeekHK": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "honorLastWeekCP": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "honorStoredHK": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "honorStoredDK": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "watchedFaction": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "drunk": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "health": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "power1": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "power2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "power3": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "power4": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "power5": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "exploredZones": {
+                        "type": "string"
+                    },
+                    "equipmentCache": {
+                        "type": "string"
+                    },
+                    "ammoId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "actionBars": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "deleteInfos_Account": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "deleteInfos_Name": {
+                        "type": "string"
+                    },
+                    "deleteDate": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "area": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "world_phase_mask": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "customFlags": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "city_protector": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "regexFilterCount": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "isGMCharacter": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "ignore_titles": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "mortality_status": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "total_deaths": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "xp_gain": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "type": "object"
+            },
+            "GmTicket": {
+                "title": "GmTicket",
+                "description": "GmTicket model",
+                "properties": {
+                    "ticketId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "guid": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "createTime": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "mapId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "posX": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "posY": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "posZ": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "lastModifiedTime": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "closedBy": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "assignedTo": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "comment": {
+                        "type": "string"
+                    },
+                    "response": {
+                        "type": "string"
+                    },
+                    "completed": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "escalated": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "viewed": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "haveTicket": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "ticketType": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "securityNeeded": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "type": "object"
+            },
+            "Guild": {
+                "title": "Guild",
+                "description": "Guild model",
+                "properties": {
+                    "guildid": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "leaderguid": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "EmblemStyle": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "EmblemColor": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "BorderStyle": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "BorderColor": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "BackgroundColor": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "info": {
+                        "type": "string"
+                    },
+                    "motd": {
+                        "type": "string"
+                    },
+                    "createdate": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "type": "object"
+            },
+            "GuildMember": {
+                "title": "GuildMember",
+                "description": "GuildMember model",
+                "properties": {
+                    "guildid": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "guid": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "rank": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "pnote": {
+                        "type": "string"
+                    },
+                    "offnote": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "HardcoreDeath": {
+                "title": "HardcoreDeath",
+                "description": "HardcoreDeath model",
+                "properties": {
+                    "lowGuid": {
+                        "description": "Character's low GUID",
+                        "type": "integer"
+                    },
+                    "race": {
+                        "description": "Character's race",
+                        "type": "integer"
+                    },
+                    "class": {
+                        "description": "Character's class",
+                        "type": "integer"
+                    },
+                    "level": {
+                        "description": "Character's level",
+                        "type": "integer"
+                    },
+                    "attackerEntry": {
+                        "description": "Attacker's entry",
+                        "type": "integer"
+                    },
+                    "position_x": {
+                        "description": "Position X",
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "position_y": {
+                        "description": "Position Y",
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "position_z": {
+                        "description": "Position Z",
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "mapId": {
+                        "description": "Map ID",
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "PlayerXpForLevel": {
+                "title": "PlayerXpForLevel",
+                "description": "PlayerXpForLevel model",
+                "properties": {
+                    "lvl": {
+                        "description": "Character's level",
+                        "type": "integer"
+                    },
+                    "xp_for_next_level": {
+                        "description": "Experience points required for the next level",
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}

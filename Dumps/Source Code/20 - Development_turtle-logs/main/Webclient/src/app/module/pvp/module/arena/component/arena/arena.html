@@ -1,0 +1,14 @@
+<Table [bodyRows]="body_columns" [headColumns]="header_columns" [clientSide]="clientSide"
+       [responsiveHeadColumns]="responsiveHeadColumns" [responsiveModeWidthInPx]="responsiveModeWidthInPx"
+       [numItems]="num_characters" unique_id="pvp_arena_search"
+       (filterOrPageChanged)="onFilter($event)" (share)="tinyUrlService.set_table_filter(4, $event)"
+       [et_row_items]="[instance_map, undefined, undefined, undefined, undefined, undefined, detailed_ts, detailed_ts]">
+</Table>
+
+<ng-template #instance_map let-specification="specification" let-content="content">
+    <InstanceMap [map_icon]="specification.args.icon" [instance_label]="content" [html_href]="'/viewer/' + specification.args.instance_meta_id + '/base'"></InstanceMap>
+</ng-template>
+
+<ng-template #detailed_ts let-specification="specification" let-content="content">
+    {{specification.content.length === 0 ? '-' : dateService.toRPLLLongDate(specification.content) }}
+</ng-template>

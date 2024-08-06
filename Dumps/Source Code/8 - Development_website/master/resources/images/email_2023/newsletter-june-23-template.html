@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings
+            xmlns:o="urn:schemas-microsoft-com:office:office"
+          >
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+        </xml>
+      </noscript>
+      <style>
+        td,
+        th,
+        div,
+        p,
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: 'Segoe UI', sans-serif;
+          mso-line-height-rule: exactly;
+        }
+      </style>
+    <![endif]-->
+  <title>Patch 1.16.6: Beyond the Gilneas Wall</title>
+  <style>
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important;
+      }
+    }
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.25rem !important;
+        line-height: 1.75rem !important;
+      }
+    }
+    h3 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      line-height: 1.75rem;
+      color: #FFF;
+      margin: 0px 0px 1rem;
+    }
+    @media (max-width: 600px) {
+      h3 {
+        font-size: 1.125rem !important;
+        line-height: 1.5rem !important;
+      }
+    }
+    @media (max-width: 600px) {
+      h4 {
+        font-size: 1rem !important;
+        line-height: 1.25rem !important;
+      }
+    }
+    h5 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      line-height: 1.25rem;
+      color: #FFF;
+    }
+    @media (max-width: 600px) {
+      h5 {
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+      }
+    }
+    h6 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      line-height: 1.25rem;
+      color: #FFF;
+    }
+    @media (max-width: 600px) {
+      h6 {
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+      }
+    }
+    blockquote p {
+      margin: 0px;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: #5E5B55;
+    }
+    hr {
+      height: 1px;
+      border-width: 0px;
+      background-color: rgb(94 91 85 / 0.4);
+      color: rgb(94 91 85 / 0.4);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    pre {
+      margin-bottom: 1.5rem;
+      overflow: auto;
+      white-space: pre;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      text-align: left;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #929391;
+      hyphens: none;
+      tab-size: 2;
+      word-break: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+    }
+    :not(pre) > code {
+      border-radius: 0.25rem;
+      padding: 0.125rem 0.375rem;
+      white-space: normal;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      border: 1px solid rgb(94 91 85 / 0.4);
+      background-color: rgb(24 20 18 / 0.4);
+      color: #9E9783;
+    }
+    .icons:hover {
+      opacity: 1;
+    }
+    @media (max-width: 600px) {
+      .sm-px-4 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0px; width: 100%; background-color: #100d0c; padding: 0px; -webkit-font-smoothing: antialiased; word-break: break-word">
+  <div style="display: none">
+    We are thrilled to announce that the development of Patch 1.16.6 is progressing at full speed.
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847; </div>
+  <div align="center" role="article" aria-roledescription="email" lang="en" class="sm-px-4" aria-label="Patch 1.16.6: Beyond the Gilneas Wall" style="background-color: #100d0c; background-image: url(https://turtle-wow.org/email-assets/page_background.png); background-size: contain; background-position: top; background-repeat: no-repeat">
+    <div role="separator" style="line-height: 40px">&zwj;</div>
+    <div style="text-align: center">
+      <img src="https://turtle-wow.org/email-assets/logo_team.png" alt="Turtle WoW" style="max-width: 100%; vertical-align: middle; border: 0">
+    </div>
+    <div role="separator" style="line-height: 40px">&zwj;</div>
+    <table style="font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" cellpadding="0" cellspacing="0" role="presentation">
+      <tr>
+        <td style="width: 800px; max-width: 100%">
+          <table style="width: 100%; border: 1px solid rgb(94 91 85 / 0.4); background-color: rgb(24 20 18 / 0.4); padding: 1rem; box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+              <td class="sm-px-4" style="max-width: 0rem; padding-left: 2rem; padding-right: 2rem">
+                <h1 style="font-size: 1.875rem; text-transform: uppercase; line-height: 2.25rem; color: #FFF">Patch 1.16.6: Beyond the Gilneas Wall</h1>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem">Hello everyone! We are thrilled to announce that the development of Patch 1.16.6 is progressing at full speed. In case you missed our recent update on Discord, here's a quick recap of what you can expect from the upcoming content:</p>
+                <ol style="line-height: 1.5rem; color: #929391">
+                  <li><strong>New titles and challenges:</strong> Vagrant's Endeavor and <a href="https://forum.turtle-wow.org/viewtopic.php?t=7491" style="color: #FB8A4C; text-decoration: underline">Inferno Mode</a>.</li>
+                  <li><strong>New race and class combinations:</strong> Human Hunter and Troll Warlock.</li>
+                  <li><strong>New end-game content:</strong> Lower Karazhan Halls (level 60 raid) and Emerald Sanctum (level 60 raid).</li>
+                  <li><strong>New levleing zones and quests:</strong> Gilneas, Hyjal, and Gnomeregan Reclamation Facility.</li>
+                  <li><strong>New rare monsters in the open world.</strong></li>
+                  <li><strong>New transport and flight paths.</strong></li>
+                  <li><strong>New dungeon:</strong> Gilneas City.</li>
+                </ol>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">Stay tuned for more details about the upcoming patch. Please visit our <a href="https://forum.turtle-wow.org/viewtopic.php?t=5391" style="color: #FB8A4C; text-decoration: underline;">work-in-progress changelog page</a> to watch the trailers and read more details about the upcoming content!</p>
+                <h2 style="font-size: 1.5rem; text-transform: uppercase; line-height: 2rem; color: #FFF">7100+ players online</h2>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">We're also happy to announce that we've hit yet another milestone in Turtle WoW's history - 7100+ players online simultaneously. We would like to welcome each and every one of you for many adventures to come!</p>
+                <h2 style="font-size: 1.5rem; text-transform: uppercase; line-height: 2rem; color: #FFF">AI VoiceOver for Vanilla WoW</h2>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">Exciting news! The AI VoiceOver Addon for the WoW Vanilla beta release is here! Big thanks to MrThinger for making this happen! You can <a href="https://github.com/mrthinger/wow-voiceover/releases/latest" style="color: #FB8A4C; text-decoration: underline;">download it here</a> and check out <a href="https://www.youtube.com/watch?v=-uNsFkRNZg8" style="color: #FB8A4C; text-decoration: underline;">this video</a> to see how it works.</p>
+                <h2 style="font-size: 1.5rem; text-transform: uppercase; line-height: 2rem; color: #FFF">Zone music &amp; ambience</h2>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">While 1.16.6 is on the horizon, we would like to provide some details about our music crafting team :) George Kouroupakis has composed several soundtracks for this patch, including the Emerald Sanctum — the official soundtrack for our new raid in 1.16.6, and Inferior Numbers — soundtracks for our new Gnome Hub, the &quot;Gnomegeran Reclamation Facility.&quot; Additionally, József Kiss (formerly known as TU:RUL) has also contributed music for this update. He has composed Spectral Symphony, which features soundtracks for our upcoming raid, Karazhan!</p>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">You can listen to their latest and upcoming releases on our music profiles on YouTube, Spotify, Apple Music, and Deezer.</p>
+                <h2 style="font-size: 1.5rem; text-transform: uppercase; line-height: 2rem; color: #FFF">Fighting a good fight...</h2>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">As you may already know, we heavily monitor all gold transactions so we'd like to provide you some numbers regarding our fight against any form of RMT, botting, and unfair play in order to provide you with a clean and bot-free environment. In the last 60 days...</p>
+                <ul style="line-height: 1.5rem; color: #929391;">
+                  <li><strong>~400</strong> gold-selling services advertisers have been banned.</li>
+                  <li><strong>~350</strong> accounts related to gold-selling services (mules, banks...) have been banned.</li>
+                  <li><strong>~400</strong> accounts of leveling bots have been banned.</li>
+                  <li><strong>~150</strong> accounts of cheaters have been banned.</li>
+                  <li><strong>~250</strong> player accounts that bought gold have been temporarily banned (and non-legit gold removed from their characters).</li>
+                </ul>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">Please don't support individuals that are actively harming our server, the gold they offer comes in most cases from stolen player accounts. Be aware that if you are involved in these activities your account will be automatically flagged and eventually your ban will come.</p>
+                <h2 style="font-size: 1.5rem; text-transform: uppercase; line-height: 2rem; color: #FFF">Returning to Youtube</h2>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">We are pleased to announce that Turtle WoW is now fully back on YouTube! We kindly request your support by subscribing to <a href="https://www.youtube.com/@turtlewow" style="color: #FB8A4C; text-decoration: underline;">our YouTube channel</a> and helping us establish a stronger presence on this platform.</p>
+                <h4 style="font-size: 1.125rem; text-transform: uppercase; line-height: 1.5rem; color: #FFF">Podcast about storytelling and game design!</h4>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;">For those of you interested in the lore and stories of our expansion, Mysteries of Azeroth. Check out <a href="https://www.youtube.com/live/1XwkqUV_D_Q" style="color: #FB8A4C; text-decoration: underline;">DesignerDave's podcast</a>, featuring our writers as special guests! While the WoW fan-based development encompasses a wide range of aspects, such as emulators, addons, and game modifications, this talk is focused on fan-written stories.</p>
+                <blockquote style="border-left: 4px solid #403561; margin: 0px 0px 2rem; padding-left: 1rem">
+                  <p style="margin: 0px; font-size: 1.125rem; line-height: 1.75rem; color: #5E5B55;">Dave was a Warcraft III development team member, where he focused on campaign stories and level design. As we aim to maintain the core essence of the previous Warcraft games in our modification of WoW, we hope this discussion will be of great interest to you.</p>
+                </blockquote>
+                <p style="font-size: 1rem; line-height: 1.5rem; color: #929391; margin: 0px 0px 2rem;"><strong>The more exciting news are coming in the future, stand by! 💚</strong></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr role="separator">
+        <td style="line-height: 2.5rem">&zwj;</td>
+      </tr>
+      <tr>
+        <td class="sm-px-4" style="padding-left: 2rem; padding-right: 2rem">
+          <table align="center" style="margin-bottom: 0.75rem" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/@turtlewow" target="_blank" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6"><img src="https://turtle-wow.org/email-assets/icon_youtube.png" alt="Youtube" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://discord.com/invite/mBGxmHy" target="_blank" class="icons" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_discord.png" alt="Discord" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://www.instagram.com/turtlewowteam/" target="_blank" class="icons" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_instagram.png" alt="Instagram" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://twitter.com/turtlewowteam" target="_blank" class="icons" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_twitter.png" alt="Twitter" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://github.com/slowtorta/turtlewow-bug-tracker/issues" target="_blank" class="icons" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_github.png" alt="GitHub" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://soundcloud.com/turtlewow" target="_blank" class="icons" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_soundcloud.png" alt="SoundCloud" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://turtle-wow.org/#/watch" target="_blank" class="icons" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_turtletv.png" alt="TurtleTV" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://open.spotify.com/artist/3QLoyBdT2ZlirCtRPhdOcp" target="_blank" class="icons" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_spotify.png" alt="Spotify" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+              <td>
+                <a href="https://music.apple.com/us/artist/turtle-wow/1649088037" target="_blank" class="icons apple" style="color: #FB8A4C; text-decoration: underline; padding-left: 0.5rem; padding-right: 0.5rem; opacity: 0.6;">
+                  <img src="https://turtle-wow.org/email-assets/icon_apple.png" alt="AppleMusic" style="max-width: 100%; vertical-align: middle; border: 0;"></a>
+              </td>
+            </tr>
+          </table>
+          <div style="text-align: center;">
+            <p style="font-size: 1rem; line-height: 1.5rem; margin: 0px 0px 2rem; color: #FFF; opacity: 0.6">
+              Mysteries of Azeroth — is a story expansion made by the Turtle
+              WoW Team, inspired by the Warcraft universe of Blizzard
+              Entertainment.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div role="separator" style="line-height: 40px">&zwj;</div>
+  </div>
+</body>
+</html>

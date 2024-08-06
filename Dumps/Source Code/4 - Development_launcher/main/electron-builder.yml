@@ -1,0 +1,27 @@
+productName: TurtleLauncher
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+asarUnpack:
+  - resources/**
+npmRebuild: false
+electronLanguages: en
+win:
+  artifactName: ${productName}.${ext}
+  target:
+    - portable
+    - nsis
+nsis:
+  artifactName: ${productName}_Installer.${ext}
+  uninstallDisplayName: ${productName}
+  oneClick: false
+  removeDefaultUninstallWelcomePage: true
+publish:
+  - provider: generic
+    url: 'TODO: Add URL'

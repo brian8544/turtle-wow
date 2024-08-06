@@ -1,0 +1,29 @@
+<h1>Write addon paste</h1>
+<div class="input_row">
+    <label for="title">Title:</label>
+    <GeneralInput type="text" id="title" placeholderKey="The title of your paste..." [(value)]="current_title"></GeneralInput>
+</div>
+<div class="input_row">
+    <label for="addon_name">Addon name:</label>
+    <GeneralInput type="text" id="addon_name" placeholderKey="Name the addon of this paste..." [(value)]="current_addon_name"></GeneralInput>
+</div>
+<div class="input_row">
+    <label for="expansion">Expansion:</label>
+    <SelectInput id="expansion" [options]="expansions" [(value)]="selected_expansion"></SelectInput>
+</div>
+<div class="input_row">
+    <label for="description">Description:</label>
+    <GeneralInput type="text" id="description" placeholderKey="Shortly describe the paste..." [(value)]="current_desc"></GeneralInput>
+</div>
+<div class="input_row">
+    <label for="tags">Tags:</label>
+    <MultiSelect id="tags" [dropdownList]="tags" [(selectedItems)]="selected_tags"
+                 placeholder="Select tags..."></MultiSelect>
+</div>
+<div class="input_row">
+    <label for="content">Content:</label>
+    <GeneralInput type="text" id="content" placeholderKey="Paste here the content that you want to share..." [(value)]="current_content"></GeneralInput>
+</div>
+<div class="input_row">
+    <div class="save_btn btn btnHighlight" (click)="save_paste()">Save</div>
+</div>

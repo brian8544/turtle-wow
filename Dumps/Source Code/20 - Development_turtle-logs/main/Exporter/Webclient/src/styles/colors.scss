@@ -1,0 +1,88 @@
+$lesser_black: rgba(0, 0, 0, 0.2);
+$medium_black: rgba(0, 0, 0, 0.5);
+
+$font_title: #212934;
+$font_less_important: #141e23;
+$font_default: #e1f2f5;
+
+$highlight: #368bd6;
+$non_highlight: #eee;
+$less_important: darken($highlight, 30%);
+
+$theme_dominant_color: #303030;
+$tdc_darker: darken($theme_dominant_color, 3%);
+$tdc_accent: lighten($theme_dominant_color, 10%);
+
+$success: darken(#DFF2BF, 20%);
+$warning: darken(#FEEFB3, 20%);
+$error: darken(#FFD2D2, 20%);
+$information: darken(#BDE5F8, 20%);
+
+$alliance: #372727;
+$horde: #272f37;
+
+$expansions: (
+    1: $font_default, // vanilla
+    2: green, // tbc
+    3: lighten(blue, 10%) // wotlk
+);
+
+$factions: (
+    0: lighten(#272f37, 20%), // horde
+    1: lighten(#372727, 20%) // alliance
+);
+
+$hero_classes: (
+    1: #C79C6E, // warrior
+    2: #F58CBA, // paladin
+    3: #ABD473, // hunter
+    4: #FFF569, // rogue
+    5: #FFFFFF, // priest
+    6: #C41F3B, // death knight
+    7: #0070DE, // shaman
+    8: #69CCF0, // mage
+    9: #9482C9, // warlock
+    10: #C41F3B, // monk
+    11: #FF7D0A, // druid
+    12: #A330C9, // demon hunter
+);
+
+$qualities: (
+    0: #ffd100, // Itemset yellow
+    1: #9d9d9d, // Poor
+    2: #e8e8e8, // Common
+    3: #1eff00, // Uncommon
+    4: #0070ff, // Rare
+    5: #a335ee, // Epic
+    6: #ff8000, // Legendary
+    7: #e6cc90, // Artifact
+    8: #00ccff, // Heirloom
+);
+
+@each $name, $value in $expansions {
+    .expansion_#{$name} {
+        color: $value;
+    }
+}
+
+@each $name, $value in $factions {
+    .faction_#{$name} {
+        color: $value;
+    }
+}
+
+@each $name, $value in $hero_classes {
+    .hero_class_#{$name} {
+        color: $value;
+    }
+}
+
+@each $name, $value in $qualities {
+    .item_quality_#{$name} {
+        color: $value;
+    }
+
+    .item_quality_border_#{$name} {
+        border: 1px solid $value;
+    }
+}

@@ -1,0 +1,39 @@
+<table>
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Ability</td>
+            <td>Hit</td>
+            <td>Miss</td>
+            <td>Amount</td>
+            <td>%</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of payload; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{row[0]}}</td>
+            <td>{{get_num_hits(row[2])}}</td>
+            <td>{{get_num_misses(row[2])}}</td>
+            <td>{{format_number(row[1])}}</td>
+            <td>{{get_percent(row[1])}}%</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<table>
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Actor</td>
+            <td>Amount</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of target_summary; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{row[0]}}</td>
+            <td>{{format_number(row[1])}}</td>
+        </tr>
+    </tbody>
+</table>

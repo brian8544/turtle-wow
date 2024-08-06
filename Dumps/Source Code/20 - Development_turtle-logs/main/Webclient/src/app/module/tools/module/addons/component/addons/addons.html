@@ -1,0 +1,8 @@
+<Table [bodyRows]="current_addons" [headColumns]="header_columns" [clientSide]="clientSide"
+       [responsiveHeadColumns]="responsiveHeadColumns" [responsiveModeWidthInPx]="responsiveModeWidthInPx"
+       [numItems]="total_num" unique_id="addon_search" [et_row_items]="[addon_name, undefined, undefined]">
+</Table>
+
+<ng-template #addon_name let-specification="specification" let-content="content">
+    <a href="https://legacyplayers.com/Addons/{{expansions.get(specification.args.expansion_id)}}/{{specification.args.url_name}}.zip">{{ content }}</a>
+</ng-template>

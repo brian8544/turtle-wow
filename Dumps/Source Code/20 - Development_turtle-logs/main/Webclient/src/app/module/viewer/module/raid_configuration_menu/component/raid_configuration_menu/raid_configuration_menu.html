@@ -1,0 +1,60 @@
+<div class="left_nav_bar">
+    <button class="menu_button base" routerLink="../base" routerLinkActive="active"><span>Base</span></button>
+    <button class="menu_button ability" routerLink="../ability" routerLinkActive="active"><span>Ability</span></button>
+    <button class="menu_button detail" routerLink="../detail" routerLinkActive="active"><span>Detail</span></button>
+    <button class="menu_button event_log" routerLink="../event_log/by_actor" routerLinkActive="active"><span>Log</span>
+    </button>
+    <ExportViewer></ExportViewer>
+    <a href="/uploads/upload_{{ upload_id }}.zip">
+        <svg id="download_button" enable-background="new 0 0 36 36" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff">
+            <g>
+                <rect fill="none" height="36" width="36"/></g><g>
+                <path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z"/>
+            </g>
+        </svg>
+    </a>
+</div>
+
+<div class="container">
+    <!--
+    <button (click)="closed = !closed" class="toggle_button">
+        <svg aria-hidden="true" height="32" version="1.1" viewBox="0 0 12 16" width="24">
+            <path
+                d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"
+                fill-rule="evenodd"></path>
+        </svg>
+    </button>
+    -->
+
+    <!-- All actual buttons that are supposed to do something -->
+    <MultiSelect placeholder="Segments" [(selectedItems)]="selected_items_segments"
+                 [enableCheckAll]="true" [additional_button]="segments_additional_button"
+                 [dropdownList]="list_items_segments"
+                 (items_changed_by_action)="on_segment_selection_updated()" [showTooltip]="{ type: 999, payload: 'Select attempts' }"></MultiSelect>
+    <MultiSelect placeholder="Sources" [(selectedItems)]="selected_items_sources"
+                 [dropdownList]="list_items_sources" (items_changed_by_action)="on_source_selection_updated()"
+                 [enableCheckAll]="true" [additional_button]="sources_additional_button" [showTooltip]="{ type: 999, payload: 'Select sources' }"></MultiSelect>
+    <MultiSelect placeholder="Targets" [(selectedItems)]="selected_items_targets"
+                 [dropdownList]="list_items_targets" (items_changed_by_action)="on_target_selection_updated()"
+                 [enableCheckAll]="true" [additional_button]="sources_additional_button" [showTooltip]="{ type: 999, payload: 'Select targets' }"></MultiSelect>
+    <MultiSelect placeholder="Abilities" [(selectedItems)]="selected_items_abilities"
+                 [dropdownList]="list_items_abilities" [showTooltip]="{ type: 999, payload: 'Select abilities' }"
+                 [enableCheckAll]="true" (items_changed_by_action)="on_ability_selection_updated()"></MultiSelect>
+    <MultiThumbInput label_left="Start" label_right="End"
+                     [reference_start]="time_slider_reference_start" [reference_end]="time_slider_reference_end"
+                     [reference_slider0]="time_slider_start_reference"
+                     [reference_slider1]="time_slider_end_reference"
+                     [reference_label_function]="multi_thumb_label_function"
+                     [reference_label_args]="dateService"
+                     (slider0_output)="timeBoundariesUpdated(true, $event)"
+                     (slider1_output)="timeBoundariesUpdated(false, $event)"
+                     [showTooltip]="{ type: 999, payload: 'Restrict the attempt time boundaries' }"></MultiThumbInput>
+    <RaidBrowser></RaidBrowser>
+
+    <!--
+    <MultiSelect placeholder="Options"></MultiSelect>
+
+    <GeneralInput placeholderKey="Export Link..."></GeneralInput>
+    <button class="replay_btn btnHighlight" disabled>Replay</button>
+    -->
+</div>

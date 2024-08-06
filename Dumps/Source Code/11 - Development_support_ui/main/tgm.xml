@@ -1,0 +1,1058 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+    <Script file="tgm.lua"/>
+
+    <Frame name="TGMTicketTemplate" virtual="true">
+        <Size x="517" y="24"/>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture name="$parentSelected" file="Interface\Tooltips\UI-Tooltip-Background">
+                    <Anchors>
+                        <Anchor point="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="0" y="0"/>
+                            </Offset>
+                        </Anchor>
+                        <Anchor point="BOTTOMRIGHT">
+                            <Offset>
+                                <AbsDimension x="0" y="0"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString name="$parentTicketIndex" inherits="GameFontNormal" text="1" justifyH="LEFT"
+                hidden="true">
+                    <Size>
+                        <AbsDimension x="30" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="LEFT">
+                            <Offset>
+                                <AbsDimension x="5" y="0"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentPlayerName" inherits="GameFontNormal" text="Playername" justifyH="LEFT">
+                    <Size>
+                        <AbsDimension x="100" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="LEFT">
+                            <Offset>
+                                <AbsDimension x="20" y="0"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentTicketTextShort" inherits="GameFontHighlight"
+                            text="Gm please help me, youre my only hope" justifyH="LEFT">
+                    <Size>
+                        <AbsDimension x="300" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="LEFT">
+                            <Offset>
+                                <AbsDimension x="100" y="0"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Button name="$parentAssignButton" inherits="UIPanelButtonTemplate2" text="Assign">
+                <Size>
+                    <AbsDimension x="100" y="18"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-5" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        TGM_AssignTicket(this:GetID())
+                    </OnClick>
+                </Scripts>
+            </Button>
+            <Button name="$parentManageTicket" inherits="UIPanelButtonTemplate" text="">
+                <NormalTexture file=""/>
+                <PushedTexture file=""/>
+                <Size>
+                    <AbsDimension x="380" y="18"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        TGM_ManageTicket(this:GetID())
+                    </OnClick>
+                </Scripts>
+            </Button>
+        </Frames>
+    </Frame>
+
+    <Button name="TGM_CloseButtonTemplate" inherits="UIPanelCloseButton" virtual="true">
+        <NormalTexture file="Interface\addons\gm-addon\images\ui-panel-minimizebutton-up"/>
+        <HighlightTexture file="Interface\addons\gm-addon\images\ui-panel-minimizebutton-highlight" alphaMode="ADD"/>
+        <PushedTexture file="Interface\addons\gm-addon\images\ui-panel-minimizebutton-down"/>
+    </Button>
+
+    <Frame name="TGM_ResponseTemplate" virtual="true">
+        <Size>
+            <AbsDimension x="170" y="18"/>
+        </Size>
+        <Frames>
+
+            <Button name="$parentButton" inherits="UIPanelButtonTemplate2">
+                <Size>
+                    <AbsDimension x="190" y="18"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="0" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        TGM_UseTemplate()
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentEditButton" inherits="UIPanelButtonTemplate2" text="E">
+                <Size>
+                    <AbsDimension x="32" y="18"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentButton" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="0" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        TGM_EditTemplate()
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentDeleteButton" inherits="UIPanelButtonTemplate2" text="X">
+                <Size>
+                    <AbsDimension x="32" y="18"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentEditButton" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="0" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        TGM_DeleteTemplate()
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+        </Frames>
+    </Frame>
+
+    <Frame name="TGM" hidden="true" toplevel="true"
+           parent="UIParent" movable="true" enableMouse="true" resizable="false">
+        <Size>
+            <AbsDimension x="1000" y="540"/>
+        </Size>
+        <Backdrop bgFile="interface\addons\gm-addon\images\ui-background-marble"
+                  edgeFile="Interface\addons\gm-addon\images\border-main"
+                  tile="true">
+<!--                        <Color r="0.02" g="0.14" b="0.08" a="0.8"/>-->
+<!--            <Color r="1" g="1" b="1" a="0.8"/>-->
+            <EdgeSize>
+                <AbsValue val="32"/>
+            </EdgeSize>
+            <TileSize>
+                <AbsValue val="256"/>
+            </TileSize>
+            <BackgroundInsets>
+                <AbsInset left="5" right="5" top="24" bottom="5"/>
+            </BackgroundInsets>
+        </Backdrop>
+        <Anchors>
+            <Anchor point="CENTER">
+                <Offset>
+                    <AbsDimension x="0" y="0"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture name="$parentTopGlyph" file="Interface\addons\gm-addon\images\top-glyph">
+                    <Size x="128" y="20"/>
+                    <Anchors>
+                        <Anchor point="TOP">
+                            <Offset x="0" y="15"/>
+                        </Anchor>
+                    </Anchors>
+                    <TexCoords left="0" right="1" top="0.375" bottom="1"/>
+                </Texture>
+                <Texture name="$parentTitleBackground" file="Interface\addons\gm-addon\images\background-main">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset x="4" y="-7"/>
+                        </Anchor>
+                        <Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT">
+                            <Offset x="-4" y="-25"/>
+                        </Anchor>
+                    </Anchors>
+                    <TexCoords left="0" right="2" top="0" bottom="0.375"/>
+                </Texture>
+
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString name="$parentTitle" inherits="GameFontHighlight" text="Turtle WoW GM Addon (v1.0.7)">
+                    <Anchors>
+                        <Anchor point="TOP">
+                            <Offset>
+                                <AbsDimension x="0" y="-9"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Frames>
+
+            <Button name="TGM_Minimap" movable="true" parent="UIParent" enableMouse="true" toplevel="true"
+                    frameStrata="LOW" enableMouseWheel="true">
+                <Size x="33" y="33"/>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="Minimap" relativePoint="LEFT"/>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture file="Interface\Icons\inv_misc_food_53">
+                            <Size x="21" y="21"/>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset x="7" y="-6"/>
+                                </Anchor>
+                            </Anchors>
+                            <TexCoords left="0.075" right="0.925" top="0.075" bottom="0.925"/>
+                        </Texture>
+                    </Layer>
+                    <Layer level="OVERLAY">
+                        <Texture file="Interface\Minimap\MiniMap-TrackingBorder">
+                            <Size x="56" y="56"/>
+                            <Anchors>
+                                <Anchor point="TOPLEFT"/>
+                            </Anchors>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+                <Scripts>
+                    <OnLoad>
+                        this:RegisterForClicks("RightButtonUp")
+                        this:RegisterForDrag("LeftButton")
+                        this:SetClampedToScreen(true)
+                    </OnLoad>
+                    <OnDragStart>
+                        this:LockHighlight()
+                        this:StartMoving()
+                    </OnDragStart>
+                    <OnDragStop>
+                        this:UnlockHighlight()
+                        this:StopMovingOrSizing()
+                    </OnDragStop>
+                    <OnEnter>
+                        GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT", 0, 0)
+                        GameTooltip:AddLine('Turtle GM', 1, 1, 1)
+                        GameTooltip:AddLine('Left-click to toggle frame')
+                        GameTooltip:AddLine('Scroll to change frame size')
+                        GameTooltip:AddLine('Shift-Scroll to reset frame size')
+                        GameTooltip:AddLine('CTRL-Scroll to change frame alpha')
+                        GameTooltip:Show()
+                    </OnEnter>
+                    <OnLeave>
+                        GameTooltip:Hide()
+                    </OnLeave>
+                    <OnMouseUp>
+                        if arg1 == "LeftButton" then
+                        TGM_Toggle()
+                        end
+                    </OnMouseUp>
+                    <OnMouseWheel>
+                        TGM_OnMouseWheel()
+                    </OnMouseWheel>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentCloseButton" inherits="TGM_CloseButtonTemplate">
+                <Size>
+                    <AbsDimension x="22" y="22"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPRIGHT">
+                        <Offset>
+                            <AbsDimension x="-3" y="-4"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </Button>
+
+            <Frame name="$parentRightPanel">
+                <Size x="540" y="522"/>
+                <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+                          tile="false">
+                    <Color r="0.02" g="0.04" b="0.08" a="0.4"/>
+                    <BackgroundInsets>
+                        <AbsInset left="11" right="12" top="12" bottom="11"/>
+                    </BackgroundInsets>
+                    <TileSize>
+                        <AbsValue val="32"/>
+                    </TileSize>
+                </Backdrop>
+                <Anchors>
+                    <Anchor point="TOPRIGHT">
+                        <Offset>
+                            <AbsDimension x="0" y="-20"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentTicketCount" inherits="GameFontNormal" text="Tickets (23)"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="100" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset>
+                                        <AbsDimension x="20" y="-10"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+                <Frames>
+                    <Button name="$parentRefreshButton" inherits="UIPanelButtonTemplate2" text="Refresh">
+                        <NormalTexture/>
+                        <PushedTexture/>
+                        <HighlightTexture/>
+                        <Size>
+                            <AbsDimension x="180" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT">
+                                <Offset>
+                                    <AbsDimension x="-12" y="-15"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_refreshTickets()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <ScrollFrame name="$parentScrollFrame" inherits="UIPanelScrollFrameTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-45"/>
+                                </Offset>
+                            </Anchor>
+                            <Anchor point="BOTTOMRIGHT">
+                                <Offset>
+                                    <AbsDimension x="0" y="10"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <ScrollChild>
+                            <Frame name="$parentChild">
+                                <Anchors>
+                                    <Anchor point="TOPLEFT">
+                                        <Offset>
+                                            <AbsDimension x="0" y="0"/>
+                                        </Offset>
+                                    </Anchor>
+                                </Anchors>
+                                <Size>
+                                    <AbsDimension x="540" y="1"/>
+                                </Size>
+                                <Frames>
+                                </Frames>
+                            </Frame>
+                        </ScrollChild>
+                    </ScrollFrame>
+
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentTemplatesPanel" hidden="true">
+                <Size x="540" y="522"/>
+                <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+                          tile="false">
+                    <Color r="0.02" g="0.04" b="0.08" a="0.4"/>
+                    <BackgroundInsets>
+                        <AbsInset left="11" right="12" top="12" bottom="11"/>
+                    </BackgroundInsets>
+                    <TileSize>
+                        <AbsValue val="32"/>
+                    </TileSize>
+                </Backdrop>
+                <Anchors>
+                    <Anchor point="TOPRIGHT">
+                        <Offset>
+                            <AbsDimension x="0" y="-20"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Frames>
+                    <Button name="$parentCloseButton" inherits="UIPanelButtonTemplate2" text="Close">
+                        <Size>
+                            <AbsDimension x="190" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="BOTTOMRIGHT">
+                                <Offset>
+                                    <AbsDimension x="-20" y="20"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_CloseTemplates()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentLeftPanelResponse">
+                <Size x="455" y="250"/>
+
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-30"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentTitle" inherits="GameFontNormal" text="Ticket "
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="400" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset>
+                                        <AbsDimension x="5" y="5"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString inherits="GameFontNormal" text="Write a reply:"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset>
+                                        <AbsDimension x="5" y="-205"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentPlayerName" inherits="GameFontNormal" text="Name: |cffffffffPenus"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset>
+                                        <AbsDimension x="5" y="-335"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentAccount" inherits="GameFontNormal" text="Account: |cffffffffPENUS"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentPlayerName" relativePoint="BOTTOMLEFT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentIP" inherits="GameFontNormal" text="IP: |cffffffff1.1.1.1"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentAccount" relativePoint="BOTTOMLEFT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentLevel" inherits="GameFontNormal" text="Level: |cffffffff1"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentIP" relativePoint="BOTTOMLEFT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentForum" inherits="GameFontNormal" text="Forum username: |cffffffffpenus"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentLevel" relativePoint="BOTTOMLEFT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentEmail" inherits="GameFontNormal" text="E-mail: |cffffffffa@b.com"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentForum" relativePoint="BOTTOMLEFT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+
+
+                        <FontString name="$parentOnlineStatus" inherits="GameFontNormal" text="Online Status: |cffffffffpenus"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentEmail" relativePoint="BOTTOMLEFT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+
+                        <FontString name="$parentRaceClass" inherits="GameFontNormal" text="Race/Class: |cffffffffpenus"
+                                    justifyH="LEFT">
+                            <Size>
+                                <AbsDimension x="300" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentOnlineStatus" relativePoint="BOTTOMLEFT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+
+                    </Layer>
+                </Layers>
+                <Frames>
+
+                    <Button name="$parentTemplates" inherits="UIPanelButtonTemplate2" text="Templates"
+                    hidden="false">
+                        <Size>
+                            <AbsDimension x="80" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-205"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_ToggleTemplates()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <Button name="$parentSaveTemplate" inherits="UIPanelButtonTemplate2" text="Save Template"
+                            hidden="false">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT">
+                                <Offset>
+                                    <AbsDimension x="-80" y="-205"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_SaveTemplate()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <ScrollFrame name="$parentTicketScrollFrame" inherits="UIPanelScrollFrameTemplate">
+                        <Size>
+                            <AbsDimension x="425" y="185"/>
+                        </Size>
+<!--                        <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="false">-->
+<!--                            <BackgroundInsets>-->
+<!--                                <AbsInset left="-5" right="-25" top="-5" bottom="-5"/>-->
+<!--                            </BackgroundInsets>-->
+<!--                            <Color r="0" g="0" b="0" a="0.7"/>-->
+<!--                        </Backdrop>-->
+                        <Anchors>
+                            <Anchor point="TOPLEFT">
+                                <Offset>
+                                    <AbsDimension x="5" y="-18"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <ScrollChild>
+                            <EditBox name="$parentTicketBox" multiLine="true" letters="1000" autoFocus="false">
+                                <Size>
+                                    <AbsDimension x="425" y="185"/>
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="TOPLEFT">
+                                        <Offset>
+                                            <AbsDimension x="0" y="0"/>
+                                        </Offset>
+                                    </Anchor>
+                                </Anchors>
+                                <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="false">
+                                    <BackgroundInsets>
+                                        <AbsInset left="-5" right="-25" top="-5" bottom="-5"/>
+                                    </BackgroundInsets>
+                                    <Color r="0" g="0" b="0" a="0.7"/>
+                                </Backdrop>
+                                <Scripts>
+                                    <OnClick>
+                                        this:SetFocus()
+                                    </OnClick>
+                                    <OnTextChanged>
+                                        ScrollingEdit_OnTextChanged();
+                                    </OnTextChanged>
+                                    <OnCursorChanged>
+                                        ScrollingEdit_OnCursorChanged(arg1, arg2, arg3, arg4);
+                                    </OnCursorChanged>
+                                    <OnUpdate>
+                                        ScrollingEdit_OnUpdate();
+                                    </OnUpdate>
+                                    <OnEscapePressed>
+                                        this:ClearFocus()
+                                    </OnEscapePressed>
+                                </Scripts>
+                                <FontString inherits="ChatFontNormal"/>
+                            </EditBox>
+                        </ScrollChild>
+                    </ScrollFrame>
+
+                    <ScrollFrame name="$parentReplyScrollFrame" inherits="UIPanelScrollFrameTemplate">
+                        <Size>
+                            <AbsDimension x="425" y="70"/>
+                        </Size>
+<!--                        <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"-->
+<!--                                  tile="false">-->
+<!--                            <BackgroundInsets>-->
+<!--                                <AbsInset left="-5" right="-25" top="-5" bottom="-5"/>-->
+<!--                            </BackgroundInsets>-->
+<!--                        </Backdrop>-->
+                        <Anchors>
+                            <Anchor point="TOPLEFT">
+                                <Offset>
+                                    <AbsDimension x="5" y="-230"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <ScrollChild>
+                            <EditBox name="$parentReplyBox" multiLine="true" letters="218" autoFocus="false">
+                                <Size>
+                                    <AbsDimension x="425" y="185"/>
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="TOPLEFT">
+                                        <Offset>
+                                            <AbsDimension x="0" y="0"/>
+                                        </Offset>
+                                    </Anchor>
+                                </Anchors>
+                                <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="false">
+                                    <BackgroundInsets>
+                                        <AbsInset left="-5" right="-25" top="-5" bottom="-5"/>
+                                    </BackgroundInsets>
+                                    <Color r="0" g="0" b="0" a="0.7"/>
+                                </Backdrop>
+                                <Scripts>
+                                    <OnClick>
+                                        this:SetFocus()
+                                    </OnClick>
+                                    <OnTextChanged>
+                                        ScrollingEdit_OnTextChanged();
+                                    </OnTextChanged>
+                                    <OnCursorChanged>
+                                        ScrollingEdit_OnCursorChanged(arg1, arg2, arg3, arg4);
+                                    </OnCursorChanged>
+                                    <OnUpdate>
+                                        ScrollingEdit_OnUpdate();
+                                    </OnUpdate>
+                                    <OnEscapePressed>
+                                        this:ClearFocus()
+                                    </OnEscapePressed>
+                                </Scripts>
+                                <FontString inherits="ChatFontNormal"/>
+                            </EditBox>
+                        </ScrollChild>
+                        <Scripts>
+                            <OnClick>
+                                TGMLeftPanelResponseReplyScrollFrameReplyBox:SetFocus()
+                            </OnClick>
+                        </Scripts>
+                    </ScrollFrame>
+
+                    <Button name="$parentRespondToMailbox" inherits="UIPanelButtonTemplate2" text="Respond to Mailbox">
+                        <Size>
+                            <AbsDimension x="195" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-310"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_MailPlayer()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <Button name="$parentRespondToChat" inherits="UIPanelButtonTemplate2" text="Respond to Chat">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentRespondToMailbox">
+                                <Offset>
+                                    <AbsDimension x="10" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_WhisperPlayer()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <Button name="$parentCloseTicket" inherits="UIPanelButtonTemplate2" text="Close Ticket">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentRespondToChat">
+                                <Offset>
+                                    <AbsDimension x="10" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_CloseTicket(this:GetID())
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <Button name="$parentInfo" inherits="UIPanelButtonTemplate2" text="Player Info">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT">
+                                <Offset>
+                                    <AbsDimension x="-130" y="-350"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_PlayerInfo()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <Button name="$parentBaninfo" inherits="UIPanelButtonTemplate2" text="Baninfo">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOP" relativeTo="$parentInfo" relativePoint="BOTTOM">
+                                <Offset>
+                                    <AbsDimension x="0" y="-10"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_BanInfo()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <Button name="$parentShopLog" inherits="UIPanelButtonTemplate2" text="Shop Log">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOP" relativeTo="$parentBaninfo" relativePoint="BOTTOM">
+                                <Offset>
+                                    <AbsDimension x="0" y="-10"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_ShopLog()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <Button name="$parentGoTo" inherits="UIPanelButtonTemplate2" text="Go to Player">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-350"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_GoToPlayer()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <Button name="$parentTarget" inherits="UIPanelButtonTemplate2" text="Target Player">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOP" relativeTo="$parentGoTo" relativePoint="BOTTOM">
+                                <Offset>
+                                    <AbsDimension x="0" y="-10"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_Target()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <Button name="$parentSummon" inherits="UIPanelButtonTemplate2" text="Summon Player">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOP" relativeTo="$parentTarget" relativePoint="BOTTOM">
+                                <Offset>
+                                    <AbsDimension x="0" y="-10"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_SummonPlayer()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <Button name="$parentRecall" inherits="UIPanelButtonTemplate2" text="Recall Player">
+                        <Size>
+                            <AbsDimension x="120" y="18"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOP" relativeTo="$parentSummon" relativePoint="BOTTOM">
+                                <Offset>
+                                    <AbsDimension x="0" y="-10"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_Recall()
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <Button name="$parentPlayerNameCopyButton" inherits="UIPanelButtonTemplate">
+                        <Size>
+                            <AbsDimension x="180" y="18"/>
+                        </Size>
+                        <NormalTexture file=""/>
+                        <PushedTexture file=""/>
+                        <DisabledTexture file=""/>
+                        <Anchors>
+                            <Anchor point="LEFT" relativeTo="$parentPlayerName">
+                                <Offset>
+                                    <AbsDimension x="-5" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_CopyButtonOnClick('PlayerName')
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <Button name="$parentAccountCopyButton" inherits="UIPanelButtonTemplate">
+                        <Size>
+                            <AbsDimension x="180" y="18"/>
+                        </Size>
+                        <NormalTexture file=""/>
+                        <PushedTexture file=""/>
+                        <DisabledTexture file=""/>
+                        <Anchors>
+                            <Anchor point="LEFT" relativeTo="$parentAccount">
+                                <Offset>
+                                    <AbsDimension x="-5" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_CopyButtonOnClick('Account')
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <Button name="$parentIPCopyButton" inherits="UIPanelButtonTemplate">
+                        <Size>
+                            <AbsDimension x="180" y="18"/>
+                        </Size>
+                        <NormalTexture file=""/>
+                        <PushedTexture file=""/>
+                        <DisabledTexture file=""/>
+                        <Anchors>
+                            <Anchor point="LEFT" relativeTo="$parentIP">
+                                <Offset>
+                                    <AbsDimension x="-5" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                TGM_CopyButtonOnClick('IP')
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+
+                    <EditBox name="$parentPlayerNameCopyEditbox" multiLine="false" letters="100" autoFocus="false"
+                             hidden="true">
+                        <Size>
+                            <AbsDimension x="100" y="20"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="LEFT" relativeTo="$parentPlayerName">
+                                <Offset>
+                                    <AbsDimension x="43" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnEscapePressed>
+                                TGM_CopyEditboxOnEscape('PlayerName')
+                            </OnEscapePressed>
+                        </Scripts>
+                        <FontString inherits="GameFontHighlight"/>
+                    </EditBox>
+
+                    <EditBox name="$parentAccountCopyEditbox" multiLine="false" letters="100" autoFocus="false"
+                    hidden="true">
+                        <Size>
+                            <AbsDimension x="100" y="20"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="LEFT" relativeTo="$parentAccount">
+                                <Offset>
+                                    <AbsDimension x="58" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnEscapePressed>
+                                TGM_CopyEditboxOnEscape('Account')
+                            </OnEscapePressed>
+                        </Scripts>
+                        <FontString inherits="GameFontHighlight"/>
+                    </EditBox>
+
+                </Frames>
+            </Frame>
+
+        </Frames>
+        <Scripts>
+            <OnLoad>
+                this:RegisterForDrag("LeftButton");
+                this:SetMovable(1);
+                this:SetUserPlaced(true);
+                tinsert(UISpecialFrames, this:GetName());
+                TGM_refreshTickets()
+            </OnLoad>
+            <OnShow>
+                TGM_refreshTickets()
+            </OnShow>
+            <OnDragStart>
+                this:StartMoving();
+                this.isMoving = true;
+            </OnDragStart>
+            <OnDragStop>
+                this:StopMovingOrSizing();
+                this.isMoving = false;
+            </OnDragStop>
+        </Scripts>
+    </Frame>
+
+</Ui>

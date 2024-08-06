@@ -1,0 +1,219 @@
+<?php
+
+global $UDWBaseconf;
+
+// -- WORLD Database --
+$UDWBaseconf['world']['host']           = '127.0.0.1';
+$UDWBaseconf['world']['user']           = 'root';
+$UDWBaseconf['world']['pass']           = 'root';
+$UDWBaseconf['world']['db']             = 'tw_world';
+define('WORLD', $UDWBaseconf['world']['db']);
+$UDWBaseconf['world']['table_prefix']   = ''; // optional table prefix
+
+// -- Realmd Database --
+$UDWBaseconf['realmd']['host']          = '127.0.0.1';
+$UDWBaseconf['realmd']['user']          = 'root';
+$UDWBaseconf['realmd']['pass']          = 'root';
+$UDWBaseconf['realmd']['db']            = 'realmd';
+$UDWBaseconf['realmd']['table_prefix']  = ''; // optional table prefix
+define('REALMD', $UDWBaseconf['realmd']['db']);
+
+// -- AoWoW Database --
+$UDWBaseconf['aowow']['host']           = '127.0.0.1';
+$UDWBaseconf['aowow']['user']           = 'root';
+$UDWBaseconf['aowow']['pass']           = 'root';
+$UDWBaseconf['aowow']['db']             = 'aowow';
+$UDWBaseconf['aowow']['table_prefix']   = ''; // optional table prefix
+define('AOWOW', $UDWBaseconf['aowow']['db'] );
+
+// Site Configuration
+$UDWBaseconf['udwbase']['name']         = 'Turtle WoW Database';
+$UDWBaseconf['udwbase']['template']     = 'wowhead';
+$UDWBaseconf['udwbase']['cache_time']   = (60*60*24*7); // Time to keep cache in seconds (Default: 1 week)
+$UDWBaseconf['locale']                  = 0;
+$UDWBaseconf['register']                = false;
+$UDWBaseconf['expansion']               = 0; // Used with register
+$UDWBaseconf['limit']                   = 300;
+$UDWBaseconf['debug']                   = false;
+
+
+define('LOCALE_REQUIREMENTS', 'Requirements');
+// classes
+define('LOCALE_WARRIOR', 'Warrior');
+define('LOCALE_PALADIN', 'Paladin');
+define('LOCALE_HUNTER', 'Hunter');
+define('LOCALE_ROGUE', 'Rogue');
+define('LOCALE_PRIEST', 'Priest');
+define('LOCALE_SHAMAN', 'Shaman');
+define('LOCALE_MAGE', 'Mage');
+define('LOCALE_WARLOCK', 'Warlock');
+define('LOCALE_DRUID', 'Druid');
+// races
+define('LOCALE_HUMAN', 'Human');
+define('LOCALE_ORC', 'Orc');
+define('LOCALE_DWARF', 'Dwarf');
+define('LOCALE_NIGHT_ELF', 'Night Elf');
+define('LOCALE_UNDEAD', 'Undead');
+define('LOCALE_TAUREN', 'Tauren');
+define('LOCALE_GNOME', 'Gnome');
+define('LOCALE_TROLL', 'Troll');
+// side
+define('LOCALE_BOTH', 'Both');
+define('LOCALE_HORDE', 'Horde');
+define('LOCALE_ALLIANCE', 'Alliance');
+// reputation
+define('LOCALE_NEUTRAL', 'Neutral');
+define('LOCALE_FRIENDLY', 'Friendly');
+define('LOCALE_HONORED', 'Honored');
+define('LOCALE_REVERED', 'Revered');
+define('LOCALE_EXALTED', 'Exalted');
+// resistances
+define('LOCALE_FIRE_RESISTANCE', 'Fire Resistance');
+define('LOCALE_FROST_RESISTANCE', 'Frost Resistance');
+define('LOCALE_ARCANE_RESISTANCE', 'Arcane Resistance');
+define('LOCALE_SHADOW_RESISTANCE', 'Shadow Resistance');
+define('LOCALE_NATURE_RESISTANCE', 'Nature Resistance');
+define('LOCALE_HOLY_RESISTANCE', 'RESISTANCE DOES NOT EXIST');
+// binds
+define('LOCALE_BIND_PICKUP', 'Binds when picked up');
+define('LOCALE_BIND_EQUIP', 'Binds when equipped');
+define('LOCALE_BIND_USE', 'Binds when used');
+define('LOCALE_BIND_SOULBOUND', 'Soulbound');
+define('LOCALE_BIND_QUEST_ITEM', 'Quest Item');
+// bags
+define('LOCALE_BAG', 'Bag');
+define('LOCALE_BAG_QUIVER', 'Quiver');
+define('LOCALE_BAG_AMMO', 'Ammo Pouch');
+define('LOCALE_BAG_SOUL', 'Soul Bag');
+define('LOCALE_BAG_LEATHER', 'Leatherworking Bag');
+define('LOCALE_BAG_HERB', 'Herb Bag');
+define('LOCALE_BAG_ENCHANT', 'Enchanting bag');
+define('LOCALE_BAG_ENGINEER', 'Engineering Bag');
+define('LOCALE_BAG_MINING', 'Mining Bag');
+// equip slots
+define('LOCALE_EQUIP_HEAD', 'Head');
+define('LOCALE_EQUIP_NECK', 'Neck');
+define('LOCALE_EQUIP_SHOULDER', 'Shoulder');
+define('LOCALE_EQUIP_SHIRT', 'Shirt');
+define('LOCALE_EQUIP_CHEST', 'Chest');
+define('LOCALE_EQUIP_WAIST', 'Waist');
+define('LOCALE_EQUIP_LEGS', 'Legs');
+define('LOCALE_EQUIP_FEET', 'Feet');
+define('LOCALE_EQUIP_WRIST', 'Wrist');
+define('LOCALE_EQUIP_HANDS', 'Hands');
+define('LOCALE_EQUIP_FINGER', 'Finger');
+define('LOCALE_EQUIP_TRINKET', 'Trinket');
+define('LOCALE_EQUIP_ONEHAND', 'One-hand');
+define('LOCALE_EQUIP_OFFHAND', 'Off Hand');
+define('LOCALE_EQUIP_RANGED', 'Ranged');
+define('LOCALE_EQUIP_BACK', 'Back');
+define('LOCALE_EQUIP_TWOHAND', 'Two-hand');
+define('LOCALE_EQUIP_UNK0', '');
+define('LOCALE_EQUIP_TABARD', 'Tabard');
+define('LOCALE_EQUIP_MAINHAND', 'Main Hand');
+define('LOCALE_EQUIP_CHEST2', 'Chest');
+define('LOCALE_EQUIP_OFFHAND2', 'Off Hand');
+define('LOCALE_EQUIP_HELDINOFFHAND', 'Held In Off-Hand');
+define('LOCALE_EQUIP_PROJECTILE', 'Projectile');
+define('LOCALE_EQUIP_THROWN', 'Thrown');
+define('LOCALE_EQUIP_RANGED2', 'Ranged');
+define('LOCALE_EQUIP_UNK1', '');
+define('LOCALE_EQUIP_RELIC', 'Relic');
+// armor type
+define('LOCALE_ARMOR_CLOTH', 'Cloth');
+define('LOCALE_ARMOR_LEATHER', 'Leather');
+define('LOCALE_ARMOR_MAIL', 'Mail');
+define('LOCALE_ARMOR_PLATE', 'Plate');
+define('LOCALE_ARMOR_BUCKLER', '');
+define('LOCALE_ARMOR_SHIELD', 'Shield');
+define('LOCALE_ARMOR_LIBRAM', 'Libram');
+define('LOCALE_ARMOR_IDOL', 'Idol');
+define('LOCALE_ARMOR_TOTEM', 'Totem');
+// weapon type
+define('LOCALE_WEAPON_AXE1H', 'Axe');
+define('LOCALE_WEAPON_AXE2H', 'Axe');
+define('LOCALE_WEAPON_BOW', 'Bow');
+define('LOCALE_WEAPON_GUN', 'Gun');
+define('LOCALE_WEAPON_MACE1H', 'Mace');
+define('LOCALE_WEAPON_MACE2H', 'Mace');
+define('LOCALE_WEAPON_POLEARM', 'Polearm');
+define('LOCALE_WEAPON_SWORD1H', 'Sword');
+define('LOCALE_WEAPON_SWORD2H', 'Sword');
+define('LOCALE_WEAPON_OBSOLETE', '');
+define('LOCALE_WEAPON_STAFF', 'Staff');
+define('LOCALE_WEAPON_EXOTIC', '');
+define('LOCALE_WEAPON_EXOTIC2', '');
+define('LOCALE_WEAPON_FIST', 'Fist Weapon');
+define('LOCALE_WEAPON_MISC', 'Miscellaneous');
+define('LOCALE_WEAPON_DAGGER', 'Dagger');
+define('LOCALE_WEAPON_THROWN', 'Thrown');
+define('LOCALE_WEAPON_SPEAR', '');
+define('LOCALE_WEAPON_CROSSBOW', 'Crossbow');
+define('LOCALE_WEAPON_WAND', 'Wand');
+define('LOCALE_WEAPON_FISHINGPOLE', 'Fishing Pole');
+// projectile type
+define('LOCALE_PROJECTILE_WAND', '');
+define('LOCALE_PROJECTILE_BOLT', '');
+define('LOCALE_PROJECTILE_ARROW', 'Arrow');
+define('LOCALE_PROJECTILE_BULLET', 'Bullet');
+define('LOCALE_PROJECTILE_THROWN', '');
+// damage
+define('LOCALE_DAMAGE_PRE', ' ');
+define('LOCALE_DAMAGE_POST', ' Damage');
+define('LOCALE_DAMAGE_HOLY', 'Holy');
+define('LOCALE_DAMAGE_FIRE', 'Fire');
+define('LOCALE_DAMAGE_FROST', 'Frost');
+define('LOCALE_DAMAGE_ARCANE', 'Arcane');
+define('LOCALE_DAMAGE_SHADOW', 'Shadow');
+define('LOCALE_DAMAGE_NATURE', 'Nature');
+// stats
+define('LOCALE_STAT_STRENGTH', ' Strength');
+define('LOCALE_STAT_STAMINA', ' Stamina');
+define('LOCALE_STAT_INTELLECT', ' Intellect');
+define('LOCALE_STAT_SPIRIT', ' Spirit');
+define('LOCALE_STAT_AGILITY', ' Agility');
+// green bonuses
+define('LOCALE_GBONUS_DEFENCE', 'Increases defense rating by %d.');
+define('LOCALE_GBONUS_DODGE', 'Increases your dodge rating by %d.');
+define('LOCALE_GBONUS_PARRY', 'Increases your parry rating by %d.');
+define('LOCALE_GBONUS_SHIELDBLOCK', 'Increases your shield block rating by %d.');
+define('LOCALE_GBONUS_SPELLHIT_RATING', 'Improves spell hit rating by %d.');
+define('LOCALE_GBONUS_MELEECRIT_RATING', 'Improves melee critical strike rating by %d.');
+define('LOCALE_GBONUS_RANGEDCRIT_RATING', 'Improves ranged critical strike rating by $d.');
+define('LOCALE_GBONUS_SPELLCRIT_RATING', 'Improves spell critical strike rating by %d.');
+define('LOCALE_GBONUS_SPELLHASTE_RATING', 'Improves spell haste rating by %d.');
+define('LOCALE_GBONUS_HIT_RATING', 'Increases your hit rating by %d.');
+define('LOCALE_GBONUS_CRIT_RATING', 'Increases your critical strike rating by %d.');
+define('LOCALE_GBONUS_RESILIENCE_RATING', 'Improves your resilience rating by %d.');
+define('LOCALE_GBONUS_HASTE_RATING', 'Improves haste rating by %d.');
+define('LOCALE_GBONUS_EXPERTISE_RATING', 'Increases your expertise rating by %d.');
+define('LOCALE_GBONUS_RESTOREMANA', 'Restores %d mana per 5 sec.');
+define('LOCALE_GBONUS_ATTACKPOWER', 'Increases attack power by %d.');
+define('LOCALE_GBONUS_ARMORPENETRATION', 'Increases your armor penetration rating by %d.');
+define('LOCALE_GBONUS_SPELLPOWER', 'Improves spell power by %d.');
+define('LOCALE_GBONUS_UNKNOWN', 'Unknown Bonus #%d');
+define('LOCALE_GBONUS_CHANCEONHIT', 'Chance on hit: ');
+define('LOCALE_GBONUS_EQUIP', 'Equip: ');
+define('LOCALE_GBONUS_USE', 'Use: ');
+
+// misc
+define('LOCALE_SPEED', 'Speed');
+define('LOCALE_UNIQUE', 'Unique');
+define('LOCALE_START_QUEST', 'This Item Begins a Quest');
+define('LOCALE_SLOT', ' Slot ');
+define('LOCALE_DPS', 'damage per second');
+define('LOCALE_DPS2', 'damage per second');
+define('LOCALE_DPS_ADDS', 'Adds');
+define('LOCALE_ARMOR', 'Armor');
+define('LOCALE_BLOCK', 'Block');
+define('LOCALE_REQUIRES', 'Requires');
+define('LOCALE_REQUIRES_LEVEL', 'Requires Level');
+define('LOCALE_DURABILITY', 'Durability');
+define('LOCALE_CLASSES', 'Classes');
+
+
+function dumpp($a) {
+    echo "<pre>";
+    var_dump($a);
+    echo "</pre>";
+}

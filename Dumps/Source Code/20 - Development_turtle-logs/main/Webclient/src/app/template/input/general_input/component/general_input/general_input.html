@@ -1,0 +1,19 @@
+<span>{{ labelKey | translate }}</span>
+<input *ngIf="type==='checkbox' && !!value" #generalInput (focus)="touch()" (input)="value=$event.currentTarget.value"
+       (change)="value=type === 'checkbox' ? $event.currentTarget.checked : $event.currentTarget.value"
+       (invalid)="touch()"
+       [attr.data-validity]="formFailure.invalidityMsg | translate:formFailure.msgArgs" [attr.max]="max_spec"
+       [attr.pattern]="pattern" [attr.placeholder]="placeholderKey | translate" [class.touched]="touched"
+       [maxLength]="maximum_length"
+       [min]="min_spec" [name]="name" [required]="required" [autocomplete]="autoComplete" (keydown)="onKeypress($event)"
+       [type]="type" [value]="value" oninvalid="setCustomValidity(this.dataset['validity'])" [attr.id]="htmlId"
+       checked/>
+
+<input *ngIf="type!=='checkbox' || !value" #generalInput (focus)="touch()" (input)="value=$event.currentTarget.value"
+       (change)="value=type === 'checkbox' ? $event.currentTarget.checked : $event.currentTarget.value"
+       (invalid)="touch()"
+       [attr.data-validity]="formFailure.invalidityMsg | translate:formFailure.msgArgs" [attr.max]="max_spec"
+       [attr.pattern]="pattern" [attr.placeholder]="placeholderKey | translate" [class.touched]="touched"
+       [maxLength]="maximum_length"
+       [min]="min_spec" [name]="name" [required]="required" [autocomplete]="autoComplete" (keydown)="onKeypress($event)"
+       [type]="type" [value]="value" oninvalid="setCustomValidity(this.dataset['validity'])" [attr.id]="htmlId"/>

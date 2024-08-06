@@ -1,0 +1,98 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.menu_bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 0 3px 3px 0;
+
+    width: calc(100% - #{$spacing} - 2px);
+    min-height: 50px;
+    background: $tdc_darker;
+    border: 1px solid $tdc_accent;
+    padding: 0.25 * $spacing 0.5 * $spacing;
+
+    $questionmarkSize: calc(50px - 0.5 * #{$spacing});
+    MultiSelect, SelectInput {
+        width: calc(20% - 0.5 * #{$spacing} - 16px);
+        max-width: 300px;
+        margin-right: 0.5 * $spacing;
+    }
+
+    @media (max-width: 1800px) {
+        MultiSelect, SelectInput {
+            margin-right: 0.5 * $spacing;
+            margin-bottom: 0.5 * $spacing;
+            width: calc(33.3% - (1/3) * #{$spacing});
+            max-width: calc(33.3% - (1/3) * #{$spacing});
+        }
+
+        #last_multi_select {
+            width: calc(33.3% - (1/3) * #{$spacing} - 50px);
+            max-width: calc(33.3% - (1/3) * #{$spacing} - 50px);
+        }
+
+        #last_select_2, #last_multi_select {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 600px) {
+        SelectInput {
+            margin-top: 0.5 * $spacing;
+        }
+
+        MultiSelect, SelectInput {
+            margin-right: 0;
+            margin-bottom: 0.5 * $spacing;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #last_multi_select {
+            width: calc(100% - #{$questionmarkSize});
+            max-width: calc(100% - #{$questionmarkSize});
+        }
+    }
+
+    .question_mark {
+        margin-left: auto;
+        width: $questionmarkSize;
+        height: $questionmarkSize;
+        cursor: pointer;
+        text-align: center;
+        line-height: $questionmarkSize;
+        font-size: 32px;
+    }
+}
+
+.graph_container{
+    position: relative;
+    width: calc(100% - #{$spacing} - 2px);
+    border: 1px solid $tdc_accent;
+    border-top: none;
+    height: 300px;
+    background: $tdc_darker;
+    border-radius: 3px 0 0 3px;
+    padding: 0.5 * $spacing 0.5 * $spacing;
+}
+
+.aura_uptime_container {
+    width: calc(100% - #{$spacing} - 2px);
+    border: 1px solid $tdc_accent;
+    border-top: none;
+    background: $tdc_darker;
+    border-radius: 3px 0 0 3px;
+    padding: 0.5 * $spacing 0.5 * $spacing;
+
+    AuraUptimeBar:not(:last-child) {
+        margin-bottom: 0.5 * $spacing;
+    }
+}

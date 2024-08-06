@@ -1,0 +1,126 @@
+<div class="section mb-5 donate" id="pages" style="background-image: url(images/donatebg.png)">
+    <div class="container-fluid pt-1">
+        <div class="container pt-5">
+            <div class="row p-5 mt-5">
+                <div class="col-lg-6 "><h2 class="orange-text mb-2 font-weight-bold">Donations —<Br> How does it work?
+                </h2>
+                    <p class="w-100 mt-3 mb-5 text-white">We have a scaling milestone donation system that starts from
+                        30 Euro. Your support will be rewarded with a bonus of extra 2.5% tokens every 10 Euro, that
+                        scales up to a maximum of 40%. This bonus is calculated automatically, for each separate
+                        received donation.<br><span class="orange-text">The ratio is 10:1, which means 1 Euro gives you 10 tokens. </span>
+                    </p></div>
+                <div class="col-lg-6">
+                    <div class="shield text-center"><p class="sum"> {{user.tokens}} </p>
+                        <p class="text"> tokens </p></div>
+                </div>
+                <div class="col-lg-6 bg-dark-gray p-3">
+                    <div ng-repeat="d in discounts" ng-if="$index < 5" class="dono">
+                        <div class="d-inline-block text-white" style="width: 70px;"><span
+                                class="orange-text">&euro;</span> {{d[0]}}
+                        </div>
+                        <div class="d-inline-block text-right text-gray" style="width: 80px; "> + {{d[1]}}%</div>
+                        <div class="d-inline-block text-center text-gray" style="width: 70px; "> ⟶</div>
+                        <div class="d-inline-block text-center text-white" style="width: 100px; "><img class="mr-1"
+                                                                                                       src="images/icon_turtle_small.png">{{_round(d[0] * 10 + d[0] * d[1] / 10)}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 bg-dark-gray p-3">
+                    <div ng-repeat="d in discounts" ng-if="$index >= 5" class="dono">
+                        <div class="d-inline-block text-white" style="width: 70px;"><span
+                                class="orange-text">&euro;</span> {{d[0]}}
+                        </div>
+                        <div class="d-inline-block text-right text-gray" style="width: 80px; "> + {{d[1]}}%</div>
+                        <div class="d-inline-block text-center text-gray" style="width: 70px; "> ⟶</div>
+                        <div class="d-inline-block text-center text-white" style="width: 100px; "><img class="mr-1"
+                                                                                                       src="images/icon_turtle_small.png">{{_round(d[0] * 10 + d[0] * d[1] / 10)}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-5 mb-3"><p class="text-white w-100">If you want to help support our project or
+                    would like to obtain some of our donation rewards, you have the following options:</p></div>
+                <div class="col-lg-4 text-gray2 text-left hand" ng-click="donateSetVisible(donate_visible_enum.GP)"><img
+                        src="images/buttongamepoints.png" class="w-100">
+                    <p class="mt-3">&nbsp;</p></div>
+                <div class="col-lg-4 text-gray2 text-center hand" ng-click="donateSetVisible(donate_visible_enum.ENOT)">
+                    <img src="images/buttonenot.png" class="w-100">
+                    <p class="mt-3">&nbsp;</p></div>
+                <div class="col-lg-4 text-gray2 text-center hand "
+                     ng-click="donateSetVisible(donate_visible_enum.PAYPAL)"><img src="images/buttonpaypal.png"
+                                                                                  class="w-100">
+                    <p class="mt-3">&nbsp;</p></div>
+                <!--            <div class="col-lg-3 pr-0 text-gray2 text-center">-->
+                <!--               <img src="images/buttonbitcoin.png" class="img-fluid">-->
+                <!--               <p class="mt-3">--><!--                  Soon--><!--               </p>-->
+                <!--            </div>-->
+                <div class="col-lg-4 text-gray2 text-left hand" ng-click="donateSetVisible(donate_visible_enum.PW)"><img
+                        src="images/buttonpaymentwall.png" class="w-100">
+                    <p class="mt-3">&nbsp;</p></div>
+                <!--<div class="col-lg-4 text-gray2 text-left hand"
+                     ng-click="donateSetVisible(donate_visible_enum.SBERBANK)"><img src="images/buttonsberbank.png"
+                                                                                    class="w-100">
+                    <p class="mt-3">&lt;!&ndash;                  5469400050966113&ndash;&gt;</p></div>-->
+                <!--<div class="col-lg-4 text-gray2 text-center hand"
+                     ng-click="donateSetVisible(donate_visible_enum.BOOSTY)"><img src="images/buttonboosty.png"
+                                                                                  class="w-100">
+                    <p class="mt-3">
+                        &lt;!&ndash;                  <a href="boosty.to/turtlewow" class="text-gray2" target="_blank">boosty.to/turtlewow</a>&ndash;&gt;</p>
+                </div>-->
+                <!--<div class="col-lg-12 text-white" ng-if="donateIsVisible(donate_visible_enum.BOOSTY)">Please DM your
+                    account or character name while donating via Boosty: <a href="https://boosty.to/turtlewow"
+                                                                            target="_blank" class="text-green">boosty.to/turtlewow</a><br><br><span
+                            class="orange-text">Your donation will be processed within 24 hours.</span></div>-->
+                <div class="col-lg-12 text-white" ng-if="donateIsVisible(donate_visible_enum.PAYPAL)"> Please use this
+                    PayPal address to donate: <span class="orange-text">info.turtlewow@gmail.com</span>
+                    <!--&lt;!&ndash; or click <a href='https://www.paypal.com/paypalme/mysteriesofazeroth'><span class="orange-text">here</span></a>.&ndash;&gt;-->
+                    <br><br> Include your <span class="orange-text">account name</span> in the payment comment. Turtle WoW is not a company, so while donating via PayPal please use the option Sending to a Friend.
+                    <br><br> <span class="orange-text">Your donation will be processed within 24 hours.</span>
+                </div>
+                <!--<div class="col-lg-12 text-white" ng-if="donateIsVisible(donate_visible_enum.SBERBANK)">Приоритетным
+                    каналом для оплаты из России является вот эта карта Сбербанка <span class="orange-text">2202202356626196</span><br><br>Это
+                    наш разработчик, которому из-за санкций мы не имеем возможности платить зарплату никак, кроме
+                    прямого сбора пожертвований сразу на его карту. Платить можно в рублях, конвертируем мы по текущему
+                    курсу с округлением в пользу отправителя.<br><br>Для получения токенов после оплаты пожалуйста
+                    пришлите скриншот транзакции и имя аккаунта на почту <span class="orange-text">info.turtlewow@gmail.com</span><br><br><span
+                            class="orange-text">Токены зачисляются в течении 1-24 часов. Спасибо за поддержку!</span>
+                </div>-->
+                <div class="col-lg-12" ng-if="donateIsVisible(donate_visible_enum.PW) && pw_url != ''">
+                    <iframe ng-src="{{pw_url}}" width="100%" height="750px" frameborder="0" id="pw-iframe"></iframe>
+                </div>
+                <div class="col-lg-12 mt-4" ng-if="donateIsVisible(donate_visible_enum.ENOT)">
+                    <form method='get' action='https://enot.io/pay' class="enot_form"><input type="hidden" name="m"
+                                                                                             value="{{enot_merchant_id}}"/><input
+                            type="hidden" name="o" value="{{now_time}}"/><input type="hidden" name="cf"
+                                                                                value="{{user.user_id}}_{{enot_infos.enot_points}}"/><input
+                            type="hidden" name="s" value="{{enot_sign}}"/><input type="number"
+                                                                                 ng-model="enot_infos.enot_price"
+                                                                                 ng-change="enotUpdatePoints()"
+                                                                                 class="form-control col-lg-3"/><input
+                            type="hidden" ng-value="enot_infos.enot_price_updated" name="oa"/>
+                        <div class="currency"><span class="orange-text"> € </span></div>
+                        <div class="enot_result_conversion col-lg-3">{{enot_infos.enot_points}} tokens</div>
+                        <input type="submit" class="btn btn-primary btn-enot col-lg-2" value="Donate"></form>
+                </div>
+                <div class="col-lg-12" ng-if="donateIsVisible(donate_visible_enum.GP)">
+                    <!--h2 class="gp_title orange-text"> Gamepoints : <br/> Follow instructions to donate</h2-->
+                    <div class="gp_container">
+                        <div class="col-lg-6"><p class="text-white"> Purchase a code :</p><a
+                                class="gp_link wtf_its_shit_rule" href="https://gamepoints.org/offers/15"
+                                target="_blank"></a></div>
+                        <div class="col-lg-6"><p class="text-white"> Redeem the code to receive your points :</p><input
+                                type="text" class="form-control" ng-model="gp_infos.code"/>
+                            <p class="gp_error" ng-if="isGPErrorVisible()"> {{gp_infos.msg}} </p>
+                            <div class="btn-gp hand" ng-click="useGPCode()"></div>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/footerline.png" class="mt-3 mb-4 w-100">
+                <!-- div class="col-lg-12 mt-5"> <p class="text-white"> <span class="orange-text">Gift for character.</span> Enter your friend's character name to gift tokens: </p> </div> <div class="col-lg-3 mt-4"> <input type="text" class="form-control" placeholder="Enter your code"> </div> <div class="col-lg-3" style="margin-top: 17px !important;"> <img src="images/buttonactivate.png" style="height: 76px;"> </div> <img src="images/footerline.png" class="mt-3 mb-4 w-100"-->
+            </div>
+        </div>
+        <div class="container p-5" id="thanks"><img src="images/footerline.png" class="mt-5 mb-4 w-100">
+            <h2 class="orange-text font-weight-bold">THANK YOU</h2><h4 class="orange-text font-weight-bold">FOR</h4>
+            <h3 class="orange-text font-weight-bold">supporting Turtle WoW!</h3><img src="images/footerline.png"
+                                                                                     class="mt-3 mb-5 w-100"></div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="section mb-5 donate" id="pages" style="background-image: url(images/donatebg.png)">
+    <div class="container-fluid pt-1">
+        <div class="container pt-5">
+
+            <div class="row p-5 mt-5">
+
+                <div class="col-lg-12 ">
+
+                    <h2 class="orange-text mb-2 font-weight-bold">Donations —<Br> How does it work?</h2>
+                    <p class="w-50 mt-3 mb-5 text-white">
+                        Greetings! If you want to help support our project or would like to obtain some of our donation
+                        rewards, you have the following options:
+                    </p>
+
+                </div>
+
+                <div class="col-lg-3 pr-0 text-gray2 text-center">
+                    <img src="images/buttonpaypal.png" class="img-fluid">
+                    <p class="mt-3">
+                    <a href="https://www.paypal.com/paypalme/mysteriesofazeroth" class="text-gray2" target="_blank">info.turtlewow@gmail.com</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 pr-0 text-gray2 text-center">
+                    <img src="images/buttonpatreon.png" class="img-fluid">
+                    <p class="mt-3">
+                        <a href="https://www.patreon.com/turtlewow" class="text-gray2" target="_blank">patreon.com</a>
+                    </p>
+                </div>
+              <div class="col-lg-3 pr-0 text-gray2 text-center">
+                  <img src="images/buttonsberbank.png" class="img-fluid">
+                  <p class="mt-3">
+                      5469400050966113
+                  </p>
+              </div>
+                <div class="col-lg-3 pr-0 text-gray2 text-center">
+                    <img src="images/buttonbitcoin.png" class="img-fluid">
+                    <p class="mt-3">
+                        Soon
+                    </p>
+                </div>
+
+
+                <div class="col-lg-12 mt-5">
+
+                    <p class="text-white">
+                        The ratio is 10:1, which means 1 Euro gives you 10 tokens. <b>Please include your account name
+                        in the payment comment. You can donate tokens to your friends aswell, include the character name and
+                        add "Gift for character ..." as comment.</b><br><br>
+                        Turtle WoW is not a company, so while donating via PayPal please use the option Sending
+                        to a Friend.<br><br>
+                        Donations can take a few hours to process, be patient.
+                    </p>
+
+                    <img src="images/footerline.png" class="mt-3 mb-4 w-100">
+					 <p class="text-white">If you're Russian and can no longer use any of the methods above: you can donate directly to this Sberbank card: <b>5469400050966113</b> | Do not specify anything in the comment, just send a a screenshot of the transaction and account name to <b>info.turtlewow@gmail.com</b>.</p>
+					 					
+					<img src="images/footerline.png" class="mt-3 mb-4 w-100">
+
+ <p class="text-white">We have a scaling milestone donation system that starts from 30 Euro. Your support will be rewarded with a bonus of extra 5% tokens every 10 Euro, that scales up to a maximum of 100%. This bonus is calculated automatically, for each separate received donation.<br><br></p>
+
+                </div>
+
+                <div class="col-lg-12"></div>
+
+                <div class="col-lg-6 bg-dark-gray p-3">
+                    <div ng-repeat="d in discounts" ng-if="$index < 10" class="dono">
+                        <div class="d-inline-block text-white" style="width: 70px;">
+                            <span class="orange-text">&euro;</span> {{d[0]}}
+                        </div>
+                        <div class="d-inline-block text-center text-gray" style="width: 80px; "> + {{d[1]}}%</div>
+                        <div class="d-inline-block text-center text-gray" style="width: 70px; "> ⟶</div>
+                        <div class="d-inline-block text-center text-white" style="width: 100px; "><img class="mr-1"
+                                                                                                       src="images/icon_turtle_small.png">
+                            {{d[2]}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 bg-dark-gray p-3">
+                    <div ng-repeat="d in discounts" ng-if="$index >= 10" class="dono">
+                        <div class="d-inline-block text-white" style="width: 70px;">
+                            <span class="orange-text">&euro;</span> {{d[0]}}
+                        </div>
+                        <div class="d-inline-block text-center text-gray" style="width: 80px; "> + {{d[1]}}%</div>
+                        <div class="d-inline-block text-center text-gray" style="width: 70px; "> ⟶</div>
+                        <div class="d-inline-block text-center text-white" style="width: 100px; "><img class="mr-1"
+                                                                                                       src="images/icon_turtle_small.png">
+                            {{d[2]}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container p-5" id="thanks">
+
+            <img src="images/footerline.png" class="mt-5 mb-4 w-100">
+
+            <h2 class="orange-text font-weight-bold">THANK YOU</h2>
+            <h4 class="orange-text font-weight-bold">FOR</h4>
+            <h3 class="orange-text font-weight-bold">supporting Turtle WoW!</h3>
+
+            <img src="images/footerline.png" class="mt-3 mb-5 w-100">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="td" (click)="open_compenents()">
+        <CaretButton *ngIf="detail_row.components.length > 0" [isToggled]="show_components"></CaretButton>
+        <span>{{detail_row.hit_type}}</span>
+    </div>
+    <div class="td">{{format_number(detail_row.content.count)}}</div>
+    <div class="td">{{detail_row.content.count_percent.toFixed(1)}}</div>
+    <div class="td">{{format_number(detail_row.content.amount)}}</div>
+    <div class="td">{{detail_row.content.amount_percent.toFixed(1)}}</div>
+    <div class="td">{{format_number(detail_row.content.min)}}</div>
+    <div class="td">{{format_number(detail_row.content.max)}}</div>
+    <div class="td">{{format_number(detail_row.content.average.toFixed(1))}}</div>
+    <div class="td"
+         [showTooltip]="{type: 11, payload: detail_row.content.resist_summary}">{{format_number(detail_row.content.resist)}}</div>
+    <div class="td">{{format_number(detail_row.content.block)}}</div>
+    <div class="td">{{format_number(detail_row.content.absorb)}}</div>
+</div>
+<ng-container *ngIf="show_components">
+    <div class="row component_row" *ngFor="let component_detail of detail_row.components">
+        <div class="td">{{component_detail.school}}</div>
+        <div class="td">{{format_number(component_detail.content.count)}}</div>
+        <div class="td">{{component_detail.content.count_percent.toFixed(1)}}</div>
+        <div class="td">{{format_number(component_detail.content.amount)}}</div>
+        <div class="td">{{component_detail.content.amount_percent.toFixed(1)}}</div>
+        <div class="td">{{format_number(component_detail.content.min)}}</div>
+        <div class="td">{{format_number(component_detail.content.max)}}</div>
+        <div class="td">{{format_number(component_detail.content.average.toFixed(1))}}</div>
+        <div class="td"
+             [showTooltip]="{type: 11, payload: component_detail.content.resist_summary}">{{format_number(component_detail.content.resist)}}</div>
+        <div class="td">{{format_number(component_detail.content.block)}}</div>
+        <div class="td">{{format_number(component_detail.content.absorb)}}</div>
+    </div>
+</ng-container>

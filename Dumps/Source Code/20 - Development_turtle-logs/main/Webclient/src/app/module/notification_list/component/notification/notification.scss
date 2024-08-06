@@ -1,0 +1,66 @@
+@import "../../../../../styles/global";
+@import "../../../../../styles/shadows";
+
+:host {
+    @extend .floatShadow;
+    display: block;
+    margin-bottom: $spacing * 0.5;
+
+    & > div {
+        position: relative;
+        min-height: 20px;
+        width: 288px;
+        border-radius: 3px 3px 3px 3px;
+    }
+
+    div.success {
+        background: $success;
+    }
+
+    div.warning {
+        background: $warning;
+    }
+
+    div.error {
+        background: $error;
+    }
+
+    div.info {
+        background: $information;
+    }
+
+    .closeButton {
+        @extend .floatShadowTiny;
+
+        &::before {
+            content: 'x';
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            line-height: 14px;
+            color: #fff;
+            font-size: 14px;
+            display: block;
+        }
+
+        position: absolute;
+        top: $spacing * 0.25;
+        right: $spacing * 0.25;
+        border: none;
+        padding: 0;
+
+        height: 16px;
+        width: 16px;
+
+        border-radius: 4px 4px 4px 4px;
+
+        background: darken($theme_dominant_color, 5%);
+        cursor: pointer;
+    }
+
+    .messageContainer {
+        color: #000;
+        padding: $spacing * 0.5 $spacing * 0.5;
+        padding-right: $spacing * 2;
+    }
+}

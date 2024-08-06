@@ -1,0 +1,47 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    border-radius: 3px 3px 3px 3px;
+
+    MeterGraph::ng-deep.bar_container {
+        border-radius: 0 0 0 0;
+    }
+
+    .title_bar {
+        $titleBarSize: 50px - $spacing;
+        display: flex;
+        flex-direction: row;
+        height: $titleBarSize;
+        width: calc(100% - #{$spacing} - 2px);
+        background: $tdc_darker;
+        padding: 0.5 * $spacing 0.5 * $spacing;
+        border: 1px solid $tdc_accent;
+        border-bottom: none;
+
+        SelectInput {
+            width: calc(100% - 200px);
+            max-width: 300px;
+            height: $titleBarSize;
+            align-self: flex-start;
+        }
+
+        .total_and_dps {
+            height: 100%;
+            line-height: $titleBarSize;
+            font-size: 20px;
+            align-self: flex-end;
+            margin-left: auto;
+
+            @media (max-width: 400px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

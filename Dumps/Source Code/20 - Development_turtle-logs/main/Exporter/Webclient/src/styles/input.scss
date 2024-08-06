@@ -1,0 +1,14 @@
+input, select {
+    background: #ffffff;
+    display: block;
+    color: #000;
+    border: none;
+    padding: $spacing * 0.5;
+    border-radius: 4px 4px 4px 4px;
+    width: calc(100% - #{$spacing});
+    margin-top: $spacing * 0.5;
+}
+
+select option {
+    color: #000;
+}

@@ -1,0 +1,10 @@
+<div class="progress_bar" #progress_bar>
+    <div class="slider" id="slider0" #slider0 (mousedown)="onMouseDown(0)">
+        <div *ngIf="is_moving" class="slider_popup" id="spop0">{{ label_slider_left }}</div>
+    </div>
+    <div class="slider" id="slider1" #slider1 (mousedown)="onMouseDown(1)">
+        <div *ngIf="is_moving" class="slider_popup" id="spop1">{{ label_slider_right }}</div>
+    </div>
+    <div id="label_left">{{ label_left | translate }}</div>
+    <div id="label_right">{{ label_right | translate }}</div>
+</div>

@@ -1,0 +1,21 @@
+@import "./../../../../../../../styles/global";
+
+:host {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0 $spacing / 2;
+    width: calc(100% - #{$spacing});
+
+    background: $tdc_darker;
+    border-radius: 3px 3px 0 0;
+
+    HeaderTd {
+        margin-left: $spacing / 2;
+        flex-basis: 100%;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+}

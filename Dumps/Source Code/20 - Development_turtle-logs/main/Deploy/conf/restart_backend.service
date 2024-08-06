@@ -1,0 +1,6 @@
+[Unit]
+Description=Restart Backend Service
+
+[Service]
+ExecStart=/bin/bash /root/LegacyPlayersV3/Deploy/restart_backend.sh
+User=root

@@ -1,0 +1,75 @@
+<style>
+    #container {
+        width: 600px;
+    }
+</style>
+<div id="container"></div>
+<script src="jquery.js"></script>
+<script src="viewer.js"></script>
+<script type="text/javascript">
+    var WH = {
+        debug: () => {}
+    };
+    setTimeout(() =>
+    {
+        let searchParams = new URLSearchParams(window.location.search);
+        let model = searchParams.get('model');
+        let SkinColor = searchParams.get('sk');
+        let HairStyle = searchParams.get('ha');
+        let HairColor = searchParams.get('hc');
+        let Face = searchParams.get('fa');
+        let Additional = searchParams.get('fh');
+        let Items = searchParams.get('items');
+        if (Items.length > 0) {
+            Items = Items.split('X').map(pairs => pairs.split(',').map(id => Number(id)));
+        }
+
+        this.characterOptions = {
+            type: window.ZamModelViewer.WOW,
+            contentPath: "https://legacyplayers.com/model_viewer/",
+            container: $("#container"),
+            hd: true,
+            aspect: 0.76,
+            sk: SkinColor,
+            ha: HairStyle,
+            hc: HairColor,
+            fa: Face,
+            fh: Additional,
+            fc: 0,
+            ep: 0,
+            ho: 0,
+            ta: 0,
+            cls: 12,
+            // sheathMain: 1,
+            // sheathOff: 1,
+            items: Items,
+            transparent: false,
+            background: "bg.png",
+            models: {
+                type: window.ZamModelViewer.Wow.Types.CHARACTER,
+                id: model
+            },
+        };
+
+        this.characterObject = new window.ZamModelViewer(this.characterOptions);
+        this.characterObject.renderer.zoom.target = -2.5;
+        this.characterObject.renderer.zenith = 1.6714272917097714;
+        this.characterObject.renderer.azimuth = 4.31026512072519;
+        var interval = setInterval(() => {
+            if (!this.characterObject.renderer.progressShown) {
+                setTimeout(() => {
+                    this.characterObject.method("setAnimPaused", true);
+                    this.characterObject.renderer.makeDataURL = ["image/jpeg", 0.9];
+                    setTimeout(() => {
+                        let image = document.createElement("img");
+                        image.setAttribute("id", "result_image");
+                        // let image = document.getElementById("result_image");
+                        image.setAttribute("src", this.characterObject.renderer.screenshotDataURL);
+                        document.body.appendChild(image);
+                    }, 1000);
+                }, 2000);
+                clearInterval(interval);
+            }
+        }, 1000);
+    }, 1000);
+</script>

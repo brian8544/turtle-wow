@@ -1,0 +1,9 @@
+<Table [bodyRows]="current_addons" [headColumns]="header_columns" [clientSide]="clientSide"
+       [responsiveHeadColumns]="responsiveHeadColumns" [responsiveModeWidthInPx]="responsiveModeWidthInPx"
+       [numItems]="total_num" unique_id="addon_pastebin_search" [et_row_items]="[link_viewer, undefined, undefined, undefined]">
+</Table>
+<div *ngIf="is_logged_in" class="edit_btn btn btnHighlight" routerLink="/tools/addon_pastebin/edit">Create a pastebin</div>
+
+<ng-template #link_viewer let-specification="specification" let-content="content">
+    <a routerLink="/tools/addon_pastebin/viewer/{{specification.args.id}}">{{content}}</a>
+</ng-template>

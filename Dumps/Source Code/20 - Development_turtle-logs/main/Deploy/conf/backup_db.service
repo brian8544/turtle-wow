@@ -1,0 +1,6 @@
+[Unit]
+Description=DB Backup Service
+
+[Service]
+ExecStart=/bin/bash /root/LegacyPlayersV3/Deploy/backup_db.sh
+User=root

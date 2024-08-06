@@ -1,0 +1,67 @@
+{
+  "name": "turtle-db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@auth/drizzle-adapter": "^0.7.0",
+    "@hookform/resolvers": "^3.3.4",
+    "@t3-oss/env-nextjs": "^0.10.1",
+    "@tanstack/react-query": "^5.36.0",
+    "classnames": "^2.5.1",
+    "drizzle-orm": "^0.29.4",
+    "geist": "^1.3.0",
+    "lodash-es": "^4.17.21",
+    "lucide-react": "^0.378.0",
+    "mysql2": "^3.9.1",
+    "next": "^14.2.1",
+    "next-auth": "^4.24.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.51.4",
+    "zod": "^3.23.3"
+  },
+  "devDependencies": {
+    "@haaxor1689/eslint-config": "^3.0.0",
+    "@haaxor1689/prettier-config": "^3.0.0",
+    "@types/eslint": "^8.56.2",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^20.11.20",
+    "@types/react": "^18.2.57",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "autoprefixer": "^10.4.19",
+    "drizzle-kit": "^0.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^13.5.6",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.34.1",
+    "postcss": "^8.4.34",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2"
+  },
+  "ct3aMetadata": {
+    "initVersion": "7.33.1"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "eslintConfig": {
+    "extends": "@haaxor1689/eslint-config"
+  },
+  "prettier": "@haaxor1689/prettier-config"
+}

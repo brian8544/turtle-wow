@@ -1,0 +1,34 @@
+<div class="title_bar">
+    <SelectInput [(value)]="modes_current_selection" (valueChange)="select()" [options]="modes"
+                 [themed]="true"></SelectInput>
+    <SelectInput [(value)]="selections_current_selection" (valueChange)="select()" [options]="selections"
+                 [themed]="true"></SelectInput>
+    <MultiSelect [(selectedItems)]="encounters_selected_items" [dropdownList]="encounters" (select_all)="select()"
+                 (item_deselected)="select()" (item_selected)="select()"
+                 [additional_button]="additional_encounter_button" [enableCheckAll]="true"
+                 (deselect_all)="select()" placeholder="Ranking.encounter"
+                 (items_changed_by_action)="select()"></MultiSelect>
+    <MultiSelect [(selectedItems)]="difficulties_selected_items" [dropdownList]="difficulties"
+                 [allowSearchFilter]="false"
+                 (select_all)="select()" placeholder="Ranking.difficulties" (items_changed_by_action)="select()"
+                 (item_deselected)="select()" (item_selected)="select()" (deselect_all)="select()"></MultiSelect>
+    <MultiSelect [(selectedItems)]="classes_selected_items" [dropdownList]="classes" [allowSearchFilter]="true"
+                 [enableCheckAll]="true"
+                 (select_all)="select()" placeholder="Ranking.classes" [additional_button]="additional_spec_buttons"
+                 (items_changed_by_action)="select()"
+                 (item_deselected)="select()" (item_selected)="select()" (deselect_all)="select()"></MultiSelect>
+    <MultiSelect [(selectedItems)]="servers_selected_items" [dropdownList]="servers" [allowSearchFilter]="true"
+                 (select_all)="select()" placeholder="Ranking.servers" (items_changed_by_action)="select()"
+                 (item_deselected)="select()" (item_selected)="select()" (deselect_all)="select()"></MultiSelect>
+    <MultiSelect [(selectedItems)]="seasons_selected_items" [dropdownList]="seasons" [allowSearchFilter]="true"
+                 (select_all)="select()" placeholder="Ranking.seasons" [enableCheckAll]="true"
+                 (items_changed_by_action)="select()"
+                 (item_deselected)="select()" (item_selected)="select()" (deselect_all)="select()"></MultiSelect>
+    <svg aria-hidden="true" viewBox="0 0 448 512" id="rpll_share_button" (click)="share()">
+        <path fill="currentColor"
+              d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zM304 296c-14.562 0-27.823 5.561-37.783 14.671l-67.958-40.775a56.339 56.339 0 0 0 0-27.793l67.958-40.775C276.177 210.439 289.438 216 304 216c30.928 0 56-25.072 56-56s-25.072-56-56-56-56 25.072-56 56c0 4.797.605 9.453 1.74 13.897l-67.958 40.775C171.823 205.561 158.562 200 144 200c-30.928 0-56 25.072-56 56s25.072 56 56 56c14.562 0 27.823-5.561 37.783-14.671l67.958 40.775a56.088 56.088 0 0 0-1.74 13.897c0 30.928 25.072 56 56 56s56-25.072 56-56C360 321.072 334.928 296 304 296z"></path>
+    </svg>
+</div>
+<MeterGraph [bars]="bars" [bar_subjects]="bar_subjects" [bar_tooltips]="bar_tooltips" [show_per_second]="false"
+            [show_percent]="false" (bar_clicked)="bar_clicked($event)" [delete_label]="is_deletable"
+            (delete_clicked)="delete_clicked($event)"></MeterGraph>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{WEBCLIENT_WEBSITE_NAME}}</title>
+    <base href="/">
+    <meta name=”robots” content="index, follow">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="{{WEBCLIENT_META_DESCRIPTION}}" name="description">
+    <meta content="{{WEBCLIENT_META_THEME_COLOR}}" name="theme-color">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="{{WEBCLIENT_ICON_PATH}}/{{WEBCLIENT_ICON_NAME}}_apple.{{WEBCLIENT_ICON_TYPE}}" rel="apple-touch-icon">
+    <link href="/manifest.webmanifest" rel="manifest">
+    <!--
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/serviceworker.js');
+            });
+        }
+    </script>
+    -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{WEBCLIENT_GOOGLE_ANALYTICS_TOKEN}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+    </script>
+    <script type='application/ld+json'>
+        [
+            {
+                "@context": "http://www.schema.org",
+                "@type": "WebSite",
+                "name": "{{WEBCLIENT_WEBSITE_NAME}}",
+                "url": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}",
+                "keywords": "{{WEBCLIENT_META_KEYWORDS}}",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}/{{WEBCLIENT_WEBSITE_SEARCH_URL}}{{{WEBCLIENT_WEBSITE_SEARCH_VARIABLE}}}",
+                    "query-input": "required name={{WEBCLIENT_WEBSITE_SEARCH_VARIABLE}}"
+                }
+            },
+            {
+                "@context": "http://www.schema.org",
+                "@type": "Organization",
+                "name": "{{WEBCLIENT_WEBSITE_NAME}}",
+                "url": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}",
+                "logo": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}{{WEBCLIENT_ICON_PATH}}/{{WEBCLIENT_ICON_NAME}}.{{WEBCLIENT_ICON_TYPE}}",
+                "description": "{{WEBCLIENT_META_DESCRIPTION}}"
+            },
+            {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Account",
+                        "item": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}/account"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Rest API",
+                        "item": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}/API/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Privacy",
+                        "item": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}/privacy/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Imprint",
+                        "item": "https://{{WEBCLIENT_WEBSITE_DOMAIN}}/imprint/"
+                    }
+                ]
+            }
+        ]
+    </script>
+    <script src="https://hb.vntsm.com/v3/live/ad-manager.min.js" type="text/javascript" data-site-id="6093d8189ddea76a9b42da89" data-mode="scan" async></script>
+</head>
+<body>
+<noscript>
+    {{WEBCLIENT_WEBSITE_NOSCRIPT_MESSAGE}}
+</noscript>
+<root></root>
+</body>
+</html>

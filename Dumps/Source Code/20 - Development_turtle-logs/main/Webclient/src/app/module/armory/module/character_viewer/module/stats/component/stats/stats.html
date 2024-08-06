@@ -1,0 +1,9 @@
+<div class="tableContainer">
+    <div class="tableRow tableHead">
+        <div>{{ 'Armory.Viewer.stats' | translate }}</div>
+    </div>
+    <div class="tableRow" *ngFor="let stat of stats">
+        <div>{{ stat.stat_type }}</div>
+        <div>{{ stat.stat_value }}</div>
+    </div>
+</div>

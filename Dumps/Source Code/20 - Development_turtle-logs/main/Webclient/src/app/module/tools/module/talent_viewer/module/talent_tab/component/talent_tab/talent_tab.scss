@@ -1,0 +1,69 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background: $tdc_darker;
+    border-bottom: 1px solid $tdc_accent;
+    height: 30px;
+
+    .right_part, .left_part {
+        display: inline-block;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    $right_part_width: 70px;
+    .right_part {
+        width: $right_part_width;
+        cursor: pointer;
+
+        &:hover {
+            color: $highlight;
+        }
+    }
+
+    .left_part {
+        width: calc(100% - #{$right_part_width});
+    }
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing 0;
+
+    $talent_icon_size: 50px;
+    .talent_row, .arrow_row {
+        display: flex;
+        flex-direction: row;
+        width: calc(100% - 2 * #{$spacing});
+        padding: 0 $spacing;
+        height: $talent_icon_size;
+    }
+
+    .talent_row {
+        TalentArrow {
+            width: calc(33.3% - (4/3) * #{$talent_icon_size} + 1px);
+            height: $talent_icon_size;
+        }
+    }
+
+    .arrow_row {
+        justify-content: space-between;
+
+        TalentArrow {
+            width: $talent_icon_size;
+            height: $talent_icon_size;
+        }
+    }
+}

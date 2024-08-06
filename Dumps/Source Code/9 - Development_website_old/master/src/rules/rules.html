@@ -1,0 +1,86 @@
+<div class="section mb-5" id="pages">
+   <style>
+      .custom-nav-tabs {
+         padding: 10px;
+      }
+
+      .custom-nav-link {
+         background-color: var(--dark-gray);
+         border-radius: 5px;
+         margin-right: 10px;
+         border: 1px solid transparent;
+      }
+
+      .custom-nav-link.active {
+         color: var(--orange) !important;
+         border-color: transparent;
+      }
+   </style>
+   <div class="container-fluid pb-5">
+      <div class="container pt-5 pb-5">
+
+         <ul class="nav custom-nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+               <button class="nav-link custom-nav-link active" id="rules-tab-1" data-toggle="tab" data-target="#rules_1" type="button" role="tab" aria-controls="rules_1" aria-selected="true">Turtle WoW PvE</button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button class="nav-link custom-nav-link" id="rules-tab-2" data-toggle="tab" data-target="#rules_2" type="button" role="tab" aria-controls="rules_2" aria-selected="false">TEL'ABIM PvP</button>
+            </li>
+         </ul>
+
+         <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="rules_1" role="tabpanel" aria-labelledby="rules-tab-1">
+               <div class="row helmet p-5">
+                  <div class="col-lg-12">
+                     <h2 class="orange-text mb-2">Server Rules & Terms of Use</h2>
+                     <p class="w-75 mt-3 text-white">
+                        Hello! Below, we have outlined our expectations for appropriate behavior on Turtle WoW. These rules flow from our forums, to our discord, to in game. By joining this server you're joining a collective effort of players and staff to create a respectful and friendly community. Please read the rules we have set up to avoid any misunderstandings during your gameplay. Remember, you have a responsibility not only for your own behavior here, but also representing the entire community and the server.
+                     </p>
+
+                     <ul>
+                        <li ng-repeat="r in tab1">
+                           <a class="hand text-green" ng-href="#/rules#{{r.slug}}-tab-1">{{r.title}}</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="row p-5 mt-5" ng-repeat="r in tab1">
+                  <a id="{{r.slug}}-tab-1"></a>
+                  <div class="col-lg-12 mb-1">
+                     <h5 class="text-white mb-3"><span class="star mr-2">&starf;</span> {{r.title}}</h5>
+                     <p class="text-gray" ng-bind-html="r.description"></p>
+                  </div>
+               </div>
+            </div>
+            <div class="tab-pane fade" id="rules_2" role="tabpanel" aria-labelledby="rules-tab-2">
+               <div class="row helmet p-5">
+                  <div class="col-lg-12">
+                     <h2 class="orange-text mb-2">Server Rules & Terms of Use</h2>
+                     <p class="w-75 mt-3 text-white">
+                        Hello! Below, we have outlined our expectations for appropriate behavior on Turtle WoW. These rules flow from our forums, to our discord, to in game. By joining this server you're joining a collective effort of players and staff to create a respectful and friendly community. Please read the rules we have set up to avoid any misunderstandings during your gameplay. Remember, you have a responsibility not only for your own behavior here, but also representing the entire community and the server.
+                     </p>
+
+                     <ul>
+                        <li ng-repeat="d in tab2">
+                           <a class="hand text-green" ng-href="#/rules#{{d.slug}}-tab-2">{{d.title}}</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="row p-5 mt-5" ng-repeat="d in tab2">
+                  <a id="{{d.slug}}-tab-2"></a>
+                  <div class="col-lg-12 mb-1">
+                     <h5 class="text-white mb-3"><span class="star mr-2">&starf;</span> {{d.title}}</h5>
+                     <p class="text-gray" ng-bind-html="d.description"></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+</div>
+
+
+

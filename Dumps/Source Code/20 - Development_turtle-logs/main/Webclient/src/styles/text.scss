@@ -1,0 +1,45 @@
+@import "./global.scss";
+
+.text {
+    .textContainer {
+        display: block;
+        max-width: 1280px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: $spacing * 1.5;
+        padding-right: $spacing * 1.5;
+
+        ul {
+            list-style: none;
+
+            li {
+                h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        h4, h1, h2, h3 {
+            font-weight: 400;
+            font-size: 24px;
+            margin: $spacing * 2.5 0 0;
+            color: $highlight;
+            line-height: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: $spacing * 0.25;
+        }
+    }
+}

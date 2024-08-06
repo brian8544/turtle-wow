@@ -1,0 +1,25 @@
+@import "../../../../../../styles/global";
+@import "../../../../../../styles/input";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+input {
+    &:focus {
+        outline: none;
+    }
+
+    &:invalid {
+        box-shadow: none;
+    }
+
+    &.touched:invalid {
+        box-shadow: 0 0 1.5px 1px red !important;
+    }
+}
+
+span {
+    font-weight: bold;
+}

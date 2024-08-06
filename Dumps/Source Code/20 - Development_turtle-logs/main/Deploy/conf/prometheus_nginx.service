@@ -1,0 +1,13 @@
+[Unit]
+Description=NGINX Prometheus exporter
+
+[Service]
+WorkingDirectory=/root
+ExecStart=/root/nginx-prometheus-exporter/nginx-prometheus-exporter -nginx.scrape-uri http://127.0.0.1:8080/stub_status
+User=root
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

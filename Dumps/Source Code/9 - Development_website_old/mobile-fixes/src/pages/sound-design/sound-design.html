@@ -1,0 +1,157 @@
+<div class="section mb-5" id="pages" style="background-image: url(images/subpagebackground.png)">
+   <div class="container-fluid pb-5">
+      <div class="container pt-5 pb-5">
+
+         <div class="row speaker p-5">
+
+            <div class="col-lg-12 ">
+
+               <h2 class="orange-text mb-2">Sound Design</h2>
+               <p class="w-50 mt-3 text-white">
+                  Sound design has always been a big part of Warcraft Universe. It helped bring players closer to the
+                  stories this world had to offer and enhanced the experience its players had. For that reason, we aim
+                  to keep up with this tradition and provide our players with excellent sound design to match the new
+                  content we provide.
+               </p>
+
+
+            </div>
+
+         </div>
+
+         <div class="row p-5 mt-5">
+
+            <div class="col-lg-12 ">
+
+               <h3 class="orange-text mb-4">Original Soundtracks</h3>
+
+               <p class="w-75 text-white">
+
+                  Thanks to our talented artists and designers, we are able to have numerous new soundtracks that you
+                  will experience as you embark on your journey through Azeroth.
+
+               </p>
+
+               <img src="images/footerline.png" class="mt-3 mb-4 w-100">
+
+               <p class="team">
+                  <span class="orange-text mr-2">Team:</span>
+                  Charles Lobaugh • Gabriel Contreras • Ivan Nikolic • George Kouroupakis • Sauli Pulkkinen
+               </p>
+            </div>
+
+            <div class="col-lg-12 mb-5">
+
+               <div class="row druair ml-0 mr-0" style="border: 0; box-shadow: none">
+
+                  <div class="col-lg-6">
+
+                  </div>
+                  <div class="col-lg-6 text-white">
+
+                     <h3 class="mt-5 mb-4">Sauli Pulkkinen, Druair</h3>
+                     <p class="mr-5 mb-5" style="width: 80%">
+                        Exploring Azeroth has been a huge and meaningful experience to me since the days of Warcraft
+                        III, and
+                        music has played a special part in it. It's a key element of creating that immersive sensation
+                        of
+                        wonder and adventure. I'm honored to be able to share my passion, skills and experience with the
+                        Turtle WoW community, and I hope my musical work can help evoke the immersion which I enjoy
+                        myself so
+                        much.
+                     </p>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="col-lg-4 mb-4" ng-repeat="l in music_links">
+
+               <iframe width="100%" height="180" src="{{l}}" title="YouTube video player"
+                       frameborder="0"
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                       allowfullscreen></iframe>
+
+            </div>
+
+         </div>
+
+         <div class="row  p-5 mt-5">
+
+            <div class="col-lg-12">
+
+               <h3 class="orange-text mb-4">Unique Character Voices</h3>
+
+               <p class="w-75 text-white">
+
+                  As we introduce many new characters, we strive to give them more life to make them feel like a part of
+                  the world they inhabit. And what better way to do that than to provide them with their own voices.
+
+               </p>
+
+               <img src="images/footerline.png" class="mt-3 mb-4 w-100">
+
+               <!--p class="team">
+                  <span class="orange-text mr-2">Team:</span>
+                  Sauli Pulkkinen
+               </p-->
+
+            </div>
+
+            <div class="col-lg-12 mb-4">
+
+               <div class="row shanky ml-0 mr-0">
+
+                  <div class="col-lg-6">
+
+                  </div>
+                  <div class="col-lg-6 text-white">
+
+                     <h3 class="mt-5 mb-4">Charles Lobaugh, 'ol Shanky</h3>
+                     <p class="mr-5 mb-5" style="width: 80%">
+                        The community that Turtle WoW fosters is one of teamwork, passion, and care that is almost
+                        unprecedented in other games past and present. I'm thankful to be working with such incredible
+                        people and extremely humbled by their willingness to let me express myself in my voicework. For
+                        Azeroth!
+                     </p>
+
+                  </div>
+
+               </div>
+
+               <div class="col-lg-12 mt-5 mb-4"></div>
+
+               <div class="row mt-4 transparent" ng-repeat="cat in sounds">
+                  <div class="col-lg-12">
+                     <h5 class="orange-text">{{cat.name}}</h5>
+                  </div>
+                  <div class="col-lg-6 audio-player" ng-repeat="s in cat.sounds">
+
+                     <div class="mt-1 mb-1 pl-3 p-2">
+
+                     <div class="pull-left" style="width: 35%;">
+                        <p class="mb-0 text-white">{{s.title}}</p>
+                        <p class="text-gray">{{s.subtitle}}</p>
+                     </div>
+
+                     <div class="player">
+                        <audio>
+                           <source src="{{s.file}}" type="audio/mpeg">
+                        </audio>
+                     </div>
+
+                     </div>
+
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+</div>
+

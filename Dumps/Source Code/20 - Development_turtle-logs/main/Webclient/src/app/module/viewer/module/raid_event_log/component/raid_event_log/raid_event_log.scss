@@ -1,0 +1,86 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+@import "src/styles/buttons";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+#table_header {
+    width: calc(100% - #{$spacing} - 2px);
+    height: calc(50px - #{$spacing});
+    background: $tdc_darker;
+    border: 1px solid $tdc_accent;
+    border-bottom: none;
+
+    padding: 0.5 * $spacing 0.5 * $spacing;
+
+    .actor_btn {
+        min-height: 18px;
+        line-height: 18px;
+
+        &:first-child {
+            margin-right: 0.5 * $spacing;
+        }
+    }
+
+    .active_btn {
+        background: $highlight !important;
+        color: #FFFFFF !important;
+    }
+}
+
+#table_wrapper {
+    height: 514px;
+    width: 100%;
+    //overflow: hidden;
+    overflow-y: scroll;
+    background: $tdc_darker;
+}
+
+table {
+    width: calc(100% - 2px);
+    border: 1px solid $tdc_accent;
+    border-collapse: collapse;
+    border-radius: 3px 3px 3px 3px;
+
+    tbody {
+        width: 100%;
+
+        $columnHeight: 25px;
+        tr {
+            width: 100%;
+            min-height: $columnHeight;
+
+            td {
+                min-height: $columnHeight;
+                line-height: $columnHeight;
+                font-size: 16px;
+                border: none;
+
+                &:first-child {
+                    width: 152px;
+                    padding-left: 0.5 * $spacing;
+                }
+            }
+
+            &:nth-child(2n) {
+                background: $tdc_darker;
+            }
+
+            &:nth-child(2n + 1) {
+                background: lighten($tdc_darker, 5%);
+            }
+        }
+    }
+}
+
+.contains_link {
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+        color: $highlight;
+    }
+}

@@ -1,0 +1,9 @@
+[package]
+name = "language"
+version = "0.1.0"
+authors = ["Tom Dymel <tom@dymel.dev>"]
+
+[dependencies]
+dotenv = "0.15.0"
+strum = "0.24.1"
+strum_macros = "0.24.2"

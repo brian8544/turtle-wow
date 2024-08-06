@@ -1,0 +1,104 @@
+@import "src/styles/global";
+
+$size: 50px;
+:host {
+    display: block;
+    width: $size;
+    height: $size;
+}
+
+.filler {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px transparent;
+
+    .vertical_arrow_filler {
+        position: absolute;
+        background: $tdc_accent;
+        width: 10px;
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    .horizontal_arrow_filler {
+        position: absolute;
+        background: $tdc_accent;
+        width: 100%;
+        height: 10px;
+        margin-top: 20px;
+    }
+
+    .diagonal_arrow_filler {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        div:nth-child(1) {
+            position: absolute;
+            background: $tdc_accent;
+            width: calc(50% + 5px);
+            height: 10px;
+            top: 20px;
+            left: 0;
+        }
+
+        div:nth-child(2) {
+            position: absolute;
+            background: $tdc_accent;
+            width: 10px;
+            height: calc(50% - 5px);
+            left: 20px;
+            top: 30px;
+        }
+    }
+
+    .golden_arrow {
+        &:not(.diagonal_arrow_filler) {
+            background: $gold !important;
+        }
+
+        div {
+            background: $gold !important;
+        }
+    }
+}
+
+.icon {
+    position: relative;
+    background-size: $size $size;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid $tdc_accent;
+    box-shadow: 0 0 2px #000;
+    cursor: pointer;
+
+    .spend_points {
+        position: absolute;
+        border: 1px solid $tdc_accent;
+        border-right: none;
+        border-bottom: none;
+        bottom: 0;
+        right: 0;
+        width: 14px;
+        height: 14px;
+        background: #000;
+        text-align: center;
+        line-height: 14px;
+        user-select: none;
+    }
+
+    &.grayed_out {
+        filter: grayscale(100%);
+    }
+
+    &.golden_border {
+        border: 1px solid $gold !important;
+    }
+
+    &.green_border {
+        border: 1px solid $success !important;
+    }
+}

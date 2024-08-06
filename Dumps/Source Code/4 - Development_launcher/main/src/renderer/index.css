@@ -1,0 +1,375 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'fontin';
+	src: url('./assets/FontinSans-Regular.otf');
+}
+
+@font-face {
+	font-family: 'din';
+	src: url('./assets/DINPro-Regular.otf');
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+#root {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: auto;
+}
+
+*:focus {
+	outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+::-webkit-scrollbar {
+	@apply w-2;
+	@apply h-2;
+
+	&-track {
+		background: transparent;
+	}
+
+	&-thumb {
+		display: none;
+		@apply bg-blueGray/40;
+
+		:hover& {
+			display: initial;
+			cursor: pointer;
+		}
+
+		&:hover {
+			@apply bg-blueGray;
+		}
+	}
+
+	&-corner {
+		display: none;
+	}
+}
+
+.gutter {
+	background: transparent;
+	@apply transition-colors;
+
+	&:hover {
+		@apply bg-orange/40;
+	}
+
+	&&-horizontal {
+		@apply -mx-1;
+		cursor: col-resize;
+	}
+
+	&&-vertical {
+		@apply -my-1;
+		cursor: row-resize;
+	}
+}
+
+@layer components {
+	/* Default text styles */
+	:not(svg, svg *) {
+		color: white;
+		@apply font-din;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+		cursor: default;
+	}
+
+	h1,
+	.h1 {
+		@apply font-fontin;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 78px;
+		line-height: 76px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	h2,
+	.h2 {
+		@apply font-fontin;
+		font-weight: 700;
+		font-size: 54px;
+		line-height: 58px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	h3,
+	.h3 {
+		@apply font-fontin;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 38px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	h4,
+	.h4 {
+		@apply font-fontin;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 26px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	.l1 {
+		font-size: 18px;
+		line-height: 32px;
+	}
+
+	.l2 {
+		font-size: 24px;
+		line-height: 36px;
+	}
+
+	.s1 {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.tw-color {
+		display: inline;
+		@apply bg-gradient-to-t from-yellow to-pink;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.tw-surface {
+		position: relative;
+		@apply border border-blueGray/20 bg-darkGray/70 p-4;
+		box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
+
+		& hr {
+			@apply -mx-4 text-blueGray/20;
+		}
+	}
+
+	.tw-dialog {
+		position: relative;
+		@apply border border-blueGray/20 bg-darkGray/70 p-3;
+		box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
+		@apply relative flex w-3/5 flex-col gap-2;
+
+		& hr {
+			@apply -mx-3 text-blueGray/20;
+		}
+	}
+
+	.tw-hocus {
+		@apply hocus:text-orange hocus:drop-shadow-[0px_0px_15px_white];
+	}
+
+	.tw-input {
+		@apply rounded-[1px];
+		@apply border border-gray/40 bg-darkerGray;
+		@apply p-2;
+		@apply placeholder:text-gray;
+		@apply focus:border-blueGray;
+
+		&-underline {
+			@apply tw-input;
+			@apply border-0;
+			@apply border-b;
+			@apply bg-[transparent];
+		}
+	}
+
+	.tw-button {
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+		flex-shrink: 0;
+		@apply py-2;
+		@apply px-4;
+		@apply bg-darkGray;
+		@apply border;
+		@apply rounded-[1px];
+
+		&:not(&-primary) {
+			background: linear-gradient(#f1c22d40, #ff775740);
+			@apply border-darkBrown;
+
+			& > span {
+				background: linear-gradient(#f1c22d, #ff7757);
+				-webkit-background-clip: text;
+			}
+
+			& svg {
+				stroke: #fb9f3a;
+			}
+
+			&::before {
+				@apply bg-orange;
+			}
+		}
+
+		&&-primary {
+			@apply bg-darkGreen/30;
+			@apply border-[#C8FF0022];
+
+			& > span {
+				background: linear-gradient(#f7ff8a, #8dd958);
+				-webkit-background-clip: text;
+			}
+
+			& svg {
+				stroke: #ccf068;
+			}
+
+			&::before {
+				@apply bg-warmGreen;
+			}
+
+			&:hover,
+			&:focus {
+				&::after {
+					@apply bg-warmGreen;
+				}
+			}
+		}
+
+		& > span {
+			@apply flex items-center justify-center;
+			@apply gap-2;
+			@apply font-fontin;
+			@apply font-bold;
+			@apply uppercase;
+			font-size: 20px;
+			line-height: 30px;
+			letter-spacing: 2px;
+			-webkit-box-decoration-break: clone;
+			-webkit-text-fill-color: transparent;
+		}
+
+		& svg {
+			font-size: 10px;
+			line-height: 30px;
+		}
+
+		&:hover,
+		&:focus {
+			& > span {
+				background: white;
+				-webkit-background-clip: text;
+			}
+
+			& svg {
+				stroke: white;
+			}
+
+			&::before {
+				top: 9px;
+				bottom: 22px;
+				left: 22px;
+				right: 22px;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 12px;
+				bottom: -46px;
+				left: 12px;
+				right: 12px;
+				border-radius: 50%;
+				@apply bg-orange;
+				opacity: 0.75;
+				mix-blend-mode: hard-light;
+				filter: blur(25px);
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 5px;
+			bottom: 5px;
+			left: 18px;
+			right: 18px;
+			border-radius: 50%;
+			opacity: 0.75;
+			mix-blend-mode: hard-light;
+			filter: blur(25px);
+		}
+	}
+
+	.tw-loading {
+		@apply absolute inset-0 transition-all;
+		background: linear-gradient(
+			90deg,
+			rgba(255, 119, 87, 0) 0%,
+			#f89c42 30%,
+			#f1c22d 50%,
+			#f89c42 70%,
+			rgba(255, 119, 87, 0) 100%
+		);
+		transition-duration: 300ms;
+
+		&-wrapper {
+			@apply relative w-full before:absolute;
+			height: 6px;
+			&::before {
+				@apply inset-0 opacity-20;
+				background: linear-gradient(
+					90deg,
+					rgba(146, 147, 145, 0) 0%,
+					#929391 13%,
+					#929391 87%,
+					rgba(146, 147, 145, 0) 100%
+				);
+			}
+		}
+
+		&-unknown {
+			@apply animate-progress opacity-20;
+			background-image: linear-gradient(
+				-45deg,
+				#929391,
+				#929391 33%,
+				transparent 33%,
+				transparent 66%,
+				#929391 66%,
+				#929391
+			);
+			background-size: 1rem 100%;
+		}
+	}
+}

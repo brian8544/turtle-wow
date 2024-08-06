@@ -1,0 +1,4 @@
+<SelectInput [class.full_span]="!only_groups_selected" [themed]="true" [options]="privacy_options"
+             [value]="selected_privacy_option" (valueChange)="update_privacy_option($event)"></SelectInput>
+<SelectInput *ngIf="only_groups_selected" [themed]="true" [options]="privacy_groups" [value]="selected_privacy_group"
+             (valueChange)="update_privacy_group($event)"></SelectInput>

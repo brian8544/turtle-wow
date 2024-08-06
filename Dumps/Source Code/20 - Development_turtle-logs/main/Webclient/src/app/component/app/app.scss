@@ -1,0 +1,62 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: auto;
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+    }
+
+    RouterLoadingBar {
+        z-index: 100;
+    }
+}
+
+.ad_hidden {
+    display: none !important;
+}
+
+#center_layer {
+    display: flex;
+    justify-content: center;
+}
+
+.center_bar {
+    height: 100%;
+    width: calc(100% - 300px);
+    align-self: flex-start;
+}
+
+.center_bar_mobile {
+    height: 100%;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.center_no_ads {
+    height: 100%;
+    width: 100%;
+    align-self: flex-start;
+}
+
+#left_bar, #right_bar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+#top_layer, #bottom_layer {
+    display: flex;
+    width: 100%;
+    max-height: 250px;
+    align-items: center;
+    justify-content: center;
+}

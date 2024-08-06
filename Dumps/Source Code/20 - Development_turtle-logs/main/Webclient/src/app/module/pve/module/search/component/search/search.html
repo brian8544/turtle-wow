@@ -1,0 +1,25 @@
+<Table [bodyRows]="body_columns" [headColumns]="header_columns" [clientSide]="clientSide"
+       [responsiveHeadColumns]="responsiveHeadColumns" [responsiveModeWidthInPx]="responsiveModeWidthInPx"
+       [numItems]="num_characters" unique_id="raids_search"
+       (filterOrPageChanged)="onFilter($event)" (share)="tinyUrlService.set_table_filter(1, $event)"
+       [et_row_items]="[instance_map, undefined, guild_name, undefined, detailed_ts, detailed_ts]">
+</Table>
+
+<ng-template #instance_map let-specification="specification" let-content="content">
+    <InstanceMap [map_icon]="specification.args.icon" [instance_label]="content"
+                 [html_href]="'/viewer/' + specification.args.instance_meta_id + '/base'"
+                 [can_delete]="specification.args.can_delete" (delete)="delete_raid(specification.args.instance_meta_id)"></InstanceMap>
+</ng-template>
+
+<ng-template #detailed_ts let-specification="specification" let-content="content">
+    {{specification.content.length === 0 ? '-' : dateService.toRPLLLongDate(specification.content) }}
+</ng-template>
+
+<ng-template #guild_name let-specification="specification" let-content="content">
+    <ng-container *ngIf="!!specification.args">
+        <a routerLink="../armory/guild/{{specification.args.server_name}}/{{specification.args.guild_name}}">{{specification.content}}</a>
+    </ng-container>
+    <ng-container *ngIf="!specification.args">
+        {{specification.content}}
+    </ng-container>
+</ng-template>

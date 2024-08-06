@@ -1,0 +1,52 @@
+version: '3.6'
+services:
+  mariadb:
+    network_mode: host
+    build: ./mariadb
+    volumes:
+    - ./../Database/patches:/docker-entrypoint-initdb.d
+    - rpll_mariadb:/var/lib/mysql
+    environment:
+    - MYSQL_USER=mysql
+    - MYSQL_PASSWORD=vagrant
+    - MYSQL_ROOT_PASSWORD=vagrant
+    - TZ=Europe/Berlin
+  nginx:
+#    depends_on:
+#      - modelgenerator
+    network_mode: host
+    restart: on-failure
+    build:
+      context: ./../
+      dockerfile: ./Environment/nginx/Dockerfile
+    #volumes:
+    #  - ./../ModelViewer/mo3/:/var/www/html/model_viewer/mo3
+    #  - ./../ModelViewer/meta/:/var/www/html/model_viewer/meta
+    #  - ./../ModelViewer/textures/:/var/www/html/model_viewer/textures
+    #  - ./../ModelViewer/viewer/:/var/www/html/model_viewer/viewer
+    #  - ./../ModelViewer/bg.png:/var/www/html/model_viewer/bg.png
+#    ports:
+#    - '80:80'
+#    - '443:443'
+#    - '8080:8080'
+  postfix:
+    network_mode: host
+    build: ./postfix
+#    ports:
+#    - '25:25'
+    environment:
+    - SMTP_SERVER=smtp.gmail.com
+    - SMTP_USERNAME=jaylappdev@gmail.com
+    - SMTP_PASSWORD=jaylapp123
+    - SERVER_HOSTNAME=jaylapp.dev
+    - SMTP_NETWORKS=127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+  #modelgenerator:
+  #  network_mode: host
+  #  build:
+  #    context: ./../
+  #    dockerfile: ./Environment/model_generator/Dockerfile
+  #  ports:
+  #    - "5555:5555"
+
+volumes:
+  rpll_mariadb:

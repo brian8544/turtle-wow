@@ -1,0 +1,60 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+    table {
+        border: 1px solid $tdc_accent;
+        border-radius: 3px 3px 3px 3px;
+        width: 100%;
+
+        thead {
+            tr {
+                background: $tdc_darker;
+
+                td {
+                    font-weight: 900;
+                    font-size: 16px;
+                    padding: 0.25 * $spacing 0.25 * $spacing;
+                    text-align: center;
+                }
+
+                td:first-child {
+                    width: 15px;
+                    text-align: right;
+                }
+
+                td:nth-child(2) {
+                    text-align: left;
+                }
+
+                td:nth-child(3) {
+                    text-align: right;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    padding: 0.25 * $spacing 0.25 * $spacing;
+                }
+
+                td:first-child {
+                    width: 15px;
+                }
+
+                &:nth-child(2n) {
+                    background: $tdc_darker;
+                }
+
+                &:nth-child(2n + 1) {
+                    background: lighten($tdc_darker, 3%);
+                }
+
+                td:last-child, td:nth-child(3), td:nth-child(4), td:first-child  {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

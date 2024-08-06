@@ -1,0 +1,9 @@
+<header>{{ 'Account.navBar.entries.mail' | translate }}</header>
+
+<form (ngSubmit)="on_submit()" formValid ngNativeValidate>
+    <GeneralInput [(value)]="mail" [formFailure]="formFailure" [required]="true"
+                  labelKey="Account.updateMail.newMail" name="mail" placeholderKey="Account.updateMail.typeNewMail"
+                  type="email"></GeneralInput>
+    <ConfirmButton [disabled]="disableSubmit" labelKey="Account.updateMail.update" type="submit"></ConfirmButton>
+</form>
+<BriefNote noteKey="Account.updateMail.updateNote"></BriefNote>

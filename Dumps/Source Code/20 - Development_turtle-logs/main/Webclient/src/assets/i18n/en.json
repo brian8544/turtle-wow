@@ -1,0 +1,429 @@
+{
+    "serverResponses": {
+        "0": "Server is not reachable!",
+        "200": "Success!",
+        "401": "Unauthorized!",
+        "4012": "You are not logged in!",
+        "404": "Server is not available!",
+        "413": "File is too large!",
+        "429": "Too many requests!",
+        "500": "This is a bug! Contact the owner!",
+        "502": "Backend server is down!",
+        "504": "The request timed out!",
+        "520": "Invalid credentials!",
+        "521": "Invalid mail!",
+        "522": "Invalid nickname!",
+        "523": "This password has been pwned {{arg1}} times. Please choose another password!",
+        "524": "The minimum length for a password is 12 character.",
+        "525": "This mail is already being used!",
+        "526": "This nickname is already being used!",
+        "527": "The provided url is invalid!",
+        "528": "Mail could not be send!",
+        "529": "A deletion has not been issued!",
+        "530": "No forgot issued!",
+        "531": "A token may only be valid for up to 365 days!",
+        "532": "Date may not be in the past!",
+        "533": "The purpose must have a length between 1 and 24 characters!",
+        "534": "Invalid Input!",
+        "535": "Invalid characters used!",
+        "536": "File is not valid UTF8!",
+        "537": "ZIP File not recognized!",
+        "538": "Invalid Format of the start time!",
+        "539": "Invalid Format of the end time!",
+        "599": "An unknown error occurred!",
+        "mail_confirm": "A confirmation mail has been send to you!",
+        "reset_mail_confirm": "A mail has been send to the specified address!"
+    },
+    "General": {
+        "gender_0": "Male",
+        "gender_1": "Female",
+        "faction_1": "Horde",
+        "faction_0": "Alliance"
+    },
+    "Tooltip": {
+        "loading": "Loading...",
+        "CharacterTooltip": {
+            "guild": "{{rank}} of {{guild}}"
+        },
+        "ItemTooltip": {
+            "armor": "{{amount}} Armor",
+            "statLabel": "{{name}}",
+            "statPositive": "+{{value}} {{name}}",
+            "statNegative": "+{{value}} {{name}}",
+            "socket1": "Meta socket",
+            "socket2": "Red socket",
+            "socket4": "Yellow socket",
+            "socket8": "Blue socket",
+            "socketBonus": "Socket Bonus: {{effect}}",
+            "durability": "Durability {{amount}}/{{amount}}",
+            "itemLevel": "Item Level {{level}}",
+            "requiredLevel": "Requires Level {{level}}",
+            "weaponSpeed": "Speed {{speed}}s",
+            "weaponDamageElement": "{{damage_min}} - {{damage_max}} {{damage_type}} Damage",
+            "weaponDamagePhysical": "{{damage_min}} - {{damage_max}} Damage",
+            "itemId": "Entry: {{id}}"
+        },
+        "GuildTooltip": {
+            "num_member": "{{amount}} member"
+        }
+    },
+    "404": {
+        "title": "Four-O-Four - Page not found!"
+    },
+    "Armory": {
+        "Search": {
+            "name": "Name",
+            "guild": "Guild",
+            "gender": "Gender",
+            "server": "Server",
+            "race": "Race",
+            "faction": "Faction",
+            "hero_class": "Class",
+            "last_update": "Updated"
+        },
+        "GuildViewer": {
+            "name": "Name",
+            "hero_class": "Class",
+            "rank": "Rank",
+            "last_update": "Updated",
+            "SpeedKill": {
+                "Rank": "Rank",
+                "Encounter": "Encounter",
+                "Difficulty": "Difficulty",
+                "Duration": "Duration"
+            }
+        },
+        "Viewer": {
+            "guild": "{{rank}} of {{guild}}",
+            "stats": "Item stats",
+            "RankingTable": {
+                "boss_name": "Boss",
+                "dps": "DPS",
+                "hps": "HPS",
+                "tps": "TPS"
+            }
+        }
+    },
+    "CookieBanner": {
+        "notification": {
+            "saved": "Your consent settings have been saved!"
+        },
+        "front": {
+            "title": "We value your privacy",
+            "description": "{{company}} uses cookies and technologies such as Google Analytics to count, track and analyze visits. This helps us to improve your experience on this website. Click below to consent to use these technologies. You can change your consent choices any time by clicking on 'Change Consent' in the footer.",
+            "button": {
+                "options": "Manage choices",
+                "reject": "Reject all",
+                "agree": "Accept all"
+            }
+        },
+        "options": {
+            "title": "We value your privacy",
+            "description": "You can change the settings below to determine how you want your data to be used. Each purpose describes how we and our partners use your data.",
+            "button": {
+                "back": "Back",
+                "rejectAll": "Reject all",
+                "save": "Agree"
+            },
+            "vendor": {
+                "thirdparty": "Third party vendors",
+                "other": "Other",
+                "necessary": "Necessary",
+                "acceptAll": "Accept all"
+            }
+        },
+        "cookieDecisions": {
+            "title": "cookieDecisions",
+            "description": "Saves your decisions that you set here!"
+        },
+        "pwa_prompt": {
+            "title": "PWA_PROMPT",
+            "description": "This saves whether or not you have been prompted to install this website as PWA."
+        },
+        "api_token": {
+            "title": "API_TOKEN",
+            "description": "This saves your current API token to authenticate with the backend."
+        },
+        "googleAnalytics": {
+            "title": "Google Analytics",
+            "description": "We use Google Analytics to count, track and analyze visits. This helps us to understand how people use the site."
+        }
+    },
+    "FooterBar": {
+        "niceToKnow": {
+            "title": "nett to know",
+            "restApi": "Rest API",
+            "github": "Github",
+            "grafana": "System health"
+        },
+        "needHelp": {
+            "title": "Need help?",
+            "changeConsent": "Change consent",
+            "privacy": "Privacy",
+            "imprint": "Imprint"
+        },
+        "connect": {
+            "title": "Connect",
+            "discord": "Discord",
+            "report_issue": "Report bug",
+            "report_feature": "Suggest feature"
+        },
+        "copyright": "©2017-{{year}} {{company}}. All rights reserved."
+    },
+    "NavigationBar": {
+        "searchPlaceHolder": "Type to search",
+        "account": {
+            "title": "Account",
+            "logout": "Sign out"
+        },
+        "loggedOut": {
+            "signIn": "Sign in",
+            "signUp": "Sign up"
+        },
+        "pve": {
+            "title": "PvE",
+            "bosses": "Bosses",
+            "ranking": "Ranking",
+            "speed_kill": "Speed kills",
+            "speed_run": "Speed runs",
+            "loot": "Loot"
+        },
+        "armory": {
+            "title": "Armory",
+            "items": "Items",
+            "guilds": "Guilds"
+        },
+        "pvp": {
+            "title": "PvP",
+            "standings": "Standings",
+            "hk_life": "Lifetime kills",
+            "arena": "Arena",
+            "skirmish": "Skirmish",
+            "battleground": "Battleground"
+        },
+        "tools": {
+            "title": "Tools",
+            "talent_calc": "Talent calculator",
+            "rp_calc": "Rankpoints calculator",
+            "char_design": "Character designer",
+            "addons": "Addons",
+            "addon_pastebin": "Addon pastebin"
+        },
+        "contribute": {
+            "title": "Contribute",
+            "upload": "Upload"
+        },
+        "queue": {
+            "title": "Queue"
+        },
+        "donate": {
+            "patreon": "Patreon"
+        }
+    },
+    "Account": {
+        "navBar": {
+            "title": "Account settings",
+            "entries": {
+                "overview": "Overview",
+                "uploads": "Uploads",
+                "nickname": "Update nickname",
+                "password": "Update password",
+                "mail": "Update mail",
+                "api": "API tokens",
+                "delete": "Delete account"
+            }
+        },
+        "accountInformation": {
+            "nickname": "Nickname",
+            "mail": "Email",
+            "mail_confirmed": "Confirmation status",
+            "resend_mail": "Resend confirmation mail",
+            "default_privacy": "Default log privacy"
+        },
+        "updatePassword": {
+            "newPassword": "New password",
+            "typePassword": "Type your new password",
+            "update": "Update password",
+            "updateNote": "Note: All API tokens will be removed."
+        },
+        "updateNickname": {
+            "newNickname": "New nickname",
+            "typeNewNickname": "Type your new nickname",
+            "update": "Update nickname"
+        },
+        "updateMail": {
+            "newMail": "New email",
+            "typeNewMail": "Type your new email",
+            "update": "Update email",
+            "updateNote": "Note: All API tokens will be removed."
+        },
+        "api": {
+            "purpose": "Purpose",
+            "typePurpose": "Purpose of the token",
+            "generate": "Generate",
+            "action": "Action",
+            "remove": "Remove",
+            "expiration": "Expiration date",
+            "tokenNote": "Copy this token. You will not be able to retrieve it again!",
+            "createdToken": "Generated token",
+            "back": "Back"
+        },
+        "delete": {
+            "delete": "Delete account",
+            "deleteNote": "Note: This action is not revertible!"
+        },
+        "uploads": {
+            "options": {
+                "public": "Public",
+                "not_listed": "Not listed",
+                "only_groups": "Only groups"
+            },
+            "privacy_action": "Privacy action",
+            "no_groups": "Everyone",
+            "notifications": {
+                "success": "Success!",
+                "failure": "Privacy change failed!"
+            }
+        }
+    },
+    "Login": {
+        "mail": "Email address",
+        "typeMail": "Your email address",
+        "password": "Password",
+        "typePassword": "Your password",
+        "signIn": "Sign in",
+        "forgotPassword": "Forgot password?"
+    },
+    "SignUp": {
+        "nickname": "Nickname",
+        "typeNickname": "Publicly displayed nickname",
+        "mail": "Email address",
+        "typeMail": "Your email address",
+        "password": "Password",
+        "typePassword": "Your password",
+        "signUp": "Sign Up"
+    },
+    "ResetPassword": {
+        "reset": "Reset password",
+        "mail": "Email address",
+        "typeMail": "Your email address"
+    },
+    "Confirm": {
+        "wait": "Validating..."
+    },
+    "Table": {
+        "total": "{{amount}} total"
+    },
+    "Contribute": {
+        "Project": {
+            "title": "Contribute as a private server project",
+            "description": "LegacyPlayers v3 makes private server projects first class data providers. Using LP's RestAPI a private key, armory and raid data can be inserted, modified and deleted. This way you are in full control of the data you provide through LegacyPlayers. If you don't want to bother coding your own exporter, you can use LP's open-source exporter which is easy to configure and provides you with a number of features:",
+            "advantages": {
+                "0": "1. Your players have fine grained control about their data on LegacyPlayers: give/withdraw consent, modifying/deleting data and choose in a fine grained way which data is uploaded.",
+                "1": "2. The exporter is a configurable docker container which is easy to install.",
+                "2": "3. It is completely open-source. You can 100% trust that the application is not malicious.",
+                "3": "4. The consent manager enables you to comply with the GDPR."
+            },
+            "whyLp": "Using LegacyPlayers your players can have easy and detailed access to an armory, pve and pvp logs. This will improve the quality of your service significantly.",
+            "advantages2": {
+                "0": "1. Extremely easy to set up.",
+                "1": "2. Keep the data up to date, delete or modify it.",
+                "2": "3. Maintain a history of your player's character's developments.",
+                "3": "4. Provide more detailed data that is otherwise not accessible through player uploads.",
+                "4": "5. Use LPs armory, PvP and PvE log viewer as a service by your server for your player.",
+                "5": "6. Player use a familiar interface and can access their character data from anywhere."
+            },
+            "disadvantages": "There are really no disadvantages to this deal. If you choose to provide the data directly then you are in full control of it. If you don't, players can freely upload any data from your server to the site, regardless of validity. This has worked well in the past, but it has its obvious flaws. So take the leashes in your own hands instead.",
+            "contact": "If you are interested please contact Shino#3990 on Discord! (Links are in the footer)"
+        },
+        "Individual": {
+            "title": "Contribute as an individual",
+            "description": "You can currently only upload for Vanilla, TBC, WOTLK and Retail Classic. If you want to upload to a non listed server, please contact Shino!",
+            "description2": "Please select the correct server, start time, end time in the upload form and upload a zip of your WoWCombatLog.txt.",
+            "description3": "Vanilla (1.12), TBC (2.4.3) and WOTLK (3.3.5a) ONLY (English client only): You need to install an AddOn: 'AdvancedCombatLog' (see below). Please note that this addon writes meta information into your spell failed combat log messages. Therefore you need to spam your spells. Caster should spam their spells without a target every now and then (can be done during trash phases for example) to produce a sufficient amount of meta information.",
+            "description4": "For Vanilla: This macro may help you '/script for i=1, 100 do CastSpellByName(\"Fireball\"); end' (Replace Fireball with one of your spells); Make sure that no Hunter named its pet after an instance NPC. If someone does it, consider kicking him from your guild.",
+            "description5": "Note for TBC and WOTLK: The addon overwrites your SPELL_FAILED UI error messages. Therefore, you will no longer see them in your UI."
+        },
+        "Guide": {
+            "title": "Step by step guide to contribue",
+            "step1": "1. Create an account and log into the account. (Accounts from the old version dont work)",
+            "step2": "2. Install the AddOn for your respective expansion, listed above.",
+            "step3": "3. Let everyone else install the Helper AddOn to improve the accuracy.",
+            "step4": "4. Prior to the raid, delete the WoWCombatLog.txt.",
+            "step5": "5. Log in and collect a raid, the addon will start collecting automatically.",
+            "step6": "6. Log out after the raid, otherwise the log may be lost.",
+            "step7": "7. Zip the WoWCombatLog.txt, e.g. using 7zip. Please note that rar is not zip.",
+            "step8": "8. Upload it on the upload page: ",
+            "step9": "9. Make sure that you select the correct server.",
+            "step10": "10. After the log has been uploaded, it can take up to a minute until it is shown in the raid list. Additionally, you can find your uploads in your account panel."
+        }
+    },
+    "PvE": {
+        "Search": {
+            "raid": "Raid",
+            "difficulty": "Difficulty",
+            "guild": "Guild",
+            "server": "Server",
+            "start": "Start",
+            "end": "End",
+            "duration": "Duration"
+        }
+    },
+    "PvP": {
+        "Battleground": {
+            "battleground": "Battleground",
+            "server": "Server",
+            "score_alliance": "Score Alliance",
+            "score_horde": "Score Horde",
+            "start": "Start",
+            "end": "End",
+            "duration": "Duration"
+        },
+        "Arena": {
+            "arena": "Arena",
+            "server": "Server",
+            "team1": "Team Blue",
+            "team2": "Team Red",
+            "change1": "Rating Blue",
+            "change2": "Rating Red",
+            "start": "Start",
+            "end": "End",
+            "duration": "Duration"
+        },
+        "Skirmish": {
+            "arena": "Arena",
+            "server": "Server",
+            "start": "Start",
+            "end": "End",
+            "duration": "Duration"
+        }
+    },
+    "TinyUrl": {
+        "set_failure": "Something went wrong",
+        "set_success": "Url saved to your clipboard",
+        "not_found": "Url was not found"
+    },
+    "TalentViewer": {
+    },
+    "Ranking": {
+        "encounter": "Select encounter",
+        "classes": "Select class",
+        "servers": "Select server",
+        "difficulties": "Select difficulties",
+        "seasons": "Select seasons"
+    },
+    "Addon": {
+        "name": "Name",
+        "description": "Description",
+        "expansion": "Expansion"
+    },
+    "AddonPastebin": {
+        "Search": {
+            "title": "Title",
+            "addon_name": "Addon name",
+            "tags": "Tags",
+            "description": "Description",
+            "expansion": "Expansion"
+        }
+    }
+}

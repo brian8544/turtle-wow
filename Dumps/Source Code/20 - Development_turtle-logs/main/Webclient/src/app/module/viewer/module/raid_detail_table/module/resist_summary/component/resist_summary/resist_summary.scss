@@ -1,0 +1,43 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+}
+
+.container {
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid $tdc_accent;
+    border-bottom: none;
+    width: 600px;
+
+    .td {
+        $tdHeight: 25px;
+        height: $tdHeight;
+        min-width: $tdHeight;
+        border-right: 1px solid $tdc_accent;
+        line-height: $tdHeight;
+        flex: 1;
+        font-size: 16px;
+        text-align: center;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .header, .row {
+        display: flex;
+        flex-direction: row;
+        $size: 25px;
+        background: $tdc_darker;
+        width: 100%;
+        height: $size;
+        border-bottom: 1px solid $tdc_accent;
+        flex: 1;
+    }
+
+    .body {
+        width: 100%;
+    }
+}

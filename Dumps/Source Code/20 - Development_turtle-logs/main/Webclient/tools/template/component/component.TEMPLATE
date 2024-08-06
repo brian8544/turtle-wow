@@ -1,0 +1,8 @@
+import {Component} from "@angular/core";
+
+@Component({
+    selector: "{{NAME_PASCAL_CASE}}",
+    templateUrl: "./{{NAME_SNAKE_CASE_LOWER}}.html",
+    styleUrls: ["./{{NAME_SNAKE_CASE_LOWER}}.scss"]
+})
+export class {{NAME_PASCAL_CASE}}Component {}

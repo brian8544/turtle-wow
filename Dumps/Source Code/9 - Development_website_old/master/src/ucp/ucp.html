@@ -1,0 +1,492 @@
+<div class="section mb-5 ucp" id="pages">
+    <div class="container-fluid pb-5">
+        <div class="container-lg pt-5 pb-5">
+            <div class="row p-5">
+                <div class="col-lg-12"><h2 class="orange-text mb-2">Account Management</h2>
+                    <div class="text-white text-center mt-4"><img src="images/footerline.png" class="mt-3 mb-3 w-100"><a
+                            ng-href="#/ucp/overview" class="text-white" ng-class="{'active' : view == 'overview'}"><i
+                            class="fa fa-fw fa-search"></i>Overview</a><a ng-href="#/ucp/services" class="text-white"
+                                                                          ng-class="{'active' : view == 'services'}"><i
+                            class="fa fa-fw fa-server"></i>Services</a><a ng-href="#/ucp/characters" class="text-white"
+                                                                          ng-class="{'active' : view == 'characters'}"><i
+                            class="fa fa-fw fa-user"></i>Characters</a><a ng-href="#/ucp/security" class="text-white"
+                                                                          ng-class="{'active' : view == 'security'}"><i
+                            class="fa fa-fw fa-key"></i>Security</a><a ng-href="#/ucp/history_shop" class="text-white"
+                                                                       ng-class="{'active' : view == 'history_shop'}"><i
+                            class="fa fa-fw fa-key"></i>History Shop</a>
+                        <!--                  <a ng-href="#/ucp/shop" class="text-white" ng-class="{'orange-text' : view == 'security'}">Shop here-->
+                        <!--                     or in a different site menu</a>--><img src="images/footerline.png"
+                                                                                        class="mt-3 mb-4 w-100"></div>
+                    <div class="text-center text-white" ng-if="view == 'email-changed'">{{emailChange.result}}</div>
+                </div>
+                <div class="col-lg-7 mt-2" ng-if="view == 'overview'"><h3 class="orange-text">General Information</h3>
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td class="col-lg-4 col-sm-6"><strong>Account name</strong></td>
+                            <td class="col-lg-8 col-sm-6">{{data.username}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E-mail</strong></td>
+                            <td>{{data.email}}<BR><small class="hand mt-1 orange-text"
+                                                         ng-click="toggleEmailChangeModal()">Change email</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Account status</strong></td>
+                            <td><span class="text-green" ng-if="!data.status.banned">Active</span><span
+                                    class="text-red hand" ng-if="data.status.banned && !data.status.perma">Banned, expires in {{data.status.tl}}</span><span
+                                    class="text-red hand"
+                                    ng-if="data.status.banned && data.status.perma">Closed</span><small
+                                    class="hand mt-1" ng-if="data.status.messages.length > 0 || data.status.banned"><br>Last
+                                message:<Br><span class="font-weight-bold"
+                                                  ng-class="{'text-green' : data.status.messages[data.status.messages.length - 1].guid == 'Turtle WoW Support'}"><ng-container
+                                        ng-if="data.status.messages[data.status.messages.length - 1].guid == 'Turtle WoW Support'">{{data.status.messages[data.status.messages.length - 1].guid}}:</ng-container><ng-container
+                                        ng-if="data.status.messages[data.status.messages.length - 1].guid != 'Turtle WoW Support'">{{data.username}}:</ng-container></span>{{data.status.messages[data.status.messages.length - 1].message}}<Br><span
+                                        class="orange-text"
+                                        ng-click="toggleBanAppealModal()">Contact Support</span></small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Creation date</strong></td>
+                            <td>{{data.joindate}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Last Login</strong></td>
+                            <td>{{data.last_login}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Last IP Address</strong></td>
+                            <td>{{data.last_ip}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Forum Username</strong></td>
+                            <td>{{data.forum_username}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Donation Tokens</strong></td>
+                            <td>{{data.tokens}}<Br><small class="mt-1 orange-text hand" ng-click="goToPage('donate')">Visit
+                                Donation Page</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Newsletter</strong></td>
+                            <td><label class="hand" ng-click="toggleEmailSub()"><i class="fa fa-fw fa-square"
+                                                                                   ng-if="data.email_sub == 0"></i><i
+                                    class="fa fa-fw fa-check-square" ng-if="data.email_sub == 1"></i>Yes</label></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Delete account</strong><br></td>
+                            <td><span class="text-warning" ng-if="!data.status.banned">This action is permanent and irreversible.</span><br><small
+                                    class="hand mt-1 orange-text" ng-click="toggleDeleteAccountModal()"
+                                    ng-if="!data.status.banned">Delete account</small><span class="text-red hand"
+                                                                                            ng-if="data.status.banned">You cannot delete your account while it is suspended!</span>
+                            </td>
+                        </tr>
+                        <tr ng-if="!transfer_account.online && !transfer_account.in_progress && rank > 0">
+                            <td><strong>Transfer account</strong><br></td>
+                            <td><span class="text-red hand" ng-if="data.status.banned">You cannot transfer your account while it is suspended!</span><small
+                                    class="hand mt-1 orange-text" ng-click="toggleTransferAccountModal(true)"
+                                    ng-if="!data.status.banned">Submit</small></td>
+                        </tr>
+                        <tr ng-if="!transfer_account.online && transfer_account.in_progress && rank > 0">
+                            <td><strong>Transfer account</strong><br></td>
+                            <td><span class="text-red hand" ng-if="data.status.banned">You cannot transfer your account while it is suspended!</span><small
+                                    class="hand mt-1 orange-text" ng-click="toggleTransferAccountModal(true)"
+                                    ng-if="!data.status.banned">Check Progress</small></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-7 mt-2" ng-if="view == 'services'"><h3 class="orange-text">Unstuck</h3>
+                    <p class="text-white">Teleport the selected character to his hearthstone location.<Br>This service
+                        has a 7 days cooldown.</p><label class="text-white w-100">Character:<select
+                            ng-model="unstuck.character" class="form-control">
+                        <option ng-selected="unstuck.character == 0" value="0">Select a character</option>
+                        <option ng-repeat="c in unstuck_characters" value="{{c.guid}}">{{c.name}}</option>
+                    </select></label><label>&nbsp;</label><br>
+                    <div class="text-white" ng-if="unstuck_eligible_status(unstuck.character).status == 1">This
+                        character is still online, please try again in 5 minutes.
+                    </div>
+                    <div class="text-white" ng-if="unstuck_eligible_status(unstuck.character).status == 2">Cooldown
+                        remaining {{unstuck_eligible_status(unstuck.character).cooldown}}
+                    </div>
+                    <button class="btn btn-sm btn-primary"
+                            ng-if="unstuck_eligible_status(unstuck.character).status == 0 && !unstuck_complete"
+                            ng-click="unstuck_do(unstuck.character)"><i class="fa fa-fw fa-check"
+                                                                        ng-if="!unstucking"></i><i
+                            class="fa fa-fw fa-spin fa-spinner" ng-if="unstucking"></i>Unstuck
+                    </button>
+                    <br>
+                    <div class="text-white">{{unstuck_result}}</div>
+                </div>
+                <div class="col-lg-9 mt-2" ng-if="view == 'characters'"><h3 class="orange-text">Characters</h3>
+                    <table class="table table-striped light-borders table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Level</th>
+                            <th>Hardcore Status</th>
+                            <th>Challenges</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="c in data">
+                            <td>{{$index + 1}}</td>
+                            <td class="game-class-{{c.class}} game-class"><img ng-src="images/races/{{c.img}}.png"
+                                                                               style="width: 24px;"
+                                                                               ng-class="{'desat' : c.mortality_status == 3}"><a
+                                    ng-href="https://armory.turtle-wow.org/#!/character/{{c.name}}" target="_blank"
+                                    ng-class="{'desat' : c.mortality_status == 3, 'halfdesat' : c.deleted}">{{c.name}}</a><span
+                                    class="text-red" ng-if="c.deleted">(deleted)</span>
+                                <!--                        <i class="fa fa-fw fa-chevron-down float-right hand text-gray"-->
+                                <!--                           ng-if="$index < data.length - 1"></i>-->
+                                <!--                        <i class="fa fa-fw fa-chevron-up float-right hand text-gray" ng-if="$index > 0"></i>-->
+                            </td>
+                            <td>{{c.level}}</td>
+                            <td><span ng-if="c.mortality_status == 1">Still Standing</span><span
+                                    ng-if="c.mortality_status == 2">Immortal</span><span
+                                    ng-if="c.mortality_status == 3">Fallen</span><span ng-if="c.mortality_status == 0"
+                                                                                       class="text-gray2">-</span></td>
+                            <td>
+                                <ng-container ng-repeat="g in c.glyphs"><img ng-if="g.spell == 50004"
+                                                                             ng-src="images/icons/spells/spell_nature_sleep.png"
+                                                                             style="width: 24px; margin-right: 5px;"
+                                                                             tooltip data-toggle="tooltip"
+                                                                             data-placement="top"
+                                                                             data-title="Exhaustion" class="float-left"><img
+                                        ng-if="g.spell == 50000" ng-src="images/icons/spells/spell_nature_timestop.png"
+                                        style="width: 24px; margin-right: 5px;" tooltip data-toggle="tooltip"
+                                        data-placement="top" data-title="Slow & Steady" class="float-left"><img
+                                        ng-if="g.spell == 50008" ng-src="images/icons/spells/ability_dualwield.png"
+                                        style="width: 24px; margin-right: 5px;" tooltip data-toggle="tooltip"
+                                        data-placement="top" data-title="War Mode" class="float-left"></ng-container>
+                            </td>
+                            <td><span class="hand orange-text" ng-if="c.deleted" ng-click="restoreCharacter(c.name)">Restore</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div ng-if="restore_result !== ''" class="text-gray2"><i class="fa fa-fw fa-info"></i> {{restore_result}}
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-2" ng-if="view == 'security'"><h3 class="orange-text">Change Password</h3>
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td class="col-lg-5 col-sm-6"><strong>Current Password</strong></td>
+                            <td class="col-lg-7 col-sm-6"><input type="password" class="form-control"
+                                                                 placeholder="********" ng-model="security.c_password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>New Password</strong><Br><small>4-16 characters long, letters, numbers, and
+                                !?%*$ characters</small></td>
+                            <td><input type="password" class="form-control" placeholder="New Password"
+                                       ng-model="security.n_password"
+                                       ng-class="{'invalid' : !pw_valid(security.n_password)}"><input type="password"
+                                                                                                      class="form-control"
+                                                                                                      placeholder="Repeat new password"
+                                                                                                      ng-model="security.n_password2"
+                                                                                                      ng-class="{'invalid' : !pw_valid(security.n_password2)}">
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>
+                                <button class="btn btn-sm btn-primary" ng-click="change_password()"
+                                        ng-class="{'passwords_invalid' : !passwords_valid() }"
+                                        ng-disabled="!passwords_valid()"><i class="fa fa-fw fa-key"></i> Change my
+                                    password
+                                </button>
+                            </th>
+                            <th><span class="text-muted"
+                                      ng-if="security.pw_change_result != ''">{{security.pw_change_result}}</span></th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div ng-if="view == 'history_shop'" class="w-100">
+                    <h3 class="orange-text">Payment history</h3>
+
+                    <h5 class="text-white mt-5">Shop Log</h5>
+                    <table class="table table-striped light-borders table-hover">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Time</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Refunded</th>
+                            <th>Realm Name</th>
+                            <th>Character Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="sl in shop_logs">
+                            <td>{{$index + 1}}</td>
+                            <td>{{ sl.time }}</td>
+                            <td>{{ sl.item }}</td>
+                            <td>{{ sl.price }}</td>
+                            <td>{{ sl.refunded }}</td>
+                            <td>{{ sl.realm_name }}</td>
+                            <td>{{ sl.character_name }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <ul uib-pagination ng-if="total_logs_items > 0" total-items="total_logs_items" ng-model="logsPage"
+                        items-per-page="logsLimit" ng-change="pageChanged(logsPage, historyPage)" max-size="10"
+                        boundary-link-numbers="true" rotate="true" class="mb-3"></ul>
+
+                    <h5 class="text-white mt-5">Redeem History</h5>
+                    <table class="table table-striped light-borders table-hover">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Points</th>
+                            <th>Actual Points</th>
+                            <th>New Points</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="sch in shop_coins_history">
+                            <td>{{$index + 1}}</td>
+                            <td>{{ sch.points }}</td>
+                            <td>{{ sch.actual_points }}</td>
+                            <td>{{ sch.new_points }}</td>
+                            <td>{{ sch.system }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <ul uib-pagination ng-if="total_coins > 0" total-items="total_coins" ng-model="historyPage"
+                        items-per-page="historyLimit" ng-change="pageChanged(logsPage, historyPage)" max-size="10"
+                        boundary-link-numbers="true" rotate="true"></ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade ucp" id="banAppeal" tabindex="-1" aria-labelledby="banAppealLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0"><a class="hand modalClose" ng-click="toggleBanAppealModal()">&times;</a>
+                <div class="row">
+                    <div class="col-lg-12 text-center p-5"><h5 class="text-white mb-5">Contact Support</h5>
+                        <div class="text-left text-muted" ng-if="data.status.messages.length == 0">You have no messages.
+                            If you wish to contact support regarding the status of your account, please write in the box
+                            below. If your account has been locked and you are unsure why, please make sure to read <a
+                                    class="text-white" href="https://turtle-wow.org/#/rules" target="_blank">our Terms
+                                of Service</a> first.
+                        </div>
+                        <div style="height: 300px; overflow-y: scroll" id="messageHistory"
+                             ng-if="data.status.messages.length > 0">
+                            <div class="text-left" ng-if="data.status.messages.length > 0">
+                                <ng-container ng-repeat="m in data.status.messages">
+                                    <div ng-if="m.guid == 'Turtle WoW Support'" class="mb-2"><span
+                                            class="text-green">{{m.guid}}</span><small class="text-gray"> &ndash;
+                                        {{m.stamp}}</small><br>
+                                        <!--                              <div class="text-white">{{m.message}}</div>-->
+                                        <div class="text-white" ng-bind-html="m.m"></div>
+                                    </div>
+                                    <div ng-if="m.guid != 'Turtle WoW Support'" class="mb-2"><span
+                                            class="text-gray">{{m.guid}}</span><small class="text-gray"> &ndash;
+                                        {{m.stamp}}</small><br>
+                                        <!--                              <div class="text-white">{{m.message}}</div>-->
+                                        <div class="text-white" ng-bind-html="m.m"></div>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="message-counter">{{appeal.message.length}}/1024</div>
+                        <textarea ng-model="appeal.message" class="form-control mt-3" placeholder="Message"></textarea>
+                        <p class="text-muted" ng-if="appeal.err != ''">{{appeal.err}}</p>
+                        <button class="btn btn-primary mt-3" ng-click="sendAppeal()"
+                                ng-disabled="appeal.message.length == 0"><i class="fa fa-fw fa-check"></i> Send Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade ucp" id="emailChange" tabindex="-1" aria-labelledby="emailChangeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0"><a class="hand modalClose" ng-click="toggleEmailChangeModal()">&times;</a>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 text-center p-5"><h5 class="text-white mb-5">Change E-mail adrress</h5><input
+                            type="email" class="form-control" placeholder="Old email address"
+                            ng-class="{'invalid' : emailChange.old <= 2}" ng-if="!emailChange.done"
+                            ng-model="emailChange.old"><input type="email" class="form-control"
+                                                              placeholder="New email address"
+                                                              ng-class="{'invalid' : emailChange.new <= 2}"
+                                                              ng-if="!emailChange.done" ng-model="emailChange.new">
+                        <div class="text-center text-white p-4" ng-if="emailChange.result !== ''">
+                            {{emailChange.result}}
+                        </div>
+                        <button class="btn btn-primary mt-5" ng-click="changeEmailAddress()" ng-if="!emailChange.done">
+                            <i class="fa fa-fw fa-check"></i> Change email address
+                        </button>
+                        <button class="btn btn-primary mt-5" ng-click="toggleEmailChangeModal()"
+                                ng-if="emailChange.done"><i class="fa fa-fw fa-check"></i> Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade ucp" id="deleteAccount" tabindex="-1" aria-labelledby="deleteAccountLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0"><a class="hand modalClose" ng-click="toggleDeleteAccountModal()">&times;</a>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 text-center p-5"><h5 class="text-white mb-5">Delete account</h5>
+                        <p class="text-warning">This action will permanently delete your account.<Br>This action is
+                            irreversible. </p>
+                        <p class="text-white hand mt-3" ng-click="delete_account_checkbox_toggle()"><i
+                                class="fa fa-fw fa-check-square" ng-if="delete_account.checkbox"></i><i
+                                class="fa fa-fw fa-square" ng-if="!delete_account.checkbox"></i>I understand.</p>
+                        <div><label class="text-white w-100 text-left" ng-if="delete_account.checkbox">Please enter your
+                            account email:<input type="email" ng-model="delete_account.email"
+                                                 class="form-control"></label><label class="text-white w-100 text-left"
+                                                                                     ng-if="delete_account.checkbox">Please
+                            enter your password:<input type="password" ng-model="delete_account.password"
+                                                       class="form-control"></label></div>
+                        <div class="text-center text-white p-4" ng-if="delete_account.result !== ''">
+                            {{delete_account.result}}
+                        </div>
+                        <button class="btn btn-danger mt-5" ng-click="deleteAccount()"
+                                ng-disabled="!delete_account.checkbox || delete_account.email.length == 0"><i
+                                class="fa fa-fw fa-times"></i> Delete my account
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade ucp" id="transferAccount" tabindex="-1" aria-labelledby="transferAccountLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0"><a class="hand modalClose"
+                                           ng-click="toggleTransferAccountModal(true)">&times;</a>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 text-center p-5"><h5 class="text-white mb-5">Transfer Account</h5>
+                        <p class="text-warning" ng-if="transfer_account.in_progress && !transfer_complete">
+                            Your account is locked!
+                            <br>
+                            <br>
+                            The account transfer consists of three phases. The first phase involves moving the account
+                            to the new network. During this phase, you won't be able to log in to the server, but you
+                            can still access the website until all characters are transferred. After that, you won't be
+                            able to log in at all.
+                            <br>
+                            <br>
+                            The second phase will display a table showing the current
+                            status of each character. When you click 'Start process' for a specific character, their
+                            data will be exported from the EU network at that moment.
+                            <br>
+                            <br>The third phase is the final one.
+                            The character will now need to be imported on the Asia network, this is done by clicking
+                            'Complete Process'. Now you are ready to use this character.<br>
+                        </p>
+                        <p class="text-warning" ng-if="transfer_account.in_progress && transfer_complete">
+                            Successfully transferred account.
+                            <br>
+                        </p>
+                        <table class="table table-striped light-borders table-hover"
+                               ng-if="transfer_account.in_progress">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="c in character_queue_status" style="color:wheat">
+                                <td>{{$index + 1}}</td>
+                                <td>{{c.name}}</td>
+                                <td ng-if="c.status == 'pending'">Not Request</td>
+                                <td ng-if="c.status == 'in_progress'">Requested</td>
+                                <td ng-if="c.status == 'transferred'">Transferred</td>
+                                <td ng-if="c.status == 'failed'">Failed</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" ng-if="c.status == 'pending'"
+                                            ng-click="beginTransferCharacter(c.source_character_guid)"><a><i
+                                            class="fa fa-fw fa-play"></i>Start Process</a></button>
+                                    <button class="btn btn-sm btn-primary" ng-if="c.status == 'in_progress'"
+                                            ng-click="completeTransferCharacter(c.source_character_guid)"><a><i
+                                            class="fa fa-fw fa-check"></i>Complete Process</a></button>
+                                    <span ng-if="c.status == 'transferred'">Done</span>
+                                    <a ng-if="c.status == 'failed'" ng-click="">Retry Process</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-warning"
+                           ng-if="!transfer_account.in_progress && transfer_account.needNewAccount && !transfer_complete">
+                            That username already exists!
+                            <br>
+                            Please pick a new username and password
+                        </p>
+                        <p class="text-warning" ng-if="transfer_account.banned">
+                            You can not transfer your account while your account is banned!
+                        </p>
+                        <p class="text-warning" ng-if="transfer_account.online">
+                            You can not transfer your account while your account is online!
+                        </p>
+                        <div ng-if="transfer_err" class="orange-text pb-2">
+                            {{response}}<br>
+                        </div>
+
+                        <input ng-if="transfer_account.needNewAccount && !transfer_account.in_progress && !transfer_account.banned && !transfer_account.online && !transfer_complete"
+                               type="text" class="form-control" placeholder="Username"
+                               ng-class="{'invalid' : transfer_account.account_name.length <= 2}"
+                               ng-model="transfer_account.account_name">
+                        <input ng-if="transfer_account.needNewAccount && !transfer_account.in_progress && !transfer_account.banned && !transfer_account.online && !transfer_complete"
+                               type="password" class="form-control w-50 pull-left" placeholder="Password"
+                               ng-class="{'invalid' : transfer_account.user_password.length <= 2}"
+                               ng-model="transfer_account.user_password">
+                        <input ng-if="transfer_account.needNewAccount && !transfer_account.in_progress && !transfer_account.banned && !transfer_account.online && !transfer_complete"
+                               type="password" class="form-control w-50 pull-right"
+                               ng-class="{'invalid' : transfer_account.user_password != transfer_account.user_password2 }"
+                               placeholder="Repeat Password" ng-model="transfer_account.user_password2">
+
+                        <select
+                                ng-model="transfer_account.realm_id" class="form-control"
+                                ng-if="!transfer_account.in_progress && !transfer_account.banned && !transfer_account.online && !transfer_complete">
+                            <option ng-selected="realm_list.id == 0" value="0">Select a realm</option>
+                            <option ng-repeat="c in realm_lists" value="{{c.id}}">{{c.realmName}}</option>
+                        </select>
+
+                        <div class="form-check mb-3" ng-if="!transfer_account.in_progress && !transfer_account.banned && !transfer_account.online && !transfer_complete">
+                            <input type="checkbox" class="form-check-input" id="confirmationCheckbox"
+                                   ng-model="confirmation_checked">
+                            <label class="form-check-label text-gray" for="confirmationCheckbox">
+                                Are you sure you want to begin this process? Please make sure to inform yourself about
+                                what will happen by reading our <a href="https://forum.turtle-wow.org/" target="_blank"><span class="orange-text">Rules &amp; Limitations</span></a> before
+                                proceeding.
+                            </label>
+                            <img src="images/registerbutton.png" class="w-100 hand register"
+                            ng-if="!transfer_account.in_progress && !transfer_account.banned && !transfer_account.online && !transfer_complete"
+                            ng-click="transferAccount()" ng-hide="!confirmation_checked">
+                        </div>
+
+                        <div class="response m-3 text-white" ng-if="response != '' && !transfer_err">
+                            {{response}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<div class="player_label">{{character_name | async}}</div>
+<div class="stack_label" *ngIf="amount > 1">{{amount}}</div>
+<ItemIcon [size]="48" [quality]="quality" [iconPath]="'/assets/wow_icon/' + icon_path + '.jpg'" [item_id]="item_id"
+          [expansion_id]="expansion_id"></ItemIcon>

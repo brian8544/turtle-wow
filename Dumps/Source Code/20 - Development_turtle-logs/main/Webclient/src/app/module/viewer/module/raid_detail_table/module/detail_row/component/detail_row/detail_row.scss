@@ -1,0 +1,83 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.component_row {
+    border-top: 1px solid $tdc_accent;
+    background: lighten($tdc_darker, 6%);
+}
+
+.td {
+    $tdHeight: 25px;
+    height: $tdHeight;
+    border-right: 1px solid $tdc_accent;
+    line-height: $tdHeight;
+    flex: 1;
+    font-size: 16px;
+    text-align: center;
+
+    &:last-child {
+        border: none;
+    }
+
+    &:first-child {
+        text-align: left;
+        padding-left: 0.5 * $spacing;
+        flex: 2;
+
+        CaretButton {
+            display: block;
+            width: 16px;
+            float: left;
+            margin-right: 0.25 * $spacing;
+        }
+
+        span {
+            display: block;
+            height: 100%;
+            float: left;
+            line-height: $tdHeight;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+
+        &:first-child {
+            CaretButton {
+                width: 12px !important;
+            }
+
+            span {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        font-size: 11px;
+
+        &:first-child {
+            CaretButton {
+                width: 9px !important;
+            }
+
+            span {
+                font-size: 11px !important;
+            }
+        }
+    }
+}
+
+

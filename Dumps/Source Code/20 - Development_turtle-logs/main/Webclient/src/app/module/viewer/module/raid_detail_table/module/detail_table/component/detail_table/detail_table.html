@@ -1,0 +1,18 @@
+<div class="table_container">
+    <div class="header">
+        <div class="td">Type</div>
+        <div class="td">Count</div>
+        <div class="td">%</div>
+        <div class="td">Amount</div>
+        <div class="td">%</div>
+        <div class="td">Min</div>
+        <div class="td">Max</div>
+        <div class="td">Average</div>
+        <div class="td">Resist</div>
+        <div class="td">Block</div>
+        <div class="td">Absorb</div>
+    </div>
+    <div class="body">
+        <DetailRow *ngFor="let row of sorted_detail_rows" [detail_row]="row"></DetailRow>
+    </div>
+</div>

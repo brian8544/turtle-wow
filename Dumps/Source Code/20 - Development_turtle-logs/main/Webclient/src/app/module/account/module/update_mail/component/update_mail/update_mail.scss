@@ -1,0 +1,9 @@
+@import "../../../../../../../styles/global";
+
+:host {
+    display: block;
+
+    GeneralInput {
+        margin-bottom: $spacing;
+    }
+}

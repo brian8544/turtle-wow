@@ -1,0 +1,1222 @@
+{
+    "register_modal": {
+        "title": "Create New Account",
+        "placeholder": {
+            "account_name": "Account Name",
+            "email": "E-mail",
+            "forum_username": "Forum Username",
+            "password": "Password",
+            "password_repeat": "Repeat Password"
+        },
+        "forgot_your_password": "Forgot Your Password?",
+        "message": {
+            "success": "Your account was created successfully, check your email inbox for further information.",
+            "success_reset_password": "We've sent you a letter. Please check your mailbox!",
+            "error": "An error has occurred!"
+        },
+        "exception": {
+            "reserved_name": "You cant use it, reserved name!",
+            "existing_forum_username": "This forum username is already taken!"
+        }
+    },
+    "login_modal": {
+        "title": "My Account",
+        "placeholder": {
+            "username": "Username",
+            "email": "Email",
+            "password": "Password",
+            "one_time_code": "One Time Code"
+        },
+        "exception": {
+            "wrong_one_time_code": "Wrong One Time Code!"
+        },
+        "password_reset": "Password Reset.",
+        "reset_2_fa_code": "Reset 2FA Code.",
+        "password_reset_body": "<p class=\"text-muted\">Forgot your password ?<br>Enter your email to continue.</p><br>",
+        "2_fa_code_reset_body": "<p class=\"text-muted\">Forgot your 2fa code ?<br>Enter your recovery code to reset.</p><br>",
+        "remember_me": "Remember me"
+    },
+    "reset_password_form": {
+        "title": "Set New Password",
+        "placeholder": {
+            "email": "E-mail",
+            "password": "Password",
+            "password_repeat": "Repeat Password"
+        }
+    },
+    "change_password_modal": {
+        "title": "Change Password",
+        "title_2fa": "2fa authentication",
+        "current_password": "Current Password",
+        "placeholder": {
+            "password": "********",
+            "new_password": "New Password",
+            "new_password_repeat": "Repeat New Password",
+            "one_time_code": "One Time Code"
+        },
+        "new_password": "New Password",
+        "new_password_repeat": "4-16 characters long, letters, numbers, and !?%*$ characters",
+        "exception": {
+            "current_password": "The password is incorrect.",
+            "wrong_one_time_code": "Wrong One Time Code!"
+        },
+        "message": {
+            "success": "Your password has been successfully changed.",
+            "enable_2fa": "Successfully enabled 2fa!",
+            "disable_2fa": "Successfully disabled 2fa!",
+            "error": "An error has occurred!"
+        },
+        "need_one_time_code": "You need to provide One Time Code to disable 2fa.",
+        "your_secret_key": "This is your secret key:",
+        "your_recovery_code": "This is your recovery code:",
+        "case_lose_2fa": "In case you lose access to 2fa this is secret phrase that you need to provide support team to disable 2fa:"
+    },
+    "change_email_modal": {
+        "title": "Change E-mail Address",
+        "placeholder": {
+            "current_email": "Old Email Address",
+            "new_email": "New Email Address"
+        },
+        "exception": {
+            "current_email": "The email is incorrect."
+        },
+        "message": {
+            "success": "Check your email for next step.",
+            "error": "An error has occurred!"
+        }
+    },
+    "page_profile": {
+        "title": "Account Management",
+        "overview": {
+            "title": "Overview",
+            "general_information": "General Information",
+            "account_name": "Account Name",
+            "email": "E-mail",
+            "change_email": "Change Email",
+            "account_status": "Account Status",
+            "closed": "Closed",
+            "banned": "Banned, expires in",
+            "permanent_ban": "You are permanently banned",
+            "denied_appeal": "Denied appeal!",
+            "approved_appeal": "Approved appeal!",
+            "check_message": "Check message",
+            "check_ban_appeal": "Check ban appeal",
+            "last_message": "Last message:",
+            "contact_support": "Contact Support",
+            "active": "Active",
+            "creation_date": "Creation Date",
+            "last_login": "Last Login",
+            "last_ip_address": "Last IP Address",
+            "forum_username": "Forum Username",
+            "donation_tokens": "Donation Tokens",
+            "visit_donate_page": "Visit Donate Page",
+            "newsletter": "Newsletter",
+            "delete_account": "Delete Account",
+            "cant_delete": "You cannot delete your account while it is suspended!",
+            "action_is_permanent": "This action is permanent and irreversible.",
+            "understand": "I understand.",
+            "enter_email": "Please enter your account email:",
+            "enter_password": "Please enter your account password:",
+            "button_delete_account": "Delete my account",
+            "message": {
+                "success_changed_email": "Your email address has been changed.",
+                "email_already_changed": "Your email address has been already changed.",
+                "email_already_took": "You late, someone took that email!",
+                "error": "An error has occurred!",
+                "left_characters": "You must manually delete all your characters before deleting your account."
+            }
+        },
+        "services": {
+            "title": "Services",
+            "character": "Character:",
+            "select_a_character": "Select A Character",
+            "exception": {
+                "character_online": "Character is online!",
+                "no_character_selected": "No character selected!"
+            },
+            "message": {
+                "success": "Character unstuck.",
+                "error": "An error has occurred!"
+            }
+        },
+        "characters": {
+            "title": "Characters",
+            "deleted": "(deleted)",
+            "still_standing": "Still Standing",
+            "immortal": "Immortal",
+            "fallen": "Fallen",
+            "exhaustion": "Exhaustion",
+            "slow_and_steady": "Slow & Steady",
+            "war_mode": "War Mode",
+            "message": {
+                "success": "Character restored.",
+                "error": "An error has occurred!"
+            },
+            "exception": {
+                "unknown_character": "Unknown character!"
+            }
+        },
+        "security": {
+            "title": "Security"
+        },
+        "history": {
+            "title": "Payment History",
+            "shop_log": {
+                "title": "Shop Log",
+                "table_headers": {
+                    "id": "ID",
+                    "time": "Time",
+                    "item": "Item",
+                    "price": "Price",
+                    "refunded": "Refunded",
+                    "realm_name": "Realm Name",
+                    "character_name": "Character Name"
+                },
+                "no_data_message": "No data available"
+            },
+            "redeem_history": {
+                "title": "Redeem History",
+                "table_headers": {
+                    "id": "ID",
+                    "points": "Points",
+                    "actual_points": "Actual Points",
+                    "new_points": "New Points",
+                    "date": "Date"
+                },
+                "no_data_message": "No data available"
+            }
+        }
+    },
+    "page_activate": {
+        "title": "Account Activation",
+        "message": {
+            "success": "Thank you for activating your account. You can now log in!",
+            "already_activated": "Your account is already activated!",
+            "error": "An error has occurred!"
+        }
+    },
+    "page_reset_password": {
+        "message": {
+            "success": "Your password has been successfully changed.",
+            "invalid_token": "Token has expired or used before!",
+            "error": "An error has occurred!",
+            "missing_one_time_code": "This account has 2fa enabled, please provide one time code!",
+            "wrong_one_time_code": "Wrong One Time Code!"
+        }
+    },
+    "page_home": {
+        "maintenance": "Maintenance"
+    },
+    "page_donate": {
+        "exception": {
+            "gamepoints_code": "Invalid Code!",
+            "cant_reach_gamepoints_server": "Error trying to contact Gamepoints server, please try again later or contact an admin",
+            "error": "Something went wrong, contact support!",
+            "already_used": "Code already used!"
+        },
+        "want_help": "If you want to help support our project or would like to obtain some of our donation rewards, you have the following options:",
+        "purchase_code": "Purchase a code :",
+        "redeem_the_code": "Redeem the code to receive your points :",
+        "tokens": "Tokens"
+    },
+    "header": {
+        "donate": "Donate",
+        "forum": "Forum",
+        "account_management": "Account Management",
+        "security": "Security",
+        "logout": "Logout",
+        "login": "Login",
+        "rules": "Rules",
+        "our_features": "Features",
+        "gameplay_features": "Gameplay Features",
+        "challenges": "Leveling Challenges",
+        "class_changes": "Class Changes",
+        "talents": "Talents",
+        "armory": "Armory",
+        "database": "Database",
+        "hardcore": "Hardcore Leaderboards",
+        "changelog": "Changelog",
+        "turtle_tv": "Turtle TV",
+        "you_need_to_verify": "You need to verify your account to enjoy full features of our service. If you didn't receive the email, you can resend it.",
+        "resend_email": "Resend Email",
+        "verification_email_resent": "Verification email resent! Please check your inbox.",
+        "world_config": "World Config",
+        "need_reset_2_fa_code": "We improved our security system, please reset your 2fa code to get recovery code.",
+        "tools": "Tools"
+    },
+    "footer": {
+        "server_rules_and_terms_of_use": "Server Rules & Terms of Use & Refund Policy",
+        "legal_information": "Legal Information"
+    },
+    "email_template": {
+        "verify": {
+            "welcome": "Account creation on Turtle WoW",
+            "title": "Activate account on Turtle WoW"
+        },
+        "reset_password": {
+            "title": "Account recovery on Turtle WoW"
+        },
+        "change_email": {
+            "title": "Updating your e-mail address on Turtle WoW"
+        }
+    },
+    "button": {
+        "sign_up": "Sign Up",
+        "account_management": "Account Management",
+        "download_client": "Download Client",
+        "change_my_password": "Change My Password",
+        "change_email_address": "Change Email Address",
+        "close": "Close",
+        "log_in": "Log in",
+        "forgot_password": "Forgot Password",
+        "next": "Next",
+        "back_to_home": "Back To Website.",
+        "login": "Login",
+        "send": "Send",
+        "complete": "Complete",
+        "unstuck": "Unstuck",
+        "restore": "Restore",
+        "enable_2fa": "Enable 2fa",
+        "disable_2fa": "Disable 2fa",
+        "submit": "Submit",
+        "edit": "Edit",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "yes": "Yes",
+        "no": "No",
+        "refund": "Refund",
+        "request_a_refund": "Contact Support",
+        "save": "Save",
+        "reset_2_fa_code": "Reset 2FA Code"
+    },
+    "SEO": {
+        "home": {
+            "title": "Turtle WoW — Mysteries of Azeroth",
+            "description": "Mysteries of Azeroth — is a fan-made expansion story for WoW Vanilla that delves deeper into exploring the original lore of the game.",
+            "keywords": "World of Warcraft, WoW, WoW Classic, WoW Vanilla, Vanilla+, Vanilla Plus, 1.16.0, 1.16.1, 1.16.2, 1.16.3, 1.16.4, 1.17, 1.17.0, Beyond the Greymane Wall,  Mysteries of Azeroth, Custom WoW Expansion, Turtle WoW, Custom Vanilla, Extended Vanilla, Continued Vanilla, High Elves, Goblins, Vanilla Expanded, New Raids, New Bosses, Mirage Raceway, Survival, New Items, New Skills, New Quests, Private WoW Server, Play WoW Free",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth"
+        },
+        "rules": {
+            "title": "Rules - Turtle WoW",
+            "description": "Navigating through the rules of any game or organization is crucial for success. Explore our comprehensive guide to rules, regulations, and guidelines, ensuring you're always on the right track.",
+            "keywords": "Game rules, Server rules, Online gaming guidelines, Multi-boxing regulations, Role-play server rules, RP server naming policy, PvP etiquette, Reporting player behavior, Loot distribution guidelines, Account sharing policy, GM assistance for quest issues, Disclaimer for gaming server, Rule violations and penalties, Bug and exploit abuse, Cheating in games, Online gaming conduct, Player behavior standards, Gaming terms and conditions, Turtle WoW rulebook,Turtle WoW server rules",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth"
+        },
+        "logotypes": {
+            "title": "Logotypes - Turtle WoW",
+            "description": "Explore the unique and creative logotypes of Turtle WoW, a custom World of Warcraft expansion inspired by the Warcraft universe of Blizzard Entertainment. Download high-quality PNG versions of our logos for your stream or content.",
+            "keywords": "Turtle WoW Logotypes, WoW Logo, Custom WoW Logos, Warcraft-inspired Logos, High-Quality Logos, Logo Downloads, Stream Logos, Content Logos, Blizzard Entertainment, World of Warcraft Logos, Vanilla WoW Logos",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Logotypes"
+        },
+        "client_ui_page": {
+            "title": "Client UI Improvements - Turtle WoW",
+            "description": "Enhance your gaming experience with the latest Client UI improvements on Turtle WoW. Explore the upgraded user interface designed to make your journey through Azeroth even more enjoyable.",
+            "keywords": "Client UI Improvements, Gaming Interface Enhancements, User Interface Updates, Turtle WoW UI, Azeroth Journey, WoW Custom UI, Interactive UI Features, Gaming Experience Upgrade",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Client UI Improvements"
+        },
+        "additional_transport_routes_page": {
+            "title": "Additional Transport Routes - Turtle WoW",
+            "description": "Discover new transport routes and flight paths on Turtle WoW. Explore additional routes, including Dun Agrath, Mosh'ogg Refuge, Ironforge Airfield, Alah'thalas, Caelan's Rest, Nordanaar, Ravenshire, Gilneas, Stillward Church, and Bael Hardul, to access the farthest corners of Azeroth. Enhance your journey with our expanded transportation network.",
+            "keywords": "Additional Transport Routes, Flight Paths Expansion, Azeroth Transportation, New Routes Discovery, Turtle WoW Travel, Improved Azeroth Accessibility, WoW Transportation Network, Expanded Flight Paths, Dun Agrath, Mosh'ogg Refuge, Ironforge Airfield, Alah'thalas, Caelan's Rest, Nordanaar, Ravenshire, Gilneas, Stillward Church, Bael Hardul",
+            "robots": "all",
+            "name": "Turtle WoW — Explore Additional Transport Routes and Flight Paths"
+        },
+        "roleplay_page": {
+            "title": "Roleplay & Community Events - Turtle WoW",
+            "description": "Immerse yourself in the vibrant roleplaying community and engaging events at Turtle WoW. Explore intricate storylines, character development, and a variety of role-playing guilds hosting regular events. Whether you seek a casual role-playing experience or an immersive narrative, Turtle WoW offers the ideal platform for your creative journey in Azeroth.",
+            "keywords": "Roleplay Community, Turtle WoW Events, Azeroth Roleplaying, Roleplaying Guilds, Casual Roleplay, Immersive Narrative, Creative Journey, Roleplaying Adventure, Vibrant Community, Turtle WoW Roleplay",
+            "robots": "all",
+            "name": "Turtle WoW — Dive into Roleplay and Community Events"
+        },
+        "new_factions_and_quests_page": {
+            "title": "Explore Additional Transport Routes and Flight Paths - Turtle WoW",
+            "description": "Discover new transport routes and flight paths on Turtle WoW. Explore additional routes, including Dun Agrath, Mosh'ogg Refuge, Ironforge Airfield, Alah'thalas, Caelan's Rest, Nordanaar, Ravenshire, Gilneas, Stillward Church, and Bael Hardul, to access the farthest corners of Azeroth. Enhance your journey with our expanded transportation network.",
+            "keywords": "Additional Transport Routes, Flight Paths Expansion, Azeroth Transportation, New Routes Discovery, Turtle WoW Travel, Improved Azeroth Accessibility, WoW Transportation Network, Expanded Flight Paths, Dun Agrath, Mosh'ogg Refuge, Ironforge Airfield, Alah'thalas, Caelan's Rest, Nordanaar, Ravenshire, Gilneas, Stillward Church, Bael Hardul",
+            "robots": "all",
+            "name": "Turtle WoW — Explore Additional Transport Routes and Flight Paths"
+        },
+        "class_race_combinations_page": {
+            "title": "Explore Additional Class and Race Combinations - Turtle WoW",
+            "description": "Discover new and exciting class and race combinations on Turtle WoW. Explore additional combinations, including Orc Mages, Dwarf Mages, Gnome Hunters, Undead Hunters, Human Hunters, and Troll Warlocks. Unlock unique abilities and storylines as you venture into the diverse world of Azeroth. Enhance your gaming experience with our expanded class and race options.",
+            "keywords": "Additional Class and Race Combinations, Turtle WoW, New Character Options, Orc Mage, Dwarf Mage, Gnome Hunter, Undead Hunter, Human Hunter, Troll Warlock, Azeroth Adventures, Gaming Diversity, Unique Abilities, Azeroth Exploration, Turtle WoW Classes, Turtle WoW Races",
+            "robots": "all",
+            "name": "Turtle WoW — Explore Additional Class and Race Combinations"
+        },
+        "guild_banks_page": {
+            "title": "Guild Vaults - Turtle WoW",
+            "description": "Unlock the Guild Vault and store your guild's valuables. Pay a hefty sum to unlock the vault and additional tabs. Personalize with icons, set daily item limits, and control guild ranks' access. Enhance your guild's storage on Turtle WoW.",
+            "keywords": "Guild Vaults, Guild Bank, Turtle WoW, Vault Tabs, Guild Storage, Customize Guild Vault, Daily Item Limits, Guild Ranks Access, Guild Bank Gold, Azeroth Guilds, Guild Valuables, Guild Bank Features, Turtle WoW Guilds",
+            "robots": "all",
+            "name": "Turtle WoW — Guild Vaults and Bank Features"
+        },
+        "dynamic_mount_speed_page": {
+            "title": "Dynamic Mount Speed - Turtle WoW",
+            "description": "Experience dynamic mount speeds on Turtle WoW. All mounts now adjust their speed according to your riding skill. Explore this innovative feature and enhance your journey in Azeroth.",
+            "keywords": "Dynamic Mount Speed, Turtle WoW, Mount Riding Skill, Mount Speed Adjustment, Azeroth Adventures, Riding Skill Progression, Mount Features, Turtle WoW Mounts",
+            "robots": "all",
+            "name": "Turtle WoW — Dynamic Mount Speed Feature"
+        },
+        "survival_and_gardening_page": {
+            "title": "Survival & Gardening - Turtle WoW",
+            "description": "Discover the art of survival and gardening on Turtle WoW. Set up a camping tent, enjoy a warm campfire, and embark on fishing adventures with bonuses. Learn how to cultivate crops with unique seeds and reap the rewards of your gardening efforts. Explore the immersive world of Azeroth with enhanced survival skills.",
+            "keywords": "Survival and Gardening, Turtle WoW, Camping Tent, Campfire, Fishing Boat, Gardening Seeds, Crop Cultivation, Azeroth Exploration, Adventure Bonuses, Gardening Rewards, Turtle WoW Survival, Outdoor Activities",
+            "robots": "all",
+            "name": "Turtle WoW — Survival & Gardening Features"
+        },
+        "transmogrification_page": {
+            "title": "Transmogrification - Turtle WoW",
+            "description": "Explore the fascinating world of transmogrification on Turtle WoW. Use Fashion Tokens to complete repeatable quests, earn rewards, and customize your gear appearance. Preview item appearances with an enhanced interface and collect Fashion Coins for a stylish Azerothian look.",
+            "keywords": "Transmogrification, Turtle WoW, Fashion Tokens, Gear Customization, Item Appearances, Fashion Coins, Azerothian Style, Stylish Characters, Repeatable Quests, Preview Interface, Customized Gear",
+            "robots": "all",
+            "name": "Turtle WoW — Transmogrification Features"
+        },
+        "chronoboon_displacer_page": {
+            "title": "Chronoboon Displacer - Turtle WoW",
+            "description": "Suspend beneficial world effects from dragonslaying, Dire Maul, Zul'Gurub, Darkmoon Faire, and Felwood. Use Chronoboon Displacer to store and restore these effects.",
+            "keywords": "Chronoboon Displacer, Turtle WoW, Suspend Buffs, Dragonslaying Buff, Dire Maul, Zul'Gurub, Darkmoon Faire, Felwood, Store Buffs, Restore Buffs, Azeroth Exploration, World Buffs, Turtle WoW Features",
+            "robots": "all",
+            "name": "Turtle WoW — Chronoboon Displacer Features"
+        },
+        "ban_appeals": {
+            "title": "Turtle WoW - Ban Appeals"
+        },
+        "achievement_titles_page": {
+            "title": "Achievement Titles - Turtle WoW",
+            "description": "Show off your outstanding accomplishments with a title granted to you by wielding legendary items or accomplishing extreme feats. Explore the available titles, from Lorekeeper to Bloodthirsty, and the requirements to earn them.",
+            "keywords": "Achievement Titles, Turtle WoW, Available Titles, Lorekeeper, Cartographer, Sulfuron Champion, Guardian of Tirisfal, Stormwielder, Conqueror of Naxxramas, Scarab Lord, Immortal, Seeker of Knowledge, Blood Ring Champion, Crazy Cat Lady, Lord of the Frogs, Bloodthirsty, The Wanderer, Diplomat, Azeroth Exploration, Legendary Titles, Feats of Strength",
+            "robots": "all",
+            "name": "Turtle WoW — Achievement Titles"
+        },
+        "slow_and_steady_page": {
+            "title": "Slow and Steady - Turtle WoW",
+            "description": "Embrace the journey with Slow and Steady mode, where your creature kill rates are set to 0.5, making questing and leveling a deliberate and rewarding experience. Learn about the mechanics, benefits, and rewards every 10 levels.",
+            "keywords": "Slow and Steady, Turtle WoW, Turtle Mode, Creature Kill Rates, Rewards, Glyph of the Turtle, Leveling Experience, Dungeons, Adventure, Azeroth Exploration",
+            "robots": "all",
+            "name": "Turtle WoW — Slow and Steady Mode"
+        },
+        "vagrants_endeavor_page": {
+            "title": "Vagrant's Endeavor - Turtle WoW",
+            "description": "Embark on the Vagrant's Endeavor challenge and experience a unique journey where you must wear only poor or common quality gear until reaching level 60. Enchanting items is not permitted. Earn the title of 'The Wanderer' and a trusty mule as your reward. Say goodbye to the complexities of choosing the right item stats!",
+            "keywords": "Vagrant's Endeavor, Turtle WoW, Challenge, Poor Quality Gear, Level 60, The Wanderer, Unique Journey, Enchanting, Reward, Azeroth Exploration",
+            "robots": "all",
+            "name": "Turtle WoW — Vagrant's Endeavor"
+        },
+        "druid_page": {
+            "title": "Druid Class Guide - Turtle WoW",
+            "description": "Discover the secrets of the Druid class on Turtle WoW - Mysteries of Azeroth. Explore abilities, talents, and unique features of Druids in our custom WoW expansion.",
+            "keywords": "Druid class, WoW Druid, Turtle WoW Druid guide, Custom WoW classes, Druid talents, Druid abilities, Shapeshifting, Feral Druid, Balance Druid, Restoration Druid, WoW Classic, Vanilla WoW",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth - Druid Class Guide"
+        },
+        "hunter_page": {
+            "title": "Hunter Class Guide - Turtle WoW",
+            "description": "Master the art of the Hunter class on Turtle WoW - Mysteries of Azeroth. Explore the skills, talents, and unique features of Hunters in our custom WoW expansion.",
+            "keywords": "Hunter class, WoW Hunter, Turtle WoW Hunter guide, Custom WoW classes, Hunter talents, Hunter abilities, Beast Mastery, Marksmanship, Survival, WoW Classic, Vanilla WoW",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth - Hunter Class Guide"
+        },
+        "paladin_page": {
+            "title": "Paladin Class Guide - Turtle WoW",
+            "description": "Unleash the power of the Paladin class on Turtle WoW - Mysteries of Azeroth. Dive into the abilities, talents, and unique features of Paladins in our custom WoW expansion.",
+            "keywords": "Paladin class, WoW Paladin, Turtle WoW Paladin guide, Custom WoW classes, Paladin talents, Paladin abilities, Holy Paladin, Protection Paladin, Retribution Paladin, WoW Classic, Vanilla WoW",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth - Paladin Class Guide"
+        },
+        "priest_page": {
+            "title": "Priest Class Guide - Turtle WoW",
+            "description": "Explore the mystical realm of the Priest class on Turtle WoW - Mysteries of Azeroth. Delve into the abilities, talents, and unique features of Priests in our custom WoW expansion.",
+            "keywords": "Priest class, WoW Priest, Turtle WoW Priest guide, Custom WoW classes, Priest talents, Priest abilities, Discipline Priest, Holy Priest, Shadow Priest, WoW Classic, Vanilla WoW",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth - Priest Class Guide"
+        },
+        "mage_page": {
+            "title": "Mage Class Guide - Turtle WoW",
+            "description": "Harness the arcane powers of the Mage class on Turtle WoW - Mysteries of Azeroth. Uncover the abilities, talents, and unique features of Mages in our custom WoW expansion.",
+            "keywords": "Mage class, WoW Mage, Turtle WoW Mage guide, Custom WoW classes, Mage talents, Mage abilities, Arcane Mage, Fire Mage, Frost Mage, WoW Classic, Vanilla WoW",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth - Mage Class Guide"
+        },
+        "rogue_page": {
+            "title": "Rogue Class Guide - Turtle WoW",
+            "description": "Dive into the shadows with the Rogue class on Turtle WoW - Mysteries of Azeroth. Explore the abilities, talents, and unique features of Rogues in our custom WoW expansion.",
+            "keywords": "Rogue class, WoW Rogue, Turtle WoW Rogue guide, Custom WoW classes, Rogue talents, Rogue abilities, Assassination Rogue, Combat Rogue, Subtlety Rogue, WoW Classic, Vanilla WoW",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth - Rogue Class Guide"
+        },
+        "sound_design_page": {
+            "title": "Sound Design - Turtle WoW",
+            "description": "Immerse yourself in the original soundtrack and voice acting of Turtle WoW, a custom World of Warcraft expansion. Experience a unique auditory journey inspired by the rich lore of the Warcraft universe.",
+            "keywords": "Original soundtrack, Voice acting, WoW custom expansion, Warcraft-inspired music, Atmospheric sound design, Immersive gaming experience, Turtle WoW audio, WoW auditory experience, Game music, In-game voiceovers, Custom game soundscapes",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Sound Design"
+        },
+        "character_customizations_page": {
+            "title": "Character Customizations - Turtle WoW",
+            "description": "Unleash your creativity with the diverse character customizations offered by Turtle WoW, a custom World of Warcraft expansion. Personalize your in-game avatar with a variety of options and make your journey truly unique.",
+            "keywords": "Character customizations, WoW custom expansion, Avatar personalization, In-game appearance, Cosmetic options, Unique character design, Turtle WoW customization features, WoW character diversity, Personalized gaming experience, WoW vanity options",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Character Customizations"
+        },
+        "new_locations_and_maps_page": {
+            "title": "New Locations & Maps - Turtle WoW",
+            "description": "Embark on a thrilling adventure through new locations and maps introduced in Turtle WoW, a custom World of Warcraft expansion. Explore uncharted territories, encounter fresh challenges, and unravel the mysteries of Azeroth's expanded world.",
+            "keywords": "New locations, New maps, WoW custom expansion, Expanded game world, Adventure in Azeroth, Turtle WoW exploration, In-game discoveries, Fresh challenges, WoW map updates, Azeroth mysteries",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth New Locations & Maps"
+        },
+        "new_races_page": {
+            "title": "New Races - Turtle WoW",
+            "description": "Discover the new playable races introduced in Turtle WoW, a custom World of Warcraft expansion. Immerse yourself in the unique lore and gameplay offered by these additions to Azeroth's diverse races.",
+            "keywords": "New playable races, WoW custom expansion, Race diversity, Turtle WoW lore, Azerothian races, Expanded race options, In-game race choices, Custom racial abilities, WoW character selection, Turtle WoW race additions",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth New Races"
+        },
+        "raids_and_dungeons_page": {
+            "title": "Raids and Dungeons - Turtle WoW",
+            "description": "Explore challenging raids and dungeons in Turtle WoW, a custom World of Warcraft expansion. Delve into epic encounters, conquer formidable bosses, and earn valuable rewards as you navigate through the mysteries of Azeroth's expanded dungeons and raids.",
+            "keywords": "Challenging raids, Dungeons exploration, WoW custom expansion, Boss encounters, Epic loot, Turtle WoW dungeon challenges, Azeroth mysteries, Raid rewards, WoW boss battles, Dungeon quests",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Raids and Dungeons"
+        },
+        "player_versus_player_page": {
+            "title": "Player versus Player - Turtle WoW",
+            "description": "Engage in thrilling Player versus Player content in Turtle WoW, a custom World of Warcraft expansion. Immerse yourself in epic battles, develop PvP strategies, and compete against other players for glory and rewards in the expanded PvP system of Azeroth.",
+            "keywords": "PvP content, Player versus Player, WoW custom expansion, Epic PvP battles, PvP strategies, Turtle WoW PvP system, Azeroth PvP challenges, Player combat, PvP rewards, World PvP",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Player versus Player"
+        },
+        "seasonal_events_page": {
+            "title": "Seasonal Events - Turtle WoW",
+            "description": "Experience exciting seasonal events in Turtle WoW, a custom World of Warcraft expansion. Whether it's celebrating holidays, participating in special festivals, or engaging in unique activities, Turtle WoW offers a variety of seasonal events for players to enjoy.",
+            "keywords": "Exciting seasonal events, WoW custom expansion, Holiday celebrations, Festival participation, Unique in-game activities, Turtle WoW events, Azeroth festivities, Seasonal rewards, In-game celebrations, Player entertainment",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Seasonal Events"
+        },
+        "hardcore_mode_page": {
+            "title": "Hardcore Mode - Turtle WoW",
+            "description": "Embark on the ultimate challenge with Hardcore Mode in Turtle WoW, a custom World of Warcraft expansion. Test your skills by leveling as a mortal being, aiming to reach level 60 without ever dying. Discover the rules, features, and rewards of this hardcore challenge in Azeroth.",
+            "keywords": "Hardcore Mode, WoW custom expansion, Ultimate challenge, Hardcore leveling, Level 60 goal, Azeroth challenges, Hardcore rules, Hardcore features, Hardcore rewards, Mortal character",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Hardcore Mode"
+        },
+        "community_artworks_page": {
+            "title": "Community Artworks - Turtle WoW",
+            "description": "Explore the official and community-driven artworks of Turtle WoW, a custom World of Warcraft expansion. Witness the creative talents of our community members, contributing to the unique atmosphere of our project. Submit your artwork to be featured on our website, social media, and potentially in-game!",
+            "keywords": "Official artworks, Community-driven art, Turtle WoW creative community, Player contributions, Artwork submissions, In-game art features, Website and social media features, Community talent showcase, Turtle WoW art gallery, Player creativity",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Community Artworks"
+        },
+        "pets_and_mounts_page": {
+            "title": "Pets & Mounts - Turtle WoW",
+            "description": "Discover a variety of companions and mounts in Turtle WoW, a custom World of Warcraft expansion. From cute critters to valiant steeds and powerful shredders, find your perfect companion stored in your personal tabs. Explore our extensive collection and check the online database for accurate displays of companions and mounts.",
+            "keywords": "World of Warcraft companions, Mounts collection, Turtle WoW pets, Shredders, Companion database, Mounts showcase, Pet collectors, Online database display, Turtle WoW custom expansion",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Pets & Mounts"
+        },
+        "everlook_broadcasting_page": {
+            "title": "Everlook Broadcasting Co. - Turtle WoW",
+            "description": "Experience the unparalleled radio entertainment in Azeroth with Everlook Broadcasting Co. Meet the legendary DJ Zappo Zapblast, the master of delivering outrageously honest news. Discover the new radio feature on your minimap and tune in to the live show 'Living in the Past' for tales from Azeroth's mysteries. Join the vibrant radio staff, including DJ Dapper, Newsmaker Vrograg the Fishslayer, and more. Explore the diverse content, hottest deals, and weekly products presented by the Everlook Broadcasting Co.",
+            "keywords": "Azeroth radio, DJ Zappo Zapblast, Everlook Broadcasting Co., Live show Living in the Past, Azeroth mysteries, Radio staff, Weekly products, DJ Dapper, Vrograg the Fishslayer, Turtle WoW entertainment",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Everlook Broadcasting Co."
+        },
+        "shaman_page": {
+            "title": "Shaman - Turtle WoW",
+            "description": "Explore the Shaman class on Turtle WoW, a custom World of Warcraft expansion inspired by Blizzard Entertainment's Warcraft universe. Learn about Shaman abilities, talents, and unique features on Turtle WoW's Mysteries of Azeroth server.",
+            "keywords": "Turtle WoW Shaman, WoW Shaman Class, Shaman Abilities, Vanilla WoW, Custom WoW Expansion, Mysteries of Azeroth, Azeroth Shaman, Turtle WoW Class Guide, WoW Talents, WoW Shaman Skills.",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Shaman"
+        },
+        "warlock_page": {
+            "title": "Warlock - Turtle WoW",
+            "description": "Delve into the Warlock class on Turtle WoW, a custom World of Warcraft expansion inspired by Blizzard Entertainment's Warcraft universe. Explore Warlock spells, talents, and unique additions on Turtle WoW's Mysteries of Azeroth server.",
+            "keywords": "Turtle WoW Warlock, WoW Warlock Class, Warlock Spells, Vanilla WoW, Custom WoW Expansion, Mysteries of Azeroth, Azeroth Warlock, Turtle WoW Class Guide, WoW Talents, WoW Warlock Skills.",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Warlock"
+        },
+        "warrior_page": {
+            "title": "Warrior - Turtle WoW",
+            "description": "Examine the Warrior class on Turtle WoW, a custom World of Warcraft expansion inspired by Blizzard Entertainment's Warcraft universe. Investigate Warrior abilities, talents, and innovative features on Turtle WoW's Mysteries of Azeroth server.",
+            "keywords": "Turtle WoW Warrior, WoW Warrior Class, Warrior Abilities, Vanilla WoW, Custom WoW Expansion, Mysteries of Azeroth, Azeroth Warrior, Turtle WoW Class Guide, WoW Talents, WoW Warrior Skills.",
+            "robots": "all",
+            "name": "Turtle WoW — Mysteries of Azeroth Warrior"
+        },
+        "hardcore_page": {
+            "title": "Turtle WoW Hardcore Scoreboard",
+            "description": "Discover the Turtle WoW Hardcore Scoreboard. View the standings of characters in hardcore mode, including the still standing, fallen heroes, and immortals. Learn more about their levels, races, classes, and achievements.",
+            "keywords": "Turtle WoW Hardcore, Hardcore Scoreboard, Still Standing, Fallen Heroes, Immortals, Azeroth, Character Levels, Races, Classes, Achievements",
+            "robots": "all",
+            "name": "Turtle WoW — Hardcore Scoreboard"
+        },
+        "shop_appeals": {
+            "title": "Turtle WoW - Shop Appeals"
+        },
+        "shop_history": {
+            "title": "Turtle WoW - Shop History"
+        },
+        "shellcoin_page": {
+            "title": "Shellcoin Co. Trading - Turtle WoW",
+            "description": "Discover Shellcoin Co. Trading on Turtle WoW, a custom World of Warcraft expansion inspired by the Warcraft universe of Blizzard Entertainment. Dive into the world of trading and economics in Azeroth.",
+            "keywords": "Shellcoin Co. Trading, WoW Trading, Azeroth Economics, World of Warcraft Trading, WoW Marketplace, Virtual Economy, Turtle WoW Marketplace, In-Game Trading, Virtual Currency, Player Economy, Trade Routes, Trading Companies, Trading Guilds",
+            "robots": "all",
+            "name": "Turtle WoW — Shellcoin Co. Trading"
+        },
+        "population_graph_page": {
+            "title": "Population Graph - Turtle WoW",
+            "description": "Explore the Population Graph of Turtle WoW, a custom World of Warcraft expansion inspired by the Warcraft universe of Blizzard Entertainment. View peak player numbers for both factions since launch.",
+            "keywords": "Population Graph, Player Statistics, Peak Players, WoW Population, Azeroth Demographics, Turtle WoW Player Data, WoW Faction Statistics, Weekly Peak Players, WoW Player Count, Player Numbers",
+            "robots": "all",
+            "name": "Turtle WoW — Population Graph"
+        },
+        "patch-1.17.2_page": {
+            "title": "Patch 1.17.2 Update - Turtle WoW: Revitalizing Classic Dungeon Experience",
+            "description": "Discover Turtle WoW's Patch 1.17.2, bringing fresh adventures and revamps to Vanilla dungeons. Dive into new areas, face unique bosses, and enjoy enhanced character customizations. This update enriches the Warcraft universe with innovative content, ensuring a more immersive Azeroth exploration. Experience the beginning of our journey to rejuvenate classic WoW, with new challenges, rewards, and lore waiting to be unveiled.",
+            "keywords": "Turtle WoW Patch 1.17.2, Vanilla Dungeon Updates, New WoW Bosses, Character Customization, Classic WoW Revitalization, Enhanced WoW Experience, Warcraft Universe, Azeroth Exploration, New Dungeon Areas, WoW Patch Updates, Unique WoW Content, Custom Vanilla WoW, Turtle WoW Adventures, WoW Lore Expansion, Vanilla WoW Challenges, Turtle WoW Community, Classic WoW Enhancements, Azeroth Adventures, New Rewards in WoW, WoW Lore Updates, Immersive Warcraft Experience",
+            "robots": "all",
+            "name": "Turtle WoW Patch 1.17.2 - Revitalizing the Classic Dungeon Experience"
+        },
+        "bug_tracker_page": {
+            "title": "Turtle WoW Bug Tracker - Track and Report Game Issues",
+            "description": "Utilize Turtle WoW’s Bug Tracker to report and track issues within the game. Help improve the gameplay by contributing to our community-driven bug resolution process. Stay updated with the status of bug fixes and participate in enhancing the gaming experience for all users.",
+            "keywords": "Turtle WoW Bug Reporting, WoW Game Issues, Bug Tracker, Video Game Bugs, Game Issue Reporting, Turtle WoW Community, Game Bug Fixes, Warcraft Game Bugs, Player Contributions, Game Improvement, Bug Status Updates, Community Driven Bug Resolution, Enhancing Gaming Experience, Player Bug Reporting, WoW Game Enhancements",
+            "robots": "index, follow",
+            "name": "Turtle WoW Bug Tracker - Help Enhance Your Gaming Experience"
+        },
+        "radio_page": {
+            "title": "Everlook Broadcasting Co. Radio - Tune into Azeroth's Best Sounds",
+            "description": "Experience the ultimate radio entertainment with Everlook Broadcasting Co. Dive into a world of music, news, and unique shows directly from Azeroth. Stay connected, get entertained, and never miss out on our exclusive broadcasts tailored for the adventurous spirit of every WoW player.",
+            "keywords": "Everlook Radio, Azeroth radio, WoW music, Everlook Broadcasting, live radio, Azeroth news, WoW radio stream, online WoW radio, in-game radio, World of Warcraft radio, gaming radio stations, fantasy game radio",
+            "robots": "all",
+            "name": "Everlook Radio - Your Gateway to Azeroth's Audio Adventures"
+        },
+        "boaring_adventure_page": {
+            "title": "Boaring Adventure - Turtle WoW",
+            "description": "Take on the Boaring Adventure and level up exclusively using boars in the world of Azeroth. This unique challenge offers a fresh and exciting way to experience gameplay, rewarding successful adventurers with a unique boar mount and the prestigious title of 'The Hambringer'.",
+            "keywords": "Boaring Adventure, WoW leveling challenge, unique boar mount, WoW adventure, World of Warcraft boar, exclusive WoW titles, leveling in WoW, adventure gaming, MMO challenges, fantasy gaming",
+            "robots": "all",
+            "name": "Turtle WoW - Boaring Adventure"
+        },
+        "jewelcrafting_page": {
+            "title": "Jewelcrafting — Turtle WoW",
+            "description": "Explore the new Jewelcrafting profession in Turtle WoW, featuring over 200 new items to craft, exclusive recipes, and two specializations: Goldsmith and Gemology.",
+            "keywords": "Turtle WoW, Jewelcrafting, WoW Jewelcrafting, WoW Professions, World of Warcraft, WoW, WoW Classic, Vanilla WoW, Vanilla+, Custom WoW Expansion, New Items, New Recipes, Goldsmith, Gemology, New Professions, Custom Professions, High Elves, Goblins, Vanilla Expanded, New Quests, Private WoW Server, Play WoW Free",
+            "robots": "all",
+            "name": "Turtle WoW — Jewelcrafting"
+        }
+    },
+    "logotypes_page": {
+        "logotypes": "Logotypes"
+    },
+    "client_ui_page": {
+        "client_ui": "Client UI improvements"
+    },
+    "additional_transport_routes_page": {
+        "additional_transport_routes": "Additional transport routes"
+    },
+    "roleplay_page": {
+        "roleplay": "Roleplay & community events"
+    },
+    "jewelcrafting_page": {
+        "jewelcrafting": "Jewelcrafting"
+    },
+    "new_factions_and_quests_page": {
+        "new_factions_and_quests": "New factions & quests"
+    },
+    "class_race_combinations_page": {
+        "class_race_combinations": "Additional class & race combinations"
+    },
+    "guild_banks_page": {
+        "guild_banks": "Guild Vaults"
+    },
+    "dynamic_mount_speed_page": {
+        "dynamic_mount_speed": "Dynamic Mount Speed"
+    },
+    "survival_and_gardening_page": {
+        "survival_and_gardening": "Survival & Gardening"
+    },
+    "transmogrification_page": {
+        "transmogrification": "Transmogrification"
+    },
+    "chronoboon_displacer_page": {
+        "chronoboon_displacer": "Chronoboon Displacer"
+    },
+    "achievement_titles_page": {
+        "achievement_titles": "Achievement Titles"
+    },
+    "slow_and_steady_page": {
+        "slow_and_steady": "Slow and Steady"
+    },
+    "vagrants_endeavor_page": {
+        "vagrants_endeavor": "Vagrant's Endeavor"
+    },
+    "druid_page": {
+        "druid": "Druid"
+    },
+    "hunter_page": {
+        "hunter": "Hunter"
+    },
+    "mage_page": {
+        "mage": "Mage"
+    },
+    "paladin_page": {
+        "paladin": "Paladin"
+    },
+    "priest_page": {
+        "priest": "Priest"
+    },
+    "rogue_page": {
+        "rogue": "Rogue"
+    },
+    "new_races_page": {
+        "new_races": "Two new playable races"
+    },
+    "character_customizations_page": {
+        "character_customizations": "New character customizations"
+    },
+    "sound_design_page": {
+        "sound_design": "Original soundtracks & voice-acting"
+    },
+    "new_locations_and_maps_page": {
+        "new_locations_and_maps": "New locations & maps"
+    },
+    "raids_and_dungeons_page": {
+        "raids_and_dungeons": "Raids & dungeons"
+    },
+    "itemization_page": {
+        "itemization": "Itemization"
+    },
+    "player_versus_player_page": {
+        "player_versus_player": "Player vs Player content"
+    },
+    "seasonal_events_page": {
+        "seasonal_events": "Exciting seasonal events"
+    },
+    "hardcore_mode_page": {
+        "hardcore_mode": "Hardcore Mode"
+    },
+    "war_mode_page": {
+        "war_mode": "War Mode"
+    },
+    "wiki_page": {
+        "wiki": "Community Wiki"
+    },
+    "community_artworks_page": {
+        "community_artworks": "Official & community artworks"
+    },
+    "pets_and_mounts_page": {
+        "pets_and_mounts": "New pets & mounts"
+    },
+    "development_tools_page": {
+        "development_tools": "Item Creator"
+    },
+    "everlook_broadcasting_page": {
+        "everlook_broadcasting": "Everlook Brodcasting Co."
+    },
+    "radio_page": {
+        "radio": "Radio"
+    },
+    "shaman_page": {
+        "shaman": "Shaman"
+    },
+    "warlock_page": {
+        "warlock": "Warlock"
+    },
+    "warrior_page": {
+        "warrior": "Warrior"
+    },
+    "patch_1.17.2_page": {
+        "patch_1.17.2": "Classic Dungeon Updates"
+    },
+    "boaring_adventure_page": {
+        "boaring_adventure": "Boaring Adventure"
+    },
+    "ban_appeals_profile_page": {
+        "contact_support": "Contact Support",
+        "no_messages": "You have no messages.\nIf you wish to contact support regarding the status of your account, please write in the box below. If your account has been locked and you are unsure why, please make sure to read ",
+        "terms_of_service": "our Terms of Service first.",
+        "characters_left": "Characters left: ",
+        "send_message": "Send Message"
+    },
+    "gm_ban_appeals_page": {
+        "pending": "Pending",
+        "delivered": "Delivered",
+        "ban_appeals": "Ban Appeals",
+        "refresh": "Refresh",
+        "search": "Search by username",
+        "unseen": "Unseen",
+        "messages": "messages",
+        "responded_by": "Responded by",
+        "closed": "Closed",
+        "unbanned": "Unbanned",
+        "respond": "Respond",
+        "permanent": "permanent",
+        "table_headers": {
+            "account": "Account",
+            "message": "Message",
+            "ban_date": "Ban Date",
+            "by_reason": "By/Reason",
+            "date": "Date",
+            "status": "Status",
+            "actions": "Actions"
+        },
+        "filter_labels": {
+            "all": "Total",
+            "approved": "Approved",
+            "closed": "Closed",
+            "unread": "New Messages",
+            "delivered": "Delivered Messages"
+        },
+        "gm_ban_appeals_modal": {
+            "ban_info": "Ban Info",
+            "back_to_list": "Back to list",
+            "edit": "Edit",
+            "save": "Save",
+            "cancel": "Cancel",
+            "table_headers": {
+                "account": "Account Name",
+                "ban_date": "Ban Date",
+                "by_reason": "Banned By",
+                "date": "Ban Reason",
+                "status": "Duration",
+                "actions": "Status"
+            },
+            "change_ban_duration_label": "Change ban duration to:",
+            "options": {
+                "default": "Change ban duration to:",
+                "1": "1 Day",
+                "3": "3 Days",
+                "7": "1 Week",
+                "14": "2 Weeks",
+                "21": "3 Weeks",
+                "30": "1 Month",
+                "60": "2 Months"
+            },
+            "change_button": "Change",
+            "message_history": "Message History",
+            "support": "Support",
+            "your_response": "Your response: ",
+            "button_labels": {
+                "send_message": "Send Message",
+                "send_message_unban": "Send Message & Unban",
+                "send_message_deny_appeal": "Send Message & Deny Appeal",
+                "deny_appeal": "Deny Appeal"
+            },
+            "template_response": "Template Response:",
+            "select": "Select",
+            "template_responses": {
+                "rmt_forbidden": {
+                    "display": "[Appeal Denied] RMT is Forbidden",
+                    "value": "Greetings! Please remember that both selling and buying gold for real money will result in a ban on Turtle WoW. Please do not support individuals that are actively harming our project."
+                },
+                "read_and_accept_tos": {
+                    "display": "Read and Accept our ToS.",
+                    "value": "Greetings! Please review our Terms of Service, found at https://turtle-wow.org/#/rules, and confirm your understanding. We will then review the appeal further."
+                },
+                "failed_appeal": {
+                    "display": "[Appeal Denied] Failed Appeal.",
+                    "value": "Greetings! As you have demonstrated you will not follow our Terms of Service, your ban will not be revoked."
+                },
+                "unbanned_our_fault": {
+                    "display": "[Unbanned] Unbanned, Our Fault.",
+                    "value": "Greetings! We have completed the investigation of your ban and concluded that it was issued by incorrectly. The ban has been lifted. Welcome back!"
+                },
+                "appeal_success": {
+                    "display": "[Unbanned] Appeal Success.",
+                    "value": "Greetings! Thank you for committing to follow our Terms of Service. Please remember future offenses will result in stricter punishments! You have been unbanned."
+                }
+            },
+            "notes": "Notes",
+            "add_notes": "Only GameMasters can see notes.",
+            "edit_notes": "Edit notes",
+            "error_messages": {
+                "editing_ban_reason": "Error editing ban reason",
+                "closing_ban_appeal": "Error closing ban appeal",
+                "sending_message_and_closing_ban_appeal": "Error sending message and closing ban appeal",
+                "sending_message_and_unban_account": "Error sending message and unban account",
+                "adding_gm_comment": "Error adding GM comment",
+                "sending_message": "Error sending message",
+                "editing_ban_duration": "Error editing ban duration"
+            },
+            "success_messages": {
+                "edited_ban_reason": "Success edited ban reason",
+                "closed_ban_appeal": "Success closed ban appeal",
+                "message_sent_and_closed_ban_appeal": "Success message sent and closed ban appeal",
+                "message_sent_and_unbanned_account": "Success message sent and unbanned account",
+                "comment_added": "Success comment added",
+                "message_sent": "Success message sent",
+                "edited_ban_duration": "Success edited ban duration"
+            }
+        }
+    },
+    "bug_tracker": {
+        "successfully_saved": "Successfully saved.",
+        "link_an_issue": "Link an Issue",
+        "remove": "Remove",
+        "link_another_issue": "Link another issue",
+        "type_of_link": "Type of link",
+        "search_bug_reports": "Search Bug reports",
+        "duplicated": "Duplicated",
+        "related": "Related",
+        "tooltip": "By clicking this button, you are assigning a higher priority to this bug. Bugs with higher priority are addressed more promptly, ensuring faster resolutions.",
+        "new_report": "New Report",
+        "select_realm": "Select Realm",
+        "select_category": "Select Category",
+        "no_category": "No category",
+        "select_status": "Select Status",
+        "search": "Search",
+        "reset": "Reset",
+        "staff": "Turtle Wow Staff",
+        "before_submitting": "Before submitting your issue, make sure it hasn't already been reported by others! Follow the guidelines and provide as much information about the problem as you can. A properly submitted report will increase the chances of a quicker resolution.",
+        "are_you_sure": "Are you sure you want to edit this bug report? This action cannot be undone.",
+        "bug_tracker": "Bug Tracker",
+        "reports_per_page": "Per Page",
+        "edit_report": "Edit Report",
+        "sort_by": "Sort by",
+        "date_of_creation": "Recently Created",
+        "date_of_last_update": "Recently Modified",
+        "number_of_comments": "Most Comments",
+        "latest_activity": "Latest Reply",
+        "top_rated": "Top Rated",
+        "my_reports": "My Reports",
+        "my_threads": "My Threads",
+        "vote_for_fixing": "Vote for fixing",
+        "undo_vote": "Undo Vote",
+        "voted_for_fixing": "Voted for Fixing:",
+        "number_of_votes": "Rating",
+        "open_reports": "Open reports",
+        "closed_reports": "Closed reports",
+        "all_reports": "All reports",
+        "priority": "Priority",
+        "problem": "Describe the Issue:\n",
+        "how_to_work": "How is it supposed to work:\n",
+        "how_to_reproduce": "How to reproduce:\n",
+        "character": "Character the bug occurred on:\n",
+        "new_bug_report": "New Bug Report",
+        "avoid_duplicates": "- Use the search function to avoid duplicate reports",
+        "verified_info": "- Use verified info sources",
+        "be_accurate": "- Be accurate in describing the issue",
+        "submit_report": "Submit Report",
+        "modify_statuses": "Modify Statuses",
+        "modify_categories": "Modify Categories",
+        "modify_priorities": "Modify Priorities",
+        "modify_teams": "Modify Teams",
+        "en_title": "English Title",
+        "cn_title": "Chinese Title",
+        "color": "Color",
+        "save_status": "Save Status",
+        "save_priority": "Save Priority",
+        "save_category": "Save Category",
+        "save_team": "Save Team",
+        "team_members": "Team Members",
+        "select_team": "Select Team Members",
+        "teams": "Teams",
+        "statuses": "Statuses",
+        "categories": "Categories",
+        "priorities": "Priorities",
+        "id": "ID",
+        "realms": "Realms",
+        "assign_to": "Assign To",
+        "select_assigned_to": "Select Teams",
+        "edit_status": "Edit status",
+        "edit_priority": "Edit priority",
+        "edit_category": "Edit category",
+        "all_categories": "All Categories",
+        "edit_team": "Edit team",
+        "no_categories": "No categories available.",
+        "no_realms": "No realms available.",
+        "upload_images": "Upload Images",
+        "upload_image": "Upload Image",
+        "you_can_upload": "You can upload up to 2 images (2MB per image max).",
+        "you_can_upload_one_image": "You can upload 1 image (2MB max). Drag and drop your image in the input area, or click to select an image.",
+        "closed_this_report": "closed this report",
+        "uploading": "Uploading",
+        "pick_author_name": "You need to pick author name",
+        "select_author_name": "Select Author Name",
+        "select_character": "Select Character",
+        "no_character": "No Character",
+        "you_need_to": "You need to ",
+        "in_order_to": " in order to comment and report new issues.",
+        "login_first": "You need to login in order to comment and report new issues.",
+        "success_messages": {
+            "added_status": "Success added status",
+            "edited_status": "Success edited status",
+            "deleted_status": "Success deleted status",
+            "added_priority": "Success added priority",
+            "edited_priority": "Success edited priority",
+            "deleted_priority": "Success deleted priority",
+            "added_category": "Success added category",
+            "edited_category": "Success edited category",
+            "deleted_category": "Success deleted category",
+            "added_team": "Success added team",
+            "edited_team": "Success edited team",
+            "deleted_team": "Success deleted team",
+            "added_new_bug_report": "Success added new bug report"
+        },
+        "error_messages": {
+            "adding_status": "Error adding status",
+            "editing_status": "Error editing status",
+            "deleting_status": "Error deleting status",
+            "adding_priority": "Error adding priority",
+            "editing_priority": "Error editing priority",
+            "deleting_priority": "Error deleting priority",
+            "adding_category": "Error adding category",
+            "editing_category": "Error editing category",
+            "deleting_category": "Error deleting category",
+            "adding_team": "Error adding team",
+            "editing_team": "Error editing team",
+            "deleting_team": "Error deleting team",
+            "adding_new_bug_report": "Error adding new bug report"
+        }
+    },
+    "bug_report": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "change_priority": "Change Priority",
+        "back_to_list": "Back to List",
+        "author": "Author",
+        "category": "Category",
+        "realm": "Realm",
+        "status": "Status",
+        "priority": "Priority",
+        "gm_priority": "GM Priority",
+        "created": "Created",
+        "updated": "Updated",
+        "title": "Title",
+        "id": "ID",
+        "assigned_to": "Assigned To",
+        "all": "All",
+        "not_assigned": "Not Assigned",
+        "change_status": "Change Status",
+        "open": "Open",
+        "closed": "Closed",
+        "en_name": "English Name",
+        "cn_name": "Chinese Name",
+        "color": "Color",
+        "icon": "Icon",
+        "action": "Action",
+        "select_realms": "Select Realms",
+        "select_categories": "Select Categories",
+        "desc_en": "English Description",
+        "desc_cn": "Chinese Description",
+        "opened": "Opened",
+        "by": "by",
+        "reported": "reported",
+        "commented_at": "commented",
+        "hide_comment": "Hide comment",
+        "delete_comment": "Delete comment",
+        "edit_comment": "Edit comment",
+        "no_comments": "No comments yet.",
+        "delete_report": "Delete Report",
+        "action_is_permanent": "This action is permanent. When deleting a report, you will also be deleting all data related to it (images, comments, etc.). Are you sure you want to delete this report?",
+        "bug_details": {
+            "description": "Description",
+            "related_reports": "Related Reports",
+            "duplicated_reports": "Duplicated Reports",
+            "linked_by": "Linked By Bug Report",
+            "comments": "Comments",
+            "add_comment": "Add Comment",
+            "submit_comment": "Submit Comment",
+            "report_history": "Report History"
+        },
+        "related_reports_table": {
+            "id": "ID",
+            "title": "Title",
+            "category": "Category",
+            "status": "Status",
+            "priority": "Priority",
+            "updated": "Updated"
+        }
+    },
+    "hardcore": {
+        "immortals": "Immortals",
+        "fallen_heroes": "Fallen Heroes",
+        "still_standing": "Still Standing",
+        "hardcore_scoreboard": "Hardcore Scoreboard",
+        "learn_more": "Learn more about Hardcore Challenge",
+        "showing": "showing",
+        "of": "of"
+    },
+    "shop_appeals_page": {
+        "pending": "Pending",
+        "delivered": "Delivered",
+        "title": "Shop Appeals",
+        "shop_appeals": "Shop Appeals",
+        "refresh": "Refresh",
+        "search": "Search shop appeals by username",
+        "unseen": "Unseen",
+        "messages": "messages",
+        "responded_by": "Responded by",
+        "closed": "Closed",
+        "respond": "Respond",
+        "refunded": "Refunded",
+        "send_message": "Send message",
+        "deny_appeal": "Deny appeal",
+        "approve_appeal": "Approve appeal",
+        "closed_appeal": "Your appeal has been reviewed and is now closed. We appreciate your patience. If you have any questions, feel free to contact support.",
+        "approved_appeal": "Good news! Your appeal has been approved. We're glad to have been able to assist you. Should you require further help, our support team is here for you.",
+        "see_full_shop_history": "See full shop history",
+        "chat_history": "Chat history",
+        "enter_id_or_username": "Enter ID or Username",
+        "go": "Go",
+        "go_to_players_shop_history": "Go to player's shop history",
+        "table_headers": {
+            "account": "Account",
+            "message": "Message",
+            "date": "Date",
+            "status": "Status",
+            "actions": "Actions"
+        },
+        "filter_labels": {
+            "all": "Total",
+            "approved": "Approved",
+            "closed": "Closed",
+            "unread": "New Messages",
+            "delivered": "Delivered Messages"
+        },
+        "no_messages": "You have no pending messages at the moment. If you require assistance concerning any payment-related issues, please feel free to communicate with our support team using the space provided below. For further insights into our refund policy, we kindly suggest referring to the relevant section in ",
+        "are_you_sure": "Are you sure you want to delete this image?",
+        "image_deletion": "Image deletion"
+    },
+    "shop_history_page": {
+        "back_to_list": "Back to List",
+        "refresh": "Refresh",
+        "title": "Shop History",
+        "appeal_info": "Appeal Info",
+        "shop_coins_history": "Shop Coins History",
+        "table_headers": {
+            "account": "Account",
+            "realm": "Realm",
+            "points": "Points",
+            "actual_points": "Actual Points",
+            "new_points": "New Points",
+            "type": "Type",
+            "system": "System",
+            "reference": "Reference",
+            "date": "Date",
+            "time": "Time",
+            "guid": "GUID",
+            "item": "Item",
+            "price": "Price",
+            "refunded": "Refunded",
+            "actions": "Actions"
+        }
+    },
+    "population_graph_page": {
+        "population_graph": "Population",
+        "the_following_graphs": "The following graphs represent the peak numbers of online players for both factions for each week last 3 months:",
+        "alliance_players": "Alliance Players",
+        "horde_players": "Horde Players",
+        "queued_players": "Queued Players",
+        "total_players": "Total Players"
+    },
+    "shellcoin_page": {
+        "shellcoin_title": "Shellcoin — turning peons into Warchiefs!",
+        "welcome_to_shellcoin": "Welcome to Shell Co. Trading Company! With my genius I have invented a brand-new currency that will take Azeroth by storm, the magical Shellcoin will turn the world on its head, and create an all new way to get rich. Down on your luck, well, now is the time to invest in Shellcoin and hit big like many others have!",
+        "marlos_catos": "Marlos Catos, CEO of Shell Co. Trading Company",
+        "total_amount": "Shellcoins, total amount:",
+        "shellcoin": "Shellcoin Co. Trading",
+        "total": "Total",
+        "last_week": "Last Week"
+    },
+    "transfer_account": {
+        "transfer_account": "Transfer Account",
+        "cannot_transfer": "You cannot transfer your account while it is suspended!",
+        "check_progress": "Check Progress",
+        "submit": "Submit",
+        "your_account_is_locked": "Your account is locked!",
+        "first_phase": "The account transfer consists of three phases. The first phase involves moving the account to the new network. During this phase, you won't be able to log in to the server, but you can still access the website until all characters are transferred. After that, you won't be able to log in at all.",
+        "second_phase": "The second phase will display a table showing the current status of each character. When you click 'Start process' for a specific character, their data will be exported from the EU network at that moment.",
+        "third_phase": "The third phase is the final one. The character will now need to be imported on the Asia network, this is done by clicking 'Complete Process'. Now you are ready to use this character.",
+        "successfully_transferred": "Successfully transferred account.",
+        "username_exists": "That username already exists! Please pick a new username and password.",
+        "email_exists": "That email already exists! Please pick a new email.",
+        "account_banned": "You cannot transfer your account while your account is banned!",
+        "account_online": "You cannot transfer your account while your account is online!",
+        "transfer_error": "An error occurred during the transfer process.",
+        "choose_realm": "Select a realm",
+        "confirmation": "Are you sure you want to begin this process? Please make sure to inform yourself about what will happen by reading our <a href=\"https://forum.turtle-wow.org/viewtopic.php?t=12867\" target=\"_blank\">Rules & Limitations</a> before proceeding.",
+        "start_process": "Start Process",
+        "complete_process": "Complete Process",
+        "not_requested": "Not Requested",
+        "requested": "Requested",
+        "transferred": "Transferred",
+        "failed": "Failed",
+        "retry_process": "Retry Process",
+        "rules_and_limitations": "Rules & Limitations",
+        "proceed_with_transfer": "Proceed with Transfer",
+        "name": "Name",
+        "status": "Status",
+        "action": "Action",
+        "suspended": "You cannot transfer your account while it is suspended!",
+        "message": {
+            "missing_characters": "You have no characters to transfer.",
+            "need_character": "You need to provide character to transfer.",
+            "already_transferred": "This character has already been transferred.",
+            "was_failed_to_transfer": "This character was failed to transfer.",
+            "already_exported": "This character has already been exported.",
+            "success_exported": "Character successfully exported.",
+            "error_exporting": "Error exporting character.",
+            "need_export_first": "You need to export character first.",
+            "error_importing": "Error importing character.",
+            "success_exported_all_characters": "All characters successfully exported.",
+            "success_imported": "Character successfully imported.",
+            "check_transfer": "Try to refresh the page, to pull transfer status.",
+            "success_transferred": "Character successfully transferred.",
+            "already_transferred_account": "This account has already been transferred."
+        }
+    },
+    "world_config": {
+        "table": {
+            "variable": "Variable",
+            "value": "Value",
+            "info": "Info"
+        },
+        "title": "World Config",
+        "reload_config": "Reload Config",
+        "realm_id": "Realm ID",
+        "compression": "Compression level for update packages sent to client. (1-9)",
+        "login_queue_grace_period_secs": "How many seconds after last logout can we login and skip the queue.",
+        "character_screen_max_idle_time": "Number of seconds to allow for players to remain on the character screen before disconnecting.",
+        "player_hard_limit": "Maximum number of players in the world, after increasing player_limit with login_per_tick.",
+        "antiflood_sanction": "Sanction applied to a player if sending too many packets.",
+        "packet_bcast_threads": "Number of threads for packets broadcasting.",
+        "packet_bcast_frequency": "How often packet broadcasting threads run in milliseconds.",
+        "mailspam_expire_secs": "How many seconds before a mail expires.",
+        "mailspam_max_mails": "Maximum number of mails a player can have in their mailbox.",
+        "mailspam_level": "Level required to send mail.",
+        "mailspam_account_level": "Account level required to send mail.",
+        "mailspam_money": "Maximum amount of money that can be sent in a mail (cooper)."
+    },
+    "reset_2_fa_code_form" : {
+        "title": "Reset 2FA Code",
+        "placeholder": {
+            "email": "Email",
+            "recovery_code": "Recovery Code"
+        },
+        "message" : "If recovery code and email are correct, 2FA code will be reset.",
+        "message_login" : "If recovery code and username are correct, 2FA code will be reset."
+    },
+    "serveralert" : {
+        "population" : {
+            "high": "|cffc41f3bhigh|r",
+            "medium": "|cffFF7D0medium|r",
+            "low": "|cff00ff00low|r"
+        },
+        "queue" : {
+            "high" : "(|cffc41f3bhigh|r Queuing).",
+            "medium" : "(|cffFF7D0medium|r Queuing).",
+            "low" : "(|cff00ff00low|r Queuing)."
+        },
+        "offline" : "|cffc41f3boffline|r"
+    },
+    "armory": {
+        "talents": "Talents",
+        "professions": "Professions",
+        "secondary_skills": "Secondary Skills"
+    }
+}

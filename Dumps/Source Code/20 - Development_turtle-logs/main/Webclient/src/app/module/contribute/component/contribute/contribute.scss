@@ -1,0 +1,10 @@
+@import "src/styles/units";
+
+:host {
+    display: flex;
+    height: 100%;
+    width: calc(100% - 2 * #{$spacing});
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}

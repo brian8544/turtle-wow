@@ -1,0 +1,14 @@
+<div class="component_title">Speed runs</div>
+<Table [bodyRows]="body_columns" [headColumns]="header_columns" [clientSide]="clientSide"
+       [responsiveHeadColumns]="responsiveHeadColumns" [responsiveModeWidthInPx]="responsiveModeWidthInPx"
+       [numItems]="total_num" unique_id="guild_speed_runs_search" [enableShare]="false"
+       [et_row_items]="[undefined, encounter, undefined, detailed_ts]">
+</Table>
+
+<ng-template #encounter let-specification="specification" let-content="content">
+    <a (click)="redirect_to_viewer(specification.args.instance_meta_id)">{{content}}</a>
+</ng-template>
+
+<ng-template #detailed_ts let-specification="specification" let-content="content">
+    {{specification.content.length === 0 ? '-' : dateService.toTimeSpan(specification.content) }}
+</ng-template>

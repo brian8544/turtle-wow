@@ -1,0 +1,177 @@
+<div class="modal fade show" id="register" style="padding-right: 20px; display: block;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" ng-class="{'done' : modal == 'ok'}">
+            <div class="modal-body p-0">
+
+                <a class="hand modalClose" href="#/home" target="_blank">&times;</a>
+
+                <div class="row">
+
+                    <div class="col-lg-2"></div>
+
+                    <div class="col-lg-8 text-center p-5" ng-if="modal == 'register'">
+
+                        <h5 class="text-white">Create new account</h5>
+
+                        <BR><BR>
+
+                        <div ng-if="register_err" class="orange-text pb-2">
+                            Fill in correctly marked inputs:<br>
+                        </div>
+
+                        <input type="text" class="form-control" placeholder="Account Name"
+                               ng-class="{'invalid' : register_data.account_name.length <= 2}"
+                               ng-model="register_data.account_name">
+                        <input type="text" class="form-control" placeholder="E-mail"
+                               ng-class="{'invalid' : !validEmail(register_data.email_address)}"
+                               ng-model="register_data.email_address">
+                        <input type="text" class="form-control" placeholder="Forum Username"
+                               ng-class="{'invalid' : register_data.forum_name.length <= 2}"
+                               ng-model="register_data.forum_name">
+                        <input type="password" class="form-control w-50 pull-left" placeholder="Password"
+                               ng-class="{'invalid' : register_data.user_password.length <= 2}"
+                               ng-model="register_data.user_password">
+                        <input type="password" class="form-control w-50 pull-right"
+                               ng-class="{'invalid' : register_data.user_password != register_data.user_password2 }"
+                               placeholder="Repeat Password" ng-model="register_data.user_password2">
+
+                        <Br>
+                        <Br>
+                        <Br>
+
+                        <img ng-src="{{captchaImage}}" class="img-fluid">
+
+                        <div id="turnstile_reg" data-theme="dark"></div>
+
+                        <BR><BR>
+
+                        <img src="images/registerbutton.png" class="w-100 hand register" ng-click="register()"
+                             ng-class="{'desat' : registering }">
+
+                        <div class="response m-3 text-white" ng-if="response != ''">
+                            {{response}}
+                        </div>
+
+                        <img src="images/footerline.png" class="mt-5 mb-5 w-100">
+
+                        <a class="hand mr-3" ng-click="openLoginModal('/home')">
+                            <img src="images/icon_user_small.png" class="mr-2">
+                            Log in
+                        </a>
+
+                        <a class="hand ml-3" ng-click="changeModal('forgot')">
+                            <img src="images/icon_exclamation.png" class="mr-2">
+                            Forgot Password
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-8 text-center p-5" ng-if="modal == 'login'">
+
+                        <h5 class="text-white">my account</h5>
+
+                        <BR><BR>
+
+                        <div ng-if="login_err" class="orange-text pb-2">
+                            {{login_err_msg}}
+                        </div>
+
+                        <input type="text" class="form-control" placeholder="Username" ng-model="login_data.username"
+                               ng-class="{'invalid' : login_data.username.length <= 2 }">
+                        <input type="password" class="form-control" placeholder="Password" ng-model="login_data.password"
+                               ng-class="{'invalid' : login_data.password.length <= 2 }">
+
+                        <img src="images/button_login.png" class="w-100 hand register mt-2" ng-click="login()">
+
+                        <img src="images/footerline.png" class="mt-5 mb-5 w-100">
+
+                        <a class="hand mr-3" ng-click="changeModal('forgot')">
+                            <img src="images/icon_user_small.png" class="mr-2">
+                            Forgot Password
+                        </a>
+
+                        <a class="hand ml-3" ng-click="changeModal('register')">
+                            <img src="images/icon_user_small.png" class="mr-2">
+                            Create new account
+                        </a>
+
+
+                    </div>
+
+                    <div class="col-lg-8 text-center p-5" ng-if="modal == 'forgot'">
+
+                        <h5 class="text-white">forgot your password?</h5>
+
+                        <BR><BR>
+
+                        <input type="email" class="form-control" placeholder="E-mail" ng-class="{'invalid' : register_err }"
+                               ng-model="register_data.email_address">
+
+
+                        <img src="images/buttonforgot.png" class="w-100 hand register mt-5"
+                             ng-class="{'desat' : registering }" ng-click="forgot()">
+
+                        <div class="response m-3 text-white" ng-if="response != ''">
+                            {{response}}
+                        </div>
+
+                        <img src="images/footerline.png" class="mt-5 mb-5 w-100">
+
+                        <a class="hand" ng-click="changeModal('register')">
+                            <img src="images/icon_user_small.png" class="mr-2"> Create new account
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-8 text-center p-5" ng-if="modal == 'resetok'">
+
+                        <h3 class="text-white orange-text mt-3 mb-2">Done!</h3>
+
+                        <img src="images/footerline.png" class="mt-3 mb-4 w-50">
+
+                        <p class="text-white">
+                            {{response}}
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-8 text-center p-5" ng-if="modal == 'ok'">
+
+                        <h3 class="text-white orange-text mt-3 mb-2">Done!</h3>
+
+                        <img src="images/footerline.png" class="mt-3 mb-4 w-50">
+
+
+                        <p class="text-white">
+                            {{response}}
+                        </p>
+
+                        <a class="hand play" href="https://forum.turtle-wow.org/viewtopic.php?t=7709" target="_blank"><img
+                                src="images/button_done.png"></a>
+
+                    </div>
+
+                    <div class="col-lg-8 text-center p-5" ng-if="modal == 'failed'">
+
+                        <h3 class="text-white orange-text mt-3 mb-2">Failed!</h3>
+
+                        <img src="images/footerline.png" class="mt-3 mb-4 w-50">
+
+
+                        <p class="text-white">
+                            {{response}}
+                        </p>
+
+                        <a class="hand" ng-click="changeModal('register')">
+                            <img src="images/icon_user_small.png" class="mr-2"> Go Back
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+@import "../../../../../../styles/global";
+@import "../../../../../../styles/input";
+
+:host {
+    display: block;
+    width: 100%;
+
+    select {
+        width: 100%;
+    }
+}

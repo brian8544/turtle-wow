@@ -1,0 +1,9 @@
+[Unit]
+Description=Restarts backend daily
+
+[Timer]
+OnCalendar=00/6:00
+Unit=restart_backend.service
+
+[Install]
+WantedBy=multi-user.target

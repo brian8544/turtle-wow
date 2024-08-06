@@ -1,0 +1,35 @@
+<div class="header">
+    <span class="left_part">{{tab_label}} ({{points_spend}})</span>
+    <span class="right_part" (click)="resetTalents()">Reset</span>
+</div>
+<div class="container">
+    <ng-container *ngFor="let row of talent_tree; let j = index">
+        <div class="talent_row">
+            <ng-container *ngFor="let talent of row; let i = index">
+                <TalentIcon [talent]="talent" (talentChange)="talentChanged($event)"
+                            [expansion_id]="expansion_id"
+                            [is_horizontal_arrow_filler]="hasDependencyLeftOfIt(talent)"
+                            [is_vertical_arrow_filler]="hasDependencyTopOfIt(talent)"
+                            [can_spend_points]="canSpendPoints(talent)"
+                            [can_retrieve_points]="canRetrievePoints(talent)"
+                            [is_grayed_out]="isGrayedOut(talent)"
+                            [is_vertical_arrow_golden]="is_arrow_golden(talent, true)"
+                            [is_horizontal_arrow_golden]="is_arrow_golden(talent, false)"
+                            [is_diagonal_arrow_filler]="is_diagonal_arrow_filler(talent)"
+                            [is_diagonal_arrow_golden]="is_diagonal_arrow_golden(talent)"
+                ></TalentIcon>
+                <TalentArrow
+                    [is_filler]="isHorizontalFiller(talent)"
+                    [arrow_is_golden]="is_arrow_golden(talent, false)" [arrow_has_pointer]="hasArrowPointerLeftToRight(talent_tree[talent.row_index][talent.column_index + 1])"
+                    *ngIf="i < 3"></TalentArrow>
+            </ng-container>
+        </div>
+        <div class="arrow_row" *ngIf="j < talent_tree.length - 1">
+            <TalentArrow [vertical]="true"
+                         [is_filler]="isVerticalArrowFiller(talent)"
+                         [arrow_is_golden]="is_arrow_golden(talent, true)"
+                         [arrow_has_pointer]="hasArrowPointerTopToBottom(talent_tree[talent.row_index + 1][talent.column_index])"
+                         *ngFor="let talent of row; let i = index"></TalentArrow>
+        </div>
+    </ng-container>
+</div>

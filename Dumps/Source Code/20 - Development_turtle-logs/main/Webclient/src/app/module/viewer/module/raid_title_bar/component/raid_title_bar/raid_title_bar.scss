@@ -1,0 +1,48 @@
+@import "src/styles/colors";
+@import "src/styles/units";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    background: $tdc_darker;
+    border: 1px solid $tdc_accent;
+    height: 50px;
+    width: calc(100% - #{$spacing} - 2px);
+    border-radius: 3px 3px 3px 3px;
+    padding: 0.25 * $spacing 0.5 * $spacing;
+
+    div {
+        width: 50%;
+        height: 25px;
+        float: left;
+        line-height: 22px;
+        font-size: 20px;
+
+        a, span {
+            font-size: 20px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 12px;
+
+            a, span {
+                font-size: 12px;
+            }
+        }
+
+        &:nth-child(3) {
+            color: $font_grayish;
+        }
+    }
+
+    .top_left, .bottom_left{
+        text-align: left;
+    }
+
+    .top_right, .bottom_right {
+        text-align: right;
+    }
+}

@@ -1,0 +1,37 @@
+<!--<CookieBanner *ngIf="show_cookie_banner" (close_banner)="set_cookie_banner($event)"></CookieBanner>-->
+<RouterLoadingBar></RouterLoadingBar>
+<NotificationList></NotificationList>
+<Tooltip id="global_tooltip"></Tooltip>
+<NavigationBar></NavigationBar>
+<main>
+    <div id="left_bar" *ngIf="false && enable_ads">
+        <div class="vm-placement" data-id="609a80894e3663176463205f"></div>
+    </div>
+    <div [class.center_bar]="!isMobile && enable_ads" [class.center_bar_mobile]="isMobile && enable_ads" [class.center_no_ads]="!enable_ads">
+        <div id="top_layer" *ngIf="false && enable_ads">
+            <div *ngIf="isMobile" class="vm-placement" data-id="609a80ac4e36631764632065"></div>
+            <div *ngIf="!isMobile" class="vm-placement" data-id="609a80924e36631764632061"></div>
+        </div>
+        <div id="center_layer">
+            <router-outlet></router-outlet>
+        </div>
+        <div id="bottom_layer" *ngIf="enable_ads">
+            <div *ngIf="!isMobile" class="vm-placement" data-id="609a809e4e36631764632063"></div>
+            <div *ngIf="isMobile" class="vm-placement" data-id="609a807e4e3663176463205d"></div>
+            <div [class.ad_hidden]="!enough_bottom_space" *ngIf="!isMobile">
+                <div class="vm-placement" data-id="609a809e4e36631764632063"></div>
+            </div>
+        </div>
+    </div>
+    <div id="right_bar" *ngIf="!isMobile && enable_ads">
+        <div class="vm-placement" data-id="609a80894e3663176463205f"></div>
+        <div [class.ad_hidden]="!is_on_viewer_site">
+            <div class="vm-placement" data-id="609a80894e3663176463205f"></div>
+        </div>
+        <div [class.ad_hidden]="!is_on_viewer_site">
+            <div class="vm-placement" data-id="609a80894e3663176463205f"></div>
+        </div>
+    </div>
+    <div *ngIf="enable_ads" class="vm-placement" data-id="609a80769ddea76a9b42dd08" style="display:none"></div>
+</main>
+<FooterBar (consent)="set_cookie_banner(true)"></FooterBar>

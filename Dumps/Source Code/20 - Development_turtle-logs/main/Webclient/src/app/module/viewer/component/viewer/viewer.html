@@ -1,0 +1,9 @@
+<RaidTitleBar></RaidTitleBar>
+<RaidConfigurationMenu></RaidConfigurationMenu>
+<RaidGraph></RaidGraph>
+<RaidMeter *ngIf="is_base_mode() || is_ability_mode()" id="left_meter" [unique_id]="'viewer_rm_1'"></RaidMeter>
+<RaidMeter *ngIf="is_base_mode() || is_ability_mode()" [unique_id]="'viewer_rm_2'"></RaidMeter>
+<RaidDetailTable *ngIf="is_detail_mode()"></RaidDetailTable>
+<RaidLoot *ngIf="is_base_mode()" (lootEmpty)="empty_loot = $event" [class.hide_loot]="empty_loot"></RaidLoot>
+<RaidComposition *ngIf="is_base_mode()" [class.full_width]="empty_loot"></RaidComposition>
+<RaidEventLog *ngIf="is_event_log_mode()"></RaidEventLog>

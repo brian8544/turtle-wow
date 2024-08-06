@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="title_bar">
+        <SelectInput [options]="options" (valueChange)="change_meter_selection($event)" [value]="current_meter_selection" [themed]="true"></SelectInput>
+        <SelectInput [options]="abilities" [value]="current_ability_selection" (valueChange)="change_ability_selection($event)" [themed]="true"></SelectInput>
+    </div>
+    <DetailTable [current_ability_details]="current_ability_details"></DetailTable>
+</div>

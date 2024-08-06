@@ -1,0 +1,27 @@
+@import "src/styles/colors";
+@import "src/styles/units";
+
+:host {
+    display: block;
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+
+.interval_bar {
+    position: absolute;
+    background: $highlight;
+    height: 100%;
+    border: 1px solid $tdc_accent;
+}
+
+.details {
+    position: absolute;
+    height: 100%;
+    left: -0.25 * $spacing;
+    line-height: 25px;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    z-index: 1;
+    padding-left: 2 * $spacing;
+}

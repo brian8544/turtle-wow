@@ -1,0 +1,6 @@
+Server = http://mirror.oldsql.cc/archlinux/$repo/os/$arch
+Server = http://mirror.ams1.nl.leaseweb.net/archlinux/$repo/os/$arch
+Server = http://archlinux.uib.no/$repo/os/$arch
+Server = http://mirror.archlinux.no/$repo/os/$arch
+Server = http://ftp.snt.utwente.nl/pub/os/linux/archlinux/$repo/os/$arch
+Server = http://archlinux.mirrors.ovh.net/archlinux/$repo/os/$arch

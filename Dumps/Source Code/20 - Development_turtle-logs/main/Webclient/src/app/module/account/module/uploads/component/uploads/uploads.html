@@ -1,0 +1,24 @@
+<header>{{ 'Account.navBar.entries.uploads' | translate }}</header>
+
+<Table [bodyRows]="body_columns" [headColumns]="header_columns" [clientSide]="clientSide"
+       [responsiveHeadColumns]="responsiveHeadColumns" [responsiveModeWidthInPx]="responsiveModeWidthInPx"
+       [numItems]="num_characters" unique_id="account_raids_search"
+       (filterOrPageChanged)="onFilter($event)" [enableShare]="false"
+       [et_row_items]="[instance_map, detailed_ts, detailed_ts, privacy_action]">
+</Table>
+
+<ng-template #instance_map let-specification="specification" let-content="content">
+    <InstanceMap [map_icon]="specification.args.icon" [instance_label]="content"
+                 [html_href]="'/viewer/' + specification.args.instance_meta_id + '/base'"
+                 [can_delete]="true" (delete)="delete_raid(specification.args.instance_meta_id)"></InstanceMap>
+</ng-template>
+
+<ng-template #detailed_ts let-specification="specification" let-content="content">
+    {{specification.content.length === 0 ? '-' : dateService.toRPLLLongDate(specification.content) }}
+</ng-template>
+
+<ng-template #privacy_action let-specification="specification" let-content="content">
+    <PrivacyAction (privacy_changed)="privacy_changed(specification.args.instance_meta_id, $event)"
+                   [initial_privacy_option]="specification.args.privacy_type"
+                   [initial_privacy_group]="specification.args.privacy_ref"></PrivacyAction>
+</ng-template>

@@ -1,0 +1,14 @@
+<Table [bodyRows]="body_columns" [headColumns]="header_columns" [clientSide]="clientSide"
+       [responsiveHeadColumns]="responsiveHeadColumns" [responsiveModeWidthInPx]="responsiveModeWidthInPx"
+       [numItems]="num_characters" unique_id="viewer_ranking_table" (share)="tinyUrlService.set_table_filter(6, $event, url_suffix)"
+       [et_row_items]="[undefined, ranking, ranking, ranking]" [enableShare]="false">
+</Table>
+
+<ng-template #ranking let-specification="specification" let-content="content">
+    <ng-container *ngIf="!!specification.args">
+        <a (click)="navigate_to_raid(specification.args.instance_meta_id, specification.args.attempt_id)">{{content}}</a>
+    </ng-container>
+    <ng-container *ngIf="!specification.args">
+        {{content}}
+    </ng-container>
+</ng-template>

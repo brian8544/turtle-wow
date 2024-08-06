@@ -1,0 +1,36 @@
+@import "../../../../../../../styles/global";
+@import "../../../../../../../styles/switch";
+
+:host {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    border-top: 1px solid $lesser_black;
+}
+
+$toggle_width: 80px;
+.cor-right {
+    flex: 1 $toggle_width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cor-left {
+    flex: 1 calc(100% - #{$toggle_width});
+}
+
+.cor-title {
+    height: 30px;
+    padding: $spacing * 0.5 0 0 0;
+    width: 100%;
+    font-weight: bold;
+    color: #000;
+}
+
+.cor-description {
+    min-height: 30px;
+    width: 100%;
+    padding: 0 0 $spacing * 0.5 0;
+    color: #000;
+}

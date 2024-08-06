@@ -1,0 +1,62 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+@import "src/styles/buttons";
+
+:host {
+    display: inline-block;
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+    width: min(100%, 600px);
+}
+
+.row {
+    min-height: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 0.5 * $spacing;
+
+    .col {
+        float: left;
+        width: 100%;
+
+        button {
+            width: 100%;
+        }
+
+        label {
+            font-size: 18px;
+        }
+    }
+
+    /*
+    &:nth-child(2), &:nth-child(3) {
+        .col {
+            width: calc(50% - 0.25 * #{$spacing});
+
+            &:first-child {
+                margin-right: 0.5 * $spacing;
+            }
+        }
+    }
+    */
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#log {
+    width: 100%;
+}
+
+.progress_counter{
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    height: 600px;
+    line-height: 600px;
+}
+
+.hide_upload {
+    display: none;
+}

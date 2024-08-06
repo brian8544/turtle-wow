@@ -1,0 +1,101 @@
+
+*** These modified files were found in JOE when it aborted on Fri Jan 26 01:35:27 2024
+*** JOE was aborted because the terminal closed
+
+*** File '/home/twptr/sources/.git/MERGE_MSG'
+
+
+Merge branch 'patch_1171' of https://git.turtle-wow.org/development/turtle-wow into patch_1171
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# 
+the commit.
+
+
+
+
+
+
+*** File '(Unnamed)'
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc
+
+*** These modified files were found in JOE when it aborted on Fri Jan 26 01:36:34 2024
+*** JOE was aborted because the terminal closed
+
+*** File '/home/twptr/sources/.git/COMMIT_EDITMSG'
+Merge branch 'patch_1171' of https://git.turtle-wow.org/development/turtle-wow into patch_1171
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try 
+again
+
+
+.
+ewewewr
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch patch_1171
+# Your branch and 'origin/patch_1171' have diverged,
+# and have 2 and 1 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   sql/database_updates/20240125212716_world.sql
+#
+# Changes not staged for commit:
+#	modified:   sql/database_updates/20240125212534_world.sql
+#
+# Untracked files:
+#	DEADJOE
+#
+
+*** File '(Unnamed)'
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/MERGE_MSG
+/home/twptr/sources/.git/COMMIT_EDITMSG
+
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc

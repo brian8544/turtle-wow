@@ -1,0 +1,10 @@
+<div class="title_bar">
+    <div>{{paste?.title}}</div>
+    <div *ngIf="is_paste_owner" class="delete_button btn btnHighlight" (click)="delete()">Delete</div>
+    <div *ngIf="is_paste_owner" class="edit_btn btn btnHighlight" routerLink="/tools/addon_pastebin/edit/{{paste?.id}}">Edit</div>
+    <div class="copy_to_clipboard_btn btn btnHighlight" (click)="save_to_clipboard()">Copy</div>
+</div>
+<!--<img src="/addon_pastes/{{paste?.id}}.png" class="preview_image" />-->
+<div class="desc_title_bar">Description:</div>
+<div class="desc_container">{{paste?.description}}</div>
+<div class="tags_bar"><span>Tags:</span> {{tags}}</div>

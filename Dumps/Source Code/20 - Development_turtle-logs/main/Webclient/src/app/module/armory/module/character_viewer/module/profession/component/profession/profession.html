@@ -1,0 +1,5 @@
+<Icon iconPath="/assets/wow_icon/{{ profession.icon }}.jpg" [size]="48" [border]="true"></Icon>
+<span>{{ profession.name }}</span>
+<div class="progress" [attr.data-label]="profession.points + '/' + profession.point_max">
+    <span class="value" [style.width]="(profession.points / profession.point_max * 100.0).toFixed(1) + '%'"></span>
+</div>

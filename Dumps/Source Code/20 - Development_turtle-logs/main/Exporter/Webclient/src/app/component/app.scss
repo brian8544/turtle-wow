@@ -1,0 +1,15 @@
+@import "src/styles/global";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: auto;
+
+    .main {
+        display: block;
+        justify-content: center;
+        flex: 1;
+        padding: $spacing;
+    }
+}

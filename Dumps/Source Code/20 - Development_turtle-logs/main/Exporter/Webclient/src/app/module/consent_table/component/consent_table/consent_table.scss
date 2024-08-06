@@ -1,0 +1,76 @@
+@import "src/styles/global";
+
+$rowHeight: 50px;
+
+:host {
+    display: block;
+    width: 100%;
+    border: 1px solid $tdc_accent;
+    border-radius: 3px 3px 3px 3px;
+    overflow: hidden;
+    min-height: 10px;
+    position: relative;
+
+    .consentHeader {
+        height: calc(#{$rowHeight} - #{$spacing});
+        padding: $spacing / 2 $spacing / 2;
+        width: calc(100% - #{$spacing});
+        background: $tdc_darker;
+        border-bottom: 1px solid $tdc_accent;
+        line-height: calc(#{$rowHeight} - #{$spacing});
+        font-size: 30px;
+    }
+
+    .consentDescription {
+        min-height: 10px;
+        padding: $spacing / 2 $spacing / 2;
+        width: calc(100% - #{$spacing});
+        border-bottom: 1px solid $tdc_accent;
+    }
+
+    .tableHeader {
+        display: flex;
+        flex-direction: row;
+        height: $rowHeight;
+        background: $tdc_darker;
+        border-bottom: 1px solid $tdc_accent;
+
+        div {
+            padding: $spacing / 2 $spacing / 2;
+            line-height: calc(#{$rowHeight} - #{$spacing});
+            font-size: 20px;
+            white-space: nowrap;
+
+            &:nth-child(1) {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    .tableBody {
+        max-height: 200px;
+        overflow-y: auto;
+
+        .tableRow {
+            display: flex;
+            flex-direction: row;
+            height: $rowHeight;
+            border-bottom: 1px solid $tdc_accent;
+
+            &:nth-child(2n) {
+                background: lighten($theme_dominant_color, 5%);
+            }
+
+            &:last-child {
+                border: none;
+            }
+
+            div {
+                padding: $spacing / 2 $spacing / 2;
+                &:nth-child(1) {
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<div class="item_quality_{{ payload.quality }}">{{ payload.name }}</div>
+<div *ngIf="payload.bonding">{{ payload.bonding }}</div>
+<div class="split" *ngIf="!!payload.sub_class || !!payload.inventory_type">
+    <div>{{ payload.sub_class }}</div>
+    <div>{{ payload.inventory_type }}</div>
+</div>
+<div *ngIf="payload.armor">{{ 'Tooltip.ItemTooltip.armor' | translate:{ amount: payload.armor } }}</div>
+<div *ngIf="payload.weapon_stat">
+    <div class="split">
+        <div>
+            <span *ngIf="!payload.weapon_stat.damage_sources[0].damage_type">{{ 'Tooltip.ItemTooltip.weaponDamagePhysical' | translate:payload.weapon_stat.damage_sources[0] }}</span>
+            <span *ngIf="payload.weapon_stat.damage_sources[0].damage_type">{{ 'Tooltip.ItemTooltip.weaponDamageElement' | translate:payload.weapon_stat.damage_sources[0] }}</span>
+        </div>
+        <div>{{ 'Tooltip.ItemTooltip.weaponSpeed' | translate:{ speed: (payload.weapon_stat.delay/1000).toFixed(2) } }}</div>
+    </div>
+    <div *ngIf="payload.weapon_stat.damage_sources.length>1">
+        <span *ngIf="!payload.weapon_stat.damage_sources[1].damage_type">{{ 'Tooltip.ItemTooltip.weaponDamagePhysical' | translate:payload.weapon_stat.damage_sources[1] }}</span>
+        <span *ngIf="payload.weapon_stat.damage_sources[1].damage_type">{{ 'Tooltip.ItemTooltip.weaponDamageElement' | translate:payload.weapon_stat.damage_sources[1] }}</span>
+    </div>
+    <div *ngIf="payload.weapon_stat.damage_sources.length>2">
+        <span *ngIf="!payload.weapon_stat.damage_sources[2].damage_type">{{ 'Tooltip.ItemTooltip.weaponDamagePhysical' | translate:payload.weapon_stat.damage_sources[2] }}</span>
+        <span *ngIf="payload.weapon_stat.damage_sources[2].damage_type">{{ 'Tooltip.ItemTooltip.weaponDamageElement' | translate:payload.weapon_stat.damage_sources[2] }}</span>
+    </div>
+</div>
+<div *ngFor="let stat of payload.stats">
+    <div *ngIf="stat.value === 0">{{ 'Tooltip.ItemTooltip.statLabel' | translate:{ name: stat.name } }}</div>
+    <div *ngIf="stat.value > 0">{{ 'Tooltip.ItemTooltip.statPositive' | translate:stat }}</div>
+    <div *ngIf="stat.value < 0">{{ 'Tooltip.ItemTooltip.statNegative' | translate:stat }}</div>
+</div>
+<div *ngIf="payload.enchant" class="item_quality_3">{{ payload.enchant }}</div>
+<div *ngIf="payload.socket">
+    <div *ngFor="let slot of payload.socket.slots">
+        <div *ngIf="slot.item">
+            <Icon [size]="12" iconPath="/assets/wow_icon/{{ slot.item.icon }}.jpg"></Icon>
+            <span *ngIf="gemMatches(slot.flag, slot.item.flag)" class="item_quality_2">{{ ' ' + slot.item.effect }}</span>
+            <span *ngIf="!gemMatches(slot.flag, slot.item.flag)" class="item_quality_1">{{ ' ' + slot.item.effect }}</span>
+        </div>
+        <div *ngIf="!slot.item">
+            <Icon [size]="12" iconPath="/assets/tooltip/socket{{ slot.flag }}.gif"></Icon>
+            {{ 'Tooltip.ItemTooltip.socket' + slot.flag | translate }}
+        </div>
+    </div>
+    <div *ngIf="validSocketBonus(payload.socket)" class="item_quality_3">{{ 'Tooltip.ItemTooltip.socketBonus' | translate:{ effect: payload.socket.socket_bonus } }}</div>
+    <div *ngIf="!validSocketBonus(payload.socket)" class="item_quality_2">{{ 'Tooltip.ItemTooltip.socketBonus' | translate:{ effect: payload.socket.socket_bonus } }}</div>
+</div>
+<div *ngIf="payload.durability">{{ 'Tooltip.ItemTooltip.durability' | translate:{ amount: payload.durability } }}</div>
+<div *ngIf="payload.item_level">{{ 'Tooltip.ItemTooltip.itemLevel' | translate:{ level: payload.item_level } }}</div>
+<div *ngIf="payload.required_level">{{ 'Tooltip.ItemTooltip.requiredLevel' | translate:{ level: payload.required_level } }}</div>
+<div *ngFor="let effect of payload.item_effects" class="item_quality_3">{{ effect }}</div>
+<div *ngIf="payload.item_set">
+    <br />
+    <div class="item_quality_0">{{ payload.item_set.name }}</div>
+    <div *ngFor="let item of getFilteredSetItems()">
+        <span *ngIf="item.active" class="item_quality_3">{{ item.name }}</span>
+        <span *ngIf="!item.active" class="item_quality_1">{{ item.name }}</span>
+    </div>
+    <br />
+    <div *ngFor="let effect of payload.item_set.set_effects">
+        <span *ngIf="isEffectActive(payload.item_set.set_items, effect.threshold)" class="item_quality_3">{{ '(' + effect.threshold + ') ' + effect.description }}</span>
+        <span *ngIf="!isEffectActive(payload.item_set.set_items, effect.threshold)" class="item_quality_1">{{ '(' + effect.threshold + ') ' +  effect.description }}</span>
+    </div>
+</div>
+<div class="item_quality_0">{{ 'Tooltip.ItemTooltip.itemId' | translate:{ id: payload.item_id } }}</div>

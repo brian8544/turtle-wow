@@ -1,0 +1,9 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+    width: calc(100% - #{$spacing} * 2);
+    align-self: flex-start;
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+}

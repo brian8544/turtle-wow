@@ -1,0 +1,6 @@
+<div [class.number]="specification.type == 1">
+    <ng-container *ngIf="!et_item">
+        {{ bodyContentToString() | translate }}
+    </ng-container>
+    <ng-container *ngTemplateOutlet="et_item; context: { specification: specification, content: bodyContentToString() }"></ng-container>
+</div>

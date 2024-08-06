@@ -1,0 +1,24 @@
+@import "./../../../../../../../styles/global";
+
+$columnHeight: 50px;
+
+:host {
+    display: flex;
+    flex-direction: row;
+    padding: 0 $spacing / 2;
+    width: calc(100% - #{$spacing});
+    max-height: $columnHeight;
+    overflow: hidden;
+
+    background: $theme_dominant_color;
+    border-bottom: 1px solid $tdc_accent;
+
+    BodyTd {
+        margin-left: $spacing / 2;
+        flex-basis: 100%;
+
+        &:first-child {
+            margin:0;
+        }
+    }
+}

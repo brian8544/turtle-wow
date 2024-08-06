@@ -1,0 +1,34 @@
+<header>{{ 'Account.navBar.entries.api' | translate }}</header>
+
+<form *ngIf="!generatedToken" (ngSubmit)="on_submit()" class="purposeForm" formValid ngNativeValidate>
+    <GeneralInput [(value)]="purpose" [formFailure]="formFailurePurpose" [maximum_length]="24" [required]="true"
+                  labelKey="Account.api.purpose" name="purpose" placeholderKey="Account.api.typePurpose"
+                  type="text"></GeneralInput>
+    <DateInput [(value)]="exp_date" [formFailure]="formFailureDate" [min_date]="min_exp_date" [required]="true"
+               labelKey="Account.api.expiration" name="exp_date"></DateInput>
+    <ConfirmButton [disabled]="disabledSubmit" labelKey="Account.api.generate" type="submit"></ConfirmButton>
+</form>
+
+<div class="generatedTokenContainer" *ngIf="generatedToken">
+    <div>
+        <GeneralInput type="text" [value]="generatedToken.token" labelKey="Account.api.createdToken"></GeneralInput>
+        <ConfirmButton (clicked)="clearGeneratedToken()" labelKey="Account.api.back"></ConfirmButton>
+    </div>
+    <BriefNote noteKey="Account.api.tokenNote"></BriefNote>
+</div>
+
+<div *ngIf="tokenList.length > 0" class="tableContainer">
+    <div class="tableRow tableHead">
+        <div>{{ 'Account.api.purpose' | translate }}</div>
+        <div>{{ 'Account.api.expiration' | translate }}</div>
+        <div>{{ 'Account.api.action' | translate }}</div>
+    </div>
+    <div *ngFor="let token_pair of tokenList" class="tableRow">
+        <div>{{ token_pair[0].purpose }}</div>
+        <div>{{ toEuropeanDate(token_pair[0].exp_date) }}</div>
+        <div>
+            <ConfirmButton (clicked)="delete_token(token_pair)" [disabled]="token_pair[1]"
+                           labelKey="Account.api.remove"></ConfirmButton>
+        </div>
+    </div>
+</div>

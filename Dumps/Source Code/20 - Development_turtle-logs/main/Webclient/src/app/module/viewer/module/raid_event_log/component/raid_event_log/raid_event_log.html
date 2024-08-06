@@ -1,0 +1,62 @@
+<div id="table_header">
+    <div class="btn btnNonHighlight actor_btn" routerLink="by_actor" routerLinkActive="active_btn">By actor</div>
+    <div class="btn btnNonHighlight actor_btn" routerLink="to_actor" routerLinkActive="active_btn">To actor</div>
+</div>
+<div id="table_wrapper" (wheel)="scrolled($event)" #scroll_elem>
+    <table>
+        <tbody>
+            <tr *ngFor="let entry of event_log_entries">
+                <td>[{{dateService.toRPLLTimePreciseLong(entry.timestamp)}}]</td>
+                <td>
+                    <ng-container *ngIf="entry.type === 0">
+                        <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> casts <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span> onto <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>.
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 1">
+                        <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> is killed by <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>.
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 6">
+                        <ng-container *ngIf="entry.amount === 0">
+                            <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span> (by <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>) fades from <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.source_id)?.name}}</span>.
+                        </ng-container>
+                        <ng-container *ngIf="entry.amount !== 0">
+                            <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> gains <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span> by <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>.
+                        </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 7">
+                        <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> interrupts <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>'s <span class="contains_link" (click)="filter_by_ability_id(entry.target_ability_id)">{{spellService.spells.get(entry.target_ability_id)?.name}}</span> with <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span>.
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 8">
+                        <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> steals <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>'s <span class="contains_link" (click)="filter_by_ability_id(entry.target_ability_id)">{{spellService.spells.get(entry.target_ability_id)?.name}}</span> with <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span>.
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 9">
+                        <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> dispels <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>'s <span class="contains_link" (click)="filter_by_ability_id(entry.target_ability_id)">{{spellService.spells.get(entry.target_ability_id)?.name}}</span> with <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span>.
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 12">
+                        <ng-container *ngIf="entry.amount === 0">
+                            <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> {{entry.hit_type_str}} <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>.
+                        </ng-container>
+                        <ng-container *ngIf="entry.amount !== 0">
+                            <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span> {{entry.hit_type_str}} <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span> for {{entry.trailer}}.
+                        </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 13">
+                        <ng-container *ngIf="entry.amount === 0">
+                            <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span>'s <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span> {{entry.hit_type_str}} <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>.
+                        </ng-container>
+                        <ng-container *ngIf="entry.amount !== 0">
+                            <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span>'s <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span> {{entry.hit_type_str}} <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span> for {{entry.trailer}}.
+                        </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="entry.type === 14">
+                        <ng-container *ngIf="entry.amount2 === 0">
+                            <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span>'s <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span> {{entry.hit_type_str}} <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span>.
+                        </ng-container>
+                        <ng-container *ngIf="entry.amount2 !== 0">
+                            <span class="contains_link" (click)="filter_by_source_id(entry.source_id)">{{unitService.units.get(entry.subject_id)?.name}}</span>'s <span class="contains_link" (click)="filter_by_ability_id(entry.source_ability_id)">{{spellService.spells.get(entry.source_ability_id)?.name}}</span> {{entry.hit_type_str}} <span class="contains_link" (click)="filter_by_target_id(entry.target_id)">{{unitService.units.get(entry.target_id)?.name}}</span> for {{entry.trailer}}.
+                        </ng-container>
+                    </ng-container>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,11 @@
+<div>{{ spell_tooltip.name }}</div>
+<div class="split" *ngIf="!!spell_tooltip.spell_cost && spell_tooltip.range > 0">
+    <div>{{ spell_tooltip.spell_cost.cost }} {{spell_tooltip.spell_cost.power_type}}</div>
+    <div *ngIf="spell_tooltip.range > 0">{{ spell_tooltip.range }} yd range</div>
+</div>
+<div *ngIf="!!spell_tooltip.spell_cost && spell_tooltip.range === 0">{{ spell_tooltip.spell_cost.cost }} {{spell_tooltip.spell_cost.power_type}}</div>
+<div *ngIf="!spell_tooltip.spell_cost && spell_tooltip.range > 0">{{ spell_tooltip.range }} yd range</div>
+<div>{{spell_tooltip.subtext}}</div>
+<div class="item_quality_0">{{spell_tooltip.description}}</div>
+<br />
+<div class="item_quality_0">Entry: {{spell_tooltip.spell_id}}</div>

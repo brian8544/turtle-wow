@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <title>Sample Frontend which embeds the Consent Manager</title>
+</head>
+<body>
+    <p>This sample frontend sets the API_TOKEN and embeds the Consent Manager</p>
+    <p>Current token set: <span id="print_token"></span></p>
+    <input id="token" type="text" placeholder="Token" />
+    <input id="account_id" type="number" placeholder="AccountId">
+    <button id="submit_button">Set token</button>
+    <br /><br />
+    <a href="/rpll/"><button>Go to Consent Manager</button></a>
+    <script type="text/javascript">
+        document.getElementById("print_token").innerText = localStorage.getItem("API_TOKEN");
+        document.getElementById("submit_button").addEventListener("click", () => {
+            let token = document.getElementById("token");
+            let account_id = document.getElementById("account_id");
+            localStorage.setItem("API_TOKEN", JSON.stringify({ token: token.value, account_id: account_id.value }));
+            document.getElementById("print_token").innerText = localStorage.getItem("API_TOKEN");
+        });
+    </script>
+</body>
+</html>

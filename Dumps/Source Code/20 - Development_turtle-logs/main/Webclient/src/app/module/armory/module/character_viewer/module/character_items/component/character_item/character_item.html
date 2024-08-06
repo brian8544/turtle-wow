@@ -1,0 +1,4 @@
+<ItemIcon *ngIf="item" [size]="48" [iconPath]="'/assets/wow_icon/'+item.icon+'.jpg'"
+          [item_id]="item.item_id" [history_id]="history_id"
+          [quality]="item.quality"></ItemIcon>
+<Icon *ngIf="!item" iconPath="/assets/armory/{{ piece }}.png" [size]="48" [border]="false"></Icon>

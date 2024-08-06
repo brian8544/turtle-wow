@@ -1,0 +1,22 @@
+<svg (click)="toggle()" aria-hidden="true" height="48" version="1.1" viewBox="0 0 12 16" width="36">
+    <path
+        d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"
+        fill-rule="evenodd"></path>
+</svg>
+<div (click)="handleClose()" id="logo" routerLink="/"></div>
+<!--
+<input type="search" id="search" [placeholder]="'NavigationBar.searchPlaceHolder' | translate" />
+-->
+
+<div [class.open]="show_item_list" id="itemListContainer">
+    <ItemList (closeMenu)="handleClose()" [items]="itemsArmory"></ItemList>
+    <ItemList (closeMenu)="handleClose()" [items]="itemsPvE"></ItemList>
+    <!--<ItemList (closeMenu)="handleClose()" [items]="itemsPvP"></ItemList>-->
+    <ItemList (closeMenu)="handleClose()" [items]="itemsTools"></ItemList>
+    <ItemList (closeMenu)="handleClose()" [items]="itemsContribute"></ItemList>
+    <!--<ItemList (closeMenu)="handleClose()" [items]="itemsQueue"></ItemList>-->
+
+    <ItemList (closeMenu)="handleClose()" *ngIf="loggedInState" [items]="accountItems" class="accountModule"></ItemList>
+    <ItemList (closeMenu)="handleClose()" *ngIf="!loggedInState" [items]="loggedOutItems"
+              class="accountModule"></ItemList>
+</div>

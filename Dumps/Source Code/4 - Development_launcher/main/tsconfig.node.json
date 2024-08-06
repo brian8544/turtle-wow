@@ -1,0 +1,23 @@
+{
+	"extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+	"include": [
+		"src/renderer/env.d.ts",
+		"electron.vite.config.*",
+		"src/common/**/*.ts",
+		"src/main/**/*.ts",
+		"src/preload/**/*.ts",
+		"tailwind.config.ts",
+		"postcss.config.cjs"
+	],
+	"compilerOptions": {
+		"composite": true,
+		"types": ["electron-vite/node"],
+		"baseUrl": ".",
+		"paths": {
+			"~common/*": ["./src/common/*"],
+			"~main/*": ["./src/main/*"],
+			"~renderer/*": ["./src/renderer/*"],
+			"~build/*": ["./build/*"]
+		}
+	}
+}

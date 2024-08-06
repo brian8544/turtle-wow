@@ -1,0 +1,129 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.delete_button {
+    position: absolute;
+    padding-left: 6px;
+    color: red !important;
+    cursor: pointer;
+
+    &:hover {
+        color: $highlight !important;
+    }
+}
+
+.bar_container {
+    width: calc(100% - 2px);
+    background: $tdc_darker;
+    border: 1px solid $tdc_accent;
+    border-radius: 3px 3px 3px 3px;
+
+    .bar {
+        $barSize: 25px;
+        position: relative;
+        height: $barSize;
+        width: 100%;
+        border-bottom: 1px solid $tdc_accent;
+
+        &:last-child {
+            border: none;
+        }
+
+        .icon {
+            width: $barSize;
+            background-size: $barSize $barSize;
+        }
+
+        .actual_value {
+            position: relative;
+            left: $barSize;
+
+            .bar_bg_color {
+                position: absolute;
+                height:100%;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .bar_labels {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                height: $barSize;
+                min-width: 100%;
+
+                .gray_bg_bar {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(255,255,255, 0.15);
+                    z-index: 0;
+                }
+
+                .bar_label_left {
+                    display: inline-block;
+                    align-self: flex-start;
+                    white-space: nowrap;
+                    margin-right: $spacing;
+                    margin-left: 0.5 * $spacing;
+                    z-index: 2;
+                }
+
+                .bar_label_right {
+                    display: inline-block;
+                    align-self: flex-end;
+                    text-align: right;
+                    margin-left: auto;
+                    margin-right: 0.5 * $spacing;
+                    white-space: nowrap;
+                    z-index: 2;
+
+                    span:last-child:before {
+                        content: "-";
+                        margin: 0 0.5 * $spacing;
+                    }
+
+                    span:first-child:before {
+                        content: ""
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    color: #111;
+                    height: $barSize;
+                    line-height: $barSize;
+                    font-size: 16px;
+                }
+
+                @media (max-width: 400px) {
+                    .bar_label_left, .bar_label_right {
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .label_right, .actual_value, .icon {
+            position: absolute;
+            top: 0;
+            height: $barSize;
+            line-height: $barSize;
+        }
+
+        .label_right {
+            right: 0.5 * $spacing;
+            text-align: right;
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}

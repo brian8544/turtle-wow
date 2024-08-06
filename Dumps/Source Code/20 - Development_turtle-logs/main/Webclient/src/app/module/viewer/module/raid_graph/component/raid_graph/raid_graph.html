@@ -1,0 +1,47 @@
+<div class="menu_bar">
+    <SelectInput [options]="chartTypes" [value]="selected_chart_type" [themed]="true"
+                 (valueChange)="select_chart_type($event)"></SelectInput>
+    <MultiSelect [placeholder]="'Datasets'" [dropdownList]="dataSets" [selectedItems]="dataSetsSelected"
+                 (item_selected)="data_set_selected($event)"
+                 (item_deselected)="data_set_deselected($event)" [enableCheckAll]="false"
+                 [allowSearchFilter]="false"></MultiSelect>
+    <MultiSelect [placeholder]="'Events'" [dropdownList]="events" id="last_select_2"
+                 [selectedItems]="eventsSelected" [enableCheckAll]="false" [allowSearchFilter]="false"
+                 (item_selected)="event_selected($event)" (item_deselected)="event_deselected($event)"></MultiSelect>
+    <MultiSelect placeholder="Source aura uptime" [dropdownList]="sourceAbilities"
+                 [selectedItems]="selectedSourceAbilities" class="bottom_ms"
+                 (selectedItemsChange)="selectedSourceAbilitiesChanged($event)" [enableCheckAll]="false"
+                 [allowSearchFilter]="true"></MultiSelect>
+    <MultiSelect placeholder="Target aura uptime" [dropdownList]="targetAbilities"
+                 [selectedItems]="selectedTargetAbilities" class="bottom_ms"
+                 (selectedItemsChange)="selectedTargetAbilitiesChanged($event)" [enableCheckAll]="false"
+                 [allowSearchFilter]="true"></MultiSelect>
+    <MultiSelect id="last_multi_select" placeholder="Source spell casts" [dropdownList]="sourceSpellCastAbilities"
+                 [selectedItems]="selectedSourceSpellCastAbilities" class="bottom_ms"
+                 (selectedItemsChange)="selectedSourceSpellCastAbilitiesChanged($event)" [enableCheckAll]="false"
+                 [allowSearchFilter]="true"></MultiSelect>
+    <div class="question_mark" [showTooltip]="tooltip">?</div>
+</div>
+<div class="graph_container" *ngIf="this.chartDataSets.length > 0">
+    <canvas
+        id="graph_cont"
+        baseChart
+        [datasets]="chartDataSets"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [colors]="chartColors"
+        chartType="line"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+    </canvas>
+</div>
+<div class="aura_uptime_container" *ngIf="selectedSourceAbilities.length > 0">
+    <AuraUptimeBar [min]="graph_min" [max]="graph_max" *ngFor="let selection of selectedSourceAbilities"
+                   [details]="selection"
+                   [intervals]="graphDataService.get_source_aura_uptime_interval(selection.id)"></AuraUptimeBar>
+</div>
+<div class="aura_uptime_container" *ngIf="selectedTargetAbilities.length > 0">
+    <AuraUptimeBar [min]="graph_min" [max]="graph_max" *ngFor="let selection of selectedTargetAbilities"
+                   [details]="selection"
+                   [intervals]="graphDataService.get_target_aura_uptime_interval(selection.id)"></AuraUptimeBar>
+</div>

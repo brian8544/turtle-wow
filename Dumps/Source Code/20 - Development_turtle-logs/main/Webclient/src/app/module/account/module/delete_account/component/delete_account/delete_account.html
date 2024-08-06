@@ -1,0 +1,4 @@
+<header>{{ 'Account.navBar.entries.delete' | translate }}</header>
+
+<ConfirmButton (clicked)="deleteAccount()" [disabled]="disableSubmit" labelKey="Account.delete.delete"></ConfirmButton>
+<BriefNote noteKey="Account.delete.deleteNote"></BriefNote>

@@ -1,0 +1,45 @@
+@import "./global.scss";
+
+$columnHeight: 34px;
+
+.tableContainer {
+    display: block;
+    border: 1px solid $tdc_accent;
+    border-radius: 4px 4px 4px 4px;
+
+    .tableHead {
+        background: $tdc_accent !important;
+
+        div {
+            height: calc(#{$columnHeight} - #{$spacing}) !important;
+            line-height: calc(#{$columnHeight} - #{$spacing}) !important;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    .tableRow {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $tdc_accent;
+
+        &:nth-child(2n) {
+            background: $tdc_darker;
+        }
+
+        &:nth-child(2n+1) {
+            background: lighten($tdc_darker, 5%);
+        }
+
+        div {
+            min-height: calc(#{$columnHeight} - #{$spacing});
+            padding: $spacing * 0.5;
+            line-height: $columnHeight;
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+}

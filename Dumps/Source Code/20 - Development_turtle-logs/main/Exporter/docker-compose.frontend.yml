@@ -1,0 +1,18 @@
+version: '3.6'
+services:
+  lpcmnginxfrontend:
+    build:
+      context: ./
+      dockerfile: ./Environment/lp_cm_nginx_frontend/Dockerfile
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.3
+    ports:
+      - '8880:80'
+
+networks:
+  lp_cm_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.34.0.1/16

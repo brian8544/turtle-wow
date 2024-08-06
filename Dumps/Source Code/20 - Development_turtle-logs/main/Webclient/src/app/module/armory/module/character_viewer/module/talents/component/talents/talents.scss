@@ -1,0 +1,20 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+    min-height: 50px;
+    width: 100%;
+    overflow: hidden;
+
+    * {
+        display: block;
+        float: left;
+        height: 50px;
+    }
+
+    span, span a {
+        line-height: 50px;
+        font-size: 18px;
+        margin-left: $spacing / 2;
+    }
+}

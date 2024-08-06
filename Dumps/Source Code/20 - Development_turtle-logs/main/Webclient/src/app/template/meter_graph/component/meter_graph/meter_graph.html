@@ -1,0 +1,27 @@
+<div class="bar_container">
+
+    <ng-container *ngIf="!show_loading || !isLoading">
+        <div *ngFor="let bar of bars; index as i" class="bar">
+            <div class="actual_value" style="width: {{get_width_style(bar[1])}}"
+                 [showTooltip]="bar_tooltips.get(bar[0])">
+                <div class="bar_labels">
+                    <div class="gray_bg_bar" (click)="bar_clicked.emit(bar)"></div>
+                    <div class="bar_label_left">
+                        <span (click)="bar_clicked.emit(bar)">{{i+1}}.</span>
+                        <span (click)="bar_clicked.emit(bar)">{{get_bar_subject(bar[0]).name}}</span>
+                        <span *ngIf="delete_label" (click)="emit_delete(bar[0])" class="delete_button"> (delete)</span>
+                    </div>
+                    <div class="bar_label_right" (click)="bar_clicked.emit(bar)">
+                        <span>{{get_amount(bar[1])}}</span>
+                        <span *ngIf="show_per_second">{{format_dps(bar[1])}}/s</span>
+                    </div>
+                </div>
+                <div class="bar_bg_color {{get_bar_subject(bar[0]).color_class}}" (click)="bar_clicked.emit(bar)"></div>
+            </div>
+            <div class="icon" style="background-image: url({{get_bar_subject(bar[0]).icon}})" (click)="bar_clicked.emit(bar)"></div>
+            <div class="label_right" *ngIf="show_percent" (click)="bar_clicked.emit(bar)">
+                <span>{{(get_fraction(bar[1])*100).toFixed(1)}}%</span>
+            </div>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,56 @@
+<div class="section mb-5" id="pages" style="background-image: url(images/subpagebackground.png)">
+   <div class="container-fluid pb-5">
+      <div class="container pt-5 pb-5">
+
+         <div class="row">
+            <div class="col-lg-7 p-5">
+               <h2 class="orange-text mb-2">CHANGELOG</h2>
+               <p class="mt-3 text-white">
+                  Turtle WoW has rescheduled their maintenance & update procedures.<BR><BR>
+
+                  From now on the server will be down for maintenance & bug fixes weekly every Tuesday morning anywhere
+                  between 7 AM — 10 AM (07:00-10:00) Server Time.<BR><BR>
+
+                  Not much will change during these times, we still expect barely any downtime (~15 minutes) but this
+                  introduces a set schedule for when a player can expect downtime to increase clarity, transparency and
+                  planning.<BR><BR>
+
+                  Weekly changelogs will be published alongside these updates if any substantial changes have been made.
+               </p>
+            </div>
+            <div class="col-lg-5 cog">
+            </div>
+         </div>
+
+         <div class="row p-5 mt-5">
+
+            <div class="col-lg-12 ">
+
+               <h3 class="orange-text mb-4">{{changelog[logIndex].date}}
+
+                  <a class="hand orange-text pull-right ml-5 mr-5" ng-click="log(1)">Next</a>
+                  <a class="hand orange-text pull-right" ng-click="log(-1)">Previous</a>
+
+               </h3>
+               <ng-container ng-repeat="c in changelog[logIndex].changes">
+
+                  <p class="w-70 mt-3 text-white">
+                     <span class="star mr-3">&starf;</span> {{c.text}}
+                  </p>
+
+                  <ul class="ml-0">
+                     <li ng-repeat="b in c.bullets">{{b}}</li>
+                  </ul>
+
+               </ng-container>
+
+
+            </div>
+
+         </div>
+
+
+      </div>
+   </div>
+</div>
+

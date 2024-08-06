@@ -1,0 +1,16 @@
+@import "src/styles/global";
+
+:host {
+    .split {
+        display: flex;
+        flex-direction: row;
+
+        div:first-child {
+            margin-right: $spacing;
+        }
+
+        div:last-child {
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+#button-sign-up, #button-am, #button-download-client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  letter-spacing: 2px;
+}
+
+#button-sign-up, #button-am {
+  margin-left: 15px;
+  border: 1px solid rgba(154, 205, 50, 0.4);
+  background-image: linear-gradient(to right, rgba(154, 205, 50, 0.4), rgba(86, 205, 50, 0.7), rgba(154, 205, 50, 0.4));
+  color: rgb(236, 255, 128) !important;
+  max-width: 210px;
+}
+
+#button-am {
+  max-width: 350px;
+}
+
+#button-download-client {
+  border: 1px solid rgba(218, 184, 32, 0.2);
+  background-image: linear-gradient(to right, transparent, rgba(218, 131, 32, 0.3), transparent);
+  max-width: 320px;
+  margin-left: 1rem;
+}
+
+#button-sign-up *, #button-download-client *, #button-am * {
+  margin: 0;
+}
+
+#button-sign-up:hover, #button-download-client:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+#button-download-client * {
+  background: -webkit-linear-gradient(270deg, #F1C22D 0%, #FF7757 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

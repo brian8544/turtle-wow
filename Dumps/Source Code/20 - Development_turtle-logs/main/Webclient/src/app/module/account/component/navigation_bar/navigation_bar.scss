@@ -1,0 +1,84 @@
+@import "../../../../../styles/global";
+
+$columnHeight: 40px;
+
+:host {
+    display: block;
+    width: 320px;
+
+    header {
+        background: $tdc_accent;
+        height: $columnHeight;
+        line-height: $columnHeight;
+        border-radius: 3px 3px 0 0;
+
+        CaretButton {
+            display: none;
+            float: left;
+            width: $columnHeight;
+        }
+
+        div {
+            float: left;
+            height: $columnHeight;
+            line-height: $columnHeight;
+            font-size: 20px;
+            width: calc(100% - #{$columnHeight});
+            padding-left: $spacing;
+        }
+
+        @media (max-width: 820px) {
+            CaretButton {
+                display: block;
+            }
+
+            div {
+                padding-left: 0;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: $tdc_darker;
+        border: 1px solid $tdc_accent;
+        border-radius: 0 0 3px 3px;
+
+        li {
+            border-top: 1px solid $tdc_accent;
+            padding-left: $spacing;
+
+            &, a {
+                display: block;
+                height: $columnHeight;
+                line-height: $columnHeight;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 820px) {
+            transform: scaleY(0);
+            transform-origin: top;
+            overflow: hidden;
+            transition: transform 0.1s;
+
+            &.open {
+                transform: scaleY(1);
+
+                li, li a {
+                    height: $columnHeight;
+                }
+            }
+
+            li, li {
+                height: 0;
+            }
+        }
+
+        li:first-child {
+            border: none;
+        }
+    }
+}

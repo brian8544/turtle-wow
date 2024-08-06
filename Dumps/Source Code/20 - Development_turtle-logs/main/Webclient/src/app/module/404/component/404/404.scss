@@ -1,0 +1,58 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+
+    .container {
+        width: 80%;
+        overflow: hidden;
+        margin: $spacing auto;
+
+        img, div {
+            float: left;
+        }
+
+        img {
+            width: 35%;
+        }
+
+        div {
+            width: calc(65% - #{$spacing});
+            margin-left: $spacing;
+
+            word-break: break-word;
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .container {
+            width: 95% !important;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .container {
+            width: 80% !important;
+
+            img, div {
+                float: none !important;
+                width: 100% !important;
+                margin: 0 !important;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .container {
+            width: 95% !important;
+
+            h1 {
+                font-size: 24px !important;
+            }
+        }
+    }
+}

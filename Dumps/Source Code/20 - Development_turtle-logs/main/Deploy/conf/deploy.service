@@ -1,0 +1,13 @@
+[Unit]
+Description=RPLL Deploy Scheduler
+
+[Service]
+WorkingDirectory=/root
+ExecStart=python /root/LegacyPlayersV3/Deploy/scheduler.py
+User=root
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

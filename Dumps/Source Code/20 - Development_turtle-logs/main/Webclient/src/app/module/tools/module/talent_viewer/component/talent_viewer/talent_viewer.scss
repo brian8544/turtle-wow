@@ -1,0 +1,62 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+}
+
+.talent_navbar {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 36px;
+    background: $tdc_darker;
+    border: 1px solid $tdc_accent;
+    margin: 0 auto;
+    padding: $spacing /2 $spacing / 2;
+    border-radius: 3px 3px 0 0;
+
+    SelectInput {
+        width: 200px;
+
+        &:nth-child(2) {
+            margin-left: $spacing / 2;
+        }
+    }
+
+    span {
+        display: inline-block;
+        width: 50px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 20px;
+        text-align: center;
+        margin-left: auto;
+    }
+}
+
+.talent_container {
+    width: calc(80% + #{$spacing});
+    min-height: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 0 0 3px 3px;
+    border: 1px solid $tdc_accent;
+    border-top: none;
+
+    TalentTab {
+        width: calc(33.3% - 0.66px);
+        float: left;
+        border-right: 1px solid $tdc_accent;
+
+        &:nth-child(3) {
+            border-right: none;
+        }
+    }
+}
+
+#doesNotExistNote {
+    height: 100%;
+    width: 100%;
+    padding: $spacing $spacing;
+    font-size: 20px;
+}

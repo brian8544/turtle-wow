@@ -1,0 +1,1219 @@
+{
+    "register_modal": {
+        "title": "创建新帐户",
+        "placeholder": {
+            "account_name": "帐户名称",
+            "email": "电子邮件",
+            "forum_username": "论坛用户名",
+            "password": "密码",
+            "password_repeat": "重复密码"
+        },
+        "forgot_your_password": "忘记密码？",
+        "message": {
+            "success": "您的帐户已成功创建，请查看您的电子邮件收件箱以获取更多信息。",
+            "success_reset_password": "我们已经向您发送了一封信件，请检查您的邮箱！",
+            "error": "发生错误！"
+        },
+        "exception": {
+            "reserved_name": "您不能使用它，名称已被保留！",
+            "existing_forum_username": "论坛用户名已经存在！"
+        }
+    },
+    "login_modal": {
+        "title": "我的帐户",
+        "placeholder": {
+            "username": "用户名",
+            "email": "电子邮件",
+            "password": "密码",
+            "one_time_code": "一次性验证码"
+        },
+        "exception": {
+            "wrong_one_time_code": "错误的一次性验证码！"
+        },
+        "password_reset": "重设密码。",
+        "reset_2_fa_code": "重置2FA代码。",
+        "password_reset_body": "<p class=\"text-muted\">忘记密码？<br>请输入您的电子邮件以继续。</p><br>",
+        "2_fa_code_reset_body": "<p class=\"text-muted\">忘记了您的双因素认证码吗？<br>输入您的恢复码以重置。</p><br>",
+        "remember_me": "记住我"
+    },
+    "reset_password_form": {
+        "title": "设置新密码",
+        "placeholder": {
+            "email": "电子邮件",
+            "password": "密码",
+            "password_repeat": "重复密码"
+        }
+    },
+    "change_password_modal": {
+        "title": "更改密码",
+        "title_2fa": "2FA身份验证",
+        "current_password": "当前密码",
+        "placeholder": {
+            "password": "********",
+            "new_password": "新密码",
+            "new_password_repeat": "重复新密码",
+            "one_time_code": "一次性验证码"
+        },
+        "new_password": "新密码",
+        "new_password_repeat": "4-16个字符，包括字母、数字和!?%*$字符",
+        "exception": {
+            "current_password": "密码不正确。",
+            "wrong_one_time_code": "错误的一次性验证码！"
+        },
+        "message": {
+            "success": "您的密码已成功更改。",
+            "enable_2fa": "成功启用2FA！",
+            "disable_2fa": "成功禁用2FA！",
+            "error": "发生错误！"
+        },
+        "need_one_time_code": "您需要提供一次性验证码来禁用2FA。",
+        "your_secret_key": "这是您的秘密密钥：",
+        "your_recovery_code": "这是您的恢复代码：",
+        "case_lose_2fa": "如果您失去了对2FA的访问权限，这是您需要向支持团队提供的秘密短语，以便禁用2FA："
+    },
+    "change_email_modal": {
+        "title": "更改电子邮件地址",
+        "placeholder": {
+            "current_email": "旧电子邮件地址",
+            "new_email": "激活在乌龟魔兽世界的账户"
+        },
+        "exception": {
+            "current_email": "电子邮件不正确。"
+        },
+        "message": {
+            "success": "请查看您的电子邮件以获取下一步信息。",
+            "error": "发生错误！"
+        }
+    },
+    "page_profile": {
+        "title": "帐户管理",
+        "overview": {
+            "title": "概览",
+            "general_information": "常规信息",
+            "account_name": "帐户名称",
+            "email": "电子邮件",
+            "change_email": "更改电子邮件",
+            "account_status": "帐户状态",
+            "closed": "已关闭",
+            "banned": "已封禁，到期时间为",
+            "permanent_ban": "您已永久封禁",
+            "denied_appeal": "申诉被拒绝！",
+            "approved_appeal": "申诉已批准！",
+            "check_message": "查看消息",
+            "check_ban_appeal": "查看封禁申诉",
+            "last_message": "最后消息：",
+            "contact_support": "联系支持",
+            "active": "活跃",
+            "creation_date": "创建日期",
+            "last_login": "最后登录",
+            "last_ip_address": "最后IP地址",
+            "forum_username": "论坛用户名",
+            "donation_tokens": "捐赠代币",
+            "visit_donate_page": "访问捐赠页面",
+            "newsletter": "通讯",
+            "delete_account": "删除帐户",
+            "cant_delete": "在帐户被暂停时无法删除您的帐户！",
+            "action_is_permanent": "此操作是永久且不可逆的。",
+            "understand": "我理解。",
+            "enter_email": "请输入您的账户邮箱：",
+            "enter_password": "请输入您的账户密码：",
+            "button_delete_account": "删除我的账户",
+            "message": {
+                "success_changed_email": "您的电子邮件地址已更改。",
+                "email_already_changed": "您的电子邮件地址已经更改。",
+                "email_already_took": "太晚了，有人已经使用了该电子邮件！",
+                "error": "发生错误！",
+                "left_characters": "在删除您的账户之前，您必须手动删除所有的角色。"
+            }
+        },
+        "services": {
+            "title": "服务",
+            "character": "角色：",
+            "select_a_character": "选择一个角色",
+            "exception": {
+                "character_online": "角色在线！",
+                "no_character_selected": "未选择角色！"
+            },
+            "message": {
+                "success": "角色解除困境。",
+                "error": "发生了一个错误！"
+            }
+        },
+        "characters": {
+            "title": "角色",
+            "deleted": "(已删除)",
+            "still_standing": "仍然坚挺",
+            "immortal": "不朽",
+            "fallen": "陨落",
+            "exhaustion": "疲惫",
+            "slow_and_steady": "稳中求进",
+            "war_mode": "战争模式",
+            "message": {
+                "success": "角色已恢复。",
+                "error": "发生了一个错误！"
+            },
+            "exception": {
+                "unknown_character": "未知角色！"
+            }
+        },
+        "security": {
+            "title": "安全"
+        },
+        "history": {
+            "title": "支付历史",
+            "shop_log": {
+                "title": "商店日志",
+                "table_headers": {
+                    "id": "ID",
+                    "time": "时间",
+                    "item": "物品",
+                    "price": "价格",
+                    "refunded": "退款",
+                    "realm_name": "领域名称",
+                    "character_name": "角色名称"
+                },
+                "no_data_message": "没有可用数据"
+            },
+            "redeem_history": {
+                "title": "赎回历史",
+                "table_headers": {
+                    "id": "ID",
+                    "points": "积分",
+                    "actual_points": "实际积分",
+                    "new_points": "新积分",
+                    "date": "日期"
+                },
+                "no_data_message": "没有可用数据"
+            }
+        }
+    },
+    "page_activate": {
+        "title": "帐户激活",
+        "message": {
+            "success": "感谢您激活您的帐户。您现在可以登录了！",
+            "already_activated": "您的帐户已经激活！",
+            "error": "发生错误！"
+        }
+    },
+    "page_reset_password": {
+        "message": {
+            "success": "您的密码已成功更改。",
+            "invalid_token": "令牌已过期或已使用！",
+            "error": "发生错误！",
+            "missing_one_time_code": "此帐户已启用2FA，请提供一次性代码！",
+            "wrong_one_time_code": "错误的一次性代码！"
+        }
+    },
+    "page_home": {
+        "maintenance": "维护"
+    },
+    "page_donate": {
+        "exception": {
+            "gamepoints_code": "无效的代码！",
+            "cant_reach_gamepoints_server": "尝试联系Gamepoints服务器时出错，请稍后再试或联系管理员",
+            "error": "出现问题，请联系支持！",
+            "already_used": "代码已经被使用过！"
+        },
+        "want_help": "如果您想支持我们的项目或想获得一些捐赠奖励，您有以下选择：",
+        "purchase_code": "购买代码：",
+        "redeem_the_code": "兑换代码以获取您的积分：",
+        "tokens": "代币"
+    },
+    "header": {
+        "donate": "捐赠",
+        "forum": "论坛",
+        "account_management": "帐户管理",
+        "security": "安全",
+        "logout": "注销",
+        "login": "登录",
+        "rules": "游戏条款",
+        "our_features": "我们的特点",
+        "gameplay_features": "游戏特色",
+        "challenges": "挑战",
+        "class_changes": "职业变动",
+        "talents": "才华",
+        "armory": "军械库",
+        "database": "数据库",
+        "hardcore": "硬核排行榜",
+        "changelog": "更新日志",
+        "turtle_tv": "乌龟电视",
+        "you_need_to_verify": "您需要验证您的账户以享受我们服务的全部功能。如果您没有收到邮件，您可以重新发送。",
+        "resend_email": "重新发送邮件",
+        "verification_email_resent": "验证邮件已重新发送！请检查您的收件箱。",
+        "world_config": "世界配置",
+        "need_reset_2_fa_code": "我们改进了我们的安全系统，请重置您的2FA代码以获取恢复代码。",
+        "tools": "工具"
+    },
+    "footer": {
+        "server_rules_and_terms_of_use": "服务器规则与使用条款与退款政策",
+        "legal_information": "法律信息"
+    },
+    "email_template": {
+        "verify": {
+            "welcome": "在Turtle WoW上创建帐户",
+            "title": "在Turtle WoW上创建帐户"
+        },
+        "reset_password": {
+            "title": "在Turtle WoW上恢复帐户"
+        },
+        "change_email": {
+            "title": "在Turtle WoW上更新您的电子邮件地址"
+        }
+    },
+    "button": {
+        "sign_up": "注册",
+        "account_management": "帐户管理",
+        "download_client": "下载客户端",
+        "change_my_password": "更改我的密码",
+        "change_email_address": "更改电子邮件地址",
+        "close": "关闭",
+        "log_in": "登录",
+        "forgot_password": "忘记密码",
+        "next": "下一步",
+        "back_to_home": "返回网站。",
+        "login": "登录",
+        "send": "发送",
+        "complete": "密码",
+        "unstuck": "解除困境",
+        "restore": "恢复 (Huīfù)",
+        "enable_2fa": "启用2FA",
+        "disable_2fa": "禁用2FA",
+        "submit": "提交",
+        "edit": "编辑",
+        "delete": "删除",
+        "cancel": "取消",
+        "yes": "是",
+        "no": "不",
+        "refund": "退款",
+        "request_a_refund": "联系支持",
+        "save": "保存",
+        "reset_2_fa_code": "重置2FA代码"
+    },
+    "SEO": {
+        "home": {
+            "title": "Turtle WoW — 阿泽拉斯的秘密",
+            "description": "《阿泽拉斯的秘密》是为魔兽世界原版设计的由粉丝制作的扩展故事，深入探索了游戏原始的传说。",
+            "keywords": "魔兽世界, WoW, 魔兽世界经典版, 魔兽世界原版, 原版+, 原版增强, 1.16.0, 1.16.1, 1.16.2, 1.16.3, 1.16.4, 1.17, 1.17.0, 灰谷墙外, 阿泽拉斯的秘密, 自定义魔兽世界扩展, Turtle WoW, 自定义原版, 扩展原版, 继续原版, 高等精灵, 地精, 原版扩展, 新副本, 新首领, 幻象赛道, 生存, 新物品, 新技能, 新任务, 私人魔兽服务器, 免费玩魔兽",
+            "robots": "all",
+            "name": "Turtle WoW — 阿泽拉斯的秘密"
+        },
+        "rules": {
+            "title": "规则 - 乌龟魔兽",
+            "description": "在任何游戏或组织中，了解规则至关重要，它是成功的关键。浏览我们的全面规则、法规和指南指南，确保您始终走在正确的道路上。",
+            "keywords": "游戏规则，服务器规则，在线游戏指南，多开规定，角色扮演服务器规则，RP服务器命名政策，PvP礼仪，举报玩家行为，战利品分配准则，共享账户政策，GM协助任务问题，游戏服务器免责声明，规则违反和处罚，作弊与滥用，游戏行为，玩家行为规范，游戏条款和条件，Turtle WoW规则手册，Turtle WoW服务器规则",
+            "robots": "all",
+            "name": "乌龟魔兽 — 艾泽拉斯之谜"
+        },
+        "logotypes": {
+            "title": "标志 - 乌龟魔兽",
+            "description": "探索乌龟魔兽独特而富有创意的标志，这是一款受到暴雪娱乐《魔兽世界》宇宙启发的自定义魔兽世界扩展。下载我们标志的高质量PNG版本，用于您的直播或内容。",
+            "keywords": "乌龟魔兽标志，魔兽世界标志，自定义魔兽世界标志，受魔兽世界启发的标志，高质量标志，标志下载，直播标志，内容标志，暴雪娱乐，魔兽世界标志，经典魔兽世界标志",
+            "robots": "all",
+            "name": "乌龟魔兽 — 亚洲之谜标志"
+        },
+        "client_ui_page": {
+            "title": "客户端用户界面改进 - 乌龟魔兽",
+            "description": "通过乌龟魔兽的最新客户端用户界面改进提升您的游戏体验。探索升级的用户界面，旨在使您在艾泽拉斯的旅程更加愉快。",
+            "keywords": "客户端用户界面改进，游戏界面增强，用户界面更新，乌龟魔兽用户界面，艾泽拉斯之旅，魔兽定制界面，互动界面功能，游戏体验升级",
+            "robots": "all",
+            "name": "乌龟魔兽 — 亚洲之谜客户端用户界面改进"
+        },
+        "additional_transport_routes_page": {
+            "title": "额外交通路线 - 龟亚WoW",
+            "description": "在龟亚WoW上发现新的交通路线和飞行路径。探索额外的路线，包括邓阿加斯、莫什奥格庇护所、铁炉堡飞行场、阿拉萨拉斯、卡兰的安息地、诺达纳尔、吉尔尼斯的拉文斯海尔、斯蒂尔沃德教堂和贝尔哈度尔，以进入艾泽拉斯最远的角落。通过我们扩展的交通网络，提升您的旅程。",
+            "keywords": "额外交通路线，飞行路径扩展，艾泽拉斯交通，新路线发现，龟亚WoW旅行，改进的艾泽拉斯可达性，魔兽世界交通网络，扩展的飞行路径，邓阿加斯，莫什奥格庇护所，铁炉堡飞行场，阿拉萨拉斯，卡兰的安息地，诺达纳尔，吉尔尼斯，斯蒂尔沃德教堂，贝尔哈度尔",
+            "robots": "all",
+            "name": "龟亚WoW — 探索额外交通路线和飞行路径"
+        },
+        "roleplay_page": {
+            "title": "角色扮演与社区活动 - Turtle WoW",
+            "description": "沉浸于Turtle WoW充满活力的角色扮演社区和精彩活动中。探索错综复杂的故事情节、人物发展和各种定期活动的角色扮演公会。无论您寻求轻松的角色扮演体验还是沉浸式叙事，Turtle WoW都为您提供了在艾泽拉斯创造性旅程的理想平台。",
+            "keywords": "角色扮演社区，Turtle WoW活动，艾泽拉斯角色扮演，角色扮演公会，轻松角色扮演，沉浸叙事，创造性之旅，角色扮演冒险，充满活力的社区，Turtle WoW角色扮演",
+            "robots": "all",
+            "name": "Turtle WoW — 沉浸于角色扮演与社区活动中"
+        },
+        "new_factions_and_quests_page": {
+            "title": "新派系与任务 - Turtle WoW",
+            "description": "在Turtle WoW，发现新的派系和任务。探索包括邓阿格拉斯、莫什奥格避难所、铁炉堡飞行场、阿拉萨拉、凯兰之息、诺达纳尔、拉文凯尔、吉尔尼斯、斯蒂尔沃德教堂和巴尔哈杜等在艾泽拉斯最远角落的额外路线。通过我们扩展的交通网络，提升您的旅程。",
+            "keywords": "新的派系与任务，飞行路径扩展，艾泽拉斯交通，新路线发现，Turtle WoW旅行，改进的艾泽拉斯可达性，魔兽世界交通网络，扩展的飞行路径，邓阿格拉斯，莫什奥格避难所，铁炉堡飞行场，阿拉萨拉，凯兰之息，诺达纳尔，拉文凯尔，吉尔尼斯，斯蒂尔沃德教堂，巴尔哈杜",
+            "robots": "all",
+            "name": "Turtle WoW — 探索新的派系与任务"
+        },
+        "class_race_combinations_page": {
+            "title": "探索额外的职业与种族组合 - 龟亲爱的魔兽",
+            "description": "在龟亲爱的魔兽上发现新颖的职业与种族组合。探索额外的组合，包括兽人法师、矮人法师、侏儒猎人、亡灵猎人、人类猎人和巨魔术士。随着你踏足艾泽拉斯丰富多彩的世界，解锁独特的能力和故事情节。通过我们扩展的职业与种族选择，提升你的游戏体验。",
+            "keywords": "额外职业与种族组合，龟亲爱的魔兽，新角色选项，兽人法师，矮人法师，侏儒猎人，亡灵猎人，人类猎人，巨魔术士，艾泽拉斯冒险，游戏多样性，独特能力，艾泽拉斯探险，龟亲爱的魔兽职业，龟亲爱的魔兽种族",
+            "robots": "all",
+            "name": "龟亲爱的魔兽 — 探索额外的职业与种族组合"
+        },
+        "guild_banks_page": {
+            "title": "公会保险库 - Turtle WoW",
+            "description": "解锁公会保险库并储存你的公会贵重物品。支付一大笔费用来解锁保险库和额外的标签。个性化设置图标，设定每日物品限制，并控制公会等级的访问权限。在Turtle WoW上增强你公会的存储功能。",
+            "keywords": "公会保险库，公会银行，Turtle WoW，保险库标签，公会储物柜，个性化公会保险库，每日物品限制，公会等级访问权限，公会银行金币，艾泽拉斯公会，公会贵重物品，公会银行功能，Turtle WoW公会",
+            "robots": "all",
+            "name": "Turtle WoW — 公会保险库和银行功能"
+        },
+        "dynamic_mount_speed_page": {
+            "title": "动态坐骑速度 - Turtle WoW",
+            "description": "在Turtle WoW上体验动态坐骑速度。现在，所有坐骑都会根据您的骑术技能调整速度。探索这一创新功能，增强您在艾泽拉斯的冒险。",
+            "keywords": "动态坐骑速度，Turtle WoW，坐骑骑术技能，坐骑速度调整，艾泽拉斯冒险，骑术技能进阶，坐骑功能，Turtle WoW坐骑",
+            "robots": "all",
+            "name": "Turtle WoW — 动态坐骑速度功能"
+        },
+        "survival_and_gardening_page": {
+            "title": "生存与园艺 - Turtle WoW",
+            "description": "在 Turtle WoW 上探索生存与园艺的艺术。搭建帐篷，享受温暖的篝火，利用船只进行附加奖励的垂钓冒险。学会如何培育独特的种子，收获园艺努力的回报。通过增强的生存技能探索阿泽拉斯丰富多彩的世界。",
+            "keywords": "生存与园艺，Turtle WoW，帐篷，篝火，渔船，园艺种子，作物培育，阿泽拉斯探险，冒险奖励，园艺回报，Turtle WoW 生存，户外活动",
+            "robots": "all",
+            "name": "Turtle WoW — 生存与园艺功能"
+        },
+        "transmogrification_page": {
+            "title": "幻化 - Turtle WoW",
+            "description": "在 Turtle WoW 探索幻化的迷人世界。使用时尚令牌完成可重复任务，赚取奖励，并定制您的装备外观。通过改进的界面预览物品外观，并收集时尚硬币，打造属于您自己的艾泽拉斯风格。",
+            "keywords": "幻化, Turtle WoW, 时尚令牌, 装备定制, 物品外观, 时尚硬币, 艾泽拉斯风格, 时尚角色, 可重复任务, 预览界面, 定制装备",
+            "robots": "all",
+            "name": "Turtle WoW — 幻化功能"
+        },
+        "chronoboon_displacer_page": {
+            "title": "Chronoboon Displacer - Turtle WoW",
+            "description": "暂停屠龙、厄运之槌、祖尔格拉布、暗月马戏团和费尔伍德等有益世界效果。使用时空奇迹位移器存储和恢复这些效果。",
+            "keywords": "时空奇迹位移器，Turtle WoW，暂停增益效果，屠龙战旗，厄运之槌，祖尔格拉布，暗月马戏团，费尔伍德，存储效果，恢复效果，Azeroth 探索，世界增益效果，Turtle WoW 功能",
+            "robots": "all",
+            "name": "Turtle WoW — 时空奇迹位移器功能"
+        },
+        "ban_appeals": {
+            "title": "乌龟魔兽 - 封禁上诉"
+        },
+        "achievement_titles_page": {
+            "title": "成就头衔 - Turtle WoW",
+            "description": "展示您通过挥舞传奇物品或完成极端壮举而获得的卓越成就头衔。探索从知识守护者到嗜血者等各种可用头衔，并了解获得它们的条件。",
+            "keywords": "成就头衔，Turtle WoW，可用头衔，知识守护者，制图师，硫磺之冠，提里斯法守护者，风暴使者，纳克萨玛斯征服者，甲虫领主，不朽者，知识探索者，血环勇士，疯狂猫奴，青蛙之主，嗜血者，漫游者，外交官，艾泽拉斯探险，传奇头衔，力量壮举",
+            "robots": "all",
+            "name": "Turtle WoW — 成就头衔"
+        },
+        "slow_and_steady_page": {
+            "title": "慢慢来 - 龟龟世界",
+            "description": "拥抱旅程，进入慢慢来模式，其中您的生物击杀速率设定为0.5，使得任务和升级成为一次深思熟虑且有益的体验。了解每10级的机制、好处和奖励。",
+            "keywords": "慢慢来，龟龟世界，龟模式，生物击杀速率，奖励，乌龟印记，升级体验，地下城，冒险，艾泽拉斯探险",
+            "robots": "all",
+            "name": "龟龟世界 — 慢慢来模式"
+        },
+        "vagrants_endeavor_page": {
+            "title": "流浪者的努力 - Turtle WoW",
+            "description": "踏上流浪者的努力挑战，体验一场独特的旅程，直到达到60级之前，你必须穿戴贫瘠或普通品质的装备。不允许附魔物品。赚取“漫游者”的头衔和一匹破旧的骡子作为奖励。告别选择正确物品属性的复杂性！",
+            "keywords": "流浪者的努力，乌龟魔兽，挑战，贫瘠品质的装备，60级，漫游者，独特旅程，附魔，奖励，艾泽拉斯探险",
+            "robots": "all",
+            "name": "乌龟魔兽 — 流浪者的努力"
+        },
+        "druid_page": {
+            "title": "德鲁伊职业指南 - 神龟魔兽",
+            "description": "在神龟魔兽的艾泽拉斯奇迹中，发现德鲁伊职业的秘密。探索我们定制的魔兽世界扩展中德鲁伊的技能、天赋和独特特点。",
+            "keywords": "德鲁伊职业，魔兽世界德鲁伊，神龟魔兽德鲁伊指南，定制魔兽职业，德鲁伊天赋，德鲁伊技能，变形，野性德鲁伊，平衡德鲁伊，恢复德鲁伊，魔兽世界经典版，纯粹魔兽世界",
+            "robots": "all",
+            "name": "神龟魔兽 — 艾泽拉斯奇迹 - 德鲁伊职业指南"
+        },
+        "hunter_page": {
+            "title": "猎人职业指南 - 神龟魔兽",
+            "description": "精通猎人职业的艺术，在神龟魔兽的艾泽拉斯奇迹中。探索我们定制的魔兽世界扩展中猎人的技能、天赋和独特特点。",
+            "keywords": "猎人职业，魔兽世界猎人，神龟魔兽猎人指南，定制魔兽职业，猎人天赋，猎人技能，野兽掌握，射击，生存，魔兽世界经典版，纯粹魔兽世界",
+            "robots": "all",
+            "name": "神龟魔兽 — 艾泽拉斯奇迹 - 猎人职业指南"
+        },
+        "paladin_page": {
+            "title": "圣骑士职业指南 - 神龟魔兽",
+            "description": "释放圣骑士职业的力量，在神龟魔兽的艾泽拉斯奇迹中。深入了解我们定制的魔兽世界扩展中圣骑士的技能、天赋和独特特点。",
+            "keywords": "圣骑士职业，魔兽世界圣骑士，神龟魔兽圣骑士指南，定制魔兽职业，圣骑士天赋，圣骑士技能，神圣圣骑士，防护圣骑士，惩戒圣骑士，魔兽世界经典版，纯粹魔兽世界",
+            "robots": "all",
+            "name": "神龟魔兽 — 艾泽拉斯奇迹 - 圣骑士职业指南"
+        },
+        "priest_page": {
+            "title": "牧师职业指南 - 神龟魔兽",
+            "description": "在神龟魔兽的艾泽拉斯奇迹中，探索牧师职业的神秘领域。深入了解我们定制的魔兽世界扩展中牧师的技能、天赋和独特特点。",
+            "keywords": "牧师职业，魔兽世界牧师，神龟魔兽牧师指南，定制魔兽职业，牧师天赋，牧师技能，戒律牧师，神圣牧师，暗影牧师，魔兽世界经典版，纯粹魔兽世界",
+            "robots": "all",
+            "name": "神龟魔兽 — 艾泽拉斯奇迹 - 牧师职业指南"
+        },
+        "mage_page": {
+            "title": "法师职业指南 - 神龟魔兽",
+            "description": "利用法师职业在神龟魔兽的艾泽拉斯奇迹中的奥术力量。揭示我们定制的魔兽世界扩展中法师的技能、天赋和独特特点。",
+            "keywords": "法师职业，魔兽世界法师，神龟魔兽法师指南，定制魔兽职业，法师天赋，法师技能，奥术法师，火焰法师，冰霜法师，魔兽世界经典版，纯粹魔兽世界",
+            "robots": "all",
+            "name": "神龟魔兽 — 艾泽拉斯奇迹 - 法师职业指南"
+        },
+        "rogue_page": {
+            "title": "潜行者职业指南 - 神龟魔兽",
+            "description": "潜入潜行者职业的阴影，深入神龟魔兽的艾泽拉斯奇迹。探索我们定制的魔兽世界扩展中潜行者的技能、天赋和独特特点。",
+            "keywords": "潜行者职业，魔兽世界潜行者，神龟魔兽潜行者指南，定制魔兽职业，潜行者天赋，潜行者技能，刺杀潜行者，战斗潜行者，敏锐潜行者，魔兽世界经典版，纯粹魔兽世界",
+            "robots": "all",
+            "name": "神龟魔兽 — 艾泽拉斯奇迹 - 潜行者职业指南"
+        },
+        "sound_design_page": {
+            "title": "声音设计 - Turtle WoW",
+            "description": "沉浸于 Turtle WoW 的原声音轨和配音中，这是一款由 Turtle WoW 团队制作的定制《魔兽世界》扩展。体验一场独特的听觉之旅，灵感来自于暴雪娱乐公司的《魔兽争霸》宇宙丰富的故事。",
+            "keywords": "原声音轨，配音，WoW 定制扩展，魔兽世界音乐灵感，氛围音效设计，沉浸式游戏体验，Turtle WoW 音频，WoW 听觉体验，游戏音乐，游戏配音，定制游戏音景",
+            "robots": "all",
+            "name": "Turtle WoW — Azeroth 的奥秘声音设计"
+        },
+        "character_customizations_page": {
+            "title": "角色定制 - Turtle WoW",
+            "description": "释放你的创造力，通过 Turtle WoW 提供的多样化角色定制功能，这是一款由 Turtle WoW 团队制作的定制《魔兽世界》扩展。使用各种选项个性化你的游戏角色，使你的冒险之旅真正独一无二。",
+            "keywords": "角色定制，WoW 定制扩展，角色个性化，游戏外观，装饰选项，独特角色设计，Turtle WoW 定制功能，WoW 角色多样性，个性化游戏体验，WoW 虚荣选项",
+            "robots": "all",
+            "name": "Turtle WoW — Azeroth 的奥秘角色定制"
+        },
+        "new_locations_and_maps_page": {
+            "title": "新地点与地图 - Turtle WoW",
+            "description": "在 Turtle WoW 中，探险全新的地点和地图。这是一款由 Turtle WoW 团队制作的定制《魔兽世界》扩展。探索未知领域，迎接新的挑战，揭开艾泽拉斯扩展世界的神秘面纱。",
+            "keywords": "新地点，新地图，WoW 定制扩展，扩展游戏世界，在艾泽拉斯冒险，Turtle WoW 探索，游戏中的发现，新的挑战，WoW 地图更新，艾泽拉斯的奥秘",
+            "robots": "all",
+            "name": "Turtle WoW — Azeroth 的奥秘新地点与地图"
+        },
+        "new_races_page": {
+            "title": "新种族 - Turtle WoW",
+            "description": "在 Turtle WoW 中发现引入的新可玩种族。这是一款由 Turtle WoW 团队制作的定制《魔兽世界》扩展。沉浸于这些新增到艾泽拉斯多样种族中的独特传说和游戏玩法。",
+            "keywords": "新的可玩种族，WoW 定制扩展，种族多样性，Turtle WoW 传说，艾泽拉斯的种族，扩展的种族选择，游戏中的种族选择，定制的种族能力，WoW 角色选择，Turtle WoW 种族新增",
+            "robots": "all",
+            "name": "Turtle WoW — Azeroth 的奥秘新种族"
+        },
+        "raids_and_dungeons_page": {
+            "title": "副本与地下城 - Turtle WoW",
+            "description": "在Turtle WoW中探索具有挑战性的副本和地下城，这是一个定制的魔兽世界扩展。深入参与史诗般的战斗，征服强大的boss，并在穿越艾泽拉斯扩展的地下城和副本的神秘之处时获得宝贵的奖励。",
+            "keywords": "具有挑战性的副本，地下城探险，魔兽世界定制扩展，boss战，史诗战利品，Turtle WoW地下城挑战，艾泽拉斯之谜，副本奖励，魔兽世界boss战，副本任务",
+            "robots": "all",
+            "name": "Turtle WoW — 艾泽拉斯之谜 副本与地下城"
+        },
+        "player_versus_player_page": {
+            "title": "玩家对战 - Turtle WoW",
+            "description": "在Turtle WoW中参与激动人心的玩家对战内容，这是一个定制的魔兽世界扩展。沉浸于史诗般的战斗中，制定PvP战略，并在艾泽拉斯扩展的PvP系统中与其他玩家竞争荣誉和奖励。",
+            "keywords": "PvP内容，玩家对战，魔兽世界定制扩展，史诗PvP战斗，PvP战略，Turtle WoW PvP系统，艾泽拉斯PvP挑战，玩家战斗，PvP奖励，世界PvP",
+            "robots": "all",
+            "name": "Turtle WoW — 艾泽拉斯之谜 玩家对战"
+        },
+        "seasonal_events_page": {
+            "title": "季节活动 - Turtle WoW",
+            "description": "在Turtle WoW中体验令人兴奋的季节性活动，这是一个定制的魔兽世界扩展。无论是庆祝假期，参加特别节日，还是参与独特的活动，Turtle WoW为玩家提供了各种季节性活动。",
+            "keywords": "令人兴奋的季节性活动，魔兽世界定制扩展，假期庆祝，节日参与，独特的游戏活动，Turtle WoW活动，艾泽拉斯庆典，季节性奖励，游戏内庆祝，玩家娱乐",
+            "robots": "all",
+            "name": "Turtle WoW — 艾泽拉斯之谜 季节活动"
+        },
+        "hardcore_mode_page": {
+            "title": "极限模式 - Turtle WoW",
+            "description": "在Turtle WoW中接受极限模式的终极挑战，这是一个定制的魔兽世界扩展。测试您作为凡人的生存技能，力争在不死亡的情况下达到60级。在艾泽拉斯发现这个极限挑战的规则、特色和奖励。",
+            "keywords": "极限模式，魔兽世界定制扩展，终极挑战，极限升级，60级目标，艾泽拉斯挑战，极限规则，极限特色，极限奖励，凡人角色",
+            "robots": "all",
+            "name": "Turtle WoW — 艾泽拉斯之谜 极限模式"
+        },
+        "community_artworks_page": {
+            "title": "社区艺术品 - 乌龟魔兽",
+            "description": "探索乌龟魔兽的官方和社区驱动艺术品，这是一个定制的魔兽世界扩展。见证我们社区成员的创造才华，为我们项目的独特氛围贡献力量。提交您的艺术品，将其展示在我们的网站、社交媒体上，并有可能在游戏中亮相！",
+            "keywords": "官方艺术品，社区驱动艺术，乌龟魔兽创意社区，玩家贡献，艺术品提交，游戏内艺术展示，网站和社交媒体展示，社区才华展示，乌龟魔兽艺术画廊，玩家创意",
+            "robots": "all",
+            "name": "乌龟魔兽 — 艾泽拉斯之谜社区艺术品"
+        },
+        "pets_and_mounts_page": {
+            "title": "宠物与坐骑 - 龟亚魔兽",
+            "description": "在龟亚魔兽，一款定制的魔兽世界扩展中，发现各种各样的同伴和坐骑。从可爱的小动物到勇猛的坐骑和强大的粉碎者，找到储存在个人选项卡中的完美同伴。探索我们庞大的收藏，并查看在线数据库，准确显示同伴和坐骑。",
+            "keywords": "魔兽世界同伴，坐骑收藏，龟亚魔兽宠物，粉碎者，同伴数据库，坐骑展示，宠物收藏家，在线数据库显示，龟亚魔兽定制扩展",
+            "robots": "all",
+            "name": "龟亚魔兽 — 艾泽拉斯之谜宠物与坐骑"
+        },
+        "everlook_broadcasting_page": {
+            "title": "艾尔福克广播公司 - Turtle WoW",
+            "description": "在艾泽拉斯体验无与伦比的广播娱乐，与艾尔福克广播公司一同感受。结识传奇DJ扎波·扎普布拉斯特，这位善于传递极富诚实的新闻的大师。发现在你的小地图上的新广播功能，并收听《活在过去》现场节目，聆听关于艾泽拉斯奥秘的故事。加入充满活力的广播团队，包括DJ达班、新闻制作者弗洛格拉格·渔杀者等。探索艾尔福克广播公司呈现的多样内容、最热门的优惠和每周新品。",
+            "keywords": "艾泽拉斯广播，DJ扎波·扎普布拉斯特，艾尔福克广播公司，现场节目《活在过去》，艾泽拉斯奥秘，广播团队，每周新品，DJ达班，弗洛格拉格·渔杀者，Turtle WoW娱乐",
+            "robots": "all",
+            "name": "Turtle WoW — 艾泽拉斯奥秘 艾尔福克广播公司"
+        },
+        "shaman_page": {
+            "title": "萨满祭司 - Turtle WoW",
+            "description": "在乌龟魔兽中探索萨满祭司职业，这是一款由暴雪娱乐的魔兽世界灵感制作的定制魔兽世界扩展。在乌龟魔兽的艾泽拉斯之谜服务器上了解有关萨满祭司技能、天赋和独特功能的信息。",
+            "keywords": "乌龟魔兽 萨满祭司, 魔兽世界 萨满祭司职业, 萨满祭司技能, 魔兽世界经典版, 定制魔兽世界扩展, 艾泽拉斯之谜, 艾泽拉斯 萨满祭司, 乌龟魔兽职业指南, 魔兽世界天赋, 魔兽世界 萨满祭司技能.",
+            "robots": "all",
+            "name": "乌龟魔兽 — 艾泽拉斯之谜 萨满祭司"
+        },
+        "warlock_page": {
+            "title": "术士 - Turtle WoW",
+            "description": "深入了解乌龟魔兽中的术士职业，这是一款由暴雪娱乐的魔兽世界灵感制作的定制魔兽世界扩展。在乌龟魔兽的艾泽拉斯之谜服务器上探索术士法术、天赋和独特的增强。",
+            "keywords": "乌龟魔兽 术士, 魔兽世界 术士职业, 术士法术, 魔兽世界经典版, 定制魔兽世界扩展, 艾泽拉斯之谜, 艾泽拉斯 术士, 乌龟魔兽职业指南, 魔兽世界天赋, 魔兽世界 术士技能.",
+            "robots": "all",
+            "name": "乌龟魔兽 — 艾泽拉斯之谜 术士"
+        },
+        "warrior_page": {
+            "title": "战士 - Turtle WoW",
+            "description": "在乌龟魔兽中仔细研究战士职业，这是一款由暴雪娱乐的魔兽世界灵感制作的定制魔兽世界扩展。在乌龟魔兽的艾泽拉斯之谜服务器上调查战士技能、天赋和创新功能。",
+            "keywords": "乌龟魔兽 战士, 魔兽世界 战士职业, 战士技能, 魔兽世界经典版, 定制魔兽世界扩展, 艾泽拉斯之谜, 艾泽拉斯 战士, 乌龟魔兽职业指南, 魔兽世界天赋, 魔兽世界 战士技能.",
+            "robots": "all",
+            "name": "乌龟魔兽 — 艾泽拉斯之谜 战士"
+        },
+        "hardcore_page": {
+            "title": "乌龟魔兽 Hardcore Scoreboard",
+            "description": "探索 Turtle WoW Hardcore 记分板。查看硬核模式中角色的排名，包括仍然存活、陨落英雄和不朽者。了解更多关于他们的等级、种族、职业和成就。",
+            "keywords": "Turtle WoW Hardcore，硬核记分板，仍然存活，陨落英雄，不朽者，艾泽拉斯，角色等级，种族，职业，成就",
+            "robots": "all",
+            "name": "乌龟魔兽 — Hardcore Scoreboard"
+        },
+        "shop_appeals": {
+            "title": "乌龟魔兽 - 商店上诉"
+        },
+        "shop_history": {
+            "title": "乌龟魔兽 - 商店历史"
+        },
+        "shellcoin_page": {
+            "title": "Shellcoin Co. Trading - Turtle WoW",
+            "description": "在受暴雪娱乐的魔兽争霸宇宙启发下，探索“壳牌币有限公司”在Turtle WoW上的交易。深入了解艾泽拉斯的交易和经济世界。",
+            "keywords": "壳牌币有限公司, 魔兽世界交易, 艾泽拉斯经济, 魔兽世界交易, 魔兽世界市场, 虚拟经济, Turtle WoW市场, 游戏内交易, 虚拟货币, 玩家经济, 贸易路线, 交易公司, 交易公会",
+            "robots": "all",
+            "name": "Turtle WoW — 壳牌币有限公司交易"
+        },
+        "population_graph_page": {
+            "title": "人口图表 - Turtle WoW",
+            "description": "探索Turtle WoW的人口图表，这是一款受暴雪娱乐的魔兽争霸宇宙启发的自定义魔兽世界扩展。查看自启动以来两个阵营的在线玩家峰值人数。",
+            "keywords": "人口图表, 玩家统计数据, 最高在线人数, 魔兽世界人口, 艾泽拉斯人口统计, Turtle WoW玩家数据, 魔兽世界阵营统计, 每周最高在线玩家, 魔兽世界玩家人数",
+            "robots": "all",
+            "name": "Turtle WoW — 人口图表"
+        },
+        "patch-1.17.2_page": {
+            "title": "Turtle WoW 1.17.2 更新 - 重振经典地下城体验",
+            "description": "探索 Turtle WoW 的 1.17.2 更新，为 Vanilla 地下城带来全新的冒险和改版。深入新区域，面对独特的 Boss，并享受更丰富的角色自定义选项。此更新通过创新内容丰富了魔兽宇宙，确保了更深入的艾泽拉斯探索体验。体验我们重振经典 WoW 之旅的开始，新的挑战、奖励和传说等待揭晓。",
+            "keywords": "Turtle WoW 1.17.2 更新, Vanilla 地下城更新, 新 WoW Boss, 角色自定义, 经典 WoW 复兴, 提升 WoW 体验, 魔兽宇宙, 艾泽拉斯探索, 新地下城区域, WoW 更新, 独特 WoW 内容, 自定义 Vanilla WoW, Turtle WoW 冒险, WoW 传说扩展, Vanilla WoW 挑战, Turtle WoW 社区, 经典 WoW 增强, 艾泽拉斯冒险, WoW 新奖励, WoW 传说更新, 沉浸式魔兽体验",
+            "robots": "all",
+            "name": "Turtle WoW 1.17.2 更新 - 重振经典地下城体验"
+        },
+        "bug_tracker_page": {
+            "title": "Turtle WoW 错误跟踪器 - 跟踪和报告游戏问题",
+            "description": "使用 Turtle WoW 的错误跟踪器来报告和跟踪游戏中的问题。通过参与我们社区驱动的错误解决过程，帮助改善游戏玩法。保持更新错误修复的状态，并参与提升所有用户的游戏体验。",
+            "keywords": "Turtle WoW 错误报告, WoW 游戏问题, 错误跟踪器, 视频游戏错误, 游戏问题报告, Turtle WoW 社区, 游戏错误修复, 魔兽世界游戏错误, 玩家贡献, 游戏改进, 错误状态更新, 社区驱动错误解决, 提升游戏体验, 玩家错误报告, WoW 游戏增强",
+            "robots": "index, follow",
+            "name": "Turtle WoW 错误跟踪器 - 帮助提升您的游戏体验"
+        },
+        "radio_page": {
+            "title": "Everlook Broadcasting Co. Radio - 调入艾泽拉斯最佳声音",
+            "description": "体验Everlook Broadcasting Co.提供的终极广播娱乐。深入艾泽拉斯的音乐、新闻和独特节目的世界。保持连接，享受娱乐，不要错过我们为每一位WoW玩家的冒险精神量身定制的独家广播。",
+            "keywords": "Everlook Radio, 艾泽拉斯广播, WoW音乐, Everlook Broadcasting, 直播广播, 艾泽拉斯新闻, WoW广播流, 在线WoW广播, 游戏内广播, 魔兽世界广播, 游戏广播电台, 幻想游戏广播",
+            "robots": "all",
+            "name": "Everlook Radio - 您进入艾泽拉斯音频冒险的大门"
+        },
+        "boaring_adventure_page": {
+            "title": "野猪冒险 - Turtle WoW",
+            "description": "参与野猪冒险，在艾泽拉斯的世界中仅使用野猪进行升级。这一独特挑战提供了一种全新而激动人心的游戏体验方式，成功的冒险者将获得独特的野猪坐骑和声望极高的称号‘火腿使者’。",
+            "keywords": "野猪冒险, WoW升级挑战, 独特野猪坐骑, WoW冒险, 魔兽世界野猪, WoW独家称号, WoW中的升级, 冒险游戏, MMO挑战, 幻想游戏",
+            "robots": "all",
+            "name": "Turtle WoW - 野猪冒险"
+        },
+        "jewelcrafting_page": {
+            "title": " 珠宝加工 — 海龟魔兽世界",
+            "description": "在海龟魔兽世界中探索新的珠宝加工专业，包含超过200种新物品可供制作、独家配方以及两个专精：金匠和宝石学。",
+            "keywords": "海龟魔兽世界, 珠宝加工, 魔兽世界珠宝加工, 魔兽世界专业, 魔兽世界, WoW, 魔兽世界经典版, 香草版魔兽世界, Vanilla+, 定制魔兽世界扩展, 新物品, 新配方, 金匠, 宝石学, 新专业, 定制专业, 高等精灵, 地精, 扩展版香草魔兽, 新任务, 私人魔兽世界服务器, 免费玩魔兽",
+            "robots": "all",
+            "name": "海龟魔兽世界 — 珠宝加工"
+        }
+    },
+    "logotypes_page": {
+        "logotypes": "标志"
+    },
+    "client_ui_page": {
+        "client_ui": "客户端用户界面改进"
+    },
+    "additional_transport_routes_page": {
+        "additional_transport_routes": "额外交通路线"
+    },
+    "roleplay_page": {
+        "roleplay": "角色扮演与社区活动"
+    },
+    "jewelcrafting_page": {
+        "jewelcrafting": "珠宝制作"
+    },
+    "new_factions_and_quests_page": {
+        "new_factions_and_quests": "新的派系和任务"
+    },
+    "class_race_combinations_page": {
+        "class_race_combinations": "额外职业与种族组合"
+    },
+    "guild_banks_page": {
+        "guild_banks": "公会储物柜"
+    },
+    "dynamic_mount_speed_page": {
+        "dynamic_mount_speed": "动态坐骑速度"
+    },
+    "survival_and_gardening_page": {
+        "survival_and_gardening": "生存与园艺"
+    },
+    "transmogrification_page": {
+        "transmogrification": "幻化"
+    },
+    "chronoboon_displacer_page": {
+        "chronoboon_displacer": "时空奇迹位移器"
+    },
+    "achievement_titles_page": {
+        "achievement_titles": "成就头衔"
+    },
+    "slow_and_steady_page": {
+        "slow_and_steady": "慢慢来"
+    },
+    "vagrants_endeavor_page": {
+        "vagrants_endeavor": "流浪者的努力"
+    },
+    "druid_page": {
+        "druid": "德鲁伊"
+    },
+    "hunter_page": {
+        "hunter": "猎人"
+    },
+    "mage_page": {
+        "mage": "法师"
+    },
+    "paladin_page": {
+        "paladin": "圣骑士"
+    },
+    "priest_page": {
+        "priest": "牧师"
+    },
+    "rogue_page": {
+        "rogue": "潜行者"
+    },
+    "new_races_page": {
+        "new_races": "两个新的可玩种族"
+    },
+    "character_customizations_page": {
+        "character_customizations": "新角色定制"
+    },
+    "sound_design_page": {
+        "sound_design": "原声音轨和配音"
+    },
+    "new_locations_and_maps_page": {
+        "new_locations_and_maps": "新地点与地图"
+    },
+    "raids_and_dungeons_page": {
+        "raids_and_dungeons": "团队和地下城"
+    },
+    "itemization_page": {
+        "itemization": "物品配置"
+    },
+    "player_versus_player_page": {
+        "player_versus_player": "玩家对玩家内容"
+    },
+    "seasonal_events_page": {
+        "seasonal_events": "令人兴奋的季节性活动"
+    },
+    "hardcore_mode_page": {
+        "hardcore_mode": "炼狱模式"
+    },
+    "war_mode_page": {
+        "war_mode": "战争模式"
+    },
+    "wiki_page": {
+        "wiki": "Turtle WoW社区维基"
+    },
+    "community_artworks_page": {
+        "community_artworks": "官方与社区艺术作品"
+    },
+    "pets_and_mounts_page": {
+        "pets_and_mounts": "新宠物和坐骑"
+    },
+    "development_tools_page": {
+        "development_tools": "开发工具"
+    },
+    "everlook_broadcasting_page": {
+        "everlook_broadcasting": "艾博陆广播公司"
+    },
+    "radio_page": {
+        "radio": "广播"
+    },
+    "shaman_page": {
+        "shaman": "萨满"
+    },
+    "warlock_page": {
+        "warlock": "术士"
+    },
+    "warrior_page": {
+        "warrior": "战士"
+    },
+    "patch_1.17.2_page": {
+        "patch_1.17.2": "经典地下城更新"
+    },
+    "boaring_adventure_page": {
+        "boaring_adventure": "野猪冒险"
+    },
+    "ban_appeals_profile_page": {
+        "contact_support": "联系支持",
+        "no_messages": "您没有消息。\n如果您希望就您账户的状态联系支持，请在下方填写。如果您的账户被锁定并且不确定原因，请确保首先阅读 ",
+        "terms_of_service": "我们的服务条款。",
+        "characters_left": "剩余字符：",
+        "send_message": "\n发送消息"
+    },
+    "gm_ban_appeals_page": {
+        "pending": "待处理",
+        "delivered": "已交付",
+        "ban_appeals": "封禁上诉",
+        "refresh": "刷新",
+        "search": "按用户名搜索",
+        "unseen": "未读",
+        "messages": "消息",
+        "responded_by": "回复者",
+        "closed": "已关闭",
+        "unbanned": "已解封",
+        "respond": "回复",
+        "permanent": "永久",
+        "table_headers": {
+            "account": "帐户",
+            "message": "消息",
+            "ban_date": "封禁日期",
+            "by_reason": "封禁人/原因",
+            "date": "日期",
+            "status": "状态",
+            "actions": "操作"
+        },
+        "filter_labels": {
+            "all": "总数",
+            "approved": "已批准",
+            "closed": "已关闭",
+            "unread": "新消息",
+            "delivered": "已送达消息"
+        },
+        "gm_ban_appeals_modal": {
+            "ban_info": "封禁信息",
+            "back_to_list": "返回列表",
+            "edit": "编辑",
+            "save": "保存",
+            "cancel": "取消",
+            "table_headers": {
+                "account": "帐户名称",
+                "ban_date": "封禁日期",
+                "by_reason": "封禁者",
+                "date": "封禁原因",
+                "status": "封禁时长",
+                "actions": "状态"
+            },
+            "change_ban_duration_label": "更改禁令期限至:",
+            "options": {
+                "default": "更改禁令期限至:",
+                "1": "1天",
+                "3": "3天",
+                "7": "1周",
+                "14": "2周",
+                "21": "3周",
+                "30": "1个月",
+                "60": "2个月"
+            },
+            "change_button": "更改",
+            "message_history": "消息记录",
+            "support": "支持",
+            "your_response": "你的回应：",
+            "button_labels": {
+                "send_message": "发送消息",
+                "send_message_unban": "发送消息并解封",
+                "send_message_deny_appeal": "发送消息并拒绝申诉",
+                "deny_appeal": "拒绝申诉"
+            },
+            "template_response": "模板回复:",
+            "select": "选择",
+            "template_responses": {
+                "rmt_forbidden": {
+                    "display": "[上诉被拒绝]金币交易禁止",
+                    "value": "问候！请记住，以真金白银买卖金币会导致在Turtle WoW上封禁。请不要支持那些积极损害我们项目的个体。"
+                },
+                "read_and_accept_tos": {
+                    "display": "阅读并接受我们的服务条款。",
+                    "value": "问候！请仔细阅读我们的服务条款，网址为https://turtle-wow.org/#/rules，并确认您的理解。然后我们将进一步审查您的上诉。"
+                },
+                "failed_appeal": {
+                    "display": "[上诉被拒绝]失败的上诉。",
+                    "value": "问候！由于您已经证明无法遵守我们的服务条款，您的封禁将不会被解除。"
+                },
+                "unbanned_our_fault": {
+                    "display": "[解封]解封，我们的错误。",
+                    "value": "问候！我们已经完成了对您的封禁的调查，并得出结论，认为是错误的。封禁已解除。欢迎回来！"
+                },
+                "appeal_success": {
+                    "display": "[解封]上诉成功。",
+                    "value": "问候！感谢您承诺遵守我们的服务条款。请记住，将来的违规行为将导致更严厉的惩罚！您已被解禁。"
+                }
+            },
+            "notes": "备注",
+            "add_notes": "只有管理员能看到备注。",
+            "edit_notes": "编辑备注",
+            "error_messages": {
+                "editing_ban_reason": "编辑封禁原因时出错",
+                "closing_ban_appeal": "关闭封禁上诉时出错",
+                "sending_message_and_closing_ban_appeal": "发送消息并关闭封禁上诉时出错",
+                "sending_message_and_unban_account": "发送消息并解封账号时出错",
+                "adding_gm_comment": "添加GM评论时出错",
+                "sending_message": "发送消息时出错",
+                "editing_ban_duration": "编辑封禁时长错误"
+            },
+            "success_messages": {
+                "edited_ban_reason": "成功编辑封禁原因",
+                "closed_ban_appeal": "成功关闭封禁上诉",
+                "message_sent_and_closed_ban_appeal": "成功发送消息并关闭封禁上诉",
+                "message_sent_and_unbanned_account": "成功发送消息并解封账号",
+                "comment_added": "成功添加评论",
+                "message_sent": "成功发送消息",
+                "edited_ban_duration": "成功编辑封禁时长"
+            }
+        }
+    },
+    "bug_tracker": {
+        "successfully_saved": "保存成功。",
+        "link_an_issue": "关联问题",
+        "remove": "删除",
+        "link_another_issue": "关联另一个问题",
+        "type_of_link": "链接类型",
+        "search_bug_reports": "搜索错误报告",
+        "duplicated": "重复",
+        "related": "相关",
+        "tooltip": "点击此按钮，您正在为此错误分配更高的优先级。具有更高优先级的错误将更迅速地得到解决，确保更快的解决方案。",
+        "new_report": "新报告",
+        "select_realm": "选择领域",
+        "select_category": "选择类别",
+        "no_category": "无分类",
+        "select_status": "选择状态",
+        "search": "搜索",
+        "reset": "重置",
+        "staff": "Turtle Wow 员工",
+        "before_submitting": "在提交问题之前，请确保其他人尚未报告过此问题！请遵循指南并尽可能提供有关问题的详细信息。一个正确提交的报告将增加问题快速解决的机会。",
+        "are_you_sure": "您确定要编辑此错误报告吗？此操作无法撤销。",
+        "bug_tracker": "错误跟踪器",
+        "reports_per_page": "每页报告数量",
+        "edit_report": "编辑报告",
+        "sort_by": "排序方式:",
+        "date_of_creation": "创建日期",
+        "date_of_last_update": "最后更新日期",
+        "number_of_comments": "评论数量",
+        "latest_activity": "最新活动",
+        "my_reports": "我的报告",
+        "my_threads": "我的主题",
+        "vote_for_fixing": "投票修复",
+        "undo_vote": "撤销投票",
+        "voted_for_fixing": "已投票修复：",
+        "number_of_votes": "投票数量",
+        "open_reports": "打开报告",
+        "closed_reports": "关闭报告",
+        "all_reports": "所有报告",
+        "priority": "优先级",
+        "problem": "问题：\n",
+        "how_to_work": "应该如何工作：\n",
+        "how_to_reproduce": "如何重现问题：\n",
+        "character": "发生错误的角色：\n",
+        "new_bug_report": "新错误报告",
+        "avoid_duplicates": "- 使用搜索功能避免重复报告",
+        "verified_info": "- 使用经过验证的信息来源",
+        "be_accurate": "- 在描述问题时要准确",
+        "submit_report": "提交报告",
+        "modify_statuses": "修改状态",
+        "modify_categories": "修改类别",
+        "modify_priorities": "修改优先级",
+        "modify_teams": "修改团队",
+        "en_title": "英文标题",
+        "cn_title": "中文标题",
+        "color": "颜色",
+        "save_status": "保存状态",
+        "save_priority": "保存优先级",
+        "save_category": "保存类别",
+        "save_team": "保存团队",
+        "team_members": "团队成员",
+        "select_team": "选择团队成员",
+        "teams": "团队",
+        "statuses": "状态",
+        "categories": "类别",
+        "priorities": "优先级",
+        "id": "标识",
+        "realms": "服务器",
+        "assign_to": "分配给",
+        "select_assigned_to": "选择团队",
+        "edit_status": "编辑状态",
+        "edit_priority": "编辑优先级",
+        "edit_category": "编辑类别",
+        "all_categories": "所有类别",
+        "edit_team": "编辑团队",
+        "no_categories": "没有可用的类别。",
+        "no_realms": "没有可用的领域。",
+        "upload_images": "上传图片",
+        "upload_image": "上传图片",
+        "you_can_upload": "您最多可以上传2张图片。",
+        "you_can_upload_one_image": "您可以上传1张图片。拖放图片到输入区域，或点击选择图片。",
+        "closed_this_report": "关闭了这个报告。",
+        "uploading": "上传中",
+        "pick_author_name": "您需要选择作者名称",
+        "select_author_name": "选择作者名称",
+        "select_character": "选择角色",
+        "no_character": "没有角色",
+        "you_need_to": "您需要 ",
+        "in_order_to": " 才能评论和报告新问题。",
+        "login_first": "您需要先登录才能评论和报告新问题。",
+        "success_messages": {
+            "added_status": "成功添加状态",
+            "edited_status": "成功编辑状态",
+            "deleted_status": "成功删除状态",
+            "added_priority": "成功添加优先级",
+            "edited_priority": "成功编辑优先级",
+            "deleted_priority": "成功删除优先级",
+            "added_category": "成功添加类别",
+            "edited_category": "成功编辑类别",
+            "deleted_category": "成功删除类别",
+            "added_team": "成功添加团队",
+            "edited_team": "成功编辑团队",
+            "deleted_team": "成功删除团队",
+            "added_new_bug_report": "成功添加新的错误报告"
+        },
+        "error_messages": {
+            "adding_status": "添加状态时出错",
+            "editing_status": "编辑状态时出错",
+            "deleting_status": "删除状态时出错",
+            "adding_priority": "添加优先级时出错",
+            "editing_priority": "编辑优先级时出错",
+            "deleting_priority": "删除优先级时出错",
+            "adding_category": "添加类别时出错",
+            "editing_category": "编辑类别时出错",
+            "deleting_category": "删除类别时出错",
+            "adding_team": "添加团队时出错",
+            "editing_team": "编辑团队时出错",
+            "deleting_team": "删除团队时出错",
+            "adding_new_bug_report": "添加新的错误报告时出错"
+        }
+    },
+    "bug_report": {
+        "low": "低",
+        "medium": "中",
+        "high": "高",
+        "change_priority": "更改优先级",
+        "back_to_list": "返回列表",
+        "author": "作者",
+        "category": "类别",
+        "realm": "领域",
+        "status": "状态",
+        "priority": "优先级",
+        "gm_priority": "GM优先级",
+        "created": "创建日期",
+        "updated": "更新日期",
+        "title": "标题",
+        "id": "ID",
+        "assigned_to": "分配给",
+        "change_status": "更改状态",
+        "open": "打开",
+        "closed": "关闭",
+        "en_name": "英文名称",
+        "cn_name": "中文名称",
+        "color": "颜色",
+        "icon": "图标",
+        "action": "操作",
+        "select_realms": "选择领域",
+        "select_categories": "选择类别",
+        "desc_en": "英文描述",
+        "desc_cn": "中文描述",
+        "opened": "已打开",
+        "by": "由",
+        "reported": "报告",
+        "commented_at": "评论于",
+        "hide_comment": "隐藏评论",
+        "delete_comment": "删除评论",
+        "edit_comment": "编辑评论",
+        "no_comments": "暂无评论。",
+        "delete_report": "删除报告",
+        "action_is_permanent": "此操作是永久性的。删除报告还将删除与其相关的所有数据（图像、评论等）。您确定要删除此报告吗？",
+        "bug_details": {
+            "description": "描述",
+            "related_reports": "相关报告",
+            "duplicated_reports": "重复报告",
+            "linked_by": "链接者",
+            "comments": "评论",
+            "add_comment": "添加评论",
+            "submit_comment": "提交评论",
+            "report_history": "举报历史"
+        },
+        "related_reports_table": {
+            "id": "ID",
+            "title": "标题",
+            "category": "类别",
+            "status": "状态",
+            "priority": "优先级",
+            "updated": "更新日期"
+        }
+    },
+    "hardcore": {
+        "immortals": "不朽者",
+        "fallen_heroes": "堕落英雄",
+        "still_standing": "依然屹立",
+        "hardcore_scoreboard": "硬核计分板",
+        "learn_more": "了解更多关于硬核挑战",
+        "showing": "展示",
+        "of": "的"
+    },
+    "shop_appeals_page": {
+        "pending": "待处理",
+        "delivered": "已交付",
+        "title": "商店申诉",
+        "shop_appeals": "退款申诉",
+        "refresh": "刷新",
+        "search": "通过用户名搜索商店申诉",
+        "unseen": "未查看",
+        "messages": "消息",
+        "responded_by": "回复者",
+        "closed": "已关闭",
+        "respond": "回复",
+        "refunded": "已退款",
+        "send_message": "发送消息",
+        "deny_appeal": "拒绝上诉",
+        "approve_appeal": "批准上诉",
+        "closed_appeal": "您的申诉已经审核完毕，目前已关闭。感谢您的耐心等待。如果您有任何疑问，请随时联系支持。",
+        "approved_appeal": "好消息！您的申诉已获批准。我们很高兴能够为您提供帮助。如果您需要进一步的帮助，我们的支持团队随时为您服务。",
+        "see_full_shop_history": "查看完整的商店历史",
+        "chat_history": "聊天记录",
+        "enter_id_or_username": "输入ID或用户名",
+        "go": "搜索",
+        "go_to_players_shop_history": "前往玩家商店历史记录",
+        "table_headers": {
+            "account": "账户",
+            "message": "消息",
+            "date": "日期",
+            "status": "状态",
+            "actions": "操作"
+        },
+        "filter_labels": {
+            "all": "总数",
+            "approved": "已批准",
+            "closed": "已关闭",
+            "unread": "未读消息",
+            "delivered": "已发送消息"
+        },
+        "no_messages": "您目前没有未处理的消息。如果您需要有关付款问题的帮助，请随时使用下面提供的空间与我们的支持团队联系。有关更多关于退款政策的信息，请参阅相关章节 ",
+        "are_you_sure": "您确定要删除这张图片吗？",
+        "image_deletion": "图片删除"
+    },
+    "shop_history_page": {
+        "back_to_list": "返回列表",
+        "refresh": "刷新",
+        "title": "商店历史",
+        "appeal_info": "申诉信息",
+        "shop_coins_history": "商店货币历史",
+        "table_headers": {
+            "account": "账户",
+            "realm": "服务器",
+            "points": "点数",
+            "actual_points": "实际点数",
+            "new_points": "新点数",
+            "type": "类型",
+            "system": "系统",
+            "reference": "参考",
+            "date": "日期",
+            "time": "时间",
+            "guid": "GUID",
+            "item": "物品",
+            "price": "价格",
+            "refunded": "已退款",
+            "actions": "操作"
+        }
+    },
+    "population_graph_page": {
+        "population_graph": "人口图表",
+        "the_following_graphs": "以下图表显示了过去三个月每周两个阵营的在线玩家峰值数量：",
+        "alliance_players": "联盟玩家",
+        "horde_players": "部落玩家",
+        "queued_players": "排队玩家",
+        "total_players": "总玩家数"
+    },
+    "shellcoin_page": {
+        "shellcoin_title": "贝壳币 —— 把苦工变成酋长！",
+        "welcome_to_shellcoin": "欢迎来到贝壳公司贸易公司！凭借我的天才，我发明了一种全新的货币，它将席卷艾泽拉斯，魔法贝壳币将颠覆世界，创造一种全新的致富方式。运气不佳？现在是投资贝壳币、像许多人一样大赚一笔的时候了！",
+        "marlos_catos": "Marlos Catos，贝壳公司贸易公司首席执行官",
+        "total_amount": "贝壳币，总数：",
+        "shellcoin": "贝壳币公司交易",
+        "total": "总数",
+        "last_week": "上周"
+    },
+    "transfer_account": {
+        "transfer_account": "转账户",
+        "cannot_transfer": "账户被挂起时，您无法转移账户！",
+        "check_progress": "检查进度",
+        "submit": "提交",
+        "your_account_is_locked": "您的账户已被锁定！",
+        "first_phase": "账户转移包括三个阶段。第一阶段涉及将账户移至新网络。在此阶段，您将无法登录服务器，但在所有角色被转移之前，您仍然可以访问网站。之后，您将完全无法登录。",
+        "second_phase": "第二阶段将显示一个表格，展示每个角色的当前状态。当您点击特定角色的‘开始处理’时，其数据将在那一刻从欧洲网络导出。",
+        "third_phase": "第三阶段是最后一个阶段。角色现在需要导入到亚洲网络，这是通过点击‘完成处理’来完成的。现在您可以使用这个角色了。",
+        "successfully_transferred": "账户转移成功。",
+        "username_exists": "该用户名已存在！请选择一个新的用户名和密码。",
+        "email_exists": "该电子邮件地址已存在！请选择一个新的电子邮件地址。",
+        "account_banned": "您的账户被禁用时，无法转移账户！",
+        "account_online": "账户在线时，您无法转移账户！",
+        "transfer_error": "转移过程中发生错误。",
+        "choose_realm": "选择领域",
+        "confirmation": "您确定要开始这个过程吗？请确保在继续之前了解将发生什么，通过阅读我们的<a href=\"https://forum.turtle-wow.org/viewtopic.php?t=12867\" target=\"_blank\">规则与限制</a>。",
+        "start_process": "开始过程",
+        "complete_process": "完成过程",
+        "not_requested": "未请求",
+        "requested": "已请求",
+        "transferred": "已转移",
+        "failed": "失败",
+        "retry_process": "重试过程",
+        "rules_and_limitations": "规则与限制",
+        "proceed_with_transfer": "继续转移",
+        "name": "名称",
+        "status": "状态",
+        "action": "操作",
+        "suspended": "账户被挂起时，您无法转移账户！",
+        "message": {
+            "missing_characters": "您需要提供要转移的角色。",
+            "need_character": "您需要选择一个角色。",
+            "already_transferred": "这个角色已经被转移。",
+            "was_failed_to_transfer": "角色转移失败。",
+            "already_exported": "这个角色已经被导出。",
+            "success_exported": "角色成功导出。",
+            "error_exporting": "导出角色时出错。",
+            "need_export_first": "您需要先导出角色。",
+            "error_importing": "导入角色时出错。",
+            "success_exported_all_characters": "所有角色都已成功导出。",
+            "success_imported": "角色成功导入。",
+            "check_transfer": "尝试刷新页面，以获取传输状态。",
+            "success_transferred": "角色已成功转移。",
+            "already_transferred_account": "这个账户已经被转移。"
+        }
+    },
+    "world_config": {
+        "table": {
+            "variable": "变量",
+            "value": "值",
+            "info": "信息"
+        },
+        "title": "世界配置",
+        "reload_config": "重新加载配置",
+        "realm_id": "领域ID",
+        "compression": "发送到客户端的更新包的压缩级别。(1-9)",
+        "login_queue_grace_period_secs": "最后一次登出后多少秒内可以登录并跳过队列。",
+        "character_screen_max_idle_time": "允许玩家在断开连接之前保持在角色选择界面上的秒数。",
+        "player_hard_limit": "在使用 login_per_tick 增加 player_limit 后，世界中的玩家的最大数量。",
+        "antiflood_sanction": "如果发送过多数据包，则对玩家施加的制裁。",
+        "packet_bcast_threads": "用于数据包广播的线程数量。",
+        "packet_bcast_frequency": "数据包广播线程以毫秒为单位运行的频率。",
+        "mailspam_expire_secs": "邮件到期前的秒数。",
+        "mailspam_max_mails": "玩家邮箱中可以拥有的邮件的最大数量。",
+        "mailspam_level": "发送邮件所需的等级。",
+        "mailspam_account_level": "发送邮件所需的帐户等级。",
+        "mailspam_money": "邮件中可发送的最大金额（铜币）。"
+    },
+    "reset_2_fa_code_form": {
+        "title": "重置2FA代码",
+        "placeholder": {
+            "email": "电子邮件",
+            "recovery_code": "恢复代码"
+        },
+        "message": "如果恢复代码和电子邮件正确，2FA代码将被重置。",
+        "message_login": "如果恢复代码和用户名正确，2FA代码将被重置。"
+    },
+    "serveralert": {
+        "population": {
+            "high": "|cffc41f3b高|r",
+            "medium": "|cffFF7D0A中|r",
+            "low": "|cff00ff00低|r"
+        },
+        "queue": {
+            "high": "(|cffc41f3b高|r  排队中).",
+            "medium": "(|cffFF7D0A正常|r  排队中).",
+            "low": "(|cff00ff00低|r  排队中)."
+        },
+        "offline": "|cffc41f3b离线|r"
+    },
+    "armory": {
+        "talents": "天赋",
+        "professions": "专业",
+        "secondary_skills": "辅助技能"
+    }
+}

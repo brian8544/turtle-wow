@@ -1,0 +1,14 @@
+<div>{{ payload.r1.name }}</div>
+<div>Rank {{ payload.points_spend }} / {{ payload.spell_ids.length }}</div>
+<div class="item_quality_0">{{ payload.r1.description }}</div>
+<ng-container *ngIf="!!payload.r2">
+    <br />
+    <div>Next rank:</div>
+    <div class="item_quality_0">{{ payload.r2.description }}</div>
+</ng-container>
+<br />
+<div class="color_error">
+    'Left-Click' to spend points.
+    <br />
+    'Shift-Left-Click' to retrieve points.
+</div>

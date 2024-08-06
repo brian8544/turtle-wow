@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Encounter</td>
+            <td>Amount (A)</td>
+            <td>Duration (D)</td>
+            <td>A/D</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of results; let i = index">
+            <td>{{i+1}}</td>
+            <td><a (click)="navigate_to_viewer(row)">{{row[0]}}</a></td>
+            <td>{{format_number(row[1])}}</td>
+            <td>{{dateService.toShortTimeSpan(row[2])}}</td>
+            <td>{{format_number(row[3])}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,95 @@
+@import "src/styles/units";
+@import "src/styles/colors";
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: calc(100% - 2px);
+    border: 1px solid $tdc_accent;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: $spacing;
+
+    .title_bar {
+        $size: 50px - $spacing;
+        width: calc(100% - #{$spacing});
+        height: $size;
+        padding: 0.5 * $spacing 0.5 * $spacing;
+        background: $tdc_darker;
+        border-bottom: 1px solid $tdc_accent;
+
+        $insigBoxWidth: 250px;
+        .title {
+            float: left;
+            height: 100%;
+            width: calc(100% - #{$insigBoxWidth});
+            line-height: $size;
+            font-size: 20px;
+        }
+
+        .insignificant_box {
+            float: left;
+            height: 100%;
+            width: $insigBoxWidth;
+            text-align: right;
+            line-height: $size;
+
+            label {
+                vertical-align: middle;
+                font-size: 16px;
+            }
+
+            GeneralInput {
+                display: inline-block;
+                width: 22px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .boss_container {
+        width: 100%;
+
+        .no_border {
+            border: none !important;
+        }
+
+        .boss_title_bar {
+            $BTBsize: 25px - 0.25 * $spacing;
+            background-color: $tdc_darker;
+            width: calc(100% - 0.5 * #{$spacing});
+            height: $BTBsize;
+            border-bottom: 1px solid $tdc_accent;
+            padding: 0.25 * $spacing 0.25 * $spacing;
+
+            CaretButton {
+                float: left;
+                height: $BTBsize;
+                width: $BTBsize;
+            }
+
+            .boss_label {
+                float:left;
+                height: $BTBsize;
+                width: calc(100% - #{$BTBsize} - 0.5 * #{$spacing});
+                font-size: 16px;
+                line-height: $BTBsize;
+                padding-left: 0.5 * $spacing;
+            }
+        }
+
+        .loot_container {
+            width: 100%;
+            padding: 0.5 * $spacing 0.25 * $spacing;
+            min-height: 0;
+            overflow: hidden;
+
+            LootItem {
+                float: left;
+                margin: 0 0.25 * $spacing;
+            }
+        }
+    }
+}

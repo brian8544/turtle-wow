@@ -1,0 +1,20 @@
+<div class="talent_navbar">
+    <SelectInput [value]="selected_expansion" (valueChange)="expansionChanged($event)" [options]="expansions" [themed]="true"></SelectInput>
+    <SelectInput [value]="selected_hero_class" (valueChange)="heroClassChanged($event)" [options]="hero_classes" [themed]="true"></SelectInput>
+    <span>{{points_spend}}/{{pointsPerExpansion}}</span>
+</div>
+<div class="talent_container">
+    <ng-container *ngIf="!combinationExists">
+        <div id="doesNotExistNote">
+            This expansion / class combination does not exist.
+        </div>
+    </ng-container>
+    <ng-container *ngIf="combinationExists">
+        <TalentTab [i_talent_tree]="tree_tab1" [tab_label]="getTabLabel(1)"
+                   [expansion_id]="selected_expansion" (talent_tree_changed)="talentTreeChanged(1, $event)"></TalentTab>
+        <TalentTab [i_talent_tree]="tree_tab2" [tab_label]="getTabLabel(2)"
+                   [expansion_id]="selected_expansion" (talent_tree_changed)="talentTreeChanged(2, $event)"></TalentTab>
+        <TalentTab [i_talent_tree]="tree_tab3" [tab_label]="getTabLabel(3)"
+                   [expansion_id]="selected_expansion" (talent_tree_changed)="talentTreeChanged(3, $event)"></TalentTab>
+    </ng-container>
+</div>

@@ -1,0 +1,64 @@
+@import "src/styles/colors";
+
+:host {
+    display: block;
+}
+
+ng-multiselect-dropdown {
+    display: inline-block;
+    width: 100%;
+
+    &::ng-deep {
+        color: $font_default !important;
+        .multiselect-dropdown {
+            .dropdown-btn {
+                display: flex !important;
+                flex-direction: row !important;
+                width: calc(100% - 26px) !important;
+
+                .selected-item {
+                    height: 20px;
+                    overflow: hidden !important;
+                }
+
+                span:last-child {
+                    margin-left: auto;
+                    display: flex;
+                    margin-right: 12px;
+
+                    span:last-child {
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .filter-textbox input {
+                width: calc(100% - 26px) !important;
+                background: lighten($tdc_darker, 3%);
+            }
+
+            .dropdown-list {
+                background: lighten($tdc_darker, 3%);
+                box-shadow: none;
+
+                .item1:first-child {
+                    max-height: 200px;
+                    overflow-y: auto;
+                }
+
+                .multiselect-item-checkbox {
+                    div {
+                        color: $font_default !important;
+                        &:hover {
+                            color: $highlight !important;
+                        }
+                    }
+
+                    &:hover {
+                        background: lighten($tdc_darker, 3%) !important;
+                    }
+                }
+            }
+        }
+    }
+}

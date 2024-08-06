@@ -1,0 +1,26 @@
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 hand mb-4"
+     ng-class="{'col-lg-12' : vertical}"
+     ng-click="goToPage('watch/' + v.id)" ng-cloak>
+
+   <div ng-attr-style="background-image:url('{{v.thumb}}')" class="thumb">
+      <i class="fa fa-fw fa-play"></i>
+      <div class="duration">
+         {{v.duration}}
+      </div>
+   </div>
+   <div class="title orange-text mt-1 font-weight-bold">
+      {{v.title}}
+   </div>
+   <p class="text-gray2">
+      <small>{{v.views}}
+         <ng-container ng-show="v.views == 1">view</ng-container>
+         <ng-container ng-show="v.views != 1">views</ng-container>
+      </small>
+      <small> • {{v.commentsCount}}
+         <ng-container ng-show="v.commentsCount == 1">comment</ng-container>
+         <ng-container ng-show="v.commentsCount != 1">comments</ng-container>
+      </small>
+      <!--      <small class="float-right">{{v.ago}}</small>-->
+   </p>
+
+</div>

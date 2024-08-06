@@ -1,0 +1,17 @@
+@import "src/styles/global";
+
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        path {
+            fill: $font_default;
+        }
+    }
+}

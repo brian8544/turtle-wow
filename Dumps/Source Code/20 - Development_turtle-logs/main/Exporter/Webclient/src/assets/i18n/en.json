@@ -1,0 +1,26 @@
+{
+    "serverResponses": {
+        "401": "Unauthorized!",
+        "520": "Consent has already been given!",
+        "521": "No consent has been given yet!",
+        "522": "None of your characters is the guild master of this guild!",
+        "523": "Something went wrong, please try again!"
+    },
+    "NavigationBar": {
+        "manager": "Consent Manager"
+    },
+    "ArmoryExporter": {
+        "title": "Armory-Data Export",
+        "description": "Armory data includes all information about your character, i.e. name, title, level, guild, gear, professions, talents etc.",
+        "characterName": "Character name",
+        "consent": "Consent"
+    },
+    "FooterBar": {
+        "niceToKnow": {
+            "title": "Nett to know",
+            "legacyplayers": "LegacyPlayers",
+            "github": "GitHub"
+        },
+        "copyright": "©{{year}} {{company}}. All rights reserved."
+    }
+}

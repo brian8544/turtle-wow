@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs DB Backup daily
+
+[Timer]
+OnCalendar=*-*-* 05:00:00
+Unit=backup_db.service
+
+[Install]
+WantedBy=multi-user.target

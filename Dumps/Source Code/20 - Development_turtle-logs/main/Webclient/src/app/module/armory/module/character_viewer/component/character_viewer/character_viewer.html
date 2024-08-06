@@ -1,0 +1,14 @@
+<ng-container *ngIf="character">
+    <CharacterItems [character]="character" (historyChanged)="historyChanged($event)"></CharacterItems>
+    <div class="rightBar">
+        <Talents *ngIf="character.talent_specialization" [talents]="character.talent_specialization"
+                 [hero_class_id]="character.hero_class_id" [expansion_id]="2"></Talents>
+        <Profession *ngIf="character.profession1" [profession]="character.profession1"></Profession>
+        <Profession *ngIf="character.profession2" [profession]="character.profession2"></Profession>
+        <Stats [stats]="character.stats"></Stats>
+    </div>
+    <div class="tables">
+        <AttendedRaids [character_id]="character.character_id"></AttendedRaids>
+        <RankingTable [character_id]="character.character_id" [server_id]="character.server_id"></RankingTable>
+    </div>
+</ng-container>

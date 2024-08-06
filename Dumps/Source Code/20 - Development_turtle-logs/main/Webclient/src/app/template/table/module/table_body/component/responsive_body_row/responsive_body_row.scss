@@ -1,0 +1,60 @@
+@import "./../../../../../../../styles/global";
+
+$columnHeight: 50px;
+
+:host {
+    display: block;
+    background: $theme_dominant_color;
+
+    .tableResponsiveBodyRow {
+        display: flex;
+        flex-direction: column;
+        padding: 0 $spacing / 2;
+        width: calc(100% - #{$spacing});
+        max-height: $columnHeight;
+        overflow: hidden;
+
+        border-bottom: 1px solid $tdc_accent;
+
+        .responsiveHeader {
+            display: flex;
+            flex-direction: row;
+
+            BodyTd:first-child {
+                margin-left: 0;
+            }
+        }
+
+        CaretButton {
+            margin-top: 10px;
+            height: calc(#{$columnHeight} - 20px);
+            width: $columnHeight;
+            margin-right: $spacing / 2;
+        }
+
+        &>BodyTd {
+            flex-basis: 100% !important;
+        }
+
+        &.isVisible {
+            @keyframes openMenu {
+                0% { max-height: $columnHeight }
+                100% { max-height: 1000px }
+            }
+            animation: openMenu;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            max-height: none;
+        }
+    }
+
+    BodyTd {
+        margin-left: $spacing / 2;
+        flex-basis: 100%;
+
+        &:first-child {
+            margin:0;
+        }
+    }
+
+}

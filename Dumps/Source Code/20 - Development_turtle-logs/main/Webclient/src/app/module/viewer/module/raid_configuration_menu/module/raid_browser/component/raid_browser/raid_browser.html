@@ -1,0 +1,9 @@
+<MultiSelect placeholder="Select presets..." [dropdownList]="options" [selectedItems]="selected_options"
+             (selectedItemsChange)="selected_presets_changed($event)" ></MultiSelect>
+<div class="rbButton btn btnHighlight" (click)="apply()">Apply</div>
+<div class="rbButton btn btnHighlight" (click)="toggleRemoveWidget()">-</div>
+<div class="rbButton btn btnHighlight" (click)="toggleAddWidget()">+</div>
+<PopupRemove *ngIf="show_remove_widget" [presets]="presets" (close_widget)="close_remove_widget()"
+             (remove)="remove_preset($event)"></PopupRemove>
+<PopupAdd *ngIf="show_add_widget" [presets]="presets" (close_widget)="close_add_widget()"
+          (add_preset)="add_preset($event)"></PopupAdd>

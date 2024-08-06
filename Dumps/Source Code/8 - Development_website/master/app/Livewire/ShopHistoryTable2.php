@@ -1,0 +1,61 @@
+<?php
+
+namespace App\Livewire;
+
+use App\Models\auth\Account;
+use App\Models\auth\ShopCoinsHistory;
+use App\Models\auth\ShopLog;
+use Livewire\Component;
+
+class ShopHistoryTable2 extends Component
+{
+    public $accountId;
+    public $username;
+    public $selectedRealm = 0;
+    public $balance = 0;
+    public $foundUsername = false;
+    public $foundAccountId = false;
+
+    public function mount()
+    {
+        if ($this->accountId != null) {
+
+            $this->foundAccountId = true;
+
+            $account = Account::where('id', $this->accountId)->first();
+
+            if (!$account) {
+                return redirect()->route('home');
+            }
+
+            $this->username = $account->username;
+            $this->balance = $account->coins;
+        }
+
+        if ($this->username != null)
+        {
+            $this->foundUsername = true;
+
+            $account = Account::where('username', $this->username)->first();
+
+            if (!$account) {
+                return redirect()->route('home');
+            }
+
+            $this->accountId = $account->id;
+            $this->balance = $account->coins;
+        }
+
+        if (!$this->username && !$this->accountId) {
+            return redirect()->route('home');
+        }
+    }
+
+    public function render()
+    {
+        $shopLogs = ShopLog::where('account', $this->accountId)->orderBy('time', 'desc')->get();
+        $paymentHistory = ShopCoinsHistory::where('account_id', $this->accountId)->orderBy('id', 'desc')->get();
+
+        return view('livewire.shop-history-table2', compact('paymentHistory', 'shopLogs'));
+    }
+}

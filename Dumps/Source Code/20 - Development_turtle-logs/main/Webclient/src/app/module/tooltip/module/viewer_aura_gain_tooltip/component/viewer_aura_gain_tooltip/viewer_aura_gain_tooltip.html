@@ -1,0 +1,16 @@
+<div class="table_container">
+    <div class="header">
+        <div class="td">Timestamp</div>
+        <div class="td">Caster</div>
+        <div class="td">Target</div>
+        <div class="td">Spell</div>
+    </div>
+    <div class="body">
+        <div class="row" *ngFor="let row of payload; index as i">
+            <div class="td">{{dateService.toRPLLTimePrecise(row.timestamp)}}</div>
+            <div class="td">{{get_unit_name(row.caster)}}</div>
+            <div class="td">{{get_unit_name(row.target)}}</div>
+            <div class="td">{{get_ability_name(row.ability)}}</div>
+        </div>
+    </div>
+</div>

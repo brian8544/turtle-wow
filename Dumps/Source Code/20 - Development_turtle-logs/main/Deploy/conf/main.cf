@@ -1,0 +1,45 @@
+mydomain = legacyplayers.com
+
+smtpd_banner = $myhostname ESMTP $mail_name
+biff = no
+
+# appending .domain is the MUA's job.
+append_dot_mydomain = no
+
+readme_directory = no
+
+# TLS parameters
+smtpd_tls_cert_file = /etc/letsencrypt/live/legacyplayers.com/fullchain.pem
+smtpd_tls_key_file = /etc/letsencrypt/live/legacyplayers.com/privkey.pem
+smtpd_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+smtpd_use_tls = yes
+smtpd_enforce_tls = no
+smtpd_tls_loglevel = 1
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
+smtp_use_tls = yes
+smtp_tls_note_starttls_offer = yes
+smtpd_tls_received_header = yes
+smtpd_tls_session_cache_timeout = 3600s
+tls_random_source = dev:/dev/urandom
+
+# See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
+# information on enabling SSL in the smtp client.
+
+smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
+myhostname = legacyplayers.com
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+myorigin = /etc/mailname
+mydestination = $myhostname, localhost.legacyplayers.com, localhost
+relayhost =
+#relay_domains = none
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 legacyplayers.com 192.168.1.0/24 78.46.17.108/32
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+inet_protocols = ipv4
+home_mailbox = Maildir/
+virtual_alias_maps = hash:/etc/postfix/virtual
+default_transport = smtp

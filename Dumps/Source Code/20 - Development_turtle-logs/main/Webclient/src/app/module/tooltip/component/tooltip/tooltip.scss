@@ -1,0 +1,38 @@
+@import "src/styles/global";
+
+:host {
+    display: none;
+    position: absolute;
+    min-height: 10px;
+    min-width: 10px;
+
+    padding: $spacing / 2 $spacing / 2;
+
+    background: $tdc_darker;
+    border: 1px solid $tdc_accent;
+    border-radius: 3px 3px 3px 3px;
+
+    z-index: 100;
+
+    .tt_icon {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        top: -1px;
+        left: calc(-48px - #{$spacing} / 2);
+
+        background: $tdc_darker;
+        border: 1px solid $tdc_accent;
+        border-radius: 3px 3px 3px 3px;
+
+        img {
+            height: 48px;
+            width: 48px;
+            border-radius: 3px 3px 3px 3px;
+        }
+    }
+
+    DetailTable {
+        width: 800px;
+    }
+}

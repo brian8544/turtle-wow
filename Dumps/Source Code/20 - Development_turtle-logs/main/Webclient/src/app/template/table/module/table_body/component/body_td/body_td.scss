@@ -1,0 +1,17 @@
+@import "./../../../../../../../styles/global";
+
+$columnSize: 50px;
+
+:host {
+    display: block;
+    height: $columnSize;
+
+    div {
+        line-height: $columnSize;
+    }
+
+    .number {
+        // Dont format it for now
+        text-align: left;
+    }
+}

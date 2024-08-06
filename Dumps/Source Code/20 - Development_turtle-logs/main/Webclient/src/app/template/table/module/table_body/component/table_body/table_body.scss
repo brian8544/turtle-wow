@@ -1,0 +1,14 @@
+@import "./../../../../../../../styles/global";
+
+:host {
+    display: flex;
+    flex-direction: column;
+
+    BodyRow:first-child, ResponsiveBodyRow:first-child::ng-deep.tableResponsiveBodyRow {
+        border-top: 1px solid $tdc_accent;
+    }
+
+    BodyRow:nth-child(2n), ResponsiveBodyRow:nth-child(2n) {
+        background: lighten($theme_dominant_color, 5%);
+    }
+}

@@ -1,0 +1,1 @@
+"szatyor.exe" "WoW.exe"

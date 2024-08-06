@@ -1,0 +1,10 @@
+## Interface: 24300
+## Title: AdvancedTBCCombatLog |cFFFF8080-Shino-|r
+## Notes: Collects pets and armory information such as gear.
+## Author: Shino
+## SavedVariablesPerCharacter: RPLL_PlayerInformation
+## DefaultState: enabled
+
+RPLLCollector.xml
+core.lua
+

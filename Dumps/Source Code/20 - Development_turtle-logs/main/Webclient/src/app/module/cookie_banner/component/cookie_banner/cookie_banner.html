@@ -1,0 +1,14 @@
+<div id="cookieContainer">
+    <CookieFront (agree_all)="agree_all()"
+                 (reject_all)="reject_all()"
+                 (show_options)="set_show_options(true)"
+                 *ngIf="!show_options">
+    </CookieFront>
+    <CookieOptions (save)="save()"
+                   (show_front)="set_show_options(false)"
+                   *ngIf="show_options"
+                   [cookies_necessary]="cookies_necessary"
+                   [cookies_other]="cookies_other"
+                   [cookies_third_party]="cookies_third_party">
+    </CookieOptions>
+</div>

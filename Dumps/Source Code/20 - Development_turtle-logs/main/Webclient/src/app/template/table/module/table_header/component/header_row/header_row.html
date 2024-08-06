@@ -1,0 +1,5 @@
+<HeaderTd [class.col-0]="column.col_type === 0" [class.col-1]="column.col_type === 1"
+          [class.col-2]="column.col_type === 2" [class.col-3]="column.col_type === 3"
+          (filterChanged)="emitFilter(column, $event)" (sortChanged)="emitSort(column, $event)"
+          [initFilterValue]="filter[column.filter_name]"
+          [specification]="column" *ngFor="let column of columns"></HeaderTd>

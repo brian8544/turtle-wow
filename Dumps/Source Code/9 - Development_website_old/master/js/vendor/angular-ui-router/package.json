@@ -1,0 +1,187 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-ui-router",
+        "scope": null,
+        "escapedName": "angular-ui-router",
+        "name": "angular-ui-router",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\xampp\\www\\baum_bet"
+    ]
+  ],
+  "_from": "angular-ui-router@latest",
+  "_id": "angular-ui-router@1.0.3",
+  "_inCache": true,
+  "_location": "/angular-ui-router",
+  "_nodeVersion": "7.9.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/angular-ui-router-1.0.3.tgz_1494177779016_0.4259352842345834"
+  },
+  "_npmUser": {
+    "name": "christopherthielen",
+    "email": "christopherthielen@ikkyikkyikkypikangzoopboing.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-ui-router",
+    "scope": null,
+    "escapedName": "angular-ui-router",
+    "name": "angular-ui-router",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-1.0.3.tgz",
+  "_shasum": "bf2494caae95c37cf01af3761d89747cfed2db45",
+  "_shrinkwrap": null,
+  "_spec": "angular-ui-router",
+  "_where": "C:\\xampp\\www\\baum_bet",
+  "bugs": {
+    "url": "https://github.com/angular-ui/ui-router/issues"
+  },
+  "contributors": [
+    {
+      "name": "Nate Abele",
+      "email": "nate@radify.io",
+      "url": "https://radify.io"
+    },
+    {
+      "name": "Chris Thielen",
+      "url": "https://github.com/christopherthielen"
+    },
+    {
+      "name": "Tim Kindberg",
+      "url": "https://github.com/timkindberg"
+    },
+    {
+      "name": "Karsten Sperling",
+      "url": "https://github.com/ksperling"
+    }
+  ],
+  "dependencies": {
+    "@uirouter/core": "5.0.3"
+  },
+  "description": "State-based routing for AngularJS 1.x",
+  "devDependencies": {
+    "@types/angular": "^1.5.14",
+    "@types/angular-animate": "^1.5.5",
+    "@types/angular-mocks": "^1.5.5",
+    "@types/jasmine": "^2.2.34",
+    "@types/jquery": "^1.10.31",
+    "awesome-typescript-loader": "3.0.0-beta.10",
+    "babel-core": "^5.8.14",
+    "clone": "^1.0.2",
+    "conventional-changelog": "^1.1.0",
+    "conventional-changelog-cli": "^1.1.1",
+    "dts-downlevel": "^0.3.0",
+    "glob": "^7.0.5",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-script-launcher": "~0.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-systemjs": "^0.7.2",
+    "karma-webpack": "^1.8.0",
+    "lodash": "^4.5.1",
+    "readline-sync": "^1.4.5",
+    "remap-istanbul": "^0.6.3",
+    "replace-in-file": "^2.0.3",
+    "rollup": "^0.38.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-progress": "^0.1.0",
+    "rollup-plugin-sourcemaps": "^0.4.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-plugin-visualizer": "^0.1.5",
+    "shelljs": "^0.7.0",
+    "shx": "^0.1.4",
+    "systemjs": "^0.18.4",
+    "tslint": "^5.1.0",
+    "typedoc": "~0.5.0",
+    "typedoc-plugin-external-module-name": "^1.0.2",
+    "typedoc-plugin-internal-external": "^1.0.0",
+    "typedoc-plugin-ui-router": "^1.0.0",
+    "typescript": "^2.1.4",
+    "ui-router-typedoc-themes": "^1.0.1",
+    "watch": "^0.18.0",
+    "webpack": "1.x",
+    "webpack-dev-server": "1.x",
+    "yargs": "^4.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "bf2494caae95c37cf01af3761d89747cfed2db45",
+    "tarball": "https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-1.0.3.tgz"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "gitHead": "db9398e13e9bab6bae4784b4edcbd7870926c78c",
+  "homepage": "https://ui-router.github.io",
+  "jsnext:main": "lib-esm/index.js",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "nateabele",
+      "email": "nate.abele@gmail.com"
+    },
+    {
+      "name": "ProLoser",
+      "email": "proloser@hotmail.com"
+    },
+    {
+      "name": "christopherthielen",
+      "email": "christopherthielen@sandgnat.com"
+    }
+  ],
+  "name": "angular-ui-router",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "angular": ">=1.2.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-ui/ui-router.git"
+  },
+  "scripts": {
+    "artifacts": "node scripts/artifact_tagging.js",
+    "build": "tsc && tsc -m es6 --outDir lib-esm && npm run fixdts",
+    "bundle": "npm run bundle_router && npm run bundle_monolithic_router && npm run bundle_events && npm run bundle_resolve",
+    "bundle_events": "rollup -c --environment EVENTS  && rollup -c --environment EVENTS,MINIFY",
+    "bundle_monolithic_router": "rollup -c --environment ROUTER,MONOLITHIC  && rollup -c --environment ROUTER,MINIFY,MONOLITHIC",
+    "bundle_resolve": "rollup -c --environment RESOLVE && rollup -c --environment RESOLVE,MINIFY",
+    "bundle_router": "rollup -c --environment ROUTER  && rollup -c --environment ROUTER,MINIFY",
+    "clean": "shx rm -rf lib lib-esm _doc build release *.log",
+    "debug": "karma start --singleRun=false --autoWatch=true --autoWatchInterval=1 --browsers=Chrome",
+    "docs": "./scripts/docs.js",
+    "fixdts": "dts-downlevel 'lib/**/*.d.ts' 'lib-esm/**/*.d.ts'",
+    "install": "node migrate/migratewarn.js",
+    "noimplicitany": "tsc --noEmit --noImplicitAny --moduleResolution node --target es6 test/noimplicitany.ts",
+    "package": "npm run clean && npm run build && npm run bundle",
+    "prepare": "npm run package",
+    "publishdocs": "node scripts/publishdocs.js",
+    "test": "npm run test:integrate",
+    "test:integrate": "tsc && npm run noimplicitany && npm run test:ng16 && npm run test:ng15 && npm run test:ng14 && npm run test:ng13 && npm run test:ng12",
+    "test:ng12": "karma start --ngversion 1.2",
+    "test:ng13": "karma start --ngversion 1.3",
+    "test:ng14": "karma start --ngversion 1.4",
+    "test:ng15": "karma start --ngversion 1.5",
+    "test:ng16": "karma start --ngversion 1.6",
+    "watch": "karma start --singleRun=false --autoWatch=true --autoWatchInterval=1"
+  },
+  "typings": "lib/index.d.ts",
+  "version": "1.0.3"
+}

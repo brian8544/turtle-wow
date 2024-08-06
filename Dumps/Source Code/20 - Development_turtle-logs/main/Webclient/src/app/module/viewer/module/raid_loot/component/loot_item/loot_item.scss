@@ -1,0 +1,27 @@
+
+$iconSize: 48px + 4px;
+
+:host {
+    display: block;
+    position: relative;
+    height: $iconSize;
+    width: $iconSize;
+}
+
+.player_label, .stack_label {
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.player_label {
+    position: absolute;
+    bottom: 1px;
+    left: 2px;
+    width: $iconSize - 8px;
+    overflow: hidden;
+}
+
+.stack_label {
+    position: absolute;
+    right: 2px;
+}

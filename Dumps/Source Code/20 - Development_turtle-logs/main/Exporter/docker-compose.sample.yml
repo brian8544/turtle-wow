@@ -1,0 +1,25 @@
+version: '3.6'
+services:
+  samplenginxhost:
+    depends_on:
+      - samplebackend
+      - lpcmnginx
+    build:
+      context: ./
+      dockerfile: ./Environment/sample_nginx_host/Dockerfile
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.5
+    ports:
+      - '8881:80'
+  samplebackend:
+    build:
+      context: ./
+      dockerfile: ./Environment/sample_backend/Dockerfile
+    restart: on-failure
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.6
+  lpcmbackend:
+    environment:
+      - URL_AUTHORIZATION_ENDPOINT=http://samplebackend:8000/token_validator

@@ -1,0 +1,19 @@
+@import "src/styles/units";
+
+:host {
+    display: block;
+    max-width: 400px;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+
+    div:first-child {
+        margin-right: $spacing;
+    }
+
+    div:last-child {
+        margin-left: auto;
+    }
+}

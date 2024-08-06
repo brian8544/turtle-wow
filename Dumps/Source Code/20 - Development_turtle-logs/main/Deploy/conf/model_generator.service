@@ -1,0 +1,13 @@
+[Unit]
+Description=RPLL model generator
+
+[Service]
+WorkingDirectory=/home/rpll/ModelViewer/
+ExecStart=python /home/rpll/ModelViewer/model_generator.py
+User=rpll
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

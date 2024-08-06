@@ -1,0 +1,12 @@
+<div class="consentHeader">{{ 'ArmoryExporter.title' | translate }}</div>
+<div class="consentDescription">{{ 'ArmoryExporter.description' | translate }}</div>
+<div class="tableHeader">
+    <div>{{ 'ArmoryExporter.characterName' | translate }}</div>
+    <div>{{ 'ArmoryExporter.consent' | translate }}</div>
+</div>
+<div class="tableBody">
+    <div class="tableRow" *ngFor="let character of sampleCharacters">
+        <div><HeroClass [hero_class_id]="character.hero_class_id" [hero_class_label]="character.character_name"></HeroClass></div>
+        <div><YesNoSwitch [state]="character.consent" (stateChange)="handleConsent(character.character_id, $event)"></YesNoSwitch></div>
+    </div>
+</div>

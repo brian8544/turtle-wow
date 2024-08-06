@@ -1,0 +1,17 @@
+import {NgModule} from "@angular/core";
+import {TranslateModule} from "@ngx-translate/core";
+import {{{NAME_PASCAL_CASE}}Component} from "./component/{{NAME_SNAKE_CASE_LOWER}}/{{NAME_SNAKE_CASE_LOWER}}";
+import {CommonModule} from "@angular/common";
+import {{{NAME_PASCAL_CASE}}Routing} from "./routing";
+
+@NgModule({
+    declarations: [{{NAME_PASCAL_CASE}}Component],
+    imports: [
+        CommonModule,
+        TranslateModule,
+        {{NAME_PASCAL_CASE}}Routing
+    ],
+    exports: [{{NAME_PASCAL_CASE}}Component]
+})
+export class {{NAME_PASCAL_CASE}}Module {
+}

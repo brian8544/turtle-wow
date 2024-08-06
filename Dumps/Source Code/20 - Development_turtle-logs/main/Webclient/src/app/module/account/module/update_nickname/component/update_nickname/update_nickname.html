@@ -1,0 +1,8 @@
+<header>{{ 'Account.navBar.entries.nickname' | translate }}</header>
+
+<form (ngSubmit)="on_submit()" formValid ngNativeValidate>
+    <GeneralInput [(value)]="nickname" [formFailure]="formFailure" [required]="true"
+                  labelKey="Account.updateNickname.newNickname" name="nickname" placeholderKey="Account.updateNickname.typeNewNickname"
+                  type="text"></GeneralInput>
+    <ConfirmButton [disabled]="disableSubmit" labelKey="Account.updateNickname.update" type="submit"></ConfirmButton>
+</form>

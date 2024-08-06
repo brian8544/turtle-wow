@@ -1,0 +1,134 @@
+@import "src/styles/global";
+
+@media (min-width: 1281px) {
+    @import "../../../../../styles/shadows";
+    :host {
+        display: inline-block;
+        height: 100%;
+        margin: 0 $spacing * 0.25;
+    }
+
+    .mainItem {
+        height: 100%;
+
+        CaretButton {
+            display: none;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            padding-left: $spacing * 0.5;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+        }
+
+        &:hover + ul {
+            display: block !important;
+        }
+    }
+
+    ul {
+        @extend .floatShadow;
+
+        display: none;
+        background: $tdc_darker;
+        border: 1px solid $tdc_accent;
+        border-top: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+
+        &:hover {
+            display: block !important;
+        }
+
+        li {
+            width: calc(100% - #{$spacing});
+            padding: $spacing * 0.5;
+            border-top: 1px solid $tdc_accent;
+
+            &:first-child {
+                border: none;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    $columnHeight: 50px;
+
+    :host {
+        display: block;
+        width: 100%;
+        min-height: $columnHeight;
+        margin: 0;
+        background: $tdc_darker;
+        border-bottom: 1px solid $tdc_accent;
+        overflow: hidden;
+
+        .mainItem {
+            width: 100%;
+            height: $columnHeight;
+            display: flex;
+            flex-direction: row;
+
+            CaretButton {
+                height: 30px;
+                width: 30px;
+                padding-top: 10px;
+                padding-left: $spacing;
+            }
+
+            a {
+                flex: 1;
+                float: left;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                font-size: 20px;
+                padding-left: $spacing;
+            }
+        }
+
+        ul {
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.1s;
+            width: calc(100% - #{$spacing} * 4);
+            margin: 0;
+            padding: 0 $spacing * 2 0 $spacing * 2;
+            list-style: none;
+            overflow: hidden;
+
+            &.open {
+                transform: scaleY(1);
+
+                li {
+                    height: $columnHeight * 0.65;
+                }
+            }
+
+            li {
+                height: 0;
+                border-top: 1px solid $tdc_accent;
+
+                a {
+                    display: inline-block;
+                    height: 100%;
+                    line-height: $columnHeight * 0.65;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

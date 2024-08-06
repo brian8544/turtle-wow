@@ -1,0 +1,72 @@
+﻿  decoder.cpp
+  encoder.cpp
+  image_iterator.cpp
+  lodepng.cpp
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(712,54): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(730,35): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(731,39): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(754,37): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(771,38): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(3728,78): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4731,33): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4953,60): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4958,83): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4959,94): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4960,83): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4961,94): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4962,83): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4963,94): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(4964,78): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5155,3): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5179,7): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5213,62): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5230,3): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5252,57): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5283,57): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5396,57): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\lodepng.cpp(5474,33): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  main.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,5): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,9): error C2039: 'path': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mutex(30): message : see declaration of 'std'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,14): error C2065: 'path': undeclared identifier
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,14): error C2146: syntax error: missing ';' before identifier '_path'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,14): error C2065: '_path': undeclared identifier
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,22): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,26): error C2039: 'current_path': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mutex(30): message : see declaration of 'std'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(69,38): error C3861: 'current_path': identifier not found
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,49): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,53): error C2039: 'recursive_directory_iterator': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mutex(30): message : see declaration of 'std'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,82): error C2065: '_path': undeclared identifier
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,88): error C3861: 'recursive_directory_iterator': identifier not found
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C3861: 'recursive_directory_iterator': identifier not found
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,81): error C2672: 'begin': no matching overloaded function found
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(1916): message : see declaration of 'std::begin'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): message : With the following template arguments:
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): message : '_Container=unknown-type'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list(57): message : see declaration of 'std::begin'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,81): error C2672: 'end': no matching overloaded function found
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(1926): message : see declaration of 'std::end'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): message : With the following template arguments:
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): message : '_Container=unknown-type'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list(63): message : see declaration of 'std::end'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C3536: '<begin>$L0': cannot be used before it is initialized
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C3536: '<end>$L0': cannot be used before it is initialized
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,16): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,20): error C2039: 'directory_entry': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mutex(30): message : see declaration of 'std'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(72,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,35): error C2143: syntax error: missing ';' before '&'
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,37): error C2065: 'dir_entry': undeclared identifier
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(71,88): error C2100: illegal indirection
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(73,13): error C2065: 'dir_entry': undeclared identifier
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(76,13): error C2065: 'dir_entry': undeclared identifier
+C:\Users\Torta\Documents\Turtle WoW\Server\turtle-wow\tools\TGAtoPNG\main.cpp(79,37): error C2065: 'dir_entry': undeclared identifier
+  stdio.cpp

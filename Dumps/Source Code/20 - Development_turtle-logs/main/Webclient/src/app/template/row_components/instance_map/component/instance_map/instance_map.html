@@ -1,0 +1,5 @@
+<img src="/assets/instance/{{ map_icon }}.png"/>
+<div>
+    <a routerLink="{{html_href}}">{{ instance_label }} </a>
+    <span *ngIf="can_delete" class="delete_button color_error" (click)="delete.emit()">(delete)</span>
+</div>

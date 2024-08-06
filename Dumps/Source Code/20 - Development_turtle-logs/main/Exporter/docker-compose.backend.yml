@@ -1,0 +1,66 @@
+version: '3.6'
+services:
+  lpcmmariadb:
+    build:
+      context: ./
+      dockerfile: ./Environment/lp_cm_mariadb/Dockerfile
+    restart: always
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.2
+    environment:
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=notSecret
+      - MYSQL_ROOT_PASSWORD=notSecret
+      - TZ=Europe/Berlin
+    volumes:
+      - rpll_mariadb_volume:/var/lib/mysql
+    ports:
+      - "3333:3306"
+  lpcmnginxbackend:
+    depends_on:
+      - lpcmbackend
+    build:
+      context: ./
+      dockerfile: ./Environment/lp_cm_nginx_backend/Dockerfile
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.3
+    ports:
+      - '8880:80'
+    volumes:
+      - "./Environment/lp_cm_nginx_backend/nginx.conf:/etc/nginx/nginx.conf"
+      # - "./Environment/lp_cm_nginx_backend/nginx_https.conf:/etc/nginx/nginx.conf"
+      # - "/path/to/your/fullchain.pem:/etc/nginx/certs/fullchain.pem:ro"
+      # - "/path/to/your/privkey.pem:/etc/nginx/certs/privkey.pem:ro"
+      # - "/path/to/your/chain.pem:/etc/nginx/certs/chain.pem:ro"
+  lpcmbackend:
+    depends_on:
+      - lpcmmariadb
+    build:
+      context: ./
+      dockerfile: ./Environment/lp_cm_backend/Dockerfile
+    restart: always
+    networks:
+      lp_cm_net:
+        ipv4_address: 172.34.128.4
+    environment:
+      - CHARACTERS_URL=mysql://root:vagrant@172.17.0.1/characters
+      - LP_CONSENT_URL=mysql://root:notSecret@lpcmmariadb/lp_consent
+      - ROCKET_DATABASES={characters={url="mysql://root:vagrant@172.17.0.1/characters"}, lp_consent={url="mysql://root:notSecret@lpcmmariadb/lp_consent"}}
+      - LP_API_TOKEN=a7c8bdf4eaa23de1ab8489190237b7532a15b3779fe9a92914994d2c4528f1af8c434608d1dc6f3b359d009bc268506d20be9855b1100609c852e89745eb1754
+      - URL_AUTHORIZATION_ENDPOINT=http://localhost:8001/token_validator
+      - CHARACTER_FETCH_INTERVAL_IN_SEC=600
+      - EXPANSION_ID=2
+      - UID_SALT=SomeSalt
+      - OPT_IN_MODE=false
+
+networks:
+  lp_cm_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.34.0.1/16
+
+volumes:
+  rpll_mariadb_volume:

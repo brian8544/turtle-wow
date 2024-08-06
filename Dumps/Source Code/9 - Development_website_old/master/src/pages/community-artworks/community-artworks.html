@@ -1,0 +1,73 @@
+<div class="section mb-5" id="pages">
+   <div class="container-fluid pb-5">
+      <div class="container pt-5 pb-5">
+
+          <div class="row p-5" id="official-artwork-container">
+
+              <div class="col-lg-12"  id="official-artwork">
+                  <div>
+                      <h5 class="orange-text mb-0">Official</h5>
+                      <h2 class="orange-text mb-2">Artworks</h2>
+                      <p class="w-75 mt-3 text-white">
+                          Turtle WoW is a community-driven project, and we are grateful to those who contribute their unique talents to enhance it by creating the amazing promotional artwork for our content! You have probably seen those beautiful pictures on our website, social media or the launcher.                      </p>
+                  </div>
+                  <div id="official-artwork-pictures">
+                      <div class="col-lg-4"><div ><img src="images/art_adventurers.png" class="img-fluid h-75 hand" ng-click="lb('images/art_adventurers.png')"></div>
+                      <div class="mb-5 text-center orange-text">Mysteries of Azeorth, <br>Misho Tenev</div></div>
+                      <div class="col-lg-4"><div ><img src="images/art_crescent_grove_no_logo.png" class="img-fluid h-75 hand" ng-click="lb('images/art_crescent_grove_no_logo.png')"></div>
+                      <div class="mb-5 text-center orange-text">Crescent Grove, <br>Ghor</div></div>
+                      <div class="col-lg-4"><div ><img src="images/art_giln.png" class="img-fluid h-75 hand" ng-click="lb('images/art_giln.png')"></div>
+                      <div class="mb-5 text-center orange-text">Beyond the Greymane Wall, Stonegut</div></div>
+                  </div>
+              </div>
+
+          </div>
+
+         <div class="row p-5">
+
+            <div class="col-lg-12">
+
+               <h5 class="orange-text mb-0">Community</h5>
+               <h2 class="orange-text mb-2">Artworks</h2>
+               <p class="w-75 mt-3 text-white">
+We are happy to see that our community is constantly growing and attracting many new players, amongst whom we have encountered a lot of creative and talented individuals. Thanks to all our players for living in our world and creating wonderful memories!<br><br>Submit your artwork to info@turtlewow.org to get featured on our website and social media, and possibly in-game!
+               </p>
+
+            </div>
+
+         </div>
+
+         <div class="row pt-5 pb-0 pl-3 pr-3 mt-5">
+
+            <div class="col-lg-4 mb-5 text-center orange-text" ng-repeat="c in artworks">
+
+               <div style="width:100%; height: 190px; background-image: url('images/artworks/{{c.file}}'); background-size: cover"
+                    class="hand" ng-click="lb('images/artworks/' + c.file)"></div>
+
+               {{c.author}}
+
+            </div>
+
+         </div>
+
+          <div class="row pt-5 pb-0 pl-3 pr-3 mt-5">
+
+              <div class="col-lg-12"  id="official-artwork">
+                  <div>
+                      <h5 class="orange-text mb-0">Community Art Museum</h5>
+                      <p class="w-100 mt-3 text-white">
+                          Your creative efforts haven't gone unnoticed by the goblins of Gadgetzan, and they have gone through the effort of building a proper art museum in Steamwheedle Port! Being rich in gold brings taste in art they say, most of the time anyway.
+                            <br>
+                          You can now find a dedicated art museum of your favorite Art Contest winners in Tanaris, located in Steamwheedle Port to the east of Gadgetzan.
+                      </p>
+                  </div>
+                  <img src="images/art_museum.webp" class="img-fluid">
+              </div>
+
+          </div>
+
+      </div>
+
+   </div>
+</div>
+

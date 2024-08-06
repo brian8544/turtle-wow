@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*:focus {
+	outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+::-webkit-scrollbar {
+	@apply w-2;
+	@apply h-2;
+
+	&-track {
+		background: transparent;
+	}
+
+	&-thumb {
+		display: none;
+		@apply bg-gray/40;
+
+		:hover& {
+			display: initial;
+		}
+
+		&:hover {
+			@apply bg-gray/80;
+		}
+	}
+
+	&-corner {
+		display: none;
+	}
+}
+
+@layer components {
+	/* Default text styles */
+	:not(svg, svg *) {
+		color: white;
+		@apply font-din;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+		min-width: 0;
+		min-height: 0;
+	}
+
+	h1,
+	.h1 {
+		@apply font-fontin;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 78px;
+		line-height: 76px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	h2,
+	.h2 {
+		@apply font-fontin;
+		font-weight: 700;
+		font-size: 54px;
+		line-height: 58px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	h3,
+	.h3 {
+		@apply font-fontin;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 38px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	h4,
+	.h4 {
+		@apply font-fontin;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 26px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	.s1 {
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	.tw-color {
+		display: inline;
+		@apply bg-gradient-to-t from-yellow to-pink;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.tw-surface {
+		position: relative;
+		@apply border border-gray/40 bg-darkerGray/50 p-3;
+		box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
+
+		& hr {
+			@apply -mx-3 text-gray/40;
+		}
+	}
+
+	.tw-hocus {
+		@apply transition-colors hocus:text-orange hocus:drop-shadow-[0px_0px_25px_white];
+	}
+
+	.tw-input {
+		@apply rounded-[2px];
+		@apply border border-gray/40 bg-darkerGray/50;
+		@apply grow cursor-text p-2;
+		@apply placeholder-blueGray/70;
+
+		&-hocus {
+			@apply transition-colors hocus:border-blueGray hocus:bg-darkGray;
+		}
+
+		&-underline {
+			@apply tw-input border-0 border-b;
+		}
+
+		&-error {
+			@apply border-red/60 transition-colors hocus:border-red hocus:bg-red/5;
+		}
+	}
+}

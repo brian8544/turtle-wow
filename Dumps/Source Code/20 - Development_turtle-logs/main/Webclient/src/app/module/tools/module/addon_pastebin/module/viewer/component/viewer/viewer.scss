@@ -1,0 +1,65 @@
+@import "src/styles/global";
+@import "src/styles/buttons";
+
+:host {
+    display: block;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.title_bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+
+    div:first-child {
+        font-size: 32px;
+        line-height: 50px;
+        color: $highlight;
+        flex: 1;
+    }
+
+    .copy_to_clipboard_btn, .edit_btn, .delete_button {
+        height: 30px;
+        min-height: 30px;
+        line-height: 30px;
+    }
+
+    .copy_to_clipboard_btn, .edit_btn {
+        margin-left: $spacing * 0.5;
+    }
+}
+
+.preview_image {
+    width: 100%;
+    height: 300px;
+}
+
+.desc_title_bar {
+    height: 50px;
+    width: 100%;
+    font-size: 32px;
+    line-height: 50px;
+    color: $highlight;
+}
+
+.desc_container {
+    line-height: 16px;
+    font-size: 16px;
+    min-height: 50px;
+    width: 100%;
+}
+
+.tags_bar {
+    height: 25px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+
+    span {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: bold;
+    }
+}

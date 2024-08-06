@@ -1,0 +1,8 @@
+@import "../../../../../styles/global";
+
+:host {
+    position: absolute;
+    top: calc(50px + #{$spacing});
+    right: $spacing;
+    z-index: 2;
+}

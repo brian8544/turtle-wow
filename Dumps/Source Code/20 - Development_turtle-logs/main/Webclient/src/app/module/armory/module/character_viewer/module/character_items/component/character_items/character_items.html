@@ -1,0 +1,53 @@
+<div class="cr_bg faction_{{ character.faction ? 1 : 0 }}"></div>
+<div class="cr_bg model" style="background-image: url('/API/armory/character_viewer_model/{{character.history_id}}')"></div>
+<div class="cr_name">
+    <Icon iconPath="/assets/wow_race_gender/rg{{ character.race_id }}-{{ character.gender ? 1 : 0 }}.png" [size]="32"></Icon>
+    <Icon iconPath="/assets/wow_hero_classes/c{{ character.hero_class_id }}.png" [size]="32"></Icon>
+    <span>{{ character.name + ' ' + character.level }} </span>
+
+    <SelectInput [value]="selectedHistoryId" [options]="selectedHistoryEntries" (valueChange)="emitHistory($event)" [themed]="true"></SelectInput>
+</div>
+<div class="cr_guild" *ngIf="character.guild">
+    <a [routerLink]="'/armory/guild/'+character.server_name+'/'+character.guild.name">
+        {{ 'Armory.Viewer.guild' | translate: { rank: character.guild.rank, guild: character.guild.name } }}
+    </a>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.head" piece="head"></CharacterItem>
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.glove" piece="glove"></CharacterItem>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.neck" piece="neck"></CharacterItem>
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.belt" piece="belt"></CharacterItem>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.shoulder" piece="shoulder"></CharacterItem>
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.leg" piece="leg"></CharacterItem>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.back" piece="back"></CharacterItem>
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.boot" piece="boot"></CharacterItem>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.chest" piece="chest"></CharacterItem>
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.ring1" piece="ring"></CharacterItem>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.tabard" piece="tabard"></CharacterItem>
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.ring2" piece="ring"></CharacterItem>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.shirt" piece="shirt"></CharacterItem>
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.trinket1" piece="trinket"></CharacterItem>
+</div>
+<div class="cr_row">
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.wrist" piece="wrist"></CharacterItem>
+
+    <div class="cr_weapon_row">
+        <CharacterItem [history_id]="character.history_id" [item]="character.gear.main_hand" piece="main_hand"></CharacterItem>
+        <CharacterItem [history_id]="character.history_id" [item]="character.gear.off_hand" piece="off_hand"></CharacterItem>
+        <CharacterItem [history_id]="character.history_id" [item]="character.gear.ternary_hand" piece="ternary_hand"></CharacterItem>
+    </div>
+
+    <CharacterItem [history_id]="character.history_id" [item]="character.gear.trinket2" piece="trinket"></CharacterItem>
+</div>
