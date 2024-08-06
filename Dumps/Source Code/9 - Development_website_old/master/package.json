@@ -13,7 +13,7 @@
     "chart.js": "^3.8.0",
     "del": "^7.1.0",
     "font-awesome": "^4.7.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-angular": "^0.1.2",
     "gulp-angular-templatecache": "^3.0.1",
     "gulp-clean-css": "^4.3.0",
